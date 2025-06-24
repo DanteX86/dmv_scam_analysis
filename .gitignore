@@ -1,0 +1,127 @@
+# DMV Scam Analysis - .gitignore
+
+# Sensitive Data Protection
+*.db
+*.sqlite
+*.sqlite3
+chat.db*
+personal_data/
+private_keys/
+credentials/
+
+# Analysis Output (may contain sensitive data)
+analysis_output/
+temp_analysis/
+working_copy_*
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Log Files
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+
+# Large Files
+*.pcap
+*.pcapng
+*.cap
+*.dmp
+*.mem
+
+# Configuration Files (may contain sensitive info)
+config.ini
+settings.ini
+.env
+.env.local
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Documentation Build
+docs/_build/
+
+# Mac specific
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux specific
+*~
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
