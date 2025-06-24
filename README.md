@@ -58,16 +58,27 @@ dmv_scam_analysis/
 │   └── infrastructure_analysis.md     # Domain and network analysis
 ├── scripts/
 │   ├── message_extractor.py          # iMessage database analysis tool
+│   ├── threat_visualizer.py          # Advanced data visualization suite
 │   ├── sentiment_analyzer.py         # Threat detection automation
 │   └── ioc_validator.py              # IOC verification toolkit
 ├── reports/
 │   ├── executive_summary.md          # High-level findings
 │   ├── law_enforcement_report.md     # LE intelligence package
 │   └── public_awareness_guide.md     # Community protection guide
-└── documentation/
-    ├── methodology.md                # Analysis methodology
-    ├── tools_used.md                 # Technical toolkit documentation
-    └── lessons_learned.md            # Post-analysis insights
+├── visualizations/
+│   ├── visualization_index.html      # Interactive visualization gallery
+│   ├── risk_dashboard.html           # Multi-panel risk assessment dashboard
+│   ├── threat_network.html           # Interactive infrastructure network
+│   ├── executive_dashboard.html      # Executive KPI dashboard
+│   ├── threat_timeline.png           # Campaign timeline analysis
+│   └── detection_analytics.png       # Detection effectiveness metrics
+├── documentation/
+│   ├── methodology.md                # Analysis methodology
+│   ├── visualizations.md             # Data visualization documentation
+│   ├── tools_used.md                 # Technical toolkit documentation
+│   └── lessons_learned.md            # Post-analysis insights
+├── requirements.txt                   # Python dependencies
+└── venv/                             # Virtual environment (excluded from git)
 ```
 
 ## 🔬 Technical Skills Demonstrated
@@ -81,6 +92,13 @@ dmv_scam_analysis/
 - **OSINT Collection**: Open source intelligence gathering
 - **Infrastructure Analysis**: Domain and network investigation
 - **Attribution Assessment**: Geographic and organizational attribution
+
+### Data Visualization & Analytics
+- **Interactive Dashboards**: Plotly-based dynamic threat assessment dashboards
+- **Statistical Visualization**: Risk scoring, trend analysis, and pattern recognition charts
+- **Network Mapping**: Threat infrastructure relationship visualization
+- **Executive Reporting**: High-level KPI dashboards with gauge and indicator widgets
+- **Timeline Analysis**: Multi-dimensional temporal threat progression mapping
 
 ### Automation & Scripting
 - **Python Development**: Custom analysis tools and automation
@@ -117,6 +135,53 @@ All analysis was conducted using:
 - **Legal Compliance**: Analysis within authorized scope
 - **Victim Protection**: No victim re-identification possible
 
+## 📊 Data Visualizations
+
+### Interactive Dashboards
+🌐 **[View Complete Visualization Suite](./visualizations/visualization_index.html)**
+
+#### 1. Risk Assessment Dashboard
+- **Multi-panel interactive dashboard** with risk scoring, geographic distribution, and threat actor capabilities
+- **Real-time filtering** and hover tooltips for detailed analysis
+- **Executive-ready** presentation with professional styling
+
+#### 2. Threat Intelligence Network
+- **Interactive network diagram** showing infrastructure relationships
+- **Color-coded entities** (threat actors, infrastructure, targets)
+- **Dynamic positioning** based on relationship proximity
+
+#### 3. Executive Summary Dashboard
+- **KPI gauges and indicators** for campaign impact and mitigation status
+- **Progress tracking** with milestone markers and trend analysis
+- **At-a-glance status** assessment for leadership briefings
+
+### Static Analysis Charts
+
+#### 4. Threat Timeline Analysis
+![Threat Timeline](./visualizations/threat_timeline.png)
+- **Message activity frequency** over campaign duration
+- **IOC discovery timeline** with annotated investigation milestones
+- **Campaign phase identification** and threat escalation patterns
+
+#### 5. Detection Analytics
+![Detection Analytics](./visualizations/detection_analytics.png)
+- **Detection method effectiveness** with accuracy metrics
+- **Pattern confidence scoring** and algorithm reliability
+- **Automation efficiency** comparison (manual vs. automated)
+- **Risk score evolution** throughout investigation
+
+### Visualization Technologies
+- **Interactive**: Plotly with HTML5/JavaScript
+- **Static**: Matplotlib/Seaborn with high-resolution PNG output
+- **Professional**: Corporate styling, responsive design, accessibility compliance
+
+### Portfolio Value
+✅ **Data Science Skills**: Statistical analysis, visualization design, interactive development  
+✅ **Executive Communication**: Technical-to-business translation, KPI dashboards  
+✅ **Professional Presentation**: Corporate-ready deliverables, multi-audience targeting  
+
+---
+
 ## 📚 Tools & Technologies
 
 ### Primary Tools
@@ -127,9 +192,18 @@ All analysis was conducted using:
 
 ### Analysis Libraries
 - **Pandas**: Data manipulation and analysis
+- **Matplotlib/Seaborn**: Statistical visualization and charting
+- **Plotly**: Interactive dashboard development
+- **NumPy**: Numerical computing and statistical analysis
 - **TextBlob/NLTK**: Natural language processing
 - **Requests**: Web reconnaissance and verification
 - **Datetime**: Timeline analysis and correlation
+
+### Visualization Stack
+- **Frontend**: HTML5, CSS3, JavaScript (via Plotly)
+- **Backend**: Python visualization libraries
+- **Output**: High-res PNG (300 DPI), Interactive HTML
+- **Design**: Professional styling, responsive layouts
 
 ## 🎓 Learning Objectives
 
