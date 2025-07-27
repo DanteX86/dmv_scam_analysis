@@ -1,0 +1,162 @@
+[
+    {
+        "text": "URGENT: Your driver's license has been suspended. Click http://dmv-license-verify.tk to pay $299 reinstatement fee within 24 hours.",
+        "source": "sms",
+        "timestamp": "2025-06-27T02:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T02:30:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "ALERT: DMV records show unpaid violations. Pay $450 at dmv-pay-center.ga now to avoid license suspension.",
+        "source": "sms",
+        "timestamp": "2025-06-27T02:31:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T02:31:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Final Notice: Your driver's license will be suspended. Visit http://dmv-renew.ml to pay fees.",
+        "source": "sms",
+        "timestamp": "2025-06-27T02:32:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T02:32:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Is this really from DMV? Seems suspicious.",
+        "source": "sms",
+        "timestamp": "2025-06-27T02:35:00Z",
+        "is_from_me": 1,
+        "readable_date": "2025-06-27T02:35:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Yes, this is DMV support. To avoid suspension, pay immediately at http://dmv-pay.ga/license",
+        "source": "sms",
+        "timestamp": "2025-06-27T02:36:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T02:36:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Your annual vehicle registration is due for renewal. Visit dmv.gov/renew or call 1-800-DMV-INFO.",
+        "source": "email",
+        "timestamp": "2025-06-27T09:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T09:00:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Automated Reminder: Your vehicle registration expires in 30 days. Renew at www.dmv.gov",
+        "source": "email",
+        "timestamp": "2025-06-27T09:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T09:30:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Automated Reminder: Your vehicle registration expires in 29 days. Renew at www.dmv.gov",
+        "source": "email",
+        "timestamp": "2025-06-27T09:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T09:30:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Hi, I need help with my registration renewal.",
+        "source": "email",
+        "timestamp": "2025-06-27T10:15:00Z",
+        "is_from_me": 1,
+        "readable_date": "2025-06-27T10:15:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Thank you for contacting DMV support. How can we assist you today?",
+        "source": "email",
+        "timestamp": "2025-06-27T10:16:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T10:16:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "URGENT: License suspension notice. Pay $350 at dmv-verify.tk immediately.",
+        "source": "sms",
+        "timestamp": "2025-06-28T03:15:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-28T03:15:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "FINAL WARNING: Pay $400 at dmv-pay.ml to avoid suspension.",
+        "source": "sms",
+        "timestamp": "2025-06-28T03:16:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-28T03:16:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Automated Reminder: Your vehicle registration expires in 28 days. Renew at www.dmv.gov",
+        "source": "email",
+        "timestamp": "2025-06-28T09:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-28T09:30:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Please stop sending these messages. I'm reporting this.",
+        "source": "sms",
+        "timestamp": "2025-06-28T10:00:00Z",
+        "is_from_me": 1,
+        "readable_date": "2025-06-28T10:00:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Don't ignore! Pay $500 now at dmv-urgent.ga to restore license.",
+        "source": "sms",
+        "timestamp": "2025-06-28T10:01:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-28T10:01:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Automated Reminder: Your vehicle registration expires in 27 days. Renew at www.dmv.gov",
+        "source": "email",
+        "timestamp": "2025-06-29T09:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-29T09:30:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "ALERT: Multiple violations found. Pay penalties at dmv-penalties.tk",
+        "source": "sms",
+        "timestamp": "2025-06-29T23:45:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-29T23:45:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "URGENT: Respond within 1 hour to prevent license suspension. Pay at dmv-quick.ml",
+        "source": "sms",
+        "timestamp": "2025-06-29T23:46:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-29T23:46:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "FINAL NOTICE: Legal action pending. Pay $600 at dmv-legal.ga immediately.",
+        "source": "sms",
+        "timestamp": "2025-06-29T23:47:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-29T23:47:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Your vehicle registration renewal is ready. Visit www.dmv.gov/renew",
+        "source": "email",
+        "timestamp": "2025-06-30T14:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-30T14:00:00Z",
+        "is_scam": 0
+    }
+]

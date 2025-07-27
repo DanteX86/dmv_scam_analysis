@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "text": "URGENT: Your DMV registration has expired. Click here to renew immediately or face penalties: http://fake-dmv-site.com/renew",
+    "sentiment": {
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "confidence": 0.0,
+      "threat_indicators": [
+        "urgent",
+        "immediately",
+        "expired"
+      ],
+      "analysis_timestamp": "2025-07-14T07:22:11.033244"
+    },
+    "threats": {
+      "threat_detected": false,
+      "confidence": 0.0,
+      "key_phrases": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033258"
+    },
+    "timestamp": "2025-07-14T07:22:11.033260"
+  },
+  {
+    "id": 2,
+    "text": "Final notice: You owe $150 in unpaid fines. Call 555-123-4567 NOW to avoid arrest.",
+    "sentiment": {
+      "sentiment_score": 0.05000000000000001,
+      "sentiment_label": "neutral",
+      "confidence": 0.05000000000000001,
+      "threat_indicators": [
+        "fine",
+        "arrest"
+      ],
+      "analysis_timestamp": "2025-07-14T07:22:11.033564"
+    },
+    "threats": {
+      "threat_detected": false,
+      "confidence": 0.0,
+      "key_phrases": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033575"
+    },
+    "timestamp": "2025-07-14T07:22:11.033577"
+  },
+  {
+    "id": 3,
+    "text": "DMV ALERT: Your license will be suspended today unless you pay the $85 processing fee. Reference #DMV123456",
+    "sentiment": {
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "confidence": 0.0,
+      "threat_indicators": [
+        "suspend"
+      ],
+      "analysis_timestamp": "2025-07-14T07:22:11.033733"
+    },
+    "threats": {
+      "threat_detected": false,
+      "confidence": 0.0,
+      "key_phrases": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033737"
+    },
+    "timestamp": "2025-07-14T07:22:11.033738"
+  },
+  {
+    "id": 4,
+    "text": "Thanks for the information. I'll look into this.",
+    "sentiment": {
+      "sentiment_score": 0.2,
+      "sentiment_label": "positive",
+      "confidence": 0.2,
+      "threat_indicators": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033830"
+    },
+    "threats": {
+      "threat_detected": false,
+      "confidence": 0.0,
+      "key_phrases": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033833"
+    },
+    "timestamp": "2025-07-14T07:22:11.033835"
+  },
+  {
+    "id": 5,
+    "text": "LAST CHANCE: Legal action will be taken if you don't respond within 24 hours. Contact legal.department@dmv-official.tk",
+    "sentiment": {
+      "sentiment_score": 0.10000000000000002,
+      "sentiment_label": "positive",
+      "confidence": 0.10000000000000002,
+      "threat_indicators": [
+        "legal action"
+      ],
+      "analysis_timestamp": "2025-07-14T07:22:11.033940"
+    },
+    "threats": {
+      "threat_detected": false,
+      "confidence": 0.0,
+      "key_phrases": [],
+      "analysis_timestamp": "2025-07-14T07:22:11.033943"
+    },
+    "timestamp": "2025-07-14T07:22:11.033944"
+  }
+]

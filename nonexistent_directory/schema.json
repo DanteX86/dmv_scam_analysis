@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "sentinel_analyzer": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "debug": {
+          "type": "boolean"
+        },
+        "test_mode": {
+          "type": "boolean"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "encoding": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "debug"
+      ]
+    },
+    "analysis": {
+      "type": "object",
+      "properties": {
+        "output_dir": {
+          "type": "string"
+        },
+        "nlp": {
+          "type": "object"
+        },
+        "ml": {
+          "type": "object"
+        },
+        "behavioral": {
+          "type": "object"
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "environment",
+    "analysis"
+  ]
+}

@@ -1,0 +1,8 @@
+analysis:
+  output_dir: ./dev_output
+environment:
+  debug: true
+  name: development
+  test_mode: true
+logging:
+  level: DEBUG

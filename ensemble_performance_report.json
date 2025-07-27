@@ -1,0 +1,201 @@
+{
+  "timestamp": "2025-07-27T01:14:59.528298",
+  "individual_models": [
+    {
+      "model": "random_forest",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "cv_mean": 1.0,
+      "cv_std": 0.0
+    },
+    {
+      "model": "gradient_boosting",
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1_score": 0.5,
+      "cv_mean": 0.5,
+      "cv_std": 0.0
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1_score": 0.5,
+      "cv_mean": 0.5,
+      "cv_std": 0.0
+    },
+    {
+      "model": "svm",
+      "accuracy": 0.5,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1_score": 0.3333333333333333,
+      "cv_mean": 0.5,
+      "cv_std": 0.0
+    },
+    {
+      "model": "naive_bayes",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "cv_mean": 1.0,
+      "cv_std": 0.0
+    }
+  ],
+  "ensemble_results": {
+    "models": {
+      "random_forest": {
+        "accuracy": 0.6666666666666666,
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.5333333333333333,
+        "cv_mean": 0.4583333333333333,
+        "cv_std": 0.20833333333333331,
+        "feature_importance": {
+          "message_length": 0.12367424242424244,
+          "word_count": 0.10992739898989899,
+          "avg_word_length": 0.1801925505050505,
+          "urgency_words_count": 0.015612373737373736,
+          "urgency_words_ratio": 0.15063131313131312,
+          "authority_words_count": 0.031976010101010095,
+          "authority_words_ratio": 0.10651515151515151,
+          "financial_words_count": 0.008585858585858587,
+          "financial_words_ratio": 0.0,
+          "action_words_count": 0.05058080808080807,
+          "action_words_ratio": 0.04474747474747475,
+          "fear_words_count": 0.0006628787878787881,
+          "fear_words_ratio": 0.008049242424242422,
+          "url_count": 0.05923295454545454,
+          "phone_count": 0.0,
+          "has_suspicious_domain": 0.027525252525252532,
+          "exclamation_count": 0.0017361111111111127,
+          "question_count": 0.0,
+          "caps_ratio": 0.08035037878787878,
+          "hour": 0.0,
+          "day_of_week": 0.0,
+          "is_weekend": 0.0,
+          "is_night": 0.0,
+          "is_business_hours": 0.0,
+          "is_from_me": 0.0
+        }
+      },
+      "gradient_boosting": {
+        "accuracy": 0.6666666666666666,
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.5333333333333333,
+        "cv_mean": 0.5833333333333333,
+        "cv_std": 0.08333333333333331,
+        "feature_importance": {
+          "message_length": 0.0005515848206020564,
+          "word_count": 0.425837314313581,
+          "avg_word_length": 0.03701377767786337,
+          "urgency_words_count": 0.0,
+          "urgency_words_ratio": 0.2574040453553944,
+          "authority_words_count": 0.0,
+          "authority_words_ratio": 0.0,
+          "financial_words_count": 0.0,
+          "financial_words_ratio": 0.0,
+          "action_words_count": 0.0,
+          "action_words_ratio": 0.15506227783342916,
+          "fear_words_count": 0.0,
+          "fear_words_ratio": 0.0,
+          "url_count": 0.0,
+          "phone_count": 0.0,
+          "has_suspicious_domain": 0.0,
+          "exclamation_count": 0.0,
+          "question_count": 0.0,
+          "caps_ratio": 0.12413099999912984,
+          "hour": 0.0,
+          "day_of_week": 0.0,
+          "is_weekend": 0.0,
+          "is_night": 0.0,
+          "is_business_hours": 0.0,
+          "is_from_me": 0.0
+        }
+      },
+      "logistic_regression": {
+        "accuracy": 0.3333333333333333,
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.3333333333333333,
+        "cv_mean": 0.4583333333333333,
+        "cv_std": 0.20833333333333331,
+        "feature_importance": {
+          "message_length": 0.3152727307290268,
+          "word_count": 0.491844675895921,
+          "avg_word_length": 0.6337307368138944,
+          "urgency_words_count": 0.138720600352137,
+          "urgency_words_ratio": 0.25814213415031906,
+          "authority_words_count": 0.0011645758530063803,
+          "authority_words_ratio": 0.1883496126381588,
+          "financial_words_count": 0.17969814283811478,
+          "financial_words_ratio": 0.1796981428381148,
+          "action_words_count": 0.16617593653766824,
+          "action_words_ratio": 0.09867651325728614,
+          "fear_words_count": 0.17969814283811478,
+          "fear_words_ratio": 0.1796981428381148,
+          "url_count": 0.31357807235959007,
+          "phone_count": 0.0,
+          "has_suspicious_domain": 0.16457448502601335,
+          "exclamation_count": 0.138720600352137,
+          "question_count": 0.0,
+          "caps_ratio": 0.5536811851143841,
+          "hour": 0.0,
+          "day_of_week": 0.0,
+          "is_weekend": 0.0,
+          "is_night": 0.0,
+          "is_business_hours": 0.0,
+          "is_from_me": 0.0
+        }
+      },
+      "svm": {
+        "accuracy": 0.6666666666666666,
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.5333333333333333,
+        "cv_mean": 0.7083333333333333,
+        "cv_std": 0.041666666666666685,
+        "feature_importance": {}
+      },
+      "naive_bayes": {
+        "accuracy": 0.6666666666666666,
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.5333333333333333,
+        "cv_mean": 0.5833333333333333,
+        "cv_std": 0.08333333333333331,
+        "feature_importance": {}
+      }
+    },
+    "best_model": "random_forest",
+    "ensemble_size": 5
+  },
+  "confidence_analysis": {
+    "mean_predictions": "[0.24159304 0.69311658 0.69063834 0.24125681 0.5162957  0.24938504\n 0.16879726 0.23007118 0.14319542 0.16706905]",
+    "std_predictions": "[0.18805568 0.36202574 0.34334431 0.1830611  0.30308603 0.18231247\n 0.20297942 0.20296149 0.21179233 0.20907288]",
+    "confidence_stats": {
+      "high_confidence_count": 0,
+      "medium_confidence_count": 3,
+      "low_confidence_count": 7,
+      "avg_variance": 0.23886914490754024,
+      "max_variance": 0.36202574164798024,
+      "min_variance": 0.18231246821034028
+    }
+  },
+  "summary": {
+    "best_individual_model": "random_forest",
+    "best_individual_f1": 1.0,
+    "worst_individual_model": "svm",
+    "worst_individual_f1": 0.3333333333333333,
+    "average_f1_score": 0.6666666666666667,
+    "average_accuracy": 0.7,
+    "model_count": 5,
+    "ensemble_size": 5
+  }
+}

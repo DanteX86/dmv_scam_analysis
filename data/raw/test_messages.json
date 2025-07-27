@@ -1,0 +1,54 @@
+{
+    "messages": [
+        {
+            "id": "msg_001",
+            "timestamp": "2025-06-27T10:15:23Z",
+            "text": "URGENT: Your driver's license has been suspended. Click http://dmv-license-verify.tk to pay $299 reinstatement fee within 24 hours.",
+            "source": "sms",
+            "metadata": {
+                "sender": "+1234567890",
+                "recipient": "+1987654321"
+            }
+        },
+        {
+            "id": "msg_002",
+            "timestamp": "2025-06-27T11:30:45Z",
+            "text": "DMV Notice: License expiration detected. Renew now at https://gov-dmv-renewal.ml. Immediate action required to avoid suspension.",
+            "source": "email",
+            "metadata": {
+                "sender": "dmv.renewal@service-notice.com",
+                "subject": "License Expiration Notice"
+            }
+        },
+        {
+            "id": "msg_003",
+            "timestamp": "2025-06-27T12:45:12Z",
+            "text": "Your annual vehicle registration is due for renewal. Visit dmv.gov/renew or call 1-800-DMV-INFO.",
+            "source": "sms",
+            "metadata": {
+                "sender": "DMV-INFO",
+                "recipient": "+1987654321"
+            }
+        },
+        {
+            "id": "msg_004",
+            "timestamp": "2025-06-27T13:20:00Z",
+            "text": "FINAL WARNING: DMV records show unpaid violations. Pay $450 at dmv-pay-center.ga now to avoid license suspension and legal action.",
+            "source": "email",
+            "metadata": {
+                "sender": "violations@dmv-notice.net",
+                "subject": "Urgent: Unpaid Violations"
+            }
+        },
+        {
+            "id": "msg_005",
+            "timestamp": "2025-06-27T14:10:33Z",
+            "text": "Reminder: Your vehicle registration expires next month. Renew online at www.dmv.gov or visit your local DMV office.",
+            "source": "email",
+            "metadata": {
+                "sender": "noreply@dmv.gov",
+                "subject": "Registration Renewal Reminder"
+            }
+        }
+    ]
+}

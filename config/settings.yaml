@@ -1,0 +1,196 @@
+---
+# Main Configuration File
+
+# Environment Settings
+environment:
+  name: development  # development, staging, production
+  debug: true
+  timezone: UTC
+  encoding: utf-8
+
+# Application Settings
+application:
+  name: DMV Scam Analysis
+  version: 1.0.0
+  description: Analysis toolkit for DMV-related scam messages
+  maintainer: your.email@example.com
+  max_workers: 4
+  batch_size: 1000
+
+# Data Storage
+storage:
+  database:
+    type: sqlite
+    path: data/raw/messages.db
+    backup_path: data/backup/
+    max_connections: 5
+    timeout: 30
+  
+  files:
+    raw_data: data/raw/
+    processed_data: data/processed/
+    interim_data: data/interim/
+    external_data: data/external/
+
+# Analysis Settings
+analysis:
+  ml_models:
+    classifier:
+      model_path: models/threat_classifier.pkl
+      threshold: 0.75
+      batch_size: 100
+    embeddings:
+      model_path: models/text_embeddings.pkl
+      dimension: 768
+  
+  nlp:
+    language: en
+    models:
+      - en_core_web_sm
+      - en_core_web_md
+    max_length: 1000000
+    batch_size: 50
+  
+  features:
+    text:
+      - length
+      - word_count
+      - unique_words
+      - special_chars
+    patterns:
+      - urls
+      - phone_numbers
+      - email_addresses
+    sentiment:
+      enabled: true
+      model: vader
+    entities:
+      enabled: true
+      types:
+        - PERSON
+        - ORG
+        - GPE
+        - MONEY
+
+# Visualization Settings
+visualization:
+  theme: dark
+  colormap: viridis
+  dpi: 300
+  formats:
+    - png
+    - html
+  interactive: true
+  dimensions:
+    width: 1200
+    height: 800
+
+# Performance Settings
+performance:
+  cache:
+    enabled: true
+    type: redis
+    max_size: 1GB
+    ttl: 3600
+  optimization:
+    parallel: true
+    gpu_enabled: false
+    memory_limit: 8GB
+
+# Security Settings
+security:
+  pii_patterns:
+    - pattern: '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+      type: phone
+    - pattern: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
+      type: email
+    - pattern: '\b\d{3}[-]?\d{2}[-]?\d{4}\b'
+      type: ssn
+  data_encryption:
+    enabled: true
+    algorithm: AES-256
+    key_file: config/secrets/encryption.key
+
+# API Settings
+api:
+  enabled: false
+  host: 0.0.0.0
+  port: 5000
+  rate_limit: 100
+  timeout: 30
+  cors:
+    enabled: true
+    origins:
+      - http://localhost:3000
+      - http://localhost:8080
+
+# Monitoring Settings
+monitoring:
+  metrics:
+    enabled: true
+    interval: 60
+    exporters:
+      - type: prometheus
+        port: 9090
+      - type: statsd
+        host: localhost
+        port: 8125
+  alerts:
+    enabled: true
+    channels:
+      - type: email
+        recipients:
+          - admin@example.com
+      - type: slack
+        webhook: "{{SLACK_WEBHOOK_URL}}"
+
+# Resource Limits
+resources:
+  cpu:
+    max_threads: 8
+    priority: normal
+  memory:
+    max_ram: 8GB
+    swap_enabled: false
+  disk:
+    min_free: 10GB
+    temp_cleanup: true
+
+# Dependencies
+dependencies:
+  python_version: ">=3.9"
+  required_packages:
+    - pandas>=1.5.0
+    - numpy>=1.21.0
+    - sklearn>=1.0.0
+    - spacy>=3.0.0
+    - torch>=1.10.0
+  optional_packages:
+    - tensorflow>=2.8.0
+    - transformers>=4.5.0
+
+# Development Tools
+development:
+  linting:
+    enabled: true
+    tools:
+      - flake8
+      - black
+      - mypy
+    config_files:
+      - .flake8
+      - pyproject.toml
+      - mypy.ini
+  testing:
+    framework: pytest
+    coverage:
+      minimum: 80
+      exclude:
+        - tests/*
+        - setup.py
+  documentation:
+    builder: sphinx
+    output: docs/build
+    format:
+      - html
+      - pdf

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "text": "URGENT: Your DMV registration has expired. Click here to renew immediately or face penalties: http://fake-dmv-site.com/renew",
+    "timestamp": "2024-01-15 10:30:00",
+    "is_from_me": 0,
+    "readable_date": "2024-01-15 10:30:00",
+    "ROWID": 1
+  },
+  {
+    "id": 2,
+    "text": "Final notice: You owe $150 in unpaid fines. Call 555-123-4567 NOW to avoid arrest.",
+    "timestamp": "2024-01-15 14:22:00",
+    "is_from_me": 0,
+    "readable_date": "2024-01-15 14:22:00",
+    "ROWID": 2
+  },
+  {
+    "id": 3,
+    "text": "DMV ALERT: Your license will be suspended today unless you pay the $85 processing fee. Reference #DMV123456",
+    "timestamp": "2024-01-15 16:45:00",
+    "is_from_me": 0,
+    "readable_date": "2024-01-15 16:45:00",
+    "ROWID": 3
+  },
+  {
+    "id": 4,
+    "text": "Thanks for the information. I'll look into this.",
+    "timestamp": "2024-01-15 16:50:00",
+    "is_from_me": 1,
+    "readable_date": "2024-01-15 16:50:00",
+    "ROWID": 4
+  },
+  {
+    "id": 5,
+    "text": "LAST CHANCE: Legal action will be taken if you don't respond within 24 hours. Contact legal.department@dmv-official.tk",
+    "timestamp": "2024-01-16 09:15:00",
+    "is_from_me": 0,
+    "readable_date": "2024-01-16 09:15:00",
+    "ROWID": 5
+  }
+]

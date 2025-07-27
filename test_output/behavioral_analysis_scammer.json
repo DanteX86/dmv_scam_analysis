@@ -1,0 +1,120 @@
+{
+  "analysis_metadata": {
+    "contact_analyzed": "scammer",
+    "analysis_timestamp": "2025-07-14T07:22:37.915438",
+    "analysis_type": "behavioral_patterns"
+  },
+  "temporal_patterns": {
+    "hourly_distribution": {
+      "distribution": {
+        "10": 1,
+        "14": 1,
+        "16": 2,
+        "9": 1
+      },
+      "peak_hours": [
+        "16"
+      ],
+      "anomalous_hours": [],
+      "statistics": {
+        "mean_messages_per_hour": 1.25,
+        "std_deviation": 0.5,
+        "most_active_hour": "16",
+        "least_active_hour": "10"
+      }
+    },
+    "weekly_distribution": {
+      "weekday_messages": 5,
+      "weekend_messages": 0,
+      "daily_distribution": {
+        "0": 4,
+        "1": 1
+      },
+      "weekend_anomaly_score": 1.0,
+      "weekend_ratio": 0.0
+    },
+    "burst_detection": {
+      "burst_events": [
+        {
+          "timestamp": "2024-01-16T09:00:00",
+          "message_count": 1,
+          "threshold": 0.983163247594393,
+          "severity": "LOW"
+        }
+      ],
+      "total_bursts": 1,
+      "max_burst_intensity": 1
+    },
+    "anomalous_timing": {
+      "anomalies": [
+        {
+          "message_timestamp": "2024-01-16T09:15:00",
+          "time_delta_seconds": 59100.0,
+          "anomaly_type": "unusual_interval"
+        }
+      ],
+      "anomaly_score": 0.25,
+      "statistics": {
+        "mean_interval_seconds": 20475.0,
+        "std_interval_seconds": 26352.610876343922,
+        "median_interval_seconds": 11250.0
+      }
+    },
+    "response_patterns": {
+      "response_times": [
+        {
+          "sent_timestamp": "2024-01-15T16:50:00",
+          "received_timestamp": "2024-01-16T09:15:00",
+          "response_time_seconds": 59100.0
+        }
+      ],
+      "statistics": {
+        "average_response_time_seconds": 59100.0,
+        "median_response_time_seconds": 59100.0,
+        "min_response_time_seconds": 59100.0,
+        "max_response_time_seconds": 59100.0,
+        "total_exchanges": 1
+      },
+      "rapid_responses": [],
+      "delayed_responses": [
+        {
+          "sent_timestamp": "2024-01-15T16:50:00",
+          "received_timestamp": "2024-01-16T09:15:00",
+          "response_time_seconds": 59100.0
+        }
+      ]
+    }
+  },
+  "automation_indicators": {
+    "timing_regularity": {
+      "regularity_score": 0.4372420376958294,
+      "coefficient_of_variation": 1.2870628022634394,
+      "interval_diversity": 1.0,
+      "mean_interval_seconds": 20475.0,
+      "analysis": "LOW_AUTOMATION_LIKELIHOOD"
+    },
+    "content_similarity": {
+      "similarity_score": 0.18736297824121695,
+      "duplicate_ratio": 0.0,
+      "unique_message_count": 5,
+      "total_message_count": 5,
+      "analysis": "LOW_TEMPLATE_USAGE"
+    },
+    "volume_consistency": {
+      "consistency_score": 0,
+      "analysis": "insufficient_temporal_data"
+    },
+    "response_predictability": {
+      "predictability_score": 0,
+      "response_ratio": 4.0,
+      "analysis": "VARIABLE_RESPONSE_PATTERN"
+    },
+    "overall_automation_score": 0.1561512539842616
+  },
+  "risk_assessment": {
+    "behavioral_risk_score": 0,
+    "risk_factors": [],
+    "risk_level": "LOW"
+  },
+  "recommendations": []
+}

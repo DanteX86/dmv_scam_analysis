@@ -1,0 +1,304 @@
+{
+  "messages": [
+    {
+      "id": "msg_001",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "source": "dmv.ca.gov",
+      "type": "email",
+      "subject": "Registration Renewal Reminder",
+      "text": "Dear Customer, This is a reminder that your vehicle registration expires on 03/15/2024. You can renew online at dmv.ca.gov or visit any DMV office. Your renewal fee is $75.00. Thank you, California DMV",
+      "sender_email": "noreply@dmv.ca.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_002",
+      "timestamp": "2024-01-20T14:45:30Z",
+      "source": "ny.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "NY DMV: Your driver license renewal appointment is confirmed for 02/10/2024 at 2:00 PM at Brooklyn DMV Office. Bring required documents. Info: ny.gov/dmv",
+      "sender_phone": "+1-518-555-0123",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_003",
+      "timestamp": "2024-01-22T09:15:00Z",
+      "source": "dmv.texas.gov",
+      "type": "email",
+      "subject": "Vehicle Inspection Due",
+      "text": "Texas DMV Notice: Your vehicle inspection is due by 02/28/2024. Find authorized inspection stations at dmv.texas.gov/inspect. Failure to inspect may result in fines.",
+      "sender_email": "inspections@dmv.texas.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_004",
+      "timestamp": "2024-01-25T16:20:15Z",
+      "source": "dmv.fl.gov",
+      "type": "email",
+      "subject": "Address Change Confirmation",
+      "text": "Florida DMV: We have successfully updated your address on file. Your new driver license will be mailed to your updated address within 7-10 business days. Reference #: FL-2024-0125-789",
+      "sender_email": "updates@dmv.fl.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_005",
+      "timestamp": "2024-02-01T11:30:45Z",
+      "source": "dmv.illinois.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "IL DMV: Your Real ID application has been approved. Pick up your new license at any Secretary of State facility within 60 days. Bring confirmation code: IL2024RID456",
+      "sender_phone": "+1-217-555-0156",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_006",
+      "timestamp": "2024-02-03T08:45:20Z",
+      "source": "dmv.wa.gov",
+      "type": "email",
+      "subject": "Appointment Reminder - Enhanced Driver License",
+      "text": "Washington State DMV: Reminder of your Enhanced Driver License appointment on 02/15/2024 at 10:00 AM at Seattle DMV Office. Required documents listed at dmv.wa.gov/edl",
+      "sender_email": "appointments@dmv.wa.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_007",
+      "timestamp": "2024-02-05T13:25:10Z",
+      "source": "dmv.oregon.gov",
+      "type": "email",
+      "subject": "Vehicle Title Transfer Complete",
+      "text": "Oregon DMV: Vehicle title transfer for 2019 Honda Accord VIN ending in 5432 has been completed. New title will be mailed within 10 business days. Transaction ID: OR-TT-240205-891",
+      "sender_email": "titles@dmv.oregon.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_008",
+      "timestamp": "2024-02-08T15:40:30Z",
+      "source": "dmv.nv.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "Nevada DMV: Your motorcycle endorsement test is scheduled for 02/20/2024 at 1:30 PM at Las Vegas DMV. Study guide available at dmv.nv.gov/mc",
+      "sender_phone": "+1-775-555-0198",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_009",
+      "timestamp": "2024-02-10T10:15:45Z",
+      "source": "dmv.colorado.gov",
+      "type": "email",
+      "subject": "Emission Test Reminder",
+      "text": "Colorado DMV: Your vehicle emission test is due before 03/01/2024. Find testing locations at dmv.colorado.gov/emissions. Test fee is $25.00.",
+      "sender_email": "emissions@dmv.colorado.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_010",
+      "timestamp": "2024-02-12T12:55:20Z",
+      "source": "dmv.arizona.gov",
+      "type": "email",
+      "subject": "Driver License Renewal - Online Available",
+      "text": "Arizona DMV: Your driver license expires on 04/15/2024. Renew online at dmv.arizona.gov for $12.00 or visit any MVD office. Online renewal available for eligible drivers.",
+      "sender_email": "renewals@dmv.arizona.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_011",
+      "timestamp": "2024-02-14T09:30:15Z",
+      "source": "dmv.michigan.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "Michigan SOS: Your vehicle registration tabs have been mailed. Expect delivery in 5-7 business days. Questions? Visit michigan.gov/sos or call 1-888-SOS-MICH",
+      "sender_phone": "+1-517-555-0167",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_012",
+      "timestamp": "2024-02-16T14:20:30Z",
+      "source": "dmv.georgia.gov",
+      "type": "email",
+      "subject": "Duplicate License Request Processed",
+      "text": "Georgia DDS: Your duplicate driver license request has been processed. New license will arrive in 7-10 business days. Reference number: GA-DUP-2024-0216-445",
+      "sender_email": "duplicates@dmv.georgia.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_013",
+      "timestamp": "2024-02-18T11:45:00Z",
+      "source": "dmv.ohio.gov",
+      "type": "email",
+      "subject": "CDL Medical Certificate Expiring",
+      "text": "Ohio BMV: Your Commercial Driver License medical certificate expires on 03/20/2024. Submit updated certificate at bmv.ohio.gov or any BMV location to maintain CDL privileges.",
+      "sender_email": "cdl@bmv.ohio.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_014",
+      "timestamp": "2024-02-20T16:10:45Z",
+      "source": "dmv.virginia.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "VA DMV: Your personalized license plates are ready for pickup at Richmond DMV. Bring confirmation and ID. Office hours: Mon-Fri 8AM-5PM",
+      "sender_phone": "+1-804-555-0142",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_015",
+      "timestamp": "2024-02-22T08:35:20Z",
+      "source": "dmv.maryland.gov",
+      "type": "email",
+      "subject": "Vehicle Registration Suspended - Action Required",
+      "text": "Maryland MVA: Your vehicle registration has been suspended due to lapsed insurance. Provide current insurance proof at mva.maryland.gov or any MVA office to restore registration.",
+      "sender_email": "compliance@mva.maryland.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_016",
+      "timestamp": "2024-02-24T13:25:30Z",
+      "source": "dmv.northcarolina.gov",
+      "type": "email",
+      "subject": "Driving Record Request Complete",
+      "text": "NC DMV: Your driving record request has been processed. Download your official record using confirmation code NCR-2024-0224-667 at ncdot.gov/dmv within 30 days.",
+      "sender_email": "records@ncdot.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_017",
+      "timestamp": "2024-02-26T10:50:15Z",
+      "source": "dmv.wisconsin.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "WI DOT: Your vehicle title loan lien has been released. Updated title will be mailed within 10 business days. Questions: Call 608-266-2353",
+      "sender_phone": "+1-608-555-0189",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_018",
+      "timestamp": "2024-02-28T15:40:45Z",
+      "source": "dmv.pennsylvania.gov",
+      "type": "email",
+      "subject": "Camera Card Renewal Due",
+      "text": "PennDOT: Your Camera Card for photography services expires on 03/31/2024. Renew online at dmv.pa.gov/camera or visit any PennDOT office. Renewal fee: $5.00",
+      "sender_email": "photo@penndot.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_019",
+      "timestamp": "2024-03-01T09:15:30Z",
+      "source": "dmv.minnesota.gov",
+      "type": "email",
+      "subject": "Vehicle Recall Notice - Safety Issue",
+      "text": "Minnesota DVS: Your 2018 Ford Escape (VIN ending 8901) is subject to a safety recall. Contact your dealer immediately. More info at nhtsa.gov using recall number 24V-123",
+      "sender_email": "safety@dps.mn.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_020",
+      "timestamp": "2024-03-03T14:30:00Z",
+      "source": "dmv.missouri.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "MO DOR: Your voter registration has been updated with your new address. Confirmation mailed separately. Questions: 573-751-2301 or dor.mo.gov",
+      "sender_phone": "+1-573-555-0176",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_021",
+      "timestamp": "2024-03-05T11:20:15Z",
+      "source": "dmv.indiana.gov",
+      "type": "email",
+      "subject": "Handicap Placard Approved",
+      "text": "Indiana BMV: Your temporary handicap placard application has been approved. Placard will be mailed within 5-7 business days. Valid until 09/05/2024.",
+      "sender_email": "placards@bmv.in.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_022",
+      "timestamp": "2024-03-07T16:45:20Z",
+      "source": "dmv.tennessee.gov",
+      "type": "email",
+      "subject": "International Driving Permit Ready",
+      "text": "Tennessee DOS: Your International Driving Permit is ready for pickup at Nashville Driver Services Center. Bring photo ID and $20 fee. Valid for one year from issue date.",
+      "sender_email": "international@tn.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_023",
+      "timestamp": "2024-03-09T08:55:45Z",
+      "source": "dmv.alabama.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "AL DMV: Your knowledge test for Class A CDL is scheduled for 03/20/2024 at 10:00 AM at Montgomery DMV. Study materials at alea.gov/dps/dmv",
+      "sender_phone": "+1-334-555-0154",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_024",
+      "timestamp": "2024-03-11T12:10:30Z",
+      "source": "dmv.kentucky.gov",
+      "type": "email",
+      "subject": "Boat Registration Renewal Notice",
+      "text": "Kentucky Transportation Cabinet: Your boat registration expires on 06/30/2024. Renew online at kytc.ky.gov or visit any county clerk office. Registration fee: $18.00",
+      "sender_email": "watercraft@ky.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_025",
+      "timestamp": "2024-03-13T15:25:00Z",
+      "source": "dmv.southcarolina.gov",
+      "type": "email",
+      "subject": "SLED Background Check Complete",
+      "text": "SC DMV: Your SLED background check for CDL hazmat endorsement has been completed and approved. Endorsement will be added to your license within 5 business days.",
+      "sender_email": "hazmat@scdmv.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_026",
+      "timestamp": "2024-03-15T10:40:15Z",
+      "source": "dmv.louisiana.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "LA OMV: Your motorcycle safety course certificate has been received. Endorsement added to license. Updated license mailed within 10 days.",
+      "sender_phone": "+1-225-555-0187",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_027",
+      "timestamp": "2024-03-17T13:55:30Z",
+      "source": "dmv.arkansas.gov",
+      "type": "email",
+      "subject": "DWI Reinstatement Requirements",
+      "text": "Arkansas DMV: To reinstate your suspended license, complete DWI education program and pay $150 reinstatement fee. More info at dfa.arkansas.gov/driver-services",
+      "sender_email": "reinstatement@dfa.arkansas.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_028",
+      "timestamp": "2024-03-19T09:30:45Z",
+      "source": "dmv.mississippi.gov",
+      "type": "email",
+      "subject": "Organ Donor Registration Confirmed",
+      "text": "Mississippi DPS: Thank you for registering as an organ donor. Your donor status has been added to your driver license record. Learn more at organdonor.ms.gov",
+      "sender_email": "donor@dps.ms.gov",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_029",
+      "timestamp": "2024-03-21T14:15:20Z",
+      "source": "dmv.oklahoma.gov",
+      "type": "sms",
+      "subject": null,
+      "text": "OK DPS: Your concealed carry license renewal is due by 05/15/2024. Renew online at ok.gov/dps or visit any DPS office. Fee: $85.00",
+      "sender_phone": "+1-405-555-0163",
+      "label": "legitimate"
+    },
+    {
+      "id": "msg_030",
+      "timestamp": "2024-03-23T11:50:00Z",
+      "source": "dmv.kansas.gov",
+      "type": "email",
+      "subject": "Farm Truck Registration Available",
+      "text": "Kansas DMV: Farm truck registration is now available online. Register vehicles 16,000 lbs or less at ksrevenue.gov/dmv. Required: farm operation proof and vehicle info.",
+      "sender_email": "farm@ksrevenue.gov",
+      "label": "legitimate"
+    }
+  ]
+}

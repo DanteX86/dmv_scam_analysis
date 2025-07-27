@@ -1,0 +1,61 @@
+---
+# Campaign Analysis Framework Configuration
+
+input:
+  # Required columns and their data types
+  required_columns:
+    datetime: datetime64[ns]
+    contact_id: str
+    text: str
+    is_from_me: bool
+    
+  # Column name mappings for flexible input
+  column_mappings:
+    timestamp: datetime
+    date: datetime
+    user_id: contact_id
+    sender_id: contact_id
+    message: text
+    content: text
+    is_sent: is_from_me
+    direction: is_from_me
+    
+  # Data validation rules
+  validation_rules:
+    datetime:
+      - not_null
+      - valid_datetime
+    contact_id:
+      - not_null
+      - unique_values
+    text:
+      - not_null
+    is_from_me:
+      - boolean
+
+output:
+  # Base output directory
+  output_dir: ./analysis_output
+  
+  # Output formats for different components
+  formats:
+    detailed_report: json
+    summary_report: txt
+    statistics: json
+    visualizations: html
+    raw_data: json
+    
+  # File naming patterns
+  naming_patterns:
+    detailed_report: campaign_analysis_{campaign_name}_{timestamp}
+    summary_report: campaign_summary_{campaign_name}_{timestamp}
+    statistics: campaign_stats_{campaign_name}_{timestamp}
+    visualizations: campaign_viz_{campaign_name}_{timestamp}
+    raw_data: campaign_data_{campaign_name}_{timestamp}
+    
+  # Output directory structure
+  directory_structure:
+    reports: "{output_dir}/reports"
+    visualizations: "{output_dir}/visualizations"
+    statistics: "{output_dir}/statistics"
+    raw_data: "{output_dir}/raw_data"

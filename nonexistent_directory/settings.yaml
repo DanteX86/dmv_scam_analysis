@@ -1,0 +1,26 @@
+analysis:
+  behavioral:
+    enabled: true
+    time_window_hours: 24
+  ml:
+    auto_train: false
+    enabled: true
+    model_path: ./models/ml/
+  nlp:
+    enabled: true
+    model_path: ./models/nlp/
+  output_dir: ./analysis_output
+environment:
+  debug: true
+  encoding: utf-8
+  name: development
+  test_mode: false
+  timezone: UTC
+logging:
+  backup_count: 5
+  file: ./logs/sentinel.log
+  level: INFO
+  max_size: 10MB
+sentinel_analyzer:
+  name: SentinelAnalyzer
+  version: '2.0'

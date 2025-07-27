@@ -1,0 +1,138 @@
+---
+# Development Environment Configuration
+
+# Override main settings for development environment
+environment:
+  name: development
+  debug: true
+  test_mode: true
+
+# Development Database
+storage:
+  database:
+    type: sqlite
+    path: data/development.db
+    max_connections: 2
+    timeout: 60
+
+# Local File Paths
+paths:
+  data: data/
+  logs: logs/
+  temp: /tmp/dmv_analysis/
+  models: models/development/
+
+# Development Server
+server:
+  host: localhost
+  port: 5000
+  reload: true
+  workers: 2
+
+# Debug Settings
+debug:
+  verbose_logging: true
+  profile_code: true
+  break_on_error: true
+  mock_services: true
+
+# Test Data
+test_data:
+  sample_size: 1000
+  seed: 42
+  generate_fake: true
+
+# Development Tools
+tools:
+  hot_reload: true
+  debugger: pdb
+  profiler: cProfile
+  memory_profiler: enabled
+
+# Security (Development)
+security:
+  allow_cors: true
+  disable_auth: true
+  mock_credentials: true
+  encryption:
+    enabled: false
+    use_dummy_keys: true
+
+# Monitoring (Development)
+monitoring:
+  level: debug
+  console_output: true
+  profile_endpoints: true
+  log_requests: true
+
+# Cache Settings
+cache:
+  enabled: true
+  type: local
+  max_size: 100MB
+  ttl: 300
+
+# API Documentation
+api_docs:
+  enabled: true
+  url: /docs
+  swagger_ui: true
+  redoc: true
+
+# Error Handling
+errors:
+  show_details: true
+  collect_locals: true
+  debug_mode: true
+  traceback: true
+
+# Development Services
+services:
+  mocking:
+    enabled: true
+    latency: 100ms
+  rate_limiting:
+    enabled: false
+  authentication:
+    bypass: true
+
+# Notifications
+notifications:
+  enabled: true
+  console: true
+  file: true
+  email: false
+
+# Testing
+testing:
+  auto_test: true
+  coverage: true
+  parallel: true
+  fail_fast: true
+  verbosity: 2
+
+# Development Database
+database:
+  migrations:
+    auto_migrate: true
+    backup_before: true
+  seeding:
+    enabled: true
+    samples: 100
+  logging:
+    queries: true
+    slow_threshold: 100ms
+
+# Asset Pipeline
+assets:
+  compile: false
+  minify: false
+  source_maps: true
+  watch: true
+
+# Feature Flags
+features:
+  experimental: true
+  beta_features: true
+  debug_tools: true
+  mock_services: true

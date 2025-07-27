@@ -1,0 +1,50 @@
+[
+    {
+        "text": "URGENT: Pay now at dmv-verify.tk",
+        "source": "sms",
+        "timestamp": "2025-06-27T00:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T00:00:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "URGENT: Pay now at dmv-verify.tk",
+        "source": "sms",
+        "timestamp": "2025-06-27T00:01:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T00:01:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "URGENT: Pay now at dmv-verify.tk",
+        "source": "sms",
+        "timestamp": "2025-06-27T00:02:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T00:02:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Your registration renewal notice",
+        "source": "email",
+        "timestamp": "2025-06-27T09:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T09:00:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Your registration renewal notice",
+        "source": "email",
+        "timestamp": "2025-06-27T09:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T09:30:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Your registration renewal notice",
+        "source": "email",
+        "timestamp": "2025-06-27T10:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T10:00:00Z",
+        "is_scam": 0
+    }
+]

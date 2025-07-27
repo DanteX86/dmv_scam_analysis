@@ -1,0 +1,49 @@
+---
+# Data Preprocessing Configuration
+
+# Text Cleaning Settings
+text_cleaning:
+  lowercase: true
+  remove_special_chars: true
+  normalize_whitespace: true
+  min_length: 10
+  max_length: 10000
+
+# PII Detection Patterns
+pii_patterns:
+  phone_numbers:
+    - '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+  email_addresses:
+    - '\S+@\S+\.\S+'
+  ssn:
+    - '\b\d{3}[-]?\d{2}[-]?\d{4}\b'
+  urls:
+    - 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+
+# Feature Extraction
+feature_extraction:
+  text_features:
+    - length
+    - word_count
+    - has_url
+    - has_phone
+    - has_email
+    - has_money
+    - urgency_score
+  
+  urgency_words:
+    - urgent
+    - immediately
+    - asap
+    - now
+    - emergency
+    - deadline
+    - expires
+    - warning
+
+# Data Export Settings
+export:
+  save_interim: true
+  save_processed: true
+  file_format: csv
+  compression: none  # Options: none, gzip, zip

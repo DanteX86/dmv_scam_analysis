@@ -1,0 +1,175 @@
+{
+  "analysis_metadata": {
+    "contact_analyzed": "comprehensive_test",
+    "analysis_timestamp": "2025-06-27T11:21:27.600236",
+    "analysis_type": "behavioral_patterns"
+  },
+  "temporal_patterns": {
+    "hourly_distribution": {
+      "distribution": {
+        "10": 4,
+        "14": 1,
+        "2": 5,
+        "23": 3,
+        "3": 2,
+        "9": 5
+      },
+      "peak_hours": [
+        "2",
+        "9"
+      ],
+      "anomalous_hours": [],
+      "statistics": {
+        "mean_messages_per_hour": 3.3333333333333335,
+        "std_deviation": 1.632993161855452,
+        "most_active_hour": "2",
+        "least_active_hour": "14"
+      }
+    },
+    "weekly_distribution": {
+      "weekday_messages": 11,
+      "weekend_messages": 9,
+      "daily_distribution": {
+        "0": 1,
+        "4": 10,
+        "5": 5,
+        "6": 4
+      },
+      "weekend_anomaly_score": 0.5750000000000002,
+      "weekend_ratio": 0.45
+    },
+    "burst_detection": {
+      "burst_events": [
+        {
+          "timestamp": "2025-06-27T09:00:00+00:00",
+          "message_count": 3,
+          "threshold": 2.949489742783178,
+          "severity": "LOW"
+        },
+        {
+          "timestamp": "2025-06-28T03:00:00+00:00",
+          "message_count": 2,
+          "threshold": 1.9663264951887844,
+          "severity": "LOW"
+        },
+        {
+          "timestamp": "2025-06-28T09:00:00+00:00",
+          "message_count": 1,
+          "threshold": 0.9831632475943911,
+          "severity": "LOW"
+        },
+        {
+          "timestamp": "2025-06-29T09:00:00+00:00",
+          "message_count": 1,
+          "threshold": 0.9831632475943913,
+          "severity": "LOW"
+        },
+        {
+          "timestamp": "2025-06-29T23:00:00+00:00",
+          "message_count": 3,
+          "threshold": 2.949489742783178,
+          "severity": "LOW"
+        },
+        {
+          "timestamp": "2025-06-30T14:00:00+00:00",
+          "message_count": 1,
+          "threshold": 0.9831632475943914,
+          "severity": "LOW"
+        }
+      ],
+      "total_bursts": 6,
+      "max_burst_intensity": 3
+    },
+    "anomalous_timing": {
+      "anomalies": [
+        {
+          "message_timestamp": "2025-06-28T03:15:00+00:00",
+          "time_delta_seconds": 61140.0,
+          "anomaly_type": "unusual_interval"
+        },
+        {
+          "message_timestamp": "2025-06-29T09:30:00+00:00",
+          "time_delta_seconds": 84540.0,
+          "anomaly_type": "unusual_interval"
+        }
+      ],
+      "anomaly_score": 0.10526315789473684,
+      "statistics": {
+        "mean_interval_seconds": 15821.052631578947,
+        "std_interval_seconds": 26276.95608423151,
+        "median_interval_seconds": 180.0
+      }
+    },
+    "response_patterns": {
+      "response_times": [
+        {
+          "sent_timestamp": "2025-06-27T02:35:00+00:00",
+          "received_timestamp": "2025-06-27T02:36:00+00:00",
+          "response_time_seconds": 60.0
+        },
+        {
+          "sent_timestamp": "2025-06-27T10:15:00+00:00",
+          "received_timestamp": "2025-06-27T10:16:00+00:00",
+          "response_time_seconds": 60.0
+        },
+        {
+          "sent_timestamp": "2025-06-28T10:00:00+00:00",
+          "received_timestamp": "2025-06-28T10:01:00+00:00",
+          "response_time_seconds": 60.0
+        }
+      ],
+      "statistics": {
+        "average_response_time_seconds": 60.0,
+        "median_response_time_seconds": 60.0,
+        "min_response_time_seconds": 60.0,
+        "max_response_time_seconds": 60.0,
+        "total_exchanges": 3
+      },
+      "rapid_responses": [],
+      "delayed_responses": []
+    }
+  },
+  "automation_indicators": {
+    "timing_regularity": {
+      "regularity_score": 0.37581475025057764,
+      "coefficient_of_variation": 1.6608854477724508,
+      "interval_diversity": 0.5789473684210527,
+      "mean_interval_seconds": 15821.052631578947,
+      "analysis": "LOW_AUTOMATION_LIKELIHOOD"
+    },
+    "content_similarity": {
+      "similarity_score": 0.2432096934755303,
+      "duplicate_ratio": 0.0,
+      "unique_message_count": 20,
+      "total_message_count": 20,
+      "analysis": "LOW_TEMPLATE_USAGE"
+    },
+    "volume_consistency": {
+      "consistency_score": 0.571973915102754,
+      "daily_volume_cv": 0.7483314773547882,
+      "mean_daily_messages": 5.0,
+      "std_daily_messages": 3.7416573867739413,
+      "analysis": "VARIABLE_VOLUME_PATTERN"
+    },
+    "response_predictability": {
+      "predictability_score": 0,
+      "response_ratio": 5.666666666666667,
+      "analysis": "VARIABLE_RESPONSE_PATTERN"
+    },
+    "overall_automation_score": 0.29774958970721543
+  },
+  "risk_assessment": {
+    "behavioral_risk_score": 20,
+    "risk_factors": [
+      "High frequency message bursts detected"
+    ],
+    "risk_level": "LOW"
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "recommendation": "Monitor for coordinated campaign activity",
+      "rationale": "Message burst patterns may indicate coordinated threat activity"
+    }
+  ]
+}

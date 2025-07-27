@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# DMV Scam Analysis Runfile
+
+## Run a quick threat analysis on a sample scam message
+quick-check:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main quick-check "URGENT: Your DMV license will be suspended! Pay the fine immediately or face arrest. Click here now: http://malicious-site.com/pay"
+
+## Show CLI help
+help:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main --help
+
+## Show model information
+model-info:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main model-info
+
+## Run the test suite
+test:
+    python -m pytest tests/ -v
+
+## Start the FastAPI server
+api:
+    python api/app.py
+
+## Install dependencies
+install:
+    pip install -r requirements.txt
+
+## Set up the project in development mode
+setup:
+    pip install -e .
+
+## Run a custom quick check with a different message
+check:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main quick-check "$1"
+
+## Analyze messages from a file
+analyze:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main analyze "$1"
+
+## Extract IOCs from messages
+extract-iocs:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main extract-iocs "$1"
+
+## Generate a report for a date range
+generate-report:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main generate-report "$1" "$2"
+
+## Run with debug mode
+debug:
+    PYTHONPATH=src python -m dmv_scam_analysis.cli.main --debug quick-check "Test message for debugging"
+
+## Clean up generated files
+clean:
+    rm -rf __pycache__ .pytest_cache *.pyc
+    rm -rf analysis_output/
+    rm -rf config/
+    find . -name "*.pyc" -delete
+    find . -name "__pycache__" -type d -exec rm -rf {} +
+
+## Show project structure
+structure:
+    tree -I '__pycache__|*.pyc|.git|venv|.pytest_cache'
+
+## Run linting
+lint:
+    python -m flake8 src/ tests/
+
+## Run formatting
+format:
+    python -m black src/ tests/
+
+## Show version info
+project-version:
+    PYTHONPATH=src python -c "print('DMV Scam Analysis v1.0.0')"

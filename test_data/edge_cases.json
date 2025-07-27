@@ -1,0 +1,204 @@
+{
+  "messages": [
+    {
+      "id": "msg_301",
+      "timestamp": "2024-01-01T00:00:00Z",
+      "source": "dmv.mockstate.gov",
+      "type": "email",
+      "subject": "",
+      "text": "",
+      "sender_email": "",
+      "label": "unknown"
+    },
+    {
+      "id": "msg_302",
+      "timestamp": "2024-01-01T12:00:00Z",
+      "source": "unusual-source.com",
+      "type": "sms",
+      "subject": null,
+      "text": "Unusually long message content... (repeated content example repeated 500 times)",
+      "sender_phone": "+1-123-456-7890",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_303",
+      "timestamp": "2024-02-29T15:00:00Z",
+      "source": "dmv.invalid.gov",
+      "type": "email",
+      "subject": "Leap Year Error",
+      "text": "Please rectify your documents due to a date error on 02/29/2024.",
+      "sender_email": "alerts@dmv.invalid.gov",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_304",
+      "timestamp": "2024-03-13T13:13:13Z",
+      "source": "numbers-r-us.org",
+      "type": "sms",
+      "subject": null,
+      "text": "All messages arriving at exactly 13:13:13 should be reviewed for authenticity.",
+      "sender_phone": "+1-313-131-3131",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_305",
+      "timestamp": "2024-04-01T10:30:00Z",
+      "source": "aprilfool.gov",
+      "type": "email",
+      "subject": "April Fool's Notice",
+      "text": "This is not a drill - or is it? Happy April Fool's Day!",
+      "sender_email": "prank@aprilfool.gov",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_306",
+      "timestamp": "2024-05-05T05:05:05Z",
+      "source": "consistency-checker.com",
+      "type": "sms",
+      "subject": null,
+      "text": "Message received at 05:05:05 on the 5th day, potential timing manipulation detected.",
+      "sender_phone": "+1-505-050-5050",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_307",
+      "timestamp": "2024-06-30T12:30:00Z",
+      "source": "dmv.exotic.gov",
+      "type": "email",
+      "subject": "Exotic Character Alert",
+      "text": "Special characters detected:｡｡◕‿◕｡｡.",
+      "sender_email": "unique@dmv.exotic.gov",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_308",
+      "timestamp": "2024-07-14T07:14:00Z",
+      "source": "206.com",
+      "type": "sms",
+      "subject": null,
+      "text": "Unusually short message.",
+      "sender_phone": "+1-206-130",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_309",
+      "timestamp": "2024-08-15T14:15:00Z",
+      "source": "dmv.multi-source.com",
+      "type": "email",
+      "subject": "Multiple Source Attempt",
+      "text": "This message claims to be from multiple sources.",
+      "sender_email": "multiple@dmv.multi-source.com",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_310",
+      "timestamp": "2024-09-21T09:21:00Z",
+      "source": "dmv.nonstandard.org",
+      "type": "sms",
+      "subject": null,
+      "text": "Nonstandard wording detected with randomness.",
+      "sender_phone": "+1-921-091-0210",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_311",
+      "timestamp": "2024-10-15T08:00:00Z",
+      "source": "",
+      "type": "email",
+      "subject": "",
+      "text": "Completely empty fields, testing system's ability to handle null sources.",
+      "sender_email": "",
+      "label": "unknown"
+    },
+    {
+      "id": "msg_312",
+      "timestamp": "2024-11-11T11:11:11Z",
+      "source": "palindrome-time.com",
+      "type": "sms",
+      "subject": null,
+      "text": "Message sent at palindromic time 11:11:11.",
+      "sender_phone": "+1-111-111-1111",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_313",
+      "timestamp": "2024-12-31T23:59:59Z",
+      "source": "dmv.exotictiming.gov",
+      "type": "email",
+      "subject": "Year-End Timing",
+      "text": "Timing precision at year end noted.",
+      "sender_email": "precision@dmv.exotictiming.gov",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_314",
+      "timestamp": "2024-02-29T11:59:59Z",
+      "source": "leap-day.org",
+      "type": "sms",
+      "subject": null,
+      "text": "Leap day reflections and notes.",
+      "sender_phone": "+1-229-229-0229",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_315",
+      "timestamp": "2024-02-02T02:22:22Z",
+      "source": "nz-timezones.net",
+      "type": "email",
+      "subject": "Timezone Check",
+      "text": "Verified at New Zealand timezones for 02/02/2024.",
+      "sender_email": "timezone@nz-timezones.net",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_316",
+      "timestamp": "2024-12-25T00:00:01Z",
+      "source": "christmas-clock.org",
+      "type": "sms",
+      "subject": null,
+      "text": "Celebration started at midnight on Christmas.",
+      "sender_phone": "+1-122-525-2525",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_317",
+      "timestamp": "2024-03-03T03:03:03Z",
+      "source": "tripleclock.com",
+      "type": "email",
+      "subject": "Triple 03's Time",
+      "text": "Rare timing noted at triple 03's.",
+      "sender_email": "triple@tripleclock.com",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_318",
+      "timestamp": "2024-11-20T11:11:11Z",
+      "source": "dmv.binary-timing.net",
+      "type": "email",
+      "subject": "Binary Timing Alert",
+      "text": "Binary time observed: 11:11:11.",
+      "sender_email": "binary@dmv.binary-timing.net",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_319",
+      "timestamp": "2024-04-04T04:04:04Z",
+      "source": "quad4s.com",
+      "type": "sms",
+      "subject": null,
+      "text": "Quadruple 4’s timing check.",
+      "sender_phone": "+1-404-404-0404",
+      "label": "anomaly"
+    },
+    {
+      "id": "msg_320",
+      "timestamp": "2024-06-06T06:06:06Z",
+      "source": "jmptimewarp.com",
+      "type": "email",
+      "subject": "Time Warp Evidence",
+      "text": "Possible time warp detected at 06:06:06.",
+      "sender_email": "timewarp@jmptimewarp.com",
+      "label": "anomaly"
+    }
+  ]
+}

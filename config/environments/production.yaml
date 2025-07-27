@@ -1,0 +1,8 @@
+analysis:
+  output_dir: /var/log/sentinel/analysis
+environment:
+  debug: false
+  name: production
+  test_mode: false
+logging:
+  level: INFO

@@ -1,0 +1,28 @@
+{
+    "messages": [
+        {
+            "datetime": "2025-01-01T10:00:00",
+            "contact_id": "user123",
+            "text": "Hello, this is a test message",
+            "is_from_me": true
+        },
+        {
+            "datetime": "2025-01-01T10:05:00",
+            "contact_id": "user123",
+            "text": "This is an automated response",
+            "is_from_me": false
+        },
+        {
+            "datetime": "2025-01-01T10:10:00",
+            "contact_id": "user123",
+            "text": "Please click here to verify",
+            "is_from_me": false
+        },
+        {
+            "datetime": "2025-01-01T10:15:00",
+            "contact_id": "user456",
+            "text": "Different user message",
+            "is_from_me": true
+        }
+    ]
+}

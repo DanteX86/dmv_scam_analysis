@@ -1,0 +1,79 @@
+{
+  "analysis_metadata": {
+    "contact_analyzed": "test_contact",
+    "analysis_timestamp": "2025-07-27T01:03:25.277791",
+    "analysis_type": "machine_learning_classification"
+  },
+  "ml_analysis": {
+    "predictions": {
+      "predictions": [
+        "government_impersonation",
+        "scam",
+        "social_engineering",
+        "scam",
+        "government_impersonation"
+      ],
+      "prediction_codes": [
+        4,
+        2,
+        3,
+        2,
+        4
+      ],
+      "confidence_scores": [
+        [
+          0.16,
+          0.17,
+          0.67
+        ],
+        [
+          0.44,
+          0.32,
+          0.24
+        ],
+        [
+          0.19,
+          0.72,
+          0.09
+        ],
+        [
+          0.66,
+          0.19,
+          0.15
+        ],
+        [
+          0.26,
+          0.28,
+          0.46
+        ]
+      ],
+      "feature_count": 25,
+      "message_count": 5,
+      "max_threat_probability": 0.72,
+      "threat_risk_level": "HIGH"
+    },
+    "anomaly_detection": {
+      "isolation_forest": {
+        "anomaly_detected": false,
+        "anomaly_score": 0.0,
+        "is_anomaly": false
+      },
+      "statistical_outliers": {
+        "outlier_features": [],
+        "outlier_count": 0
+      },
+      "overall_assessment": {
+        "anomaly_likelihood": 0,
+        "primary_concerns": []
+      }
+    }
+  },
+  "risk_assessment": {
+    "ml_risk_score": 30,
+    "risk_factors": [
+      "Threat classification detected: max_threat_probability, predictions, prediction_codes, threat_risk_level, message_count, feature_count, confidence_scores"
+    ],
+    "risk_level": "MEDIUM"
+  },
+  "recommendations": []
+}

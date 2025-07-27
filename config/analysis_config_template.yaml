@@ -1,0 +1,125 @@
+# Analysis Tools Configuration Template
+# DMV Scam Analysis Project
+
+# Core Settings
+python:
+  version: "3.9"
+  requirements_file: "requirements.txt"
+  virtual_env: "venv"
+
+# Database Configuration
+database:
+  type: "sqlite"
+  path: "data/chat.db"
+  backup_path: "data/backup/"
+  retention_days: 30
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/analysis.log"
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# Analysis Settings
+sentiment_analysis:
+  threshold: 0.5
+  model: "pre-trained"
+  language: "en"
+  batch_size: 100
+
+ioc_validation:
+  server: "https://ioc-validation.example.com"
+  timeout: 30
+  retry_attempts: 3
+  cache_duration: 3600
+
+visualization:
+  dpi: 300
+  figure_size: [12, 8]
+  output_format: "png"
+  interactive: true
+  theme: "corporate"
+  color_scheme:
+    primary: "#1f77b4"
+    secondary: "#ff7f0e"
+    accent: "#2ca02c"
+    alert: "#d62728"
+
+risk_assessment:
+  levels:
+    low: [0, 30]
+    medium: [31, 70]
+    high: [71, 100]
+  weights:
+    government_impersonation: 50
+    financial_threats: 30
+    infrastructure_compromise: 20
+  threshold:
+    alert: 75
+    warning: 50
+    info: 25
+
+# Integration Settings
+api:
+  base_url: "https://api.example.com"
+  version: "v1"
+  timeout: 30
+  rate_limit: 100
+
+automation:
+  schedule:
+    analysis: "0 3 * * *"
+    backup: "0 4 * * *"
+    report: "0 5 * * *"
+  retry:
+    max_attempts: 3
+    delay: 300
+
+deployment:
+  environment: "production"
+  container:
+    image: "python:3.9-slim"
+    memory: "2G"
+    cpu: "1"
+  scaling:
+    min_instances: 1
+    max_instances: 3
+
+# Security Settings
+security:
+  ssl_verify: true
+  api_key_env: "ANALYSIS_API_KEY"
+  secret_key_env: "ANALYSIS_SECRET_KEY"
+  allowed_ips:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+
+# Performance Settings
+performance:
+  batch_size: 1000
+  cache_enabled: true
+  cache_ttl: 3600
+  thread_pool: 4
+  timeout: 300
+
+# Monitoring
+monitoring:
+  enabled: true
+  metrics:
+    - cpu_usage
+    - memory_usage
+    - processing_time
+    - error_rate
+  alerts:
+    email: "alerts@example.com"
+    slack_webhook: "https://hooks.slack.com/services/xxx/yyy/zzz"
+
+# Development Settings
+development:
+  debug: false
+  test_data: "data/test/"
+  mock_services: false
+  profiling: false

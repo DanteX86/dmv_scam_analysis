@@ -1,0 +1,350 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "environment",
+    "application",
+    "storage",
+    "analysis"
+  ],
+  "properties": {
+    "environment": {
+      "type": "object",
+      "required": ["name", "debug"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["development", "staging", "production"]
+        },
+        "debug": {
+          "type": "boolean"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "encoding": {
+          "type": "string"
+        }
+      }
+    },
+    "application": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "maintainer": {
+          "type": "string",
+          "format": "email"
+        },
+        "max_workers": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "batch_size": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "required": ["database", "files"],
+      "properties": {
+        "database": {
+          "type": "object",
+          "required": ["type", "path"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["sqlite", "postgresql", "mysql"]
+            },
+            "path": {
+              "type": "string"
+            },
+            "backup_path": {
+              "type": "string"
+            },
+            "max_connections": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "files": {
+          "type": "object",
+          "required": ["raw_data", "processed_data"],
+          "properties": {
+            "raw_data": {
+              "type": "string"
+            },
+            "processed_data": {
+              "type": "string"
+            },
+            "interim_data": {
+              "type": "string"
+            },
+            "external_data": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["ml_models", "nlp", "features"],
+      "properties": {
+        "ml_models": {
+          "type": "object",
+          "required": ["classifier"],
+          "properties": {
+            "classifier": {
+              "type": "object",
+              "required": ["model_path", "threshold"],
+              "properties": {
+                "model_path": {
+                  "type": "string"
+                },
+                "threshold": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "batch_size": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "embeddings": {
+              "type": "object",
+              "properties": {
+                "model_path": {
+                  "type": "string"
+                },
+                "dimension": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        },
+        "nlp": {
+          "type": "object",
+          "required": ["language", "models"],
+          "properties": {
+            "language": {
+              "type": "string"
+            },
+            "models": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "max_length": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "batch_size": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "features": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "patterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sentiment": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "model": {
+                  "type": "string"
+                }
+              }
+            },
+            "entities": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "visualization": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string"
+        },
+        "colormap": {
+          "type": "string"
+        },
+        "dpi": {
+          "type": "integer",
+          "minimum": 72
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interactive": {
+          "type": "boolean"
+        },
+        "dimensions": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "pii_patterns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["pattern", "type"],
+            "properties": {
+              "pattern": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "data_encryption": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "algorithm": {
+              "type": "string"
+            },
+            "key_file": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "interval": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "exporters": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "port": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "host": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "alerts": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "channels": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type"],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "webhook": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

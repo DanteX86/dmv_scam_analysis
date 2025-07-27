@@ -1,0 +1,58 @@
+[
+    {
+        "text": "URGENT: Your driver's license has been suspended. Click http://dmv-license-verify.tk to pay $299 reinstatement fee within 24 hours.",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:30:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:30:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Your annual vehicle registration is due for renewal. Visit dmv.gov/renew or call 1-800-DMV-INFO.",
+        "source": "email",
+        "timestamp": "2025-06-27T14:35:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:35:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "DMV Notice: License expiration detected. Renew now at https://gov-dmv-renewal.ml. Immediate action required to avoid suspension.",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:40:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:40:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Hi, I received your message about my license. Is this legitimate?",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:42:00Z",
+        "is_from_me": 1,
+        "readable_date": "2025-06-27T14:42:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "Yes, this is DMV. To avoid suspension, please make payment at http://dmv-verify-pay.ga/license",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:43:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:43:00Z",
+        "is_scam": 1
+    },
+    {
+        "text": "Reminder: Your vehicle registration expires next month. Renew online at www.dmv.gov or visit your local DMV office.",
+        "source": "email",
+        "timestamp": "2025-06-27T14:45:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:45:00Z",
+        "is_scam": 0
+    },
+    {
+        "text": "FINAL WARNING: DMV records show unpaid violations. Pay $450 at dmv-pay-center.ga now to avoid license suspension and legal action.",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:50:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:50:00Z",
+        "is_scam": 1
+    }
+]

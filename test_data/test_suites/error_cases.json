@@ -1,0 +1,30 @@
+[
+    {
+        "text": "",
+        "source": "sms",
+        "timestamp": "2025-06-27T14:00:00Z",
+        "is_from_me": 0,
+        "readable_date": "2025-06-27T14:00:00Z"
+    },
+    {
+        "text": "Test message",
+        "source": "sms",
+        "timestamp": "invalid_timestamp",
+        "is_from_me": 0,
+        "readable_date": "invalid_date"
+    },
+    {
+        "text": "Test message",
+        "source": "invalid_source",
+        "timestamp": "2025-06-27T14:00:00Z",
+        "is_from_me": "invalid_bool",
+        "readable_date": "2025-06-27T14:00:00Z"
+    },
+    {
+        "text": null,
+        "source": "sms",
+        "timestamp": null,
+        "is_from_me": null,
+        "readable_date": null
+    }
+]

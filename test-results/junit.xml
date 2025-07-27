@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="1.947" timestamp="2025-07-20T22:49:34.235909-04:00" hostname="MacBook-Pro-M1-MAX-9.local"><testcase classname="tests.functional.test_analysis_workflow" name="test_complete_analysis_workflow" time="0.033"><failure message="AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'">tests/functional/test_analysis_workflow.py:62: in test_complete_analysis_workflow
+    messages = analysis_components["extractor"].extract_all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'
+        analysis_components = {'analyzer': &lt;dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer object at 0x12c142cf0&gt;,
+ 'extractor': &lt;dmv_scam_analysis.core.extractor.iMessageAnalyzer object at 0x12c142ba0&gt;,
+ 'visualizer': &lt;dmv_scam_analysis.visualization.threat_visualizer.ThreatVisualizationSuite object at 0x12c142e40&gt;}
+        test_data_dir = PosixPath('/private/var/folders/1_/z8sq_fgs787g67kgsyhj9ytm0000gn/T/pytest-of-romulusaugustus/pytest-1/test_complete_analysis_workflo0/test_data')</failure></testcase><testcase classname="tests.functional.test_analysis_workflow" name="test_incremental_analysis" time="0.002"><failure message="AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'">tests/functional/test_analysis_workflow.py:84: in test_incremental_analysis
+    initial_messages = analysis_components["extractor"].extract_all()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'
+        analysis_components = {'analyzer': &lt;dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer object at 0x12c1d4b90&gt;,
+ 'extractor': &lt;dmv_scam_analysis.core.extractor.iMessageAnalyzer object at 0x12c1d4a50&gt;,
+ 'visualizer': &lt;dmv_scam_analysis.visualization.threat_visualizer.ThreatVisualizationSuite object at 0x12c1d4cd0&gt;}
+        test_data_dir = PosixPath('/private/var/folders/1_/z8sq_fgs787g67kgsyhj9ytm0000gn/T/pytest-of-romulusaugustus/pytest-1/test_incremental_analysis0/test_data')</failure></testcase><testcase classname="tests.functional.test_analysis_workflow" name="test_error_handling" time="0.011"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tests/functional/test_analysis_workflow.py:113: in test_error_handling
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+        analysis_components = {'analyzer': &lt;dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer object at 0x12c1d5bd0&gt;,
+ 'extractor': &lt;dmv_scam_analysis.core.extractor.iMessageAnalyzer object at 0x12c1d5a90&gt;,
+ 'visualizer': &lt;dmv_scam_analysis.visualization.threat_visualizer.ThreatVisualizationSuite object at 0x12c1d5d10&gt;}
+        invalid_messages = [{'id': 'invalid1', 'text': ''}]</failure></testcase><testcase classname="tests.functional.test_analysis_workflow" name="test_analysis_output_validation" time="0.002"><failure message="AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'">tests/functional/test_analysis_workflow.py:129: in test_analysis_output_validation
+    messages = analysis_components["extractor"].extract_all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'iMessageAnalyzer' object has no attribute 'extract_all'
+        analysis_components = {'analyzer': &lt;dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer object at 0x12c285e00&gt;,
+ 'extractor': &lt;dmv_scam_analysis.core.extractor.iMessageAnalyzer object at 0x12c1d4b90&gt;,
+ 'visualizer': &lt;dmv_scam_analysis.visualization.threat_visualizer.ThreatVisualizationSuite object at 0x12c285f30&gt;}
+        test_data_dir = PosixPath('/private/var/folders/1_/z8sq_fgs787g67kgsyhj9ytm0000gn/T/pytest-of-romulusaugustus/pytest-1/test_analysis_output_validatio0/test_data')</failure></testcase></testsuite></testsuites>

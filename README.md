@@ -1,8 +1,14 @@
-# DMV Scam Analysis: SMS-Based Government Impersonation Campaign
+# 🕵️ Messaging Campaign Analysis Framework
 
-## 🔍 Overview
+A comprehensive framework for analyzing messaging-based scam campaigns, with advanced behavioral pattern detection and automation indicators.
 
-This repository contains a comprehensive malware and threat intelligence analysis of a sophisticated SMS-based scam campaign targeting Pennsylvania residents through Department of Motor Vehicles (DMV) impersonation. The analysis demonstrates digital forensics methodologies, threat actor profiling, and intelligence reporting techniques.
+## 🎯 Overview
+
+This framework provides tools and methodologies for analyzing messaging-based scam campaigns, with capabilities for:
+- Temporal pattern analysis
+- Automation detection
+- Behavioral risk assessment
+- Campaign-wide analytics
 
 ## 📋 Executive Summary
 
@@ -110,7 +116,50 @@ dmv_scam_analysis/
 - **Executive Briefings**: High-level summary preparation
 - **Multi-Audience Reporting**: LE, technical, and public formats
 
-## 🎯 Impact & Outcomes
+## 🛠️ Scam Analysis Toolkit
+
+This section contains tools and scripts for analyzing DMV-related scams and fraudulent activities.
+
+## Installed Tools
+
+### Phone Number Analysis
+- **PhoneInfoGA** - Phone number investigation tool
+  - Usage: `phoneinfoga scan -n "+27618264263"`
+
+### Email Analysis
+- **Holehe** - Email account finder across platforms
+  - Usage: `holehe suspicious@example.com`
+
+### Username Investigation
+- **Sherlock** - Username lookup across social networks
+  - Usage: `sherlock username123`
+
+### Domain/URL Analysis
+- **Whois** - Domain registration lookup
+  - Usage: `/opt/homebrew/opt/whois/bin/whois domain.com`
+- **Nmap** - Network scanning tool
+  - Usage: `nmap -F target.com`
+
+### File/Evidence Analysis
+- **ExifTool** - Metadata extraction from files
+  - Usage: `exiftool suspicious_document.pdf`
+
+### Utility Tools
+- **Retry** - Retry failed commands
+  - Usage: `retry -t 3 curl https://unreliable-site.com`
+
+## Custom Scripts
+
+### Quick Lookup Script
+- **quick_lookup.sh** - Analyze phone, email, or username
+
+### URL/Domain Analysis Script
+- **url_analysis.sh** - Analyze domain for scam indicators
+
+### Evidence Analysis Script
+- **evidence_analysis.sh** - Analyze file metadata and type
+
+## 🎯 Impact \u0026 Outcomes
 
 ### Law Enforcement Value
 - Actionable intelligence for criminal investigation

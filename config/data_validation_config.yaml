@@ -1,0 +1,64 @@
+---
+# Data Validation Configuration
+
+# Raw Messages Dataset
+raw_messages:
+  required_columns:
+    - message_id
+    - timestamp
+    - message
+    - source
+    - metadata
+
+  column_types:
+    message_id: string
+    timestamp: datetime64[ns]
+    message: string
+    source: string
+    metadata: string
+
+  value_ranges:
+    timestamp:
+      min: "2020-01-01"
+      max: "2025-12-31"
+
+# Processed Messages Dataset
+processed_messages:
+  required_columns:
+    - message_id
+    - timestamp
+    - message
+    - cleaned_text
+    - processed_text
+    - length
+    - word_count
+    - has_url
+    - has_phone
+    - has_email
+    - has_money
+    - urgency_score
+
+  column_types:
+    message_id: string
+    timestamp: datetime64[ns]
+    message: string
+    cleaned_text: string
+    processed_text: string
+    length: int64
+    word_count: int64
+    has_url: int64
+    has_phone: int64
+    has_email: int64
+    has_money: int64
+    urgency_score: int64
+
+  value_ranges:
+    length:
+      min: 1
+      max: 10000
+    word_count:
+      min: 1
+      max: 2000
+    urgency_score:
+      min: 0
+      max: 5

@@ -1,0 +1,8 @@
+text,source,timestamp,is_from_me,readable_date,is_scam
+"URGENT: Your driver's license has been suspended. Click http://dmv-license-verify.tk to pay $299 reinstatement fee within 24 hours.",sms,2025-06-27T14:30:00Z,0,2025-06-27T14:30:00Z,1
+"Your annual vehicle registration is due for renewal. Visit dmv.gov/renew or call 1-800-DMV-INFO.",email,2025-06-27T14:35:00Z,0,2025-06-27T14:35:00Z,0
+"DMV Notice: License expiration detected. Renew now at https://gov-dmv-renewal.ml. Immediate action required to avoid suspension.",sms,2025-06-27T14:40:00Z,0,2025-06-27T14:40:00Z,1
+"Hi, I received your message about my license. Is this legitimate?",sms,2025-06-27T14:42:00Z,1,2025-06-27T14:42:00Z,0
+"Yes, this is DMV. To avoid suspension, please make payment at http://dmv-verify-pay.ga/license",sms,2025-06-27T14:43:00Z,0,2025-06-27T14:43:00Z,1
+"Reminder: Your vehicle registration expires next month. Renew online at www.dmv.gov or visit your local DMV office.",email,2025-06-27T14:45:00Z,0,2025-06-27T14:45:00Z,0
+"FINAL WARNING: DMV records show unpaid violations. Pay $450 at dmv-pay-center.ga now to avoid license suspension and legal action.",sms,2025-06-27T14:50:00Z,0,2025-06-27T14:50:00Z,1

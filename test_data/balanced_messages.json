@@ -1,0 +1,523 @@
+[
+  {
+    "id": "c61b82ba-607c-4f6a-af8a-57b73a0e2fb5",
+    "message": "Your driving test is scheduled for 2025-07-03",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-10-26T11:22:02.839501",
+    "label": "legitimate",
+    "threat_score": 0.06119640331042711,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "449a99ec-f6e7-4157-8021-04e7066f88a5",
+    "message": "Registration payment declined. Update payment method at dmv-economic.walker-harmon.com",
+    "sender": "umullins@example.com",
+    "timestamp": "2024-09-21T19:00:41.887118",
+    "label": "scam",
+    "threat_score": 0.9990701090412153,
+    "suspicious_indicators": [
+      "SUSPENDED"
+    ]
+  },
+  {
+    "id": "1356ecd6-6a1c-4949-828e-dc36eb739639",
+    "message": "URGENT: Your vehicle registration is suspended. Click dmv-week.escobar.org to resolve",
+    "sender": "ericmurray@example.com",
+    "timestamp": "2024-08-01T07:21:52.357630",
+    "label": "scam",
+    "threat_score": 0.8443602597354021,
+    "suspicious_indicators": [
+      "URGENT"
+    ]
+  },
+  {
+    "id": "2d73d5ef-3375-4499-a8a4-52bce3acd61a",
+    "message": "Your DMV account has been locked. Verify identity at dmv-responsibility.graham.com",
+    "sender": "peter20@example.com",
+    "timestamp": "2024-12-06T04:21:42.295193",
+    "label": "scam",
+    "threat_score": 0.726237591051567,
+    "suspicious_indicators": [
+      "CLICK NOW"
+    ]
+  },
+  {
+    "id": "49eb0b47-8259-40ea-9b31-71b8852b267c",
+    "message": "Your vehicle registration renewal is complete. Reference: 9749494f",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-03-19T05:02:01.808704",
+    "label": "legitimate",
+    "threat_score": 0.17303215067716865,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "ddb6b021-ee37-4b6a-8853-9eb269ffe519",
+    "message": "DMV NOTICE: Your license will be revoked. Update info at dmv-industry.haley-bishop.com",
+    "sender": "lowesabrina@example.com",
+    "timestamp": "2025-05-03T17:53:59.232497",
+    "label": "scam",
+    "threat_score": 0.9044165810092111,
+    "suspicious_indicators": [
+      "CLICK NOW"
+    ]
+  },
+  {
+    "id": "5006888d-c19f-4297-930b-80f812f78353",
+    "message": "Your vehicle registration renewal is complete. Reference: 82978f9a",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-02-04T08:48:24.772554",
+    "label": "legitimate",
+    "threat_score": 0.21247247157565277,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "08afba79-4f33-497f-9f04-0af239e81656",
+    "message": "DMV office hours: Monday-Friday 8AM-5PM",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-09-11T10:04:49.527668",
+    "label": "legitimate",
+    "threat_score": 0.19990201760186757,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "2caa1bc7-3447-4b73-97a4-7ff4833b6a3f",
+    "message": "Your new license will arrive in 7-10 business days",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-01-20T09:23:38.144536",
+    "label": "legitimate",
+    "threat_score": 0.12876754957809408,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "e5c1931d-ca98-4cf3-9e2b-321f88a1a32d",
+    "message": "Thank you for your payment. Receipt number: 6192161170",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-10-24T07:33:05.942448",
+    "label": "legitimate",
+    "threat_score": 0.08531356400230287,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "f1ef2ce8-7c82-4af4-be38-733648203060",
+    "message": "Your new license will arrive in 7-10 business days",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-06-05T06:06:59.955124",
+    "label": "legitimate",
+    "threat_score": 0.08779698661753137,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "45390de4-949b-4f81-b81e-1870e3c6ed3a",
+    "message": "Your driving test is scheduled for 2025-06-25",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-09-30T08:16:26.511121",
+    "label": "legitimate",
+    "threat_score": 0.004684890067361158,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "01ac9204-ebbb-4372-bb64-7bd1eb49f34e",
+    "message": "URGENT: Your vehicle registration is suspended. Click dmv-various.holmes.com to resolve",
+    "sender": "qcampbell@example.net",
+    "timestamp": "2025-01-13T12:34:14.809562",
+    "label": "scam",
+    "threat_score": 0.8530023030500238,
+    "suspicious_indicators": [
+      "IMMEDIATE ACTION",
+      "EXPIRED"
+    ]
+  },
+  {
+    "id": "edf36be4-ff19-499a-8da6-faca3ccff0d6",
+    "message": "DMV NOTICE: Your license will be revoked. Update info at dmv-the.gutierrez-alvarado.org",
+    "sender": "lisa13@example.com",
+    "timestamp": "2025-04-01T13:12:58.117945",
+    "label": "scam",
+    "threat_score": 0.8216721047780561,
+    "suspicious_indicators": [
+      "URGENT"
+    ]
+  },
+  {
+    "id": "80706a3e-f9c3-4f56-a398-74ad2a77a0df",
+    "message": "Thank you for visiting the DMV. Your transaction number is 20375835",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-10-17T12:17:51.146512",
+    "label": "legitimate",
+    "threat_score": 0.1537718279558298,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "da1190df-76ed-4257-bb64-239d17d696b0",
+    "message": "Appointment confirmation for 2025-07-22 at 03:11:38",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-07-31T11:14:11.758176",
+    "label": "legitimate",
+    "threat_score": 0.04158488234497869,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "a4a20d0f-bc6f-435c-9df6-d351b89e4b5b",
+    "message": "Thank you for your payment. Receipt number: 8917684287",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-02-11T04:35:17.387199",
+    "label": "legitimate",
+    "threat_score": 0.17357943914087756,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "2e204a0e-a59a-4eae-9562-6e8c62e3793c",
+    "message": "DMV office hours: Monday-Friday 8AM-5PM",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-09-13T14:59:25.166449",
+    "label": "legitimate",
+    "threat_score": 0.24329298790223697,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "6da03220-f6ea-48fc-9e99-8fe33c8d1282",
+    "message": "Your DMV registration expires in 17 days. Renew now at dmv-arm.hudson.com",
+    "sender": "benderaudrey@example.net",
+    "timestamp": "2025-04-25T07:38:01.229926",
+    "label": "scam",
+    "threat_score": 0.9298023301465537,
+    "suspicious_indicators": [
+      "LOCKED"
+    ]
+  },
+  {
+    "id": "fb1ca74d-d49b-4a17-a4b6-02c94cdf4982",
+    "message": "Your DMV account has been locked. Verify identity at dmv-participant.simpson.net",
+    "sender": "martinezheather@example.org",
+    "timestamp": "2024-10-22T20:37:27.976732",
+    "label": "scam",
+    "threat_score": 0.9334223471995584,
+    "suspicious_indicators": [
+      "FINAL NOTICE"
+    ]
+  },
+  {
+    "id": "6d62d62f-3fac-41ff-8eaa-56de494beba3",
+    "message": "Your DMV registration expires in 26 days. Renew now at dmv-think.collins-smith.biz",
+    "sender": "billy75@example.com",
+    "timestamp": "2024-08-13T07:59:31.068459",
+    "label": "scam",
+    "threat_score": 0.8070638239775298,
+    "suspicious_indicators": [
+      "URGENT"
+    ]
+  },
+  {
+    "id": "05219883-34c9-410b-9734-b3f7b37c32f6",
+    "message": "FINAL NOTICE: Registration renewal required. Pay fees at dmv-take.davis.com",
+    "sender": "eacosta@example.net",
+    "timestamp": "2025-02-03T16:40:56.802005",
+    "label": "scam",
+    "threat_score": 0.7099821606233712,
+    "suspicious_indicators": [
+      "EXPIRED",
+      "FINAL NOTICE"
+    ]
+  },
+  {
+    "id": "c4d7e682-1003-4dad-b80e-a0a1e50f5e4b",
+    "message": "Your new license will arrive in 7-10 business days",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-12-19T19:48:55.633583",
+    "label": "legitimate",
+    "threat_score": 0.09292268164979055,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "a145c342-368b-4d42-a0e4-114c33e0b93e",
+    "message": "Thank you for visiting the DMV. Your transaction number is 34875623",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-07-02T16:26:39.161868",
+    "label": "legitimate",
+    "threat_score": 0.28820142035596114,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "19d1335e-6d7b-4870-8768-563bf26c5ce8",
+    "message": "DMV office hours: Monday-Friday 8AM-5PM",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-07-21T06:09:45.792420",
+    "label": "legitimate",
+    "threat_score": 0.25502515105212753,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "d7f995dc-cda9-4109-8b69-937a672b98be",
+    "message": "DMV NOTICE: Your license will be revoked. Update info at dmv-lose.carr.com",
+    "sender": "danielle87@example.org",
+    "timestamp": "2025-04-01T01:28:46.305431",
+    "label": "scam",
+    "threat_score": 0.7736234658742143,
+    "suspicious_indicators": [
+      "FINAL NOTICE",
+      "IMMEDIATE ACTION",
+      "LOCKED"
+    ]
+  },
+  {
+    "id": "ba2b322b-26b1-4234-89bd-2f56d7338e87",
+    "message": "FINAL NOTICE: Registration renewal required. Pay fees at dmv-sure.kennedy-haas.com",
+    "sender": "steven70@example.com",
+    "timestamp": "2025-07-10T07:49:49.251908",
+    "label": "scam",
+    "threat_score": 0.8209726901649351,
+    "suspicious_indicators": [
+      "CLICK NOW",
+      "IMMEDIATE ACTION",
+      "URGENT"
+    ]
+  },
+  {
+    "id": "96d2517e-0d2c-4baa-a320-0bfa6a2f606d",
+    "message": "Your driving test is scheduled for 2025-08-08",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-11-12T14:48:08.441490",
+    "label": "legitimate",
+    "threat_score": 0.2891205945398606,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "4767b102-c8f9-4e3c-a38b-cb2ee54ae74a",
+    "message": "Your DMV registration expires in 4 days. Renew now at dmv-only.beasley.com",
+    "sender": "dgaines@example.com",
+    "timestamp": "2025-02-02T21:05:57.927485",
+    "label": "scam",
+    "threat_score": 0.7065772283869051,
+    "suspicious_indicators": [
+      "VERIFY NOW"
+    ]
+  },
+  {
+    "id": "224347ef-1245-49d8-970f-3450de38ddc4",
+    "message": "URGENT: Your vehicle registration is suspended. Click dmv-western.sanders.com to resolve",
+    "sender": "collinssamantha@example.net",
+    "timestamp": "2024-07-16T16:50:15.725259",
+    "label": "scam",
+    "threat_score": 0.9045283175966535,
+    "suspicious_indicators": [
+      "VERIFY NOW"
+    ]
+  },
+  {
+    "id": "d1e054cf-10d0-4227-aa67-04cbc2643d9e",
+    "message": "Your vehicle passed inspection. Certificate valid until 2025-06-17",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-08-25T17:45:19.312730",
+    "label": "legitimate",
+    "threat_score": 0.23009633041163738,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "62ebbab7-9ff9-46ca-81a9-d6ced041d4c2",
+    "message": "Registration payment declined. Update payment method at dmv-commercial.curry.org",
+    "sender": "hilltina@example.org",
+    "timestamp": "2024-08-03T11:05:21.791331",
+    "label": "scam",
+    "threat_score": 0.7401025107462593,
+    "suspicious_indicators": [
+      "LOCKED",
+      "LIMITED TIME",
+      "CLICK NOW"
+    ]
+  },
+  {
+    "id": "2c8cd4eb-f187-4b73-8197-a4e44a100c64",
+    "message": "Your new license will arrive in 7-10 business days",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-02-22T06:24:24.899300",
+    "label": "legitimate",
+    "threat_score": 0.039560980903026975,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "842d2daa-c14c-4310-a4bf-0aa06f16ca28",
+    "message": "Thank you for your payment. Receipt number: 7977575743",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-11-16T01:35:59.596960",
+    "label": "legitimate",
+    "threat_score": 0.07010875977605949,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "272ffa94-d36f-43b3-b9dd-4c5632fad6c5",
+    "message": "Your vehicle passed inspection. Certificate valid until 2025-07-07",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-03-25T10:22:22.430751",
+    "label": "legitimate",
+    "threat_score": 0.0844625756231985,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "325e73c4-d31c-4a86-b693-3cc4a7501930",
+    "message": "DMV customer service: Call 1-800-DMV-INFO for assistance",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-04-29T13:37:55.373774",
+    "label": "legitimate",
+    "threat_score": 0.10256976609166463,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "05212f4b-5cf2-4264-bbb8-6624bcf344ea",
+    "message": "WARNING: Your driving record shows violations. Check dmv-remain.torres-bell.net now",
+    "sender": "kenneth97@example.com",
+    "timestamp": "2025-02-04T15:56:29.857241",
+    "label": "scam",
+    "threat_score": 0.8928204726277464,
+    "suspicious_indicators": [
+      "LOCKED"
+    ]
+  },
+  {
+    "id": "7d4e095b-7e4e-45b1-92ef-49f7ee1cef62",
+    "message": "Your DMV registration expires in 25 days. Renew now at dmv-recently.torres.net",
+    "sender": "valdezdavid@example.org",
+    "timestamp": "2024-10-16T10:04:24.140095",
+    "label": "scam",
+    "threat_score": 0.7996594579285892,
+    "suspicious_indicators": [
+      "EXPIRED",
+      "URGENT",
+      "FINAL NOTICE"
+    ]
+  },
+  {
+    "id": "f3fc9683-0bc2-4595-b262-8c21b2fff721",
+    "message": "Your new license will arrive in 7-10 business days",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-01-04T02:13:34.631700",
+    "label": "legitimate",
+    "threat_score": 0.18953369139322562,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "95fdae65-7ce2-44bf-b0ba-70a9871e570e",
+    "message": "Your vehicle inspection is overdue. Schedule at dmv-by.nielsen.com",
+    "sender": "andrewanderson@example.com",
+    "timestamp": "2024-07-23T13:56:07.326507",
+    "label": "scam",
+    "threat_score": 0.8744211396290118,
+    "suspicious_indicators": [
+      "SUSPENDED",
+      "IMMEDIATE ACTION"
+    ]
+  },
+  {
+    "id": "c26bdad0-6971-4f53-8094-520c8eaf5817",
+    "message": "DMV Alert: Your license points will cause suspension. View dmv-campaign.norris.com",
+    "sender": "hprice@example.org",
+    "timestamp": "2024-09-12T15:24:57.039505",
+    "label": "scam",
+    "threat_score": 0.8922017062742744,
+    "suspicious_indicators": [
+      "FINAL NOTICE",
+      "EXPIRED",
+      "LIMITED TIME"
+    ]
+  },
+  {
+    "id": "1b1d091c-2f65-4a29-a06e-3df9f016815a",
+    "message": "WARNING: Your driving record shows violations. Check dmv-nearly.smith.org now",
+    "sender": "yhuffman@example.net",
+    "timestamp": "2025-01-12T22:42:45.353077",
+    "label": "scam",
+    "threat_score": 0.9944218907713902,
+    "suspicious_indicators": [
+      "VERIFY NOW",
+      "URGENT",
+      "SUSPENDED"
+    ]
+  },
+  {
+    "id": "48412d4b-c025-4ba4-be81-108fbab44a65",
+    "message": "WARNING: Your driving record shows violations. Check dmv-not.schmidt-king.info now",
+    "sender": "jodismith@example.org",
+    "timestamp": "2024-09-22T06:15:54.339686",
+    "label": "scam",
+    "threat_score": 0.985823150288422,
+    "suspicious_indicators": [
+      "SUSPENDED",
+      "LOCKED",
+      "VERIFY NOW"
+    ]
+  },
+  {
+    "id": "f3e5152d-a7c8-4cf7-833c-ef07f850c591",
+    "message": "Thank you for visiting the DMV. Your transaction number is 8399614",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-07-11T03:16:05.612632",
+    "label": "legitimate",
+    "threat_score": 0.20586783639611386,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "ff6cb372-8e8a-436e-a1a9-a3c045fd31a5",
+    "message": "Appointment confirmation for 2025-06-21 at 06:58:18",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2025-03-03T17:45:55.438689",
+    "label": "legitimate",
+    "threat_score": 0.1434542371574181,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "058b0bf5-bee4-4e0d-bc73-71dc2113a6ec",
+    "message": "Action Required: Your car registration failed. Visit dmv-hold.wilson.biz immediately",
+    "sender": "guzmanjared@example.com",
+    "timestamp": "2025-03-04T18:51:52.464739",
+    "label": "scam",
+    "threat_score": 0.9287080142257987,
+    "suspicious_indicators": [
+      "URGENT",
+      "IMMEDIATE ACTION",
+      "CLICK NOW"
+    ]
+  },
+  {
+    "id": "5a54f6ad-b74b-4109-b08f-c24a428f5060",
+    "message": "Action Required: Your car registration failed. Visit dmv-behavior.li-mora.com immediately",
+    "sender": "robertmeyer@example.com",
+    "timestamp": "2024-09-28T14:45:29.842085",
+    "label": "scam",
+    "threat_score": 0.9630644323852295,
+    "suspicious_indicators": [
+      "URGENT",
+      "CLICK NOW"
+    ]
+  },
+  {
+    "id": "2f0f265c-5ced-400d-9de8-ec039922f870",
+    "message": "Appointment confirmation for 2025-07-20 at 16:02:46",
+    "sender": "noreply@dmv.state.gov",
+    "timestamp": "2024-11-08T13:54:44.781872",
+    "label": "legitimate",
+    "threat_score": 0.20790837193259146,
+    "suspicious_indicators": []
+  },
+  {
+    "id": "9b7b4739-6ecf-494c-a26c-9e070f92e092",
+    "message": "WARNING: Your driving record shows violations. Check dmv-candidate.smith.com now",
+    "sender": "shenderson@example.net",
+    "timestamp": "2024-12-13T15:27:33.056728",
+    "label": "scam",
+    "threat_score": 0.8171671571785375,
+    "suspicious_indicators": [
+      "IMMEDIATE ACTION"
+    ]
+  },
+  {
+    "id": "865c6aff-fe30-4f58-a8e2-bb5a386373ec",
+    "message": "Action Required: Your car registration failed. Visit dmv-growth.franklin.com immediately",
+    "sender": "peterarellano@example.net",
+    "timestamp": "2024-08-23T04:17:35.991921",
+    "label": "scam",
+    "threat_score": 0.7687348087269059,
+    "suspicious_indicators": [
+      "LIMITED TIME",
+      "CLICK NOW"
+    ]
+  }
+]

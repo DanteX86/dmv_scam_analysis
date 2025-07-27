@@ -1,0 +1,204 @@
+{
+  "messages": [
+    {
+      "id": "msg_101",
+      "timestamp": "2024-01-10T08:25:00Z",
+      "source": "scam-alert.xyz",
+      "type": "email",
+      "subject": "Immediate Action Required - License Suspension",
+      "text": "This is an urgent notice regarding your driver's license. Failure to pay an outstanding fine of $250 will result in immediate suspension. Pay now at scam-alert.xyz/payfine",
+      "sender_email": "alert@scam-alert.xyz",
+      "label": "scam"
+    },
+    {
+      "id": "msg_102",
+      "timestamp": "2024-01-12T11:30:00Z",
+      "source": "sms-scammer.com",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV: Congratulations! You've been awarded a refund from overpaid vehicle fees. Visit scam-link.com/refund to claim now!",
+      "sender_phone": "+1-000-123-4567",
+      "label": "scam"
+    },
+    {
+      "id": "msg_103",
+      "timestamp": "2024-01-17T16:45:00Z",
+      "source": "fake-dmv-site.gov",
+      "type": "email",
+      "subject": "Verify Your Account To Avoid Suspension",
+      "text": "Your DMV account needs verification to avoid suspension. Verify now at fake-dmv-site.gov/verify",
+      "sender_email": "verification@fake-dmv-site.gov",
+      "label": "scam"
+    },
+    {
+      "id": "msg_104",
+      "timestamp": "2024-01-22T10:15:00Z",
+      "source": "spoofed123.net",
+      "type": "email",
+      "subject": "Unpaid DMV Ticket - Immediate Payment Required",
+      "text": "Our records indicate an unpaid DMV ticket of $175. Make a secure payment at spoofed123.net/payticket",
+      "sender_email": "billing@spoofed123.net",
+      "label": "scam"
+    },
+    {
+      "id": "msg_105",
+      "timestamp": "2024-01-25T14:00:00Z",
+      "source": "unknownsource.net",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV: Your account is compromised. Reset your password immediately at unknownsource.net/reset-password",
+      "sender_phone": "+1-222-333-4444",
+      "label": "scam"
+    },
+    {
+      "id": "msg_106",
+      "timestamp": "2024-01-30T09:05:00Z",
+      "source": "phony-dmv-alerts.info",
+      "type": "email",
+      "subject": "Update Your Billing Information Now",
+      "text": "Dear DMV customer, update your billing information to continue using our services. Visit phony-dmv-alerts.info/update",
+      "sender_email": "billing@phony-dmv-alerts.info",
+      "label": "scam"
+    },
+    {
+      "id": "msg_107",
+      "timestamp": "2024-02-02T12:50:00Z",
+      "source": "hackersite.org",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV: Your vehicle information is outdated. Update now at hackersite.org/update",
+      "sender_phone": "+1-987-654-3210",
+      "label": "scam"
+    },
+    {
+      "id": "msg_108",
+      "timestamp": "2024-02-06T14:35:00Z",
+      "source": "scamdmvemail.net",
+      "type": "email",
+      "subject": "Last Chance to Claim Your DMV Refund",
+      "text": "You have a pending refund. Claim it within 24 hours at scamdmvemail.net/refund",
+      "sender_email": "refund@scamdmvemail.net",
+      "label": "scam"
+    },
+    {
+      "id": "msg_109",
+      "timestamp": "2024-02-10T16:20:00Z",
+      "source": "fakeupdate.com",
+      "type": "email",
+      "subject": "Account Update Required",
+      "text": "Your DMV account requires an urgent update to avoid penalties. Comply now at fakeupdate.com/update-info",
+      "sender_email": "updates@fakeupdate.com",
+      "label": "scam"
+    },
+    {
+      "id": "msg_110",
+      "timestamp": "2024-02-14T08:00:00Z",
+      "source": "fraudtext.org",
+      "type": "sms",
+      "subject": null,
+      "text": "Alert: An unauthorized attempt to access your DMV account detected. Secure your account now at fraudtext.org/secure",
+      "sender_phone": "+1-555-666-7777",
+      "label": "scam"
+    },
+    {
+      "id": "msg_111",
+      "timestamp": "2024-02-18T10:40:00Z",
+      "source": "scammerzalerts.com",
+      "type": "email",
+      "subject": "Action Required: Confirm Your Information",
+      "text": "Your DMV profile information needs verification. Confirm details at scammerzalerts.com/confirm",
+      "sender_email": "notifications@scammerzalerts.com",
+      "label": "scam"
+    },
+    {
+      "id": "msg_112",
+      "timestamp": "2024-02-22T07:15:00Z",
+      "source": "clickfraud-news.gov",
+      "type": "email",
+      "subject": "Reminder: Overdue Payment Notice",
+      "text": "You have an overdue payment of $90 with the DMV. Pay at clickfraud-news.gov/paynow to avoid late fees.",
+      "sender_email": "fees@clickfraud-news.gov",
+      "label": "scam"
+    },
+    {
+      "id": "msg_113",
+      "timestamp": "2024-02-26T15:50:00Z",
+      "source": "schemetext.biz",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV: Your driver license information needs immediate attention. Correct errors at schemetext.biz/correct-errors",
+      "sender_phone": "+1-888-444-5555",
+      "label": "scam"
+    },
+    {
+      "id": "msg_114",
+      "timestamp": "2024-03-01T11:20:00Z",
+      "source": "hoaxdomain.com",
+      "type": "email",
+      "subject": "Your DMV Account is At Risk",
+      "text": "Immediate action required! Your DMV account is at risk. Verify now at hoaxdomain.com/verify",
+      "sender_email": "support@hoaxdomain.com",
+      "label": "scam"
+    },
+    {
+      "id": "msg_115",
+      "timestamp": "2024-03-05T08:05:00Z",
+      "source": "misleadingsite.info",
+      "type": "email",
+      "subject": "Unverified DMV Account - Warning",
+      "text": "Your account is unverified. Verify your DMV account at misleadingsite.info/verifyaccounts",
+      "sender_email": "warning@misleadingsite.info",
+      "label": "scam"
+    },
+    {
+      "id": "msg_116",
+      "timestamp": "2024-03-09T13:45:00Z",
+      "source": "bogussite.net",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV Alert: Your vehicle license expired. Re-register now at bogussite.net/renewlicense",
+      "sender_phone": "+1-777-888-9999",
+      "label": "scam"
+    },
+    {
+      "id": "msg_117",
+      "timestamp": "2024-03-13T09:30:00Z",
+      "source": "deceptivealerts.org",
+      "type": "email",
+      "subject": "Confirmation Required for DMV Account",
+      "text": "Update required. Confirm your DMV subscription at deceptivealerts.org/dmvconfirm",
+      "sender_email": "service@deceptivealerts.org",
+      "label": "scam"
+    },
+    {
+      "id": "msg_118",
+      "timestamp": "2024-03-17T12:25:00Z",
+      "source": "counterfeitmessage.pro",
+      "type": "email",
+      "subject": "Last Call: Update Your Profile",
+      "text": "Your profile needs to be updated to avoid service interruption. Update now at counterfeitmessage.pro/update-profile",
+      "sender_email": "profile@counterfeitmessage.pro",
+      "label": "scam"
+    },
+    {
+      "id": "msg_119",
+      "timestamp": "2024-03-21T06:55:00Z",
+      "source": "unsafe-mails.org",
+      "type": "email",
+      "subject": "Critical Alert: DMV Account Breach",
+      "text": "Security Alert: Your account has been breached. Verify your identity at unsafe-mails.org/secure-account",
+      "sender_email": "alerts@unsafe-mails.org",
+      "label": "scam"
+    },
+    {
+      "id": "msg_120",
+      "timestamp": "2024-03-25T14:10:00Z",
+      "source": "ill-intendedsource.org",
+      "type": "sms",
+      "subject": null,
+      "text": "DMV: Contest a traffic violation by reviewing at ill-intendedsource.org/contestviolation",
+      "sender_phone": "+1-123-123-1234",
+      "label": "scam"
+    }
+  ]
+}

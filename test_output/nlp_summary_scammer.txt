@@ -1,0 +1,26 @@
+Natural Language Processing Analysis Summary
+==================================================
+
+Contact: scammer
+Analysis Date: 2025-07-14T07:22:24.778756
+
+NLP Risk Score: 99/100
+Risk Level: HIGH
+
+Overall Sentiment: 0.07 (polarity)
+Extracted Entities: 8
+Threat Vocabulary Score: 100/100
+
+Key Risk Factors:
+  • Suspicious domains detected: 1
+  • High threat vocabulary usage (score: 100)
+  • Deception indicators present (score: 35)
+  • High urgency/pressure tactics (score: 100)
+
+Recommendations:
+  [HIGH] Block and investigate suspicious domains
+      Rationale: Non-standard TLD domains detected that may be used for phishing
+  [MEDIUM] Social engineering attempt likely
+      Rationale: High pressure tactics and urgency indicators present
+  [MEDIUM] Monitor for government impersonation
+      Rationale: Threat-specific vocabulary patterns detected
