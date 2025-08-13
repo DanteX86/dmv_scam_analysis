@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "total_messages": 5,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 5
+  },
+  "results": [
+    {
+      "id": 1,
+      "message": "Your DMV license expires soon. Click here to renew immediately.",
+      "threat_score": 0.0,
+      "classification": "low_risk",
+      "timestamp": "2025-08-13T13:04:27.470247"
+    },
+    {
+      "id": 2,
+      "message": "Thank you for visiting the Pennsylvania DMV office today.",
+      "threat_score": 0.0,
+      "classification": "low_risk",
+      "timestamp": "2025-08-13T13:04:27.474237"
+    },
+    {
+      "id": 3,
+      "message": "URGENT: Pay $89 fee to avoid license suspension!",
+      "threat_score": 0.0,
+      "classification": "low_risk",
+      "timestamp": "2025-08-13T13:04:27.478419"
+    },
+    {
+      "id": 4,
+      "message": "Your vehicle registration is due next month.",
+      "threat_score": 0.0,
+      "classification": "low_risk",
+      "timestamp": "2025-08-13T13:04:27.484144"
+    },
+    {
+      "id": 5,
+      "message": "CRITICAL: Government requires immediate verification.",
+      "threat_score": 0.0,
+      "classification": "low_risk",
+      "timestamp": "2025-08-13T13:04:27.487998"
+    }
+  ],
+  "timestamp": "2025-08-13T13:04:27.488152"
+}
