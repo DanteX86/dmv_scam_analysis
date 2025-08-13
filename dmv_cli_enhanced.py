@@ -20,6 +20,7 @@ sys.path.insert(0, 'src')
 try:
     from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
     from src.dmv_scam_analysis.core.model_manager import ModelManager
+    from src.dmv_scam_analysis.detection.advanced_patterns import AdvancedThreatPatterns
     MODULES_AVAILABLE = True
 except ImportError as e:
     print(f"Warning: Some modules not available: {e}")
@@ -38,8 +39,10 @@ class EnhancedCLI:
             try:
                 self.classifier = MLThreatClassifier()
                 self.model_manager = ModelManager()
+                self.advanced_detector = AdvancedThreatPatterns()
             except Exception as e:
                 print(f"Warning: Failed to initialize components: {e}")
+                self.advanced_detector = None
     
     def analyze_message(self, args) -> None:
         """Analyze a single message for threats."""
