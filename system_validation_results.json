@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-08-13T12:53:30.626686",
+  "api_base_url": "http://localhost:8000",
+  "tests": {
+    "local_ml_functionality": {
+      "status": "passed",
+      "duration": 0.114,
+      "details": {
+        "success": true,
+        "classifier_loaded": true,
+        "predictions_count": 2,
+        "sample_predictions": [
+          {
+            "message": "Your DMV license expires soon. Click here to renew...",
+            "prediction": 0.0
+          },
+          {
+            "message": "Thank you for visiting the DMV office today.",
+            "prediction": 0.0
+          }
+        ]
+      }
+    },
+    "model_management": {
+      "status": "passed",
+      "duration": 0.0,
+      "details": {
+        "success": true,
+        "total_models": 0,
+        "models": [],
+        "active_model": null,
+        "model_manager_functional": true
+      }
+    },
+    "data_persistence": {
+      "status": "passed",
+      "duration": 0.0,
+      "details": {
+        "success": true,
+        "models_directory_exists": true,
+        "model_files_count": 3,
+        "model_files": [
+          "test_embeddings.pkl",
+          "test_classifier.pkl",
+          "test_model.pkl"
+        ],
+        "config_files_present": [
+          "requirements.txt",
+          "Dockerfile",
+          "docker-compose.yml"
+        ]
+      }
+    },
+    "basic_functionality": {
+      "status": "passed",
+      "duration": 0.0,
+      "details": {
+        "success": true,
+        "directories_found": [
+          "src",
+          "models",
+          "data",
+          "logs"
+        ],
+        "total_directories": 4,
+        "import_results": {
+          "classifier": "success",
+          "model_manager": "success"
+        }
+      }
+    },
+    "performance_benchmarks": {
+      "status": "passed",
+      "duration": 0.117,
+      "details": {
+        "success": true,
+        "classifier_loading_time": 0.0,
+        "avg_prediction_time": 0.023,
+        "all_prediction_times": [
+          0.103,
+          0.004,
+          0.004,
+          0.004,
+          0.004
+        ],
+        "performance_threshold_met": true
+      }
+    }
+  },
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_rate": 100.0
+  }
+}
