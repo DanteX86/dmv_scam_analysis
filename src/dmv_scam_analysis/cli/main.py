@@ -10,7 +10,7 @@ from typing import Optional, List, Dict, Any
 from ..core.classifier import MLThreatClassifier as ThreatClassifier
 from ..analysis.behavioral import BehavioralAnalyzer
 from ..utils.config_manager import ConfigManager
-from ..core.extractor import MessageExtractor
+from ..core.extractor import iMessageAnalyzer
 
 # Configure logging
 logging.basicConfig(
@@ -29,7 +29,7 @@ class AnalysisCLI:
         self.analyzer = BehavioralAnalyzer()
         # Initialize extractor with default database path (can be overridden)
         default_db_path = self.config.get('extractor.db_path', '~/Library/Messages/chat.db')
-        self.extractor = MessageExtractor(default_db_path)
+        self.extractor = iMessageAnalyzer(default_db_path)
 
 @click.group()
 @click.option('--debug/--no-debug', default=False, help='Enable debug output')

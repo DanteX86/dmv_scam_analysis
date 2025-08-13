@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from dmv_scam_analysis.core.classifier import MLThreatClassifier as ThreatClassifier
 from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
-from dmv_scam_analysis.analysis.sentiment import SentimentAnalyzer as NLPAnalyzer
+from dmv_scam_analysis.analysis.sentiment import AdvancedNLPAnalyzer as NLPAnalyzer
 from dmv_scam_analysis.utils.config_manager import ConfigManager
 
 @pytest.fixture

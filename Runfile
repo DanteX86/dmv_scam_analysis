@@ -19,7 +19,7 @@ test:
 
 ## Start the FastAPI server
 api:
-    python api/app.py
+    PYTHONPATH=src python src/dmv_scam_analysis/api/app.py
 
 ## Install dependencies
 install:

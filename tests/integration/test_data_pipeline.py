@@ -1,7 +1,7 @@
 """Integration tests for data pipeline."""
 import pytest
 from dmv_scam_analysis.utils.validation import DataValidator
-from dmv_scam_analysis.analysis.sentiment import SentimentAnalyzer as NLPAnalyzer
+from dmv_scam_analysis.analysis.sentiment import AdvancedNLPAnalyzer as NLPAnalyzer
 from dmv_scam_analysis.core.classifier import MLThreatClassifier as ThreatClassifier
 
 @pytest.fixture

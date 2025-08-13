@@ -39,6 +39,40 @@ class iMessageAnalyzer:
         # Create output directory
         os.makedirs(output_dir, exist_ok=True)
     
+    def read_messages(self, input_file=None):
+        """
+        Read messages from input file or database.
+        
+        Args:
+            input_file (str, optional): Path to JSON file containing messages
+            
+        Returns:
+            list: A list of message dictionaries
+        """
+        if input_file:
+            # Read from JSON file
+            try:
+                with open(input_file, 'r') as f:
+                    messages = json.load(f)
+                # Ensure messages have required fields
+                for i, msg in enumerate(messages):
+                    if 'id' not in msg:
+                        msg['id'] = f"msg_{i:03d}"
+                    if 'timestamp' not in msg:
+                        msg['timestamp'] = datetime.now().isoformat()
+                return messages
+            except Exception as e:
+                print(f"Error reading messages from file: {e}")
+                return []
+        else:
+            # Return sample messages for demonstration
+            return [{
+                "id": "msg001",
+                "timestamp": "2025-06-27T10:00:00Z",
+                "text": "Sample message for testing",
+                "source": "demo"
+            }]
+    
     def extract_all(self):
         """
         Extract all messages for demonstration.
@@ -46,12 +80,8 @@ class iMessageAnalyzer:
             list: A list of extracted message dictionaries
         """
         # This is a placeholder demonstrating extraction
-        # Real implementation would interact with the database
-        return [{
-            "id": "msg001",
-            "timestamp": "2025-06-27T10:00:00Z",
-            "data": "Sample message for testing"
-        }]
+        # Real implementation would call read_messages for files
+        return self.read_messages()
     
     def _load_threat_patterns(self):
         """
