@@ -1,11 +1,15 @@
 """FastAPI application for DMV scam analysis."""
-from fastapi import FastAPI, HTTPException, Depends, Security
+from fastapi import FastAPI, HTTPException, Depends, Security, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from typing import List, Dict, Optional
 from datetime import datetime
 from pydantic import BaseModel, Field
+import logging
+import time
+import uuid
+import os
 
 from ..core.classifier import MLThreatClassifier as ThreatClassifier
 from ..analysis.behavioral import BehavioralAnalyzer
@@ -17,9 +21,55 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Configure audit logging
+os.makedirs('logs', exist_ok=True)
+audit_logger = logging.getLogger('api_audit')
+audit_handler = logging.FileHandler('logs/api_audit.log')
+audit_handler.setFormatter(logging.Formatter(
+    '%(asctime)s - %(levelname)s - %(message)s'
+))
+audit_logger.addHandler(audit_handler)
+audit_logger.setLevel(logging.INFO)
+
 # Security
 security = HTTPBearer()
 rate_limiter = RateLimiter(max_requests=100, time_window=60)
+
+# Performance monitoring middleware
+@app.middleware("http")
+async def performance_monitoring(request: Request, call_next):
+    """Monitor API performance and log metrics."""
+    start_time = time.time()
+    request_id = str(uuid.uuid4())
+    
+    # Log request start
+    audit_logger.info(f"[{request_id}] {request.method} {request.url.path} - Started")
+    
+    try:
+        response = await call_next(request)
+        duration = time.time() - start_time
+        
+        # Log successful completion
+        audit_logger.info(
+            f"[{request_id}] {request.method} {request.url.path} - "
+            f"Completed in {duration:.3f}s - Status: {response.status_code}"
+        )
+        
+        # Add performance headers
+        response.headers["X-Request-ID"] = request_id
+        response.headers["X-Response-Time"] = f"{duration:.3f}s"
+        
+        return response
+        
+    except Exception as e:
+        duration = time.time() - start_time
+        
+        # Log errors
+        audit_logger.error(
+            f"[{request_id}] {request.method} {request.url.path} - "
+            f"Error after {duration:.3f}s: {str(e)}"
+        )
+        raise
 
 # CORS configuration
 app.add_middleware(
