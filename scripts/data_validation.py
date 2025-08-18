@@ -5,9 +5,7 @@ Validates input data against predefined schemas and quality checks.
 """
 
 import pandas as pd
-import numpy as np
-from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Any
 import logging
 import json
 import yaml
@@ -22,28 +20,29 @@ logger = logging.getLogger(__name__)
 class ValidationResult:
     """Class to encapsulate validation results."""
     
-    def __init__(self, is_valid: bool, details: Dict):
-        self.is_valid = is_valid
-        self.details = details
+    def __init__(self, is_valid: bool, details: Dict[str, Any]) -> None:
+        self.is_valid: bool = is_valid
+        self.details: Dict[str, Any] = details
 
 class DataValidator:
     """Data validation class for checking data quality and consistency."""
     
-    def __init__(self, config_path: str = "config/data_validation_config.yaml"):
+    def __init__(self, config_path: str = "config/data_validation_config.yaml") -> None:
         """Initialize the validator with configuration."""
-        self.config = self._load_config(config_path)
-        self.validation_results = {}
+        self.config: Dict[str, Any] = self._load_config(config_path)
+        self.validation_results: Dict[str, Any] = {}
 
-    def _load_config(self, config_path: str) -> dict:
+    def _load_config(self, config_path: str) -> Dict[str, Any]:
         """Load validation configuration from YAML file."""
         try:
             with open(config_path, 'r') as f:
-                return yaml.safe_load(f)
+                data: Any = yaml.safe_load(f)
+                return data if isinstance(data, dict) else {}
         except Exception as e:
             logger.error(f"Error loading config: {e}")
             return {}
 
-    def validate_dataframe(self, df: pd.DataFrame, dataset_name: str) -> Dict:
+    def validate_dataframe(self, df: pd.DataFrame, dataset_name: str) -> Dict[str, Any]:
         """
         Validate a pandas DataFrame against defined rules.
         
@@ -127,7 +126,7 @@ class DataValidator:
         self.validation_results[dataset_name] = results
         return results
 
-    def validate(self, messages: List[Dict]) -> 'ValidationResult':
+    def validate(self, messages: List[Dict[str, Any]]) -> ValidationResult:
         """
         Validate a list of messages.
         
@@ -148,7 +147,7 @@ class DataValidator:
         
         return ValidationResult(all_passed, validation_results)
 
-    def save_validation_report(self, output_path: str):
+    def save_validation_report(self, output_path: str) -> None:
         """Save validation results to a JSON file."""
         try:
             with open(output_path, 'w') as f:
@@ -157,7 +156,7 @@ class DataValidator:
         except Exception as e:
             logger.error(f"Error saving validation report: {e}")
 
-def main():
+def main() -> None:
     """Main function to run data validation."""
     validator = DataValidator()
     

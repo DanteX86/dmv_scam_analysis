@@ -5,12 +5,9 @@ Handles data cleaning, transformation, and feature engineering.
 """
 
 import pandas as pd
-import numpy as np
-from pathlib import Path
 import logging
-from typing import Dict, List, Optional
+from typing import Dict, List, Any
 import re
-from datetime import datetime
 import yaml
 
 # Setup logging
@@ -23,15 +20,16 @@ logger = logging.getLogger(__name__)
 class DataPreprocessor:
     """Class for preprocessing DMV scam message data."""
     
-    def __init__(self, config_path: str = "config/preprocessing_config.yaml"):
+    def __init__(self, config_path: str = "config/preprocessing_config.yaml") -> None:
         """Initialize the preprocessor with configuration."""
-        self.config = self._load_config(config_path)
+        self.config: Dict[str, Any] = self._load_config(config_path)
         
-    def _load_config(self, config_path: str) -> dict:
+    def _load_config(self, config_path: str) -> Dict[str, Any]:
         """Load preprocessing configuration from YAML file."""
         try:
             with open(config_path, 'r') as f:
-                return yaml.safe_load(f)
+                data: Any = yaml.safe_load(f)
+                return data if isinstance(data, dict) else {}
         except Exception as e:
             logger.error(f"Error loading config: {e}")
             return {}
@@ -88,7 +86,7 @@ class DataPreprocessor:
         
         return text
 
-    def extract_features(self, text: str) -> Dict:
+    def extract_features(self, text: str) -> Dict[str, Any]:
         """
         Extract features from message text.
         
@@ -98,7 +96,7 @@ class DataPreprocessor:
         Returns:
             Dictionary of extracted features
         """
-        features = {}
+        features: Dict[str, Any] = {}
         
         # Message length
         features['length'] = len(text)
@@ -124,7 +122,7 @@ class DataPreprocessor:
         
         return features
 
-    def process(self, messages: List[Dict]) -> List[Dict]:
+    def process(self, messages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
         Process a list of messages through the preprocessing pipeline.
         
@@ -137,7 +135,7 @@ class DataPreprocessor:
         if not messages:
             raise ValueError("Messages list is empty")
         
-        processed_messages = []
+        processed_messages: List[Dict[str, Any]] = []
         
         for message in messages:
             if not isinstance(message, dict) or 'text' not in message:
@@ -168,7 +166,7 @@ class DataPreprocessor:
         
         return processed_messages
 
-    def process_dataset(self, input_path: str, output_path: str):
+    def process_dataset(self, input_path: str, output_path: str) -> None:
         """
         Process the entire dataset.
         
@@ -204,7 +202,7 @@ class DataPreprocessor:
             logger.error(f"Error processing dataset: {e}")
             raise
 
-def main():
+def main() -> None:
     """Main function to run data preprocessing."""
     preprocessor = DataPreprocessor()
     

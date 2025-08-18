@@ -2,17 +2,17 @@
 import os
 import sys
 import cv2
-import numpy as np
 from PIL import Image
 import pytesseract
 from datetime import datetime
+from typing import Optional, Dict, Any, List
 
 class ImageAnalyzer:
-    def __init__(self, image_dir):
-        self.image_dir = image_dir
-        self.analysis_results = {}
+    def __init__(self, image_dir: str) -> None:
+        self.image_dir: str = image_dir
+        self.analysis_results: Dict[str, Any] = {}
         
-    def analyze_image(self, image_path):
+    def analyze_image(self, image_path: str) -> Optional[Dict[str, Any]]:
         """Analyze a single image and extract relevant information."""
         try:
             # Read image
@@ -43,15 +43,15 @@ class ImageAnalyzer:
             print(f"Error analyzing {image_path}: {str(e)}")
             return None
 
-    def analyze_evidence_batch(self, subdirectory=None):
+    def analyze_evidence_batch(self, subdirectory: Optional[str] = None) -> List[Dict[str, Any]]:
         """Analyze all images in a specified subdirectory of the evidence folder."""
         target_dir = os.path.join(self.image_dir, subdirectory) if subdirectory else self.image_dir
         
         if not os.path.exists(target_dir):
             print(f"Directory not found: {target_dir}")
-            return
+            return []
         
-        results = []
+        results: List[Dict[str, Any]] = []
         for filename in os.listdir(target_dir):
             if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp')):
                 image_path = os.path.join(target_dir, filename)
@@ -61,7 +61,7 @@ class ImageAnalyzer:
         
         return results
 
-    def generate_report(self, results, report_type="full"):
+    def generate_report(self, results: List[Dict[str, Any]], report_type: str = "full") -> str:
         """Generate a formatted report of the analysis results."""
         if not results:
             return "No analysis results available."
@@ -86,7 +86,7 @@ class ImageAnalyzer:
         
         return report
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print("Usage: python image_analyzer.py <evidence_dir>")
         sys.exit(1)

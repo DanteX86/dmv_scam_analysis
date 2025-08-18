@@ -4,16 +4,13 @@ Data versioning script for DMV scam analysis project.
 Handles dataset versioning and maintains data lineage.
 """
 
-import pandas as pd
-import numpy as np
 from pathlib import Path
 import logging
 import json
-import yaml
 import shutil
 from datetime import datetime
 import hashlib
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 import os
 
 # Setup logging
@@ -26,20 +23,21 @@ logger = logging.getLogger(__name__)
 class DataVersionManager:
     """Class for managing dataset versions and lineage."""
     
-    def __init__(self, base_path: str = "data"):
+    def __init__(self, base_path: str = "data") -> None:
         """Initialize the version manager."""
-        self.base_path = Path(base_path)
-        self.versions_file = self.base_path / "versions.json"
-        self.versions = self._load_versions()
+        self.base_path: Path = Path(base_path)
+        self.versions_file: Path = self.base_path / "versions.json"
+        self.versions: Dict[str, Any] = self._load_versions()
         
-    def _load_versions(self) -> dict:
+    def _load_versions(self) -> Dict[str, Any]:
         """Load version history from JSON file."""
         if self.versions_file.exists():
             with open(self.versions_file, 'r') as f:
-                return json.load(f)
+                data: Dict[str, Any] = json.load(f)
+                return data
         return {"datasets": {}}
         
-    def _save_versions(self):
+    def _save_versions(self) -> None:
         """Save version history to JSON file."""
         with open(self.versions_file, 'w') as f:
             json.dump(self.versions, f, indent=2)
@@ -97,7 +95,7 @@ class DataVersionManager:
         
         return file_hash
     
-    def get_version_info(self, dataset_name: str, version_hash: str) -> Optional[Dict]:
+    def get_version_info(self, dataset_name: str, version_hash: str) -> Optional[Dict[str, Any]]:
         """
         Get information about a specific version.
         
@@ -113,11 +111,12 @@ class DataVersionManager:
             
         for version in self.versions["datasets"][dataset_name]["versions"]:
             if version["hash"].startswith(version_hash):
-                return version
+                version_info: Dict[str, Any] = version
+                return version_info
                 
         return None
     
-    def list_versions(self, dataset_name: str) -> List[Dict]:
+    def list_versions(self, dataset_name: str) -> List[Dict[str, Any]]:
         """
         List all versions of a dataset.
         
@@ -130,7 +129,9 @@ class DataVersionManager:
         if dataset_name not in self.versions["datasets"]:
             return []
             
-        return self.versions["datasets"][dataset_name]["versions"]
+        versions = self.versions["datasets"][dataset_name]["versions"]
+        # Ensure the structure is a list of dicts
+        return versions if isinstance(versions, list) else []
     
     def restore_version(self, dataset_name: str, version_hash: str, output_path: str) -> bool:
         """
@@ -162,7 +163,7 @@ class DataVersionManager:
             logger.error(f"Error restoring version: {e}")
             return False
     
-    def get_lineage(self, dataset_name: str, version_hash: str) -> List[Dict]:
+    def get_lineage(self, dataset_name: str, version_hash: str) -> List[Dict[str, Any]]:
         """
         Get the lineage (history) of a specific version.
         
@@ -186,7 +187,7 @@ class DataVersionManager:
             
         return lineage
 
-def main():
+def main() -> None:
     """Main function to demonstrate version management."""
     version_manager = DataVersionManager()
     

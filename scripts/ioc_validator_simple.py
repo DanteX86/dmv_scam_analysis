@@ -11,12 +11,12 @@ Date: July 2025
 """
 
 import re
-import sys
 import argparse
 import json
 import hashlib
 from datetime import datetime
 import socket
+from typing import Tuple, Dict, List, Any, Optional
 
 # IOC Patterns from the DMV scam analysis
 IOC_PATTERNS = {
@@ -83,21 +83,21 @@ KNOWN_MALICIOUS = {
 }
 
 class IOCValidator:
-    def __init__(self):
-        self.results = {
+    def __init__(self) -> None:
+        self.results: Dict[str, Any] = {
             'timestamp': datetime.now().isoformat(),
             'total_checks': 0,
             'matches': [],
             'risk_score': 0
         }
     
-    def validate_pattern(self, input_data, pattern_type):
+    def validate_pattern(self, input_data: str, pattern_type: str) -> Tuple[bool, List[Dict[str, Any]]]:
         """Validate input against specific pattern type"""
         if pattern_type not in IOC_PATTERNS:
-            return False, f"Unknown pattern type: {pattern_type}"
+            return False, []
         
         pattern_info = IOC_PATTERNS[pattern_type]
-        matches = []
+        matches: List[Dict[str, Any]] = []
         
         for pattern in pattern_info['patterns']:
             if re.search(pattern, input_data):
@@ -110,9 +110,9 @@ class IOCValidator:
         
         return len(matches) > 0, matches
     
-    def validate_all_patterns(self, input_data):
+    def validate_all_patterns(self, input_data: str) -> Tuple[bool, List[Dict[str, Any]]]:
         """Validate input against all pattern types"""
-        all_matches = []
+        all_matches: List[Dict[str, str]] = []
         
         for pattern_type in IOC_PATTERNS:
             is_match, matches = self.validate_pattern(input_data, pattern_type)
@@ -121,14 +121,14 @@ class IOCValidator:
         
         return len(all_matches) > 0, all_matches
     
-    def check_known_malicious(self, input_data):
+    def check_known_malicious(self, input_data: str) -> Tuple[bool, Optional[str]]:
         """Check if input matches known malicious indicators"""
         for category, indicators in KNOWN_MALICIOUS.items():
             if input_data in indicators:
                 return True, category
         return False, None
     
-    def calculate_risk_score(self, matches):
+    def calculate_risk_score(self, matches: List[Dict[str, Any]]) -> int:
         """Calculate risk score based on matches"""
         score = 0
         risk_weights = {
@@ -143,7 +143,7 @@ class IOCValidator:
         
         return min(score, 100)  # Cap at 100
     
-    def validate_domain_dns(self, domain):
+    def validate_domain_dns(self, domain: str) -> Tuple[bool, str]:
         """Validate domain via DNS lookup"""
         try:
             socket.gethostbyname(domain)
@@ -151,16 +151,16 @@ class IOCValidator:
         except socket.gaierror:
             return False, "Domain does not resolve"
     
-    def generate_hash(self, input_data):
+    def generate_hash(self, input_data: str) -> Dict[str, str]:
         """Generate hash for input data"""
         return {
             'md5': hashlib.md5(input_data.encode()).hexdigest(),
             'sha256': hashlib.sha256(input_data.encode()).hexdigest()
         }
     
-    def validate_comprehensive(self, input_data):
+    def validate_comprehensive(self, input_data: str) -> Dict[str, Any]:
         """Comprehensive validation with all checks"""
-        result = {
+        result: Dict[str, Any] = {
             'input': input_data,
             'timestamp': datetime.now().isoformat(),
             'hashes': self.generate_hash(input_data),
@@ -192,17 +192,17 @@ class IOCValidator:
         
         return result
     
-    def is_domain(self, input_data):
+    def is_domain(self, input_data: str) -> bool:
         """Check if input appears to be a domain"""
         return bool(re.match(r'^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', input_data))
     
-    def is_url(self, input_data):
+    def is_url(self, input_data: str) -> bool:
         """Check if input appears to be a URL"""
         return bool(re.match(r'^https?://', input_data))
     
-    def generate_recommendations(self, result):
+    def generate_recommendations(self, result: Dict[str, Any]) -> List[str]:
         """Generate security recommendations based on results"""
-        recommendations = []
+        recommendations: List[str] = []
         
         if result['known_malicious']:
             recommendations.append("CRITICAL: This indicator is confirmed malicious - block immediately")
@@ -220,7 +220,7 @@ class IOCValidator:
         
         return recommendations
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description='IOC Validator - Verify indicators of compromise',
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -275,7 +275,7 @@ Examples:
         if args.json:
             print(json.dumps(result, indent=2))
         else:
-            print(f"\n=== IOC Validation Results ===")
+            print("\n=== IOC Validation Results ===")
             print(f"Input: {result['input']}")
             print(f"Timestamp: {result['timestamp']}")
             print(f"Risk Score: {result['risk_score']}/100")
@@ -284,17 +284,17 @@ Examples:
                 print(f"\n🚨 KNOWN MALICIOUS: {result['malicious_category']}")
             
             if result['pattern_matches']:
-                print(f"\n📋 Pattern Matches:")
+                print("\n📋 Pattern Matches:")
                 for match in result['pattern_matches']:
                     print(f"  - {match['description']} ({match['risk_level']})")
             
             if result['recommendations']:
-                print(f"\n💡 Recommendations:")
+                print("\n💡 Recommendations:")
                 for rec in result['recommendations']:
                     print(f"  - {rec}")
             
             if args.verbose:
-                print(f"\n🔍 Additional Details:")
+                print("\n🔍 Additional Details:")
                 print(f"  - MD5: {result['hashes']['md5']}")
                 print(f"  - SHA256: {result['hashes']['sha256']}")
                 

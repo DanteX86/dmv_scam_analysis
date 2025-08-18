@@ -14,14 +14,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
+from datetime import datetime
 import plotly.graph_objects as go
-import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.offline as pyo
-import json
 import argparse
 import os
+from typing import Dict, Any
 
 # Set style for professional visualizations
 sns.set_style("whitegrid")
@@ -32,7 +31,7 @@ class ThreatVisualizationSuite:
     Comprehensive threat analysis visualization toolkit
     """
     
-    def __init__(self, output_dir="./visualizations"):
+    def __init__(self, output_dir: str = "./visualizations") -> None:
         """
         Initialize visualization suite
         
@@ -45,7 +44,7 @@ class ThreatVisualizationSuite:
         # Sample data for demonstration (sanitized)
         self.threat_data = self._generate_sample_data()
         
-    def _generate_sample_data(self):
+    def _generate_sample_data(self) -> Dict[str, Any]:
         """
         Generate sanitized sample data for visualization demonstration
         
@@ -101,7 +100,7 @@ class ThreatVisualizationSuite:
             'capabilities': capabilities
         }
     
-    def create_threat_timeline(self):
+    def create_threat_timeline(self) -> None:
         """
         Create comprehensive threat timeline visualization
         """
@@ -157,7 +156,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Threat timeline saved: {self.output_dir}/threat_timeline.png")
     
-    def create_risk_assessment_dashboard(self):
+    def create_risk_assessment_dashboard(self) -> None:
         """
         Create comprehensive risk assessment dashboard
         """
@@ -227,7 +226,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Risk dashboard saved: {self.output_dir}/risk_dashboard.html")
     
-    def create_threat_intelligence_network(self):
+    def create_threat_intelligence_network(self) -> None:
         """
         Create network diagram showing threat infrastructure relationships
         """
@@ -303,7 +302,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Threat network diagram saved: {self.output_dir}/threat_network.html")
     
-    def create_detection_analytics(self):
+    def create_detection_analytics(self) -> None:
         """
         Create analytics showing detection effectiveness and patterns
         """
@@ -383,7 +382,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Detection analytics saved: {self.output_dir}/detection_analytics.png")
     
-    def create_executive_summary_visual(self):
+    def create_executive_summary_visual(self) -> None:
         """
         Create executive-level visual summary
         """
@@ -486,7 +485,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Executive dashboard saved: {self.output_dir}/executive_dashboard.html")
     
-    def generate_all_visualizations(self):
+    def generate_all_visualizations(self) -> None:
         """
         Generate complete visualization suite
         """
@@ -503,11 +502,11 @@ class ThreatVisualizationSuite:
         self.create_visualization_index()
         
         print("=" * 60)
-        print(f"✅ All visualizations generated successfully!")
+        print("✅ All visualizations generated successfully!")
         print(f"📁 Output directory: {self.output_dir}/")
-        print(f"🌐 Open visualization_index.html to view all charts")
+        print("🌐 Open visualization_index.html to view all charts")
     
-    def create_visualization_index(self):
+    def create_visualization_index(self) -> None:
         """
         Create HTML index page for all visualizations
         """
@@ -619,7 +618,7 @@ class ThreatVisualizationSuite:
         
         print(f"✓ Visualization index saved: {self.output_dir}/visualization_index.html")
 
-def main():
+def main() -> int:
     """
     Main execution function
     """

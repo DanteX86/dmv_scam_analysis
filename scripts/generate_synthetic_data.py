@@ -14,7 +14,7 @@ from pathlib import Path
 fake = Faker()
 
 class SyntheticDataGenerator:
-    def __init__(self):
+    def __init__(self) -> None:
         self.fake = fake
         
         # Common scam patterns
@@ -118,7 +118,7 @@ class SyntheticDataGenerator:
         
         return dataset
     
-    def save_dataset(self, dataset: List[Dict[str, Any]], output_file: str):
+    def save_dataset(self, dataset: List[Dict[str, Any]], output_file: str) -> None:
         """Save dataset to JSON file"""
         output_path = Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -132,12 +132,12 @@ class SyntheticDataGenerator:
         scam_count = sum(1 for item in dataset if item['label'] == 'scam')
         legitimate_count = sum(1 for item in dataset if item['label'] == 'legitimate')
         
-        print(f"Dataset statistics:")
+        print("Dataset statistics:")
         print(f"  - Scam messages: {scam_count}")
         print(f"  - Legitimate messages: {legitimate_count}")
         print(f"  - Total messages: {len(dataset)}")
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Generate synthetic DMV scam data')
     parser.add_argument('--scam-count', type=int, default=50, help='Number of scam messages to generate')
     parser.add_argument('--legitimate-count', type=int, default=50, help='Number of legitimate messages to generate')
