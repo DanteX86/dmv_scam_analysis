@@ -393,7 +393,7 @@ class ConfigManager:
         value = self.get(key)
         if not value:
             raise ConfigurationError(f"Path not found in configuration: {key}")
-        return Path(value)
+        return Path(str(value))
 
     def is_development(self) -> bool:
         """Check if running in development environment"""

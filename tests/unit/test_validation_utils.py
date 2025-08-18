@@ -1,16 +1,22 @@
 import pandas as pd
 import pytest
 
-from dmv_scam_analysis.utils.validation import DataValidator, OutputValidator, ValidationError
+from dmv_scam_analysis.utils.validation import (
+    DataValidator,
+    OutputValidator,
+    ValidationError,
+)
 
 
 def test_validation_success_and_warnings():
-    df = pd.DataFrame({
-        "datetime": ["2025-08-18T10:00:00Z", "2025-08-18T11:00:00Z"],
-        "contact_id": ["c1", "c2"],
-        "text": ["hello", "world"],
-        "is_from_me": [1, 0],
-    })
+    df = pd.DataFrame(
+        {
+            "datetime": ["2025-08-18T10:00:00Z", "2025-08-18T11:00:00Z"],
+            "contact_id": ["c1", "c2"],
+            "text": ["hello", "world"],
+            "is_from_me": [1, 0],
+        }
+    )
     v = DataValidator()
     res = v.validate_input_data(df)
     assert res["is_valid"] is True
@@ -23,7 +29,7 @@ def test_validation_detects_missing_columns():
     v = DataValidator()
     res = v.validate_input_data(df)
     assert res["is_valid"] is False
-    assert any("Missing required columns" in e for e in res["errors"]) 
+    assert any("Missing required columns" in e for e in res["errors"])
 
 
 def test_output_validator_path_and_format(tmp_path):
@@ -37,4 +43,3 @@ def test_output_validator_path_and_format(tmp_path):
     assert ov.validate_output_format("CSV") is True
     with pytest.raises(ValidationError):
         ov.validate_output_format("exe")
-

@@ -122,7 +122,7 @@ class iMessageAnalyzer:
                             if c in df.columns:
                                 ts_val = row.get(c)
                                 break
-                        if pd.isna(ts_val) if "pd" in globals() else ts_val is None:
+                        if ("pd" in globals() and pd.isna(ts_val)) or ts_val is None:
                             ts_val = datetime.now().isoformat()
                         msg["timestamp"] = str(ts_val)
                         # Source if present

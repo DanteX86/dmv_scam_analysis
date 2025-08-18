@@ -1,4 +1,5 @@
 import os
+
 import pytest
 
 from dmv_scam_analysis.utils.config_manager import ConfigManager, ConfigurationError
@@ -31,4 +32,3 @@ def test_load_yaml_file_parsing_error(tmp_path, monkeypatch):
 
     with pytest.raises(ConfigurationError):
         cm._load_yaml_file("bad.yaml")
-

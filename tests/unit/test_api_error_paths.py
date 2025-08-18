@@ -7,7 +7,7 @@ import jwt
 import pytest
 from fastapi.testclient import TestClient
 
-from dmv_scam_analysis.api.app import app, AUTH_SECRET, analyzer
+from dmv_scam_analysis.api.app import AUTH_SECRET, analyzer, app
 
 
 def _make_token(sub="unit", perms=("analyze:read",)):
@@ -31,7 +31,10 @@ def test_stats_raises_500_on_backend_error(monkeypatch):
     resp = client.get(
         "/stats",
         headers=headers,
-        params={"start_date": "2025-01-01T00:00:00Z", "end_date": "2025-01-02T00:00:00Z"},
+        params={
+            "start_date": "2025-01-01T00:00:00Z",
+            "end_date": "2025-01-02T00:00:00Z",
+        },
     )
     assert resp.status_code == 500
     assert "Failed to get statistics" in resp.json().get("error", "")
@@ -44,4 +47,3 @@ def test_api_version_header_invalid_returns_400():
     resp = client.post("/analyze", headers=headers, json={"text": "hello"})
     assert resp.status_code == 400
     assert "Unsupported API version" in resp.json().get("error", "")
-

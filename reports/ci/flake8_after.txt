@@ -1,0 +1,713 @@
+flake8...................................................................[41mFailed[m
+[2m- hook id: flake8[m
+[2m- exit code: 1[m
+
+[1mbehavioral_analyzer.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
+[1mconftest.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
+[1mconftest.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mconftest.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdebug_training.py[m[36m:[m9[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_completion.py[m[36m:[m18[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_completion.py[m[36m:[m75[36m:[m9[36m:[m [1m[31mF841[m local variable 'predictions' is assigned to but never used
+[1mdemonstrate_task_completion.py[m[36m:[m81[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m23[36m:[m1[36m:[m [1m[31mF401[m 'typing.Any' imported but unused
+[1mdemonstrate_task_example.py[m[36m:[m30[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_example.py[m[36m:[m47[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m53[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m59[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m86[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m125[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m126[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m126[36m:[m75[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m161[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m4[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m87[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m88[36m:[m64[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m89[36m:[m52[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m50[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m101[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m198[36m:[m57[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mdmv_cli_enhanced.py[m[36m:[m255[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m277[36m:[m101[36m:[m [1m[31mE501[m line too long (110 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m331[36m:[m17[36m:[m [1m[31mF841[m local variable 'prediction' is assigned to but never used
+[1mdmv_cli_enhanced.py[m[36m:[m333[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m335[36m:[m101[36m:[m [1m[31mE501[m line too long (116 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m349[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mdmv_cli_enhanced.py[m[36m:[m421[36m:[m44[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m516[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m516[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m42[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m71[36m:[m45[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mfinal_anomaly_test.py[m[36m:[m127[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m134[36m:[m101[36m:[m [1m[31mE501[m line too long (141 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m160[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m186[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m195[36m:[m27[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mfinal_anomaly_test.py[m[36m:[m195[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m28[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m33[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m26[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m96[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m151[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m162[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m204[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m207[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m359[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mintegration_test_ml_trainer.py[m[36m:[m17[36m:[m101[36m:[m [1m[31mE501[m line too long (153 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m20[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m23[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m26[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m29[36m:[m101[36m:[m [1m[31mE501[m line too long (152 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m33[36m:[m101[36m:[m [1m[31mE501[m line too long (129 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m36[36m:[m101[36m:[m [1m[31mE501[m line too long (127 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m39[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m43[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m49[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m52[36m:[m101[36m:[m [1m[31mE501[m line too long (122 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m69[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mintegration_test_ml_trainer.py[m[36m:[m87[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m92[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m93[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m94[36m:[m77[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m113[36m:[m37[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mintegration_test_ml_trainer.py[m[36m:[m113[36m:[m40[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m118[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m119[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mlauncher.py[m[36m:[m240[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mlauncher.py[m[36m:[m422[36m:[m43[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mml_threat_classifier.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.core.classifier.MLThreatClassifier' imported but unused
+[1mrun_tests.py[m[36m:[m51[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mrun_tests.py[m[36m:[m88[36m:[m55[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m111[36m:[m85[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m114[36m:[m99[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m114[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1mrun_tests.py[m[36m:[m117[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mrun_tests.py[m[36m:[m117[36m:[m107[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m133[36m:[m5[36m:[m [1m[31mF841[m local variable 'classifier' is assigned to but never used
+[1mscripts/data_validation.py[m[36m:[m194[36m:[m9[36m:[m [1m[31mF841[m local variable 'raw_results' is assigned to but never used
+[1mscripts/data_validation.py[m[36m:[m198[36m:[m9[36m:[m [1m[31mF841[m local variable 'processed_results' is assigned to but never used
+[1mscripts/generate_synthetic_data.py[m[36m:[m153[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/generate_synthetic_data.py[m[36m:[m154[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/generate_synthetic_data.py[m[36m:[m155[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/image_analyzer.py[m[36m:[m88[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mscripts/image_analyzer.py[m[36m:[m89[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mscripts/ioc_validator.py[m[36m:[m288[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m289[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m290[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m313[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m318[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m322[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m323[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m326[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m329[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m274[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m275[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m276[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m299[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m304[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m308[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m309[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m312[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/threat_visualizer.py[m[36m:[m432[36m:[m9[36m:[m [1m[31mF841[m local variable 'bars' is assigned to but never used
+[1mscripts/threat_visualizer.py[m[36m:[m710[36m:[m101[36m:[m [1m[31mE501[m line too long (158 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m711[36m:[m101[36m:[m [1m[31mE501[m line too long (132 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m712[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m715[36m:[m101[36m:[m [1m[31mE501[m line too long (167 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m717[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m719[36m:[m101[36m:[m [1m[31mE501[m line too long (164 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m742[36m:[m101[36m:[m [1m[31mE501[m line too long (143 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m748[36m:[m101[36m:[m [1m[31mE501[m line too long (128 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m754[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m755[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m763[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m770[36m:[m101[36m:[m [1m[31mE501[m line too long (126 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m777[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m779[36m:[m101[36m:[m [1m[31mE501[m line too long (106 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m780[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m783[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m789[36m:[m101[36m:[m [1m[31mE501[m line too long (106 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m790[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m791[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m792[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m795[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m797[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1msentinel_analyzer.py[m[36m:[m241[36m:[m93[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msentinel_analyzer.py[m[36m:[m390[36m:[m-742[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1msimple_ensemble_demo.py[m[36m:[m11[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1msimple_ensemble_demo.py[m[36m:[m16[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m19[36m:[m101[36m:[m [1m[31mE501[m line too long (148 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m22[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m28[36m:[m101[36m:[m [1m[31mE501[m line too long (146 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m91[36m:[m13[36m:[m [1m[31mF841[m local variable '_' is assigned to but never used
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m174[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1039[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1128[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1163[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1184[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1184[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1241[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m57[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m149[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m169[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m204[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m225[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m225[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m143[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m144[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (144 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1138[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1268[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1268[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1276[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m107[36m:[m90[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m107[36m:[m101[36m:[m [1m[31mE501[m line too long (129 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m112[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m129[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m129[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m333[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m112[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m118[36m:[m101[36m:[m [1m[31mE501[m line too long (122 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m118[36m:[m117[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m124[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m148[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m156[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m156[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m88[36m:[m31[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m110[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m127[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m181[36m:[m35[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m197[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m249[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m285[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m298[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m311[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m359[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m395[36m:[m30[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m396[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m397[36m:[m32[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m142[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m145[36m:[m72[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m170[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m176[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/tui.py[m[36m:[m178[36m:[m37[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/tui.py[m[36m:[m189[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m263[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m278[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m279[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m286[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m305[36m:[m77[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m410[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m411[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1180[36m:[m67[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1275[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1313[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1770[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m111[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m142[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m161[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m207[36m:[m21[36m:[m [1m[31mF841[m local variable 'messages' is assigned to but never used
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m278[36m:[m56[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m278[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m576[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m316[36m:[m20[36m:[m [1m[31mE225[m missing whitespace around operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-113[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-57[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-12[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m16[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m47[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m61[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m88[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m89[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m22[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m36[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m68[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m79[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m80[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m17[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m35[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m50[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m70[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m100[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m102[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m109[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m110[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m19[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m34[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m53[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m66[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m67[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m18[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m35[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m48[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m65[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m66[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m18[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m38[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m70[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m71[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m20[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m40[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m72[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m73[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m20[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m40[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m72[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m73[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m14[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m33[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m46[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m47[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m29[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m41[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m55[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m75[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m98[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m118[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m119[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m25[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m51[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m52[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m23[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m49[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m50[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m26[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m52[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m53[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m-81[36m:[m [1m[31mE221[m multiple spaces before operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m-53[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m33[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m46[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m-56[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m-27[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-103[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-43[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-28[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-77[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-71[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-108[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-51[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-36[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-71[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m407[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m94[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-204[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-153[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-138[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-127[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-93[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-93[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-90[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-63[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-17[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m429[36m:[m71[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m467[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m481[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m481[36m:[m83[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m495[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m505[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m551[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/ml/model_trainer.py[m[36m:[m105[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/config_manager.py[m[36m:[m395[36m:[m45[36m:[m [1m[31mE713[m test for membership should be 'not in'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m220[36m:[m67[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m233[36m:[m35[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m235[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/test_helpers.py[m[36m:[m66[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1msrc/dmv_scam_analysis/utils/test_helpers.py[m[36m:[m131[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mstep_10_integration_test.py[m[36m:[m15[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m21[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m27[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m33[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m39[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (126 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m52[36m:[m101[36m:[m [1m[31mE501[m line too long (119 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m58[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m80[36m:[m25[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mstep_10_integration_test.py[m[36m:[m89[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mstep_10_integration_test.py[m[36m:[m110[36m:[m31[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mstep_10_integration_test.py[m[36m:[m110[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtask_code_example.py[m[36m:[m16[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m8[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m10[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m11[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m16[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_analysis.py[m[36m:[m22[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_analysis.py[m[36m:[m28[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_analysis.py[m[36m:[m34[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_analysis.py[m[36m:[m40[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_analysis.py[m[36m:[m65[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_analysis.py[m[36m:[m73[36m:[m44[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_analysis.py[m[36m:[m84[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m63[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m65[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m67[36m:[m41[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m118[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m136[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (132 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m177[36m:[m97[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m177[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m184[36m:[m23[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m184[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m213[36m:[m86[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m108[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m22[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m40[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m43[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m336[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m59[36m:[m90[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m68[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m68[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m81[36m:[m53[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_direct.py[m[36m:[m82[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m82[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m84[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m84[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m120[36m:[m101[36m:[m [1m[31mE501[m line too long (185 > 100 characters)
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m19[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m29[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_anomaly_tuned.py[m[36m:[m30[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_anomaly_tuned.py[m[36m:[m59[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m59[36m:[m103[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m100[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m95[36m:[m101[36m:[m [1m[31mE501[m line too long (144 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m125[36m:[m37[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m125[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m126[36m:[m39[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m126[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m160[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m240[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m246[36m:[m19[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_tuned.py[m[36m:[m270[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m271[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m271[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m274[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m80[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m110[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m290[36m:[m5[36m:[m [1m[31mF841[m local variable 'manual_results' is assigned to but never used
+[1mtest_behavioral.py[m[36m:[m9[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_behavioral.py[m[36m:[m17[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m24[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m31[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m38[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m45[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m68[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m76[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m76[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m85[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m91[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m97[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m99[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m114[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_classification_as_requested.py[m[36m:[m16[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_classification_as_requested.py[m[36m:[m27[36m:[m23[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m29[36m:[m21[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m97[36m:[m17[36m:[m [1m[31mF841[m local variable 'accuracy' is assigned to but never used
+[1mtest_classification_as_requested.py[m[36m:[m102[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m115[36m:[m43[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m116[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m117[36m:[m72[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m118[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m119[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m129[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m135[36m:[m87[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m159[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_classification_as_requested.py[m[36m:[m171[36m:[m19[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m173[36m:[m17[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m7[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m22[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m23[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m41[36m:[m101[36m:[m [1m[31mE501[m line too long (154 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (153 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m51[36m:[m101[36m:[m [1m[31mE501[m line too long (151 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m57[36m:[m101[36m:[m [1m[31mE501[m line too long (120 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m62[36m:[m101[36m:[m [1m[31mE501[m line too long (127 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m68[36m:[m101[36m:[m [1m[31mE501[m line too long (138 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m73[36m:[m101[36m:[m [1m[31mE501[m line too long (119 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m79[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m84[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m89[36m:[m101[36m:[m [1m[31mE501[m line too long (124 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m123[36m:[m33[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m123[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m124[36m:[m63[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m125[36m:[m31[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m125[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m126[36m:[m33[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m126[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m30[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m92[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m212[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m212[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m213[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m215[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m215[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m217[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m233[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m234[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m235[36m:[m35[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m235[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m241[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m281[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m282[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m284[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtest_ensemble_performance.py[m[36m:[m284[36m:[m87[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m25[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m101[36m:[m [1m[31mE501[m line too long (125 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m106[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m339[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m339[36m:[m101[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m342[36m:[m101[36m:[m [1m[31mE501[m line too long (110 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m342[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m344[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m345[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m363[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m381[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m407[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m433[36m:[m5[36m:[m [1m[31mF841[m local variable 'final_report' is assigned to but never used
+[1mtest_ensemble_performance.py[m[36m:[m442[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m8[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m14[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m20[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m26[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m32[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m53[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m65[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m66[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m67[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m68[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m69[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m79[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m79[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m89[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ml_classifier.py[m[36m:[m89[36m:[m32[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m93[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m107[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m120[36m:[m13[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_model_persistence.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_model_persistence.py[m[36m:[m32[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m38[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m44[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m70[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m76[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m134[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m212[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m227[36m:[m31[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_model_persistence.py[m[36m:[m238[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m238[36m:[m83[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m285[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m285[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m292[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m292[36m:[m85[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m360[36m:[m9[36m:[m [1m[31mF841[m local variable 'training_results' is assigned to but never used
+[1mtest_model_persistence.py[m[36m:[m377[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m391[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mtest_production_integration.py[m[36m:[m58[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mtest_production_integration.py[m[36m:[m70[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_production_integration.py[m[36m:[m287[36m:[m17[36m:[m [1m[31mF841[m local variable 'prediction' is assigned to but never used
+[1mtest_threat_classification.py[m[36m:[m15[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_threat_classification.py[m[36m:[m102[36m:[m101[36m:[m [1m[31mE501[m line too long (116 > 100 characters)
+[1mtest_threat_classification.py[m[36m:[m111[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_threat_classification.py[m[36m:[m133[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m142[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m154[36m:[m64[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m160[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m176[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m185[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m208[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/integration/test_data_pipeline.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (227 > 100 characters)
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m49[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m49[36m:[m80[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m51[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m237[36m:[m5[36m:[m [1m[31mF841[m local variable '_models' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (335 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m6[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m14[36m:[m9[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m13[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m36[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m52[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m28[36m:[m16[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m29[36m:[m12[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m30[36m:[m14[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m31[36m:[m17[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m45[36m:[m27[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m41[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m68[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m93[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m95[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (125 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m111[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m115[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m120[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m38[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m62[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m59[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m74[36m:[m16[36m:[m [1m[31mF821[m undefined name 'NLPAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m89[36m:[m18[36m:[m [1m[31mF821[m undefined name 'ThreatClassifier'
+[1mtests/performance/test_performance.py[m[36m:[m103[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m115[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m118[36m:[m10[36m:[m [1m[31mF821[m undefined name 'ThreadPoolExecutor'
+[1mtests/performance/test_performance.py[m[36m:[m121[36m:[m19[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m124[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m125[36m:[m10[36m:[m [1m[31mF821[m undefined name 'ProcessPoolExecutor'
+[1mtests/performance/test_performance.py[m[36m:[m126[36m:[m9[36m:[m [1m[31mF841[m local variable 'results' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m128[36m:[m20[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m143[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m162[36m:[m10[36m:[m [1m[31mF821[m undefined name 'DatabaseHandler'
+[1mtests/performance/test_performance.py[m[36m:[m165[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m167[36m:[m24[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m170[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m171[36m:[m5[36m:[m [1m[31mF841[m local variable 'results' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m174[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m201[36m:[m13[36m:[m [1m[31mF821[m undefined name 'CacheManager'
+[1mtests/performance/test_performance.py[m[36m:[m205[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m207[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m210[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m212[36m:[m17[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m230[36m:[m34[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m231[36m:[m29[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m259[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m261[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m271[36m:[m9[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m274[36m:[m9[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/security/test_api_app_branches_security.py[m[36m:[m94[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtests/security/test_api_app_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'base64' imported but unused
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m10[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.api.app.http_exception_handler' imported but unused
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m42[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m43[36m:[m5[36m:[m [1m[31mF841[m local variable 'r2' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m62[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m63[36m:[m5[36m:[m [1m[31mF841[m local variable 'r2' is assigned to but never used
+[1mtests/security/test_api_bruteforce_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m8[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.api.app.rate_limiter' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m127[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.UTC' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.datetime' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.timedelta' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m24[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtests/security/test_api_middleware_security.py[m[36m:[m25[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/security/test_api_permissions_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_security.py[m[36m:[m192[36m:[m5[36m:[m [1m[31mF841[m local variable '_headers' is assigned to but never used
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'json' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m7[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.utils.config_manager.ConfigurationError' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m33[36m:[m5[36m:[m [1m[31mF841[m local variable 'before' is assigned to but never used
+[1mtests/security/test_config_manager_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_data_security.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (255 > 100 characters)
+[1mtests/security/test_data_security.py[m[36m:[m32[36m:[m55[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/security/test_data_security.py[m[36m:[m44[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/security/test_data_security.py[m[36m:[m89[36m:[m26[36m:[m [1m[31mF821[m undefined name 'yaml'
+[1mtests/security/test_data_security.py[m[36m:[m126[36m:[m12[36m:[m [1m[31mF821[m undefined name 'sqlite3'
+[1mtests/security/test_data_security.py[m[36m:[m134[36m:[m16[36m:[m [1m[31mF821[m undefined name 'sqlite3'
+[1mtests/security/test_data_security.py[m[36m:[m173[36m:[m17[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_data_security.py[m[36m:[m173[36m:[m28[36m:[m [1m[31mF821[m undefined name 'generate_test_message'
+[1mtests/security/test_data_security.py[m[36m:[m174[36m:[m11[36m:[m [1m[31mF821[m undefined name 'Fernet'
+[1mtests/security/test_data_security.py[m[36m:[m191[36m:[m17[36m:[m [1m[31mF821[m undefined name 'create_test_dataset'
+[1mtests/security/test_data_security.py[m[36m:[m193[36m:[m36[36m:[m [1m[31mF821[m undefined name 'datetime'
+[1mtests/security/test_data_security.py[m[36m:[m259[36m:[m21[36m:[m [1m[31mF821[m undefined name 'generate_test_message'
+[1mtests/security/test_data_security.py[m[36m:[m260[36m:[m25[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_data_security.py[m[36m:[m281[36m:[m18[36m:[m [1m[31mF821[m undefined name 'hashlib'
+[1mtests/security/test_data_security.py[m[36m:[m304[36m:[m20[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m305[36m:[m18[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m306[36m:[m18[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m309[36m:[m28[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m310[36m:[m26[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m311[36m:[m26[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m361[36m:[m30[36m:[m [1m[31mF722[m syntax error in forward annotation '^[a-zA-Z0-9_-]+$'
+[1mtests/security/test_data_security.py[m[36m:[m384[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mtests/security/test_logger_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'pathlib.Path' imported but unused
+[1mtests/security/test_rate_limiter_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'asyncio' imported but unused
+[1mtests/security/test_rate_limiter_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'time' imported but unused
+[1mtests/security/test_security.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (307 > 100 characters)
+[1mtests/security/test_security.py[m[36m:[m6[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/security/test_security.py[m[36m:[m32[36m:[m12[36m:[m [1m[31mF821[m undefined name 'ConfigManager'
+[1mtests/security/test_security.py[m[36m:[m55[36m:[m20[36m:[m [1m[31mF821[m undefined name 'DataPreprocessor'
+[1mtests/security/test_security.py[m[36m:[m83[36m:[m17[36m:[m [1m[31mF821[m undefined name 'DataValidator'
+[1mtests/security/test_security.py[m[36m:[m121[36m:[m20[36m:[m [1m[31mF821[m undefined name 'SecureFileHandler'
+[1mtests/security/test_security.py[m[36m:[m135[36m:[m12[36m:[m [1m[31mF821[m undefined name 'os'
+[1mtests/security/test_security.py[m[36m:[m138[36m:[m16[36m:[m [1m[31mF821[m undefined name 'os'
+[1mtests/security/test_security.py[m[36m:[m151[36m:[m14[36m:[m [1m[31mF821[m undefined name 'patch'
+[1mtests/security/test_security.py[m[36m:[m154[36m:[m14[36m:[m [1m[31mF821[m undefined name 'patch'
+[1mtests/security/test_security.py[m[36m:[m183[36m:[m5[36m:[m [1m[31mF841[m local variable 'packages' is assigned to but never used
+[1mtests/security/test_security.py[m[36m:[m190[36m:[m23[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_security.py[m[36m:[m201[36m:[m15[36m:[m [1m[31mF821[m undefined name 'MalwareScanner'
+[1mtests/test_configuration.py[m[36m:[m4[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtests/test_configuration.py[m[36m:[m5[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtests/unit/test_api_error_paths.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'logging' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m3[36m:[m1[36m:[m [1m[31mF401[m 'sys' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'pathlib.Path' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m7[36m:[m1[36m:[m [1m[31mF401[m 'pytest' imported but unused
+[1mtests/unit/test_config_manager_more.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_config_manager_roundtrip.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_extractor_small.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_extractor_small.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'pandas as pd' imported but unused
+[1mtests/unit/test_jwt_exports.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'base64' imported but unused
+[1mtests/unit/test_jwt_exports.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'json' imported but unused
+[1mtests/unit/test_logger_manager.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m3[36m:[m1[36m:[m [1m[31mF401[m 'types' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m5[36m:[m1[36m:[m [1m[31mF401[m 'pytest' imported but unused
+[1mtests/utils/test_helpers.py[m[36m:[m57[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'

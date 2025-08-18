@@ -57,6 +57,7 @@ repos:
       - id: bandit
         name: bandit (src only; pyproject + baseline)
         language_version: python3
+        pass_filenames: false
         args:
           - -c
           - pyproject.toml

@@ -259,9 +259,10 @@ class CampaignAnalyzer:
             f.write(
                 f"Analysis Date: {self.results['campaign_metadata']['analysis_timestamp']}\n"
             )
-            f.write(
-                f"Campaign Type: {self.results['campaign_metadata'].get('campaign_type', 'Unknown')}\n"
+            campaign_type = self.results["campaign_metadata"].get(
+                "campaign_type", "Unknown"
             )
+            f.write(f"Campaign Type: {campaign_type}\n")
             f.write(
                 f"Total Messages: {self.results['campaign_metadata']['total_messages']}\n"
             )

@@ -28,4 +28,3 @@ def test_config_manager_roundtrip(tmp_path, monkeypatch):
     # Validate path helper
     p = cm.get_path("analysis.output_dir")
     assert isinstance(p, Path)
-

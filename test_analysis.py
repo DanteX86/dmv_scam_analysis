@@ -6,6 +6,7 @@ import sys
 sys.path.append("/Users/romulusaugustus/dmv_scam_analysis/scripts")
 
 import pandas as pd
+
 from behavioral_analyzer import BehavioralAnalyzer
 from ml_threat_classifier import MLThreatClassifier
 

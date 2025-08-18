@@ -15,7 +15,7 @@ import json
 import pickle
 import warnings
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Sequence, cast
+from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
 import pandas as pd
@@ -750,7 +750,7 @@ class MLThreatClassifier:
                             cv_scores = cross_val_score(
                                 model, X_train_scaled, y_train, cv=cv_folds
                             )
-                    except Exception as _:
+                    except Exception:
                         # Fallback to accuracy if cross-validation fails
                         cv_scores = np.array([accuracy])
 
@@ -851,7 +851,11 @@ class MLThreatClassifier:
         X = pd.DataFrame(feature_rows)
 
         # Align features to the scaler's expected schema (compat shim for legacy tests)
-        scaler = self.scalers.get("threat_classifier") if "threat_classifier" in self.scalers else None
+        scaler = (
+            self.scalers.get("threat_classifier")
+            if "threat_classifier" in self.scalers
+            else None
+        )
         if scaler is not None:
             try:
                 expected_cols = list(getattr(scaler, "feature_names_in_", []))

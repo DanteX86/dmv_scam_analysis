@@ -54,7 +54,8 @@ class RiskAnalyzer:
         }
 
         # Save detailed report
-        output_file = f"{self.output_dir}/behavioral_analysis_{contact_identifier.replace('+', '')}.json"
+        safe_contact = contact_identifier.replace("+", "")
+        output_file = f"{self.output_dir}/behavioral_analysis_{safe_contact}.json"
         with open(output_file, "w") as f:
             json.dump(report, f, indent=2, default=str)
 
@@ -146,7 +147,10 @@ class RiskAnalyzer:
                 {
                     "priority": "HIGH",
                     "recommendation": "Escalate due to coercive/payment language",
-                    "rationale": f"Detected {payment_signals} payment and {urgency_signals} urgency cues in content",
+                    "rationale": (
+                        f"Detected {payment_signals} payment and "
+                        f"{urgency_signals} urgency cues in content"
+                    ),
                 }
             )
         elif keyword_hits >= 3 or url_count >= 2:
@@ -166,7 +170,10 @@ class RiskAnalyzer:
                 {
                     "priority": "HIGH",
                     "recommendation": "Investigate potential bot/automated messaging system",
-                    "rationale": "High automation indicators suggest non-human communication patterns",
+                    "rationale": (
+                        "High automation indicators suggest non-human communication "
+                        "patterns"
+                    ),
                 }
             )
 
@@ -201,7 +208,8 @@ class RiskAnalyzer:
         self, report: Dict[str, Any], contact_identifier: str
     ) -> None:
         """Generate human-readable summary report"""
-        summary_file = f"{self.output_dir}/behavioral_summary_{contact_identifier.replace('+', '')}.txt"
+        safe_contact = contact_identifier.replace("+", "")
+        summary_file = f"{self.output_dir}/behavioral_summary_{safe_contact}.txt"
 
         with open(summary_file, "w") as f:
             f.write("Behavioral Analysis Summary\n")

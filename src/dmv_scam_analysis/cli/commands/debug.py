@@ -8,11 +8,12 @@ from typing import Any, Dict, List
 
 import click
 import pandas as pd
-from behavioral_analyzer import BehavioralAnalyzer
-from ml_threat_classifier import MLThreatClassifier
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
+
+from behavioral_analyzer import BehavioralAnalyzer
+from ml_threat_classifier import MLThreatClassifier
 
 console = Console()
 

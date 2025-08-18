@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+
 import yaml
 
 from dmv_scam_analysis.utils import logger as logmod
@@ -87,4 +88,3 @@ def test_load_logging_config_happy_path(tmp_path, monkeypatch):
     lg = logging.getLogger("app")
     lg.info("configured")
     assert (out_dir / "test.log").exists()
-

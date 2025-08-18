@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Enhanced CLI Interface for DMV Scam Analysis System
@@ -14,12 +13,13 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 # Add src to Python path
-sys.path.insert(0, 'src')
+sys.path.insert(0, "src")
 
 # Import our modules
 try:
     from dmv_scam_analysis.core.classifier import MLThreatClassifier
     from dmv_scam_analysis.core.model_manager import ModelManager
+
     MODULES_AVAILABLE = True
 except ImportError as e:
     print(f"Warning: Some modules not available: {e}")
@@ -48,7 +48,7 @@ class EnhancedCLI:
             return
 
         message = args.message
-        source = args.source or 'cli'
+        source = args.source or "cli"
 
         try:
             print(f"🔍 Analyzing message from {source}...")
@@ -81,7 +81,9 @@ class EnhancedCLI:
             reset_code = "\033[0m"
 
             # Display results
-            print(f"\n{risk_emoji} {color_code}THREAT ASSESSMENT: {classification}{reset_code}")
+            print(
+                f"\n{risk_emoji} {color_code}THREAT ASSESSMENT: {classification}{reset_code}"
+            )
             print(f"🎯 Threat Score: {threat_score:.3f}")
             print(f"📊 Confidence: {min(threat_score * 100, 100):.1f}%")
             print(f"⚡ Analysis Time: {analysis_time:.3f}s")
@@ -108,15 +110,17 @@ class EnhancedCLI:
                 print("  • ℹ️ Always verify important information independently")
 
             if args.save:
-                self._save_analysis_result({
-                    'message': message,
-                    'source': source,
-                    'threat_score': threat_score,
-                    'classification': classification.lower().replace(' ', '_'),
-                    'indicators': threat_indicators,
-                    'timestamp': datetime.now().isoformat(),
-                    'analysis_time': analysis_time
-                })
+                self._save_analysis_result(
+                    {
+                        "message": message,
+                        "source": source,
+                        "threat_score": threat_score,
+                        "classification": classification.lower().replace(" ", "_"),
+                        "indicators": threat_indicators,
+                        "timestamp": datetime.now().isoformat(),
+                        "analysis_time": analysis_time,
+                    }
+                )
                 print("\n💾 Analysis results saved to analysis_results.json")
 
         except Exception as e:
@@ -137,13 +141,16 @@ class EnhancedCLI:
             print(f"📄 Processing batch analysis from {input_file}...")
 
             # Load messages
-            with open(input_file, 'r') as f:
-                if input_file.endswith('.json'):
+            with open(input_file, "r") as f:
+                if input_file.endswith(".json"):
                     data = json.load(f)
                     if isinstance(data, list):
-                        messages = [item['text'] if isinstance(item, dict) else str(item) for item in data]
+                        messages = [
+                            item["text"] if isinstance(item, dict) else str(item)
+                            for item in data
+                        ]
                     else:
-                        messages = [data['text']] if 'text' in data else [str(data)]
+                        messages = [data["text"]] if "text" in data else [str(data)]
                 else:
                     messages = [line.strip() for line in f.readlines() if line.strip()]
 
@@ -174,15 +181,18 @@ class EnhancedCLI:
                         risk_emoji = "✅"
 
                     result = {
-                        'id': i + 1,
-                        'message': message[:100] + ('...' if len(message) > 100 else ''),
-                        'threat_score': threat_score,
-                        'classification': classification,
-                        'timestamp': datetime.now().isoformat()
+                        "id": i + 1,
+                        "message": message[:100]
+                        + ("..." if len(message) > 100 else ""),
+                        "threat_score": threat_score,
+                        "classification": classification,
+                        "timestamp": datetime.now().isoformat(),
                     }
                     results.append(result)
 
-                    print(f"{risk_emoji} Message {i+1}: {classification.upper()} (Score: {threat_score:.3f})")
+                    print(
+                        f"{risk_emoji} Message {i+1}: {classification.upper()} (Score: {threat_score:.3f})"
+                    )
 
                 except Exception as e:
                     print(f"❌ Error analyzing message {i+1}: {e}")
@@ -200,18 +210,22 @@ class EnhancedCLI:
                 print(f"\n🔥 ALERT: {high_risk_count} high-risk messages detected!")
 
             # Save results
-            output_file = args.output or 'batch_analysis_results.json'
-            with open(output_file, 'w') as f:
-                json.dump({
-                    'summary': {
-                        'total_messages': len(messages),
-                        'high_risk_count': high_risk_count,
-                        'medium_risk_count': medium_risk_count,
-                        'low_risk_count': low_risk_count
+            output_file = args.output or "batch_analysis_results.json"
+            with open(output_file, "w") as f:
+                json.dump(
+                    {
+                        "summary": {
+                            "total_messages": len(messages),
+                            "high_risk_count": high_risk_count,
+                            "medium_risk_count": medium_risk_count,
+                            "low_risk_count": low_risk_count,
+                        },
+                        "results": results,
+                        "timestamp": datetime.now().isoformat(),
                     },
-                    'results': results,
-                    'timestamp': datetime.now().isoformat()
-                }, f, indent=2)
+                    f,
+                    indent=2,
+                )
 
             print(f"💾 Results saved to {output_file}")
 
@@ -235,12 +249,12 @@ class EnhancedCLI:
             if models:
                 print("\n📋 Available Models:")
                 for model in models[:10]:  # Show first 10
-                    status_emoji = "🟢" if model.get('status') == 'active' else "⚪"
+                    status_emoji = "🟢" if model.get("status") == "active" else "⚪"
                     print(f"  {status_emoji} {model['model_name']} v{model['version']}")
                     print(f"     Created: {model['created_at'][:19]}")
                     print(f"     Size: {model.get('file_size', 0) / 1024:.1f} KB")
-                    if model.get('performance_metrics'):
-                        metrics = model['performance_metrics']
+                    if model.get("performance_metrics"):
+                        metrics = model["performance_metrics"]
                         print(f"     Accuracy: {metrics.get('accuracy', 'N/A')}")
                     print()
 
@@ -250,8 +264,8 @@ class EnhancedCLI:
                 print(f"🎯 Active Model: {model_id}")
                 print("   Status: 🟢 ACTIVE")
                 print(f"   File: {model_info['file_path']}")
-                if model_info.get('performance_metrics'):
-                    metrics = model_info['performance_metrics']
+                if model_info.get("performance_metrics"):
+                    metrics = model_info["performance_metrics"]
                     print(f"   Performance: Accuracy {metrics.get('accuracy', 'N/A')}")
             except Exception:
                 print("⚠️ No active model set")
@@ -259,7 +273,9 @@ class EnhancedCLI:
             # System info
             print("\n💻 System Information:")
             print(f"   Models Directory: {self.model_manager.model_dir}")
-            print(f"   Metadata File: {'✅ Found' if self.model_manager.metadata_file.exists() else '❌ Missing'}")
+            print(
+                f"   Metadata File: {'✅ Found' if self.model_manager.metadata_file.exists() else '❌ Missing'}"
+            )
 
         except Exception as e:
             print(f"❌ Error retrieving model status: {e}")
@@ -271,12 +287,23 @@ class EnhancedCLI:
 
         # System status
         print("🔧 Component Status:")
-        print(f"   ML Classifier: {'✅ Available' if self.classifier else '❌ Unavailable'}")
-        print(f"   Model Manager: {'✅ Available' if self.model_manager else '❌ Unavailable'}")
+        print(
+            f"   ML Classifier: {'✅ Available' if self.classifier else '❌ Unavailable'}"
+        )
+        print(
+            f"   Model Manager: {'✅ Available' if self.model_manager else '❌ Unavailable'}"
+        )
 
         # Directory structure
         print("\n📁 Directory Structure:")
-        key_paths = ['src', 'models', 'data', 'logs', 'analysis_output', 'visualizations']
+        key_paths = [
+            "src",
+            "models",
+            "data",
+            "logs",
+            "analysis_output",
+            "visualizations",
+        ]
         for path in key_paths:
             exists = os.path.exists(path)
             emoji = "✅" if exists else "❌"
@@ -284,7 +311,12 @@ class EnhancedCLI:
 
         # Configuration files
         print("\n⚙️ Configuration Files:")
-        config_files = ['requirements.txt', 'Dockerfile', 'docker-compose.yml', 'pyproject.toml']
+        config_files = [
+            "requirements.txt",
+            "Dockerfile",
+            "docker-compose.yml",
+            "pyproject.toml",
+        ]
         for file in config_files:
             exists = os.path.exists(file)
             emoji = "✅" if exists else "❌"
@@ -299,7 +331,9 @@ class EnhancedCLI:
                 prediction = self.classifier.predict([test_message])
                 elapsed = time.time() - start_time
                 print(f"   Prediction Time: {elapsed:.3f}s")
-                print(f"   Performance: {'✅ Good' if elapsed < 1.0 else '⚠️ Slow' if elapsed < 2.0 else '❌ Critical'}")
+                print(
+                    f"   Performance: {'✅ Good' if elapsed < 1.0 else '⚠️ Slow' if elapsed < 2.0 else '❌ Critical'}"
+                )
             except Exception as e:
                 print(f"   Performance Test: ❌ Failed ({e})")
 
@@ -307,8 +341,11 @@ class EnhancedCLI:
         print("\n💾 Storage Information:")
         try:
             import shutil
+
             total, used, free = shutil.disk_usage(".")
-            print(f"   Disk Space: {free // (2**30)} GB free of {total // (2**30)} GB total")
+            print(
+                f"   Disk Space: {free // (2**30)} GB free of {total // (2**30)} GB total"
+            )
         except:
             print("   Disk Space: Unable to determine")
 
@@ -317,60 +354,60 @@ class EnhancedCLI:
         print("🧪 DMV SCAM ANALYSIS SYSTEM TESTS")
         print("=" * 50)
 
-        test_results = {'total': 0, 'passed': 0, 'failed': 0}
+        test_results = {"total": 0, "passed": 0, "failed": 0}
 
         # Test 1: Component Loading
         print("🔧 Test 1: Component Loading")
-        test_results['total'] += 1
+        test_results["total"] += 1
         if self.classifier and self.model_manager:
             print("   ✅ PASSED: All components loaded successfully")
-            test_results['passed'] += 1
+            test_results["passed"] += 1
         else:
             print("   ❌ FAILED: Some components failed to load")
-            test_results['failed'] += 1
+            test_results["failed"] += 1
 
         # Test 2: Basic Prediction
         if self.classifier:
             print("🎯 Test 2: Basic Prediction")
-            test_results['total'] += 1
+            test_results["total"] += 1
             try:
                 test_messages = [
                     "Your DMV license expires soon. Click here to renew.",
-                    "Thank you for visiting the DMV office."
+                    "Thank you for visiting the DMV office.",
                 ]
                 predictions = [self.classifier.predict([msg]) for msg in test_messages]
                 print("   ✅ PASSED: Predictions generated successfully")
                 print(f"   Scores: {[float(p[0]) for p in predictions]}")
-                test_results['passed'] += 1
+                test_results["passed"] += 1
             except Exception as e:
                 print(f"   ❌ FAILED: Prediction error - {e}")
-                test_results['failed'] += 1
+                test_results["failed"] += 1
 
         # Test 3: Model Management
         if self.model_manager:
             print("📦 Test 3: Model Management")
-            test_results['total'] += 1
+            test_results["total"] += 1
             try:
                 models = self.model_manager.list_models()
                 print(f"   ✅ PASSED: Found {len(models)} models")
-                test_results['passed'] += 1
+                test_results["passed"] += 1
             except Exception as e:
                 print(f"   ❌ FAILED: Model management error - {e}")
-                test_results['failed'] += 1
+                test_results["failed"] += 1
 
         # Test 4: File System Access
         print("📁 Test 4: File System Access")
-        test_results['total'] += 1
+        test_results["total"] += 1
         try:
-            test_file = 'system_test.tmp'
-            with open(test_file, 'w') as f:
-                f.write('test')
+            test_file = "system_test.tmp"
+            with open(test_file, "w") as f:
+                f.write("test")
             os.remove(test_file)
             print("   ✅ PASSED: File system read/write access")
-            test_results['passed'] += 1
+            test_results["passed"] += 1
         except Exception as e:
             print(f"   ❌ FAILED: File system error - {e}")
-            test_results['failed'] += 1
+            test_results["failed"] += 1
 
         # Results summary
         print("\n" + "=" * 50)
@@ -380,7 +417,7 @@ class EnhancedCLI:
         print(f"✅ Passed: {test_results['passed']}")
         print(f"❌ Failed: {test_results['failed']}")
 
-        success_rate = (test_results['passed'] / test_results['total']) * 100
+        success_rate = (test_results["passed"] / test_results["total"]) * 100
         print(f"Success Rate: {success_rate:.1f}%")
 
         if success_rate >= 75:
@@ -404,19 +441,31 @@ class EnhancedCLI:
             try:
                 user_input = input("\n📝 Enter message > ").strip()
 
-                if user_input.lower() == 'quit':
+                if user_input.lower() == "quit":
                     break
-                elif user_input.lower() == 'help':
+                elif user_input.lower() == "help":
                     print("\n💡 Available Commands:")
                     print("  - Type any message to analyze it")
                     print("  - 'status' - Show session statistics")
                     print("  - 'clear' - Clear session history")
                     print("  - 'quit' - Exit interactive mode")
                     continue
-                elif user_input.lower() == 'status':
-                    high_risk = sum(1 for r in session_results if float(r.get('threat_score', 0.0)) > 0.7)
-                    medium_risk = sum(1 for r in session_results if 0.3 < float(r.get('threat_score', 0.0)) <= 0.7)
-                    low_risk = sum(1 for r in session_results if float(r.get('threat_score', 0.0)) <= 0.3)
+                elif user_input.lower() == "status":
+                    high_risk = sum(
+                        1
+                        for r in session_results
+                        if float(r.get("threat_score", 0.0)) > 0.7
+                    )
+                    medium_risk = sum(
+                        1
+                        for r in session_results
+                        if 0.3 < float(r.get("threat_score", 0.0)) <= 0.7
+                    )
+                    low_risk = sum(
+                        1
+                        for r in session_results
+                        if float(r.get("threat_score", 0.0)) <= 0.3
+                    )
 
                     print("\n📊 Session Statistics:")
                     print(f"   Total Analyzed: {len(session_results)}")
@@ -424,7 +473,7 @@ class EnhancedCLI:
                     print(f"   ⚠️ Medium Risk: {medium_risk}")
                     print(f"   ✅ Low Risk: {low_risk}")
                     continue
-                elif user_input.lower() == 'clear':
+                elif user_input.lower() == "clear":
                     session_results.clear()
                     print("🧹 Session history cleared")
                     continue
@@ -454,11 +503,11 @@ class EnhancedCLI:
 
                 # Store result
                 result = {
-                    'message': user_input,
-                    'threat_score': threat_score,
-                    'classification': classification,
-                    'analysis_time': analysis_time,
-                    'timestamp': datetime.now().isoformat()
+                    "message": user_input,
+                    "threat_score": threat_score,
+                    "classification": classification,
+                    "analysis_time": analysis_time,
+                    "timestamp": datetime.now().isoformat(),
                 }
                 session_results.append(result)
 
@@ -481,14 +530,18 @@ class EnhancedCLI:
 
         # Save session
         if session_results:
-            session_file = f"interactive_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-            with open(session_file, 'w') as f:
+            session_file = (
+                f"interactive_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            )
+            with open(session_file, "w") as f:
                 json.dump(session_results, f, indent=2)
             print(f"\n💾 Session saved to {session_file}")
 
         print("\n👋 Exiting interactive mode")
 
-    def _extract_threat_indicators(self, message: str, threat_score: float) -> List[str]:
+    def _extract_threat_indicators(
+        self, message: str, threat_score: float
+    ) -> List[str]:
         """Extract potential threat indicators from a message."""
         indicators: List[str] = []
 
@@ -496,10 +549,17 @@ class EnhancedCLI:
         text_lower = message.lower()
 
         # Common threat indicators
-        urgent_words = ['urgent', 'immediate', 'expires', 'suspend', 'deadline', 'act now']
-        financial_words = ['payment', 'fee', 'fine', 'penalty', '$', 'cost', 'charge']
-        action_words = ['click', 'link', 'verify', 'confirm', 'update', 'call now']
-        government_words = ['dmv', 'license', 'registration', 'government', 'official']
+        urgent_words = [
+            "urgent",
+            "immediate",
+            "expires",
+            "suspend",
+            "deadline",
+            "act now",
+        ]
+        financial_words = ["payment", "fee", "fine", "penalty", "$", "cost", "charge"]
+        action_words = ["click", "link", "verify", "confirm", "update", "call now"]
+        government_words = ["dmv", "license", "registration", "government", "official"]
 
         if any(word in text_lower for word in urgent_words):
             indicators.append("Urgency language detected")
@@ -514,12 +574,13 @@ class EnhancedCLI:
             indicators.append("Government/official impersonation")
 
         # URL detection
-        if 'http' in text_lower or 'www.' in text_lower:
+        if "http" in text_lower or "www." in text_lower:
             indicators.append("External links present")
 
         # Phone number patterns
         import re
-        phone_pattern = r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+
+        phone_pattern = r"\b\d{3}[-.]?\d{3}[-.]?\d{4}\b"
         if re.search(phone_pattern, message):
             indicators.append("Phone number present")
 
@@ -531,11 +592,11 @@ class EnhancedCLI:
 
     def _save_analysis_result(self, result: Dict[str, Any]) -> None:
         """Save analysis result to file."""
-        results_file = 'analysis_results.json'
+        results_file = "analysis_results.json"
 
         # Load existing results
         if os.path.exists(results_file):
-            with open(results_file, 'r') as f:
+            with open(results_file, "r") as f:
                 try:
                     results = json.load(f)
                     if not isinstance(results, list):
@@ -553,13 +614,13 @@ class EnhancedCLI:
             results = results[-100:]
 
         # Save
-        with open(results_file, 'w') as f:
+        with open(results_file, "w") as f:
             json.dump(results, f, indent=2)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description='DMV Scam Analysis System - Enhanced CLI',
+        description="DMV Scam Analysis System - Enhanced CLI",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -568,33 +629,39 @@ Examples:
   %(prog)s interactive
   %(prog)s status
   %(prog)s test-system
-        """
+        """,
     )
 
-    subparsers = parser.add_subparsers(dest='command', help='Available commands')
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # Analyze command
-    analyze_parser = subparsers.add_parser('analyze', help='Analyze a single message')
-    analyze_parser.add_argument('message', help='Message to analyze')
-    analyze_parser.add_argument('-s', '--source', default='cli', help='Message source (default: cli)')
-    analyze_parser.add_argument('--save', action='store_true', help='Save analysis results')
+    analyze_parser = subparsers.add_parser("analyze", help="Analyze a single message")
+    analyze_parser.add_argument("message", help="Message to analyze")
+    analyze_parser.add_argument(
+        "-s", "--source", default="cli", help="Message source (default: cli)"
+    )
+    analyze_parser.add_argument(
+        "--save", action="store_true", help="Save analysis results"
+    )
 
     # Batch analyze command
-    batch_parser = subparsers.add_parser('batch-analyze', help='Analyze multiple messages from file')
-    batch_parser.add_argument('file', help='Input file (text or JSON)')
-    batch_parser.add_argument('-o', '--output', help='Output file for results')
+    batch_parser = subparsers.add_parser(
+        "batch-analyze", help="Analyze multiple messages from file"
+    )
+    batch_parser.add_argument("file", help="Input file (text or JSON)")
+    batch_parser.add_argument("-o", "--output", help="Output file for results")
 
     # Model status command
-    subparsers.add_parser('model-status', help='Show model status and information')
+    subparsers.add_parser("model-status", help="Show model status and information")
 
     # System info command
-    subparsers.add_parser('system-info', help='Show comprehensive system information')
+    subparsers.add_parser("system-info", help="Show comprehensive system information")
 
     # Test system command
-    subparsers.add_parser('test-system', help='Run system health tests')
+    subparsers.add_parser("test-system", help="Run system health tests")
 
     # Interactive mode command
-    subparsers.add_parser('interactive', help='Enter interactive analysis mode')
+    subparsers.add_parser("interactive", help="Enter interactive analysis mode")
 
     # Parse arguments
     args = parser.parse_args()
@@ -607,17 +674,17 @@ Examples:
     cli = EnhancedCLI()
 
     # Route to appropriate command
-    if args.command == 'analyze':
+    if args.command == "analyze":
         cli.analyze_message(args)
-    elif args.command == 'batch-analyze':
+    elif args.command == "batch-analyze":
         cli.batch_analyze(args)
-    elif args.command == 'model-status':
+    elif args.command == "model-status":
         cli.model_status(args)
-    elif args.command == 'system-info':
+    elif args.command == "system-info":
         cli.system_info(args)
-    elif args.command == 'test-system':
+    elif args.command == "test-system":
         cli.test_system(args)
-    elif args.command == 'interactive':
+    elif args.command == "interactive":
         cli.interactive_mode(args)
     else:
         parser.print_help()

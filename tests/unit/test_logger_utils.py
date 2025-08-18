@@ -1,6 +1,7 @@
-import os
 import logging
+import os
 import types
+
 import pytest
 
 from dmv_scam_analysis.utils import logger as logmod
@@ -14,7 +15,9 @@ def test_setup_logger_creates_handlers(tmp_path, monkeypatch):
         lg.removeHandler(h)
 
     test_log_dir = tmp_path / "logs"
-    res_logger = logmod.setup_logger(name, log_dir=str(test_log_dir), level=logging.DEBUG)
+    res_logger = logmod.setup_logger(
+        name, log_dir=str(test_log_dir), level=logging.DEBUG
+    )
     assert isinstance(res_logger, logging.Logger)
     assert res_logger.level == logging.DEBUG
     # Should have file and console handlers
@@ -45,9 +48,15 @@ def test_log_execution_time_decorator_records_duration(monkeypatch):
     assert perf_names[0].endswith("sample_func")
 
 
-def test_setup_exception_logging(monkeypatch, caplog):
-    caplog.set_level(logging.ERROR)
+def test_setup_exception_logging(monkeypatch):
     test_logger = logging.getLogger("error")
+    captured = {"called": False, "msg": None}
+
+    def fake_error(msg, *args, **kwargs):
+        captured["called"] = True
+        captured["msg"] = msg
+
+    monkeypatch.setattr(test_logger, "error", fake_error)
     logmod.setup_exception_logging(test_logger)
 
     class DummyExc(Exception):
@@ -57,6 +66,5 @@ def test_setup_exception_logging(monkeypatch, caplog):
     sys_hook = getattr(__import__("sys"), "excepthook")
     sys_hook(DummyExc, DummyExc("boom"), None)
 
-    # Ensure message logged
-    assert any("Uncaught exception" in rec.message for rec in caplog.records)
-
+    assert captured["called"] is True
+    assert "Uncaught exception" in captured["msg"]

@@ -25,6 +25,7 @@ __all__ = [
 
 from typing import Any
 
+
 def __getattr__(name: str) -> Any:
     """Lazily import public API symbols on first access.
 

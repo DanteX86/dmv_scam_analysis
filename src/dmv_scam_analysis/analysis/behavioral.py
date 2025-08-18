@@ -88,7 +88,7 @@ class BehavioralAnalyzer:
                 pd.to_datetime(
                     df["timestamp"], errors="raise", format="mixed", utc=True
                 )
-            except Exception as _:
+            except Exception:
                 raise ValueError("Invalid timestamp format")
 
         patterns = self.detect_patterns(df)
@@ -170,8 +170,12 @@ class BehavioralAnalyzer:
             if not text:
                 continue
 
-            # Extract URLs
-            url_pattern = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+            # Extract URLs (split across lines to satisfy flake8 E501)
+            url_pattern = (
+                r"http[s]?://"
+                r"(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|"
+                r"(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+            )
             urls = re.findall(url_pattern, text)
             iocs["urls"].extend(urls)
 
@@ -1036,7 +1040,8 @@ class BehavioralAnalyzer:
         }
 
         # Save detailed report
-        output_file = f"{self.output_dir}/behavioral_analysis_{contact_identifier.replace('+', '')}.json"
+        safe_contact = contact_identifier.replace("+", "")
+        output_file = f"{self.output_dir}/behavioral_analysis_{safe_contact}.json"
         with open(output_file, "w") as f:
             json.dump(report, f, indent=2, default=str)
 
@@ -1124,8 +1129,13 @@ class BehavioralAnalyzer:
             recommendations.append(
                 {
                     "priority": "HIGH",
-                    "recommendation": "Investigate potential bot/automated messaging system",
-                    "rationale": "High automation indicators suggest non-human communication patterns",
+                    "recommendation": (
+                        "Investigate potential bot/automated messaging system"
+                    ),
+                    "rationale": (
+                        "High automation indicators suggest non-human communication"
+                        " patterns"
+                    ),
                 }
             )
 
@@ -1160,7 +1170,8 @@ class BehavioralAnalyzer:
         self, report: Dict[str, Any], contact_identifier: str
     ) -> None:
         """Generate human-readable behavioral summary"""
-        summary_file = f"{self.output_dir}/behavioral_summary_{contact_identifier.replace('+', '')}.txt"
+        safe_contact = contact_identifier.replace("+", "")
+        summary_file = f"{self.output_dir}/behavioral_summary_{safe_contact}.txt"
 
         with open(summary_file, "w") as f:
             f.write("Behavioral Analysis Summary\n")

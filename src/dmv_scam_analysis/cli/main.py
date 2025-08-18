@@ -309,14 +309,15 @@ def suggestions(
         import csv as _csv
         import re
 
+        # Optional YAML support
+        from typing import Any as _Any
+
         import pandas as pd
 
         from dmv_scam_analysis.analysis.automation_analyzer import AutomationAnalyzer
         from dmv_scam_analysis.analysis.risk_analyzer import RiskAnalyzer
         from dmv_scam_analysis.analysis.temporal_analyzer import TemporalAnalyzer
 
-        # Optional YAML support
-        from typing import Any as _Any
         _yaml: _Any = None
         try:
             import yaml as _yaml
@@ -424,6 +425,7 @@ def suggestions(
                 # Convert to YAML-serializable native types
                 # Optional numeric and pandas support
                 from typing import Any as _Any
+
                 _np: _Any = None
                 try:
                     import numpy as _np
@@ -435,9 +437,17 @@ def suggestions(
                     _pd2 = None
 
                 def _json_default(o: _Any) -> _Any:
-                    if _np is not None and hasattr(_np, "generic") and isinstance(o, _np.generic):
+                    if (
+                        _np is not None
+                        and hasattr(_np, "generic")
+                        and isinstance(o, _np.generic)
+                    ):
                         return o.item()
-                    if _pd2 is not None and hasattr(_pd2, "Timestamp") and isinstance(o, _pd2.Timestamp):
+                    if (
+                        _pd2 is not None
+                        and hasattr(_pd2, "Timestamp")
+                        and isinstance(o, _pd2.Timestamp)
+                    ):
                         return o.isoformat()
                     return str(o)
 

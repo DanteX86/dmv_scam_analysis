@@ -1,73 +1,35 @@
 trim trailing whitespace.................................................[41mFailed[m
 [2m- hook id: trailing-whitespace[m
+[2m- exit code: 1[m
 [2m- files were modified by this hook[m
+
+Fixing reports/artifacts/pre_commit_output.txt
+
 fix end of files.........................................................[41mFailed[m
 [2m- hook id: end-of-file-fixer[m
 [2m- exit code: 1[m
 [2m- files were modified by this hook[m
 
-Fixing test-results/junit.xml
-Fixing tests/unit/test_logger_utils_more.py
-Fixing tests/unit/test_logger_manager.py
-Fixing tests/unit/test_config_manager_more.py
 Fixing reports/artifacts/pre_commit_output.txt
 
-check yaml...............................................................[41mFailed[m
-[2m- hook id: check-yaml[m
-[2m- files were modified by this hook[m
-check json...............................................................[41mFailed[m
-[2m- hook id: check-json[m
-[2m- files were modified by this hook[m
-check for added large files..............................................[41mFailed[m
-[2m- hook id: check-added-large-files[m
-[2m- files were modified by this hook[m
-debug statements (python)................................................[41mFailed[m
-[2m- hook id: debug-statements[m
-[2m- files were modified by this hook[m
-check python ast.........................................................[41mFailed[m
-[2m- hook id: check-ast[m
-[2m- files were modified by this hook[m
-check BOM - deprecated: use fix-byte-order-marker........................[41mFailed[m
-[2m- hook id: check-byte-order-marker[m
-[2m- files were modified by this hook[m
-check for case conflicts.................................................[41mFailed[m
-[2m- hook id: check-case-conflict[m
-[2m- files were modified by this hook[m
-check docstring is first.................................................[41mFailed[m
-[2m- hook id: check-docstring-first[m
-[2m- files were modified by this hook[m
-check that executables have shebangs.....................................[41mFailed[m
-[2m- hook id: check-executables-have-shebangs[m
-[2m- files were modified by this hook[m
-check for merge conflicts................................................[41mFailed[m
-[2m- hook id: check-merge-conflict[m
-[2m- files were modified by this hook[m
+check yaml...............................................................[42mPassed[m
+check json...............................................................[42mPassed[m
+check for added large files..............................................[42mPassed[m
+debug statements (python)................................................[42mPassed[m
+check python ast.........................................................[42mPassed[m
+check BOM - deprecated: use fix-byte-order-marker........................[42mPassed[m
+check for case conflicts.................................................[42mPassed[m
+check docstring is first.................................................[42mPassed[m
+check that executables have shebangs.....................................[42mPassed[m
+check for merge conflicts................................................[42mPassed[m
 check for broken symlinks............................(no files to check)[46;30mSkipped[m
-detect private key.......................................................[41mFailed[m
-[2m- hook id: detect-private-key[m
-[2m- files were modified by this hook[m
-mixed line ending........................................................[41mFailed[m
-[2m- hook id: mixed-line-ending[m
-[2m- files were modified by this hook[m
-black....................................................................[41mFailed[m
-[2m- hook id: black[m
-[2m- files were modified by this hook[m
-
-[1mAll done! ✨ 🍰 ✨[0m
-[34m114 files [0mleft unchanged.
-
-isort....................................................................[41mFailed[m
-[2m- hook id: isort[m
-[2m- files were modified by this hook[m
-
-Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/unit/test_config_manager_more.py
-Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/unit/test_logger_manager.py
-Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/unit/test_logger_utils_more.py
-
+detect private key.......................................................[42mPassed[m
+mixed line ending........................................................[42mPassed[m
+black....................................................................[42mPassed[m
+isort....................................................................[42mPassed[m
 flake8...................................................................[41mFailed[m
 [2m- hook id: flake8[m
 [2m- exit code: 1[m
-[2m- files were modified by this hook[m
 
 [1mbehavioral_analyzer.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
 [1mconftest.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
@@ -783,7 +745,6 @@ flake8...................................................................[41mFa
 mypy.....................................................................[41mFailed[m
 [2m- hook id: mypy[m
 [2m- exit code: 1[m
-[2m- files were modified by this hook[m
 
 fix_syntax.py: [34mnote:(B[m In function (B[m[1m"fix_unterminated_strings"(B[m:(B[m
 fix_syntax.py:13: [1m[31merror:(B[m Function is missing a type annotation
@@ -1802,7 +1763,6 @@ sentinel_analyzer.py:394: [1m[31merror:(B[m Function is missing a return typ
 bandit (src only; pyproject + baseline)..................................[41mFailed[m
 [2m- hook id: bandit[m
 [2m- exit code: 2[m
-[2m- files were modified by this hook[m
 
 usage: bandit [-h] [-r] [-a {file,vuln}] [-n CONTEXT_LINES] [-c CONFIG_FILE]
               [-p PROFILE] [-t TESTS] [-s SKIPS] [-l |
@@ -1815,8 +1775,4 @@ usage: bandit [-h] [-r] [-a {file,vuln}] [-n CONTEXT_LINES] [-c CONFIG_FILE]
               [targets ...]
 bandit: error: unrecognized arguments: behavioral_analyzer.py conftest.py debug_training.py demonstrate_task_completion.py demonstrate_task_example.py dmv_cli_enhanced.py final_anomaly_test.py fix_newline_corruption.py fix_syntax.py generate_recommendations.py integration_test_ml_trainer.py launcher.py ml_threat_classifier.py run_tests.py scripts/config/io_config.py scripts/data_preprocessing.py scripts/data_validation.py scripts/data_versioning.py scripts/generate_synthetic_data.py scripts/image_analyzer.py scripts/ioc_validator.py scripts/ioc_validator_simple.py scripts/threat_visualizer.py sentinel_analyzer.py setup.py simple_ensemble_demo.py src/dmv_scam_analysis/__init__.py src/dmv_scam_analysis/analysis/__init__.py src/dmv_scam_analysis/analysis/automation_analyzer.py src/dmv_scam_analysis/analysis/behavioral.py src/dmv_scam_analysis/analysis/risk_analyzer.py src/dmv_scam_analysis/analysis/sentiment.py src/dmv_scam_analysis/analysis/sentiment_analyzer.py src/dmv_scam_analysis/analysis/temporal_analyzer.py src/dmv_scam_analysis/analysis/threat_detector.py src/dmv_scam_analysis/api/__init__.py src/dmv_scam_analysis/api/app.py src/dmv_scam_analysis/cli/__init__.py src/dmv_scam_analysis/cli/commands/behavioral.py src/dmv_scam_analysis/cli/commands/debug.py src/dmv_scam_analysis/cli/main.py src/dmv_scam_analysis/cli/tui.py src/dmv_scam_analysis/core/__init__.py src/dmv_scam_analysis/core/analyzer.py src/dmv_scam_analysis/core/classifier.py src/dmv_scam_analysis/core/extractor.py src/dmv_scam_analysis/core/model_manager.py src/dmv_scam_analysis/dashboard/__init__.py src/dmv_scam_analysis/dashboard/threat_dashboard.py src/dmv_scam_analysis/ml/__init__.py src/dmv_scam_analysis/ml/model_trainer.py src/dmv_scam_analysis/utils/__init__.py src/dmv_scam_analysis/utils/config_manager.py src/dmv_scam_analysis/utils/log_maintenance.py src/dmv_scam_analysis/utils/logger.py src/dmv_scam_analysis/utils/rate_limiter.py src/dmv_scam_analysis/utils/test_helpers.py src/dmv_scam_analysis/utils/validation.py src/dmv_scam_analysis/visualization/__init__.py src/dmv_scam_analysis/visualization/threat_visualizer.py step_10_integration_test.py task_code_example.py test_analysis.py test_anomaly_detection.py test_anomaly_direct.py test_anomaly_tuned.py test_behavioral.py test_classification_as_requested.py test_ensemble_performance.py test_ml_classifier.py test_model_persistence.py test_production_integration.py test_threat_classification.py tests/conftest.py tests/functional/test_analysis_workflow.py tests/integration/test_data_pipeline.py tests/integration/test_ml_pipeline.py tests/performance/test_api_performance.py tests/performance/test_performance.py tests/security/test_api_analyze_success_security.py tests/security/test_api_app_branches_security.py tests/security/test_api_app_security.py tests/security/test_api_auth_errors_security.py tests/security/test_api_auth_rate_and_handlers_security.py tests/security/test_api_bruteforce_security.py tests/security/test_api_edgecases_security.py tests/security/test_api_headers_and_handlers_security.py tests/security/test_api_headers_security.py tests/security/test_api_middleware_security.py tests/security/test_api_permissions_security.py tests/security/test_api_security.py tests/security/test_config_manager_extra_security.py tests/security/test_config_manager_security.py tests/security/test_data_security.py tests/security/test_logger_security.py tests/security/test_model_security.py tests/security/test_rate_limiter_extra_security.py tests/security/test_rate_limiter_security.py tests/security/test_security.py tests/security/test_validation_security.py tests/test_configuration.py tests/unit/test_api_error_paths.py tests/unit/test_behavioral_analyzer_small.py tests/unit/test_config_manager.py tests/unit/test_config_manager_more.py tests/unit/test_config_manager_roundtrip.py tests/unit/test_extractor_small.py tests/unit/test_jwt_exports.py tests/unit/test_logger_manager.py tests/unit/test_logger_utils.py tests/unit/test_logger_utils_more.py tests/unit/test_rate_limiter.py tests/unit/test_validation_utils.py tests/utils/test_helpers.py
 
-prettier.................................................................[41mFailed[m
-[2m- hook id: prettier[m
-[2m- files were modified by this hook[m
-
-dashboard_data/threats.json[2K[1GWARP.md[2K[1Gdeployment/monitoring/grafana/provisioning/datasources/datasources.yml[2K[1Ganalysis_reports/threat_actor_profile.md[2K[1Gtest_data/test_messages.json[2K[1Gdocker-compose.yml[2K[1Gdashboard_data/metrics.json[2K[1Gdocs/guides/data_sanitization.md[2K[1Greports/artifacts/api_health.json[2K[1Greports/context/WARP.md[2K[1Gdocs/guides/framework_guide.md[2K[1Gtest_data/mixed_messages.json[2K[1Ganalysis_reports/law_enforcement_report.md[2K[1Gnonexistent_directory/environments/production.yaml[2K[1Gdocs/index.md[2K[1Gdocs/guides/installation_setup.md[2K[1Gtests/test_data/sample_messages.json[2K[1Gconfig/README.md[2K[1Gtest_training_data.json[2K[1Gnonexistent_directory/schema.json[2K[1Gtest_data/edge_cases.json[2K[1GPROJECT_SETUP_COMPLETION.md[2K[1Gdocs/guides/CONTRIBUTING.md[2K[1GCONTINUATION_SESSION_SUMMARY.md[2K[1Gdeployment/monitoring/grafana/provisioning/dashboards/analysis_metrics.json[2K[1Gconfig/analysis_config_template.yaml[2K[1Gconfig/analysis_config.yaml[2K[1Ganalysis_reports/findings/infrastructure_analysis.md[2K[1Gdocs/guides/tools_used.md[2K[1Gml_analysis_test_contact.json[2K[1Gdocs/guides/methodology.md[2K[1Gdocs/guides/troubleshooting_guide.md[2K[1Ganalysis_reports/findings/indicators_of_compromise.md[2K[1Gbandit-baseline.json[2K[1Greports/artifacts/pip_audit.json[2K[1Gscripts/IOC_VALIDATOR_USAGE.md[2K[1Gdocs/ARCHITECTURE.md[2K[1Gpublic_awareness_guide.md[2K[1G.github/workflows/main.yml[2K[1Greports/artifacts/api_analyze.json[2K[1Gdashboard_data/alerts.json[2K[1Gconfig/settings.yaml[2K[1Ganalysis_reports/technical_report.md[2K[1Gconfig/preprocessing_config.yaml[2K[1Gtest_data/test_suites/conversation_patterns.json[2K[1Ganalysis_reports/executive_summary.md[2K[1Gscripts/README.md[2K[1Gdocs/guides/visualizations.md[2K[1Gtest_data/test_suites/timing_patterns.json[2K[1Ganalysis_reports/timeline_analysis.md[2K[1Ganalysis_reports/unified_campaign_report.md[2K[1GENSEMBLE_TASK_COMPLETION.md[2K[1Gtest_data/balanced_messages.json[2K[1GTASK_COMPLETION_SUMMARY.md[2K[1Gensemble_performance_report.json[2K[1G.github/workflows/ci.yml[2K[1Gdocs/guides/analysis_tools_configuration.md[2K[1Gtest_data/comprehensive_test.json[2K[1Gnonexistent_directory/environments/development.yaml[2K[1GREADME.md[2K[1Gdocs/guides/lessons_learned.md[2K[1Gconfig/environments/production.yaml[2K[1GRESTRUCTURE_COMPLETION_REPORT.md[2K[1GPROJECT_CONTINUATION_SUMMARY.md[2K[1G.pre-commit-config.yaml[2K[1Gconfig/schema.json[2K[1GPRODUCTION_DEPLOYMENT.md[2K[1Gtest_data/legitimate_messages.json[2K[1GNEWLINE_FIX_SUMMARY.md[2K[1Gdeployment/monitoring/grafana/provisioning/dashboards/dashboards.yml[2K[1Gconfig/environments/development.yaml[2K[1Gtest_data/sample_messages.json[2K[1Gdocs/api/functions.md[2K[1Gdata/raw/test_messages.json[2K[1Gtest_data/README.md[2K[1Gdeployment/monitoring/prometheus/prometheus.yml[2K[1GPROJECT_RESTRUCTURE_PLAN.md[2K[1Gdeployment/docker/docker-compose.yml[2K[1Gdocs/api/modules.md[2K[1Gconfig/logging_config.yaml[2K[1Gtest_data/scam_messages.json[2K[1Gtest_data/test_suites/error_cases.json[2K[1Gdocs/guides/data_flow_diagrams.md[2K[1GPUBLICATION_READINESS_REPORT.md[2K[1GPUBLICATION_SUMMARY.md[2K[1Gdocs/examples/usage.md[2K[1Gsample_messages.json[2K[1Ganalysis_reports/findings/communication_analysis.md[2K[1Gml_test_report.md[2K[1Gconfig/data_validation_config.yaml[2K[1Gdocs/guides/tool_integration.md[2K[1Gsystem_validation_results.json[2K[1Gdata/sample_messages.json[2K[1Gdata/README.md[2K[1Gbatch_analysis_results.json[2K[1Greports/context/ARCHITECTURE.md[2K[1Gdocs/guides/quick_start.md[2K[1Gnonexistent_directory/settings.yaml[2K[1G
+prettier.................................................................[42mPassed[m

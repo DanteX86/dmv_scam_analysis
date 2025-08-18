@@ -63,7 +63,10 @@ def _generate_message_content(message_type: str) -> str:
         return random.choice(templates).format(random.randint(1, 7), fake.url())
     elif message_type == "legitimate":
         templates = [
-            "Thank you for renewing your vehicle registration. Your new sticker will arrive in 5-7 business days.",
+            (
+                "Thank you for renewing your vehicle registration. "
+                "Your new sticker will arrive in 5-7 business days."
+            ),
             "Your DMV appointment is confirmed for {} at {}.",
             "Registration renewal reminder: Your registration expires on {}.",
             "Your vehicle passed inspection. Certificate is valid until {}.",
@@ -72,7 +75,8 @@ def _generate_message_content(message_type: str) -> str:
             fake.date_between(start_date="+1d", end_date="+30d"), fake.time()
         )
     else:
-        return fake.text(max_nb_chars=200)
+        # Faker's type hints may be Any; ensure we return str for typing
+        return cast(str, fake.text(max_nb_chars=200))
 
 
 def create_test_dataset(

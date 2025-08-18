@@ -2,15 +2,15 @@ Machine Learning Analysis Summary
 =============================================
 
 Contact: test_contact
-Analysis Date: 2025-08-18T13:36:58.411995
+Analysis Date: 2025-08-18T15:48:39.780011
 
 ML Risk Score: 30/100
 Risk Level: MEDIUM
 
-Threat Classification: threat_risk_level, message_count, confidence_scores, max_threat_probability, feature_count, predictions, prediction_codes
+Threat Classification: prediction_codes, predictions, feature_count, threat_risk_level, confidence_scores, max_threat_probability, message_count
 Anomaly Likelihood: 0%
 
 Key Risk Factors:
-  • Threat classification detected: confidence_scores, feature_count, predictions, prediction_codes, threat_risk_level, max_threat_probability, message_count
+  • Threat classification detected: feature_count, max_threat_probability, message_count, threat_risk_level, prediction_codes, predictions, confidence_scores
 
 Recommendations:

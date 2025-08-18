@@ -1,0 +1,162 @@
+src/dmv_scam_analysis/analysis/behavioral.py:91:13: F841 local variable '_' is assigned to but never used
+src/dmv_scam_analysis/analysis/behavioral.py:174:101: E501 line too long (107 > 100 characters)
+src/dmv_scam_analysis/analysis/behavioral.py:1039:101: E501 line too long (105 > 100 characters)
+src/dmv_scam_analysis/analysis/behavioral.py:1128:101: E501 line too long (103 > 100 characters)
+src/dmv_scam_analysis/analysis/behavioral.py:1163:101: E501 line too long (104 > 100 characters)
+src/dmv_scam_analysis/analysis/risk_analyzer.py:57:101: E501 line too long (105 > 100 characters)
+src/dmv_scam_analysis/analysis/risk_analyzer.py:149:101: E501 line too long (117 > 100 characters)
+src/dmv_scam_analysis/analysis/risk_analyzer.py:169:101: E501 line too long (103 > 100 characters)
+src/dmv_scam_analysis/analysis/risk_analyzer.py:204:101: E501 line too long (104 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:143:101: E501 line too long (104 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:144:101: E501 line too long (104 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:148:101: E501 line too long (144 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:1138:101: E501 line too long (111 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:1268:101: E501 line too long (102 > 100 characters)
+src/dmv_scam_analysis/analysis/sentiment.py:1276:101: E501 line too long (108 > 100 characters)
+src/dmv_scam_analysis/api/app.py:107:101: E501 line too long (129 > 100 characters)
+src/dmv_scam_analysis/api/app.py:129:101: E501 line too long (105 > 100 characters)
+src/dmv_scam_analysis/api/app.py:333:101: E501 line too long (112 > 100 characters)
+src/dmv_scam_analysis/cli/commands/behavioral.py:118:101: E501 line too long (122 > 100 characters)
+src/dmv_scam_analysis/cli/commands/behavioral.py:156:101: E501 line too long (109 > 100 characters)
+src/dmv_scam_analysis/core/analyzer.py:263:101: E501 line too long (103 > 100 characters)
+src/dmv_scam_analysis/core/classifier.py:18:1: F401 'typing.cast' imported but unused
+src/dmv_scam_analysis/core/classifier.py:753:21: F841 local variable '_' is assigned to but never used
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:363:101: E501 line too long (112 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:370:101: E501 line too long (121 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:378:101: E501 line too long (112 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:391:101: E501 line too long (103 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:396:101: E501 line too long (107 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:407:101: E501 line too long (106 > 100 characters)
+src/dmv_scam_analysis/dashboard/threat_dashboard.py:408:101: E501 line too long (117 > 100 characters)
+src/dmv_scam_analysis/utils/test_helpers.py:66:101: E501 line too long (115 > 100 characters)
+tests/integration/test_data_pipeline.py:1:101: E501 line too long (227 > 100 characters)
+tests/integration/test_ml_pipeline.py:49:53: E231 missing whitespace after ','
+tests/integration/test_ml_pipeline.py:49:80: E231 missing whitespace after ','
+tests/integration/test_ml_pipeline.py:51:56: E231 missing whitespace after ','
+tests/integration/test_ml_pipeline.py:237:5: F841 local variable '_models' is assigned to but never used
+tests/performance/test_performance.py:1:101: E501 line too long (335 > 100 characters)
+tests/performance/test_performance.py:6:101: E501 line too long (111 > 100 characters)
+tests/performance/test_performance.py:14:9: F821 undefined name 'random'
+tests/performance/test_performance.py:15:13: F821 undefined name 'string'
+tests/performance/test_performance.py:15:36: F821 undefined name 'string'
+tests/performance/test_performance.py:15:52: F821 undefined name 'string'
+tests/performance/test_performance.py:28:16: F821 undefined name 'random'
+tests/performance/test_performance.py:29:12: F821 undefined name 'random'
+tests/performance/test_performance.py:30:14: F821 undefined name 'random'
+tests/performance/test_performance.py:45:27: F821 undefined name 'random'
+tests/performance/test_performance.py:46:41: F821 undefined name 'random'
+tests/performance/test_performance.py:46:57: E231 missing whitespace after ','
+tests/performance/test_performance.py:46:68: F821 undefined name 'random'
+tests/performance/test_performance.py:46:84: E231 missing whitespace after ','
+tests/performance/test_performance.py:46:95: F821 undefined name 'random'
+tests/performance/test_performance.py:46:101: E501 line too long (125 > 100 characters)
+tests/performance/test_performance.py:46:111: E231 missing whitespace after ','
+tests/performance/test_performance.py:48:38: F821 undefined name 'random'
+tests/performance/test_performance.py:48:54: E231 missing whitespace after ','
+tests/performance/test_performance.py:48:62: F821 undefined name 'random'
+tests/performance/test_performance.py:48:78: E231 missing whitespace after ','
+tests/performance/test_performance.py:59:16: F821 undefined name 'CampaignAnalyzer'
+tests/performance/test_performance.py:74:16: F821 undefined name 'NLPAnalyzer'
+tests/performance/test_performance.py:89:18: F821 undefined name 'ThreatClassifier'
+tests/performance/test_performance.py:103:16: F821 undefined name 'CampaignAnalyzer'
+tests/performance/test_performance.py:115:18: F821 undefined name 'time'
+tests/performance/test_performance.py:118:10: F821 undefined name 'ThreadPoolExecutor'
+tests/performance/test_performance.py:121:19: F821 undefined name 'time'
+tests/performance/test_performance.py:124:18: F821 undefined name 'time'
+tests/performance/test_performance.py:125:10: F821 undefined name 'ProcessPoolExecutor'
+tests/performance/test_performance.py:126:9: F841 local variable 'results' is assigned to but never used
+tests/performance/test_performance.py:128:20: F821 undefined name 'time'
+tests/performance/test_performance.py:143:16: F821 undefined name 'CampaignAnalyzer'
+tests/performance/test_performance.py:162:10: F821 undefined name 'DatabaseHandler'
+tests/performance/test_performance.py:165:18: F821 undefined name 'time'
+tests/performance/test_performance.py:167:24: F821 undefined name 'time'
+tests/performance/test_performance.py:170:18: F821 undefined name 'time'
+tests/performance/test_performance.py:171:5: F841 local variable 'results' is assigned to but never used
+tests/performance/test_performance.py:174:18: F821 undefined name 'time'
+tests/performance/test_performance.py:201:13: F821 undefined name 'CacheManager'
+tests/performance/test_performance.py:205:18: F821 undefined name 'time'
+tests/performance/test_performance.py:207:18: F821 undefined name 'time'
+tests/performance/test_performance.py:210:18: F821 undefined name 'time'
+tests/performance/test_performance.py:212:17: F821 undefined name 'time'
+tests/performance/test_performance.py:230:34: F821 undefined name 'np'
+tests/performance/test_performance.py:231:29: F821 undefined name 'np'
+tests/performance/test_performance.py:259:18: F821 undefined name 'time'
+tests/performance/test_performance.py:261:18: F821 undefined name 'time'
+tests/performance/test_performance.py:271:9: F821 undefined name 'np'
+tests/performance/test_performance.py:274:9: F821 undefined name 'np'
+tests/security/test_api_app_branches_security.py:94:101: E501 line too long (105 > 100 characters)
+tests/security/test_api_app_security.py:1:1: F401 'base64' imported but unused
+tests/security/test_api_auth_rate_and_handlers_security.py:10:1: F401 'dmv_scam_analysis.api.app.http_exception_handler' imported but unused
+tests/security/test_api_auth_rate_and_handlers_security.py:42:5: F841 local variable 'r1' is assigned to but never used
+tests/security/test_api_auth_rate_and_handlers_security.py:43:5: F841 local variable 'r2' is assigned to but never used
+tests/security/test_api_auth_rate_and_handlers_security.py:62:5: F841 local variable 'r1' is assigned to but never used
+tests/security/test_api_auth_rate_and_handlers_security.py:63:5: F841 local variable 'r2' is assigned to but never used
+tests/security/test_api_bruteforce_security.py:1:1: F401 'os' imported but unused
+tests/security/test_api_edgecases_security.py:1:1: F401 'os' imported but unused
+tests/security/test_api_edgecases_security.py:8:1: F401 'dmv_scam_analysis.api.app.rate_limiter' imported but unused
+tests/security/test_api_edgecases_security.py:127:5: F841 local variable 'r1' is assigned to but never used
+tests/security/test_api_middleware_security.py:1:1: F401 'datetime.UTC' imported but unused
+tests/security/test_api_middleware_security.py:1:1: F401 'datetime.datetime' imported but unused
+tests/security/test_api_middleware_security.py:1:1: F401 'datetime.timedelta' imported but unused
+tests/security/test_api_middleware_security.py:24:101: E501 line too long (109 > 100 characters)
+tests/security/test_api_middleware_security.py:25:101: E501 line too long (118 > 100 characters)
+tests/security/test_api_permissions_security.py:1:1: F401 'os' imported but unused
+tests/security/test_api_security.py:192:5: F841 local variable '_headers' is assigned to but never used
+tests/security/test_config_manager_extra_security.py:1:1: F401 'json' imported but unused
+tests/security/test_config_manager_extra_security.py:2:1: F401 'os' imported but unused
+tests/security/test_config_manager_extra_security.py:7:1: F401 'dmv_scam_analysis.utils.config_manager.ConfigurationError' imported but unused
+tests/security/test_config_manager_extra_security.py:33:5: F841 local variable 'before' is assigned to but never used
+tests/security/test_config_manager_security.py:1:1: F401 'os' imported but unused
+tests/security/test_data_security.py:1:101: E501 line too long (255 > 100 characters)
+tests/security/test_data_security.py:89:26: F821 undefined name 'yaml'
+tests/security/test_data_security.py:126:12: F821 undefined name 'sqlite3'
+tests/security/test_data_security.py:134:16: F821 undefined name 'sqlite3'
+tests/security/test_data_security.py:173:17: F821 undefined name 'json'
+tests/security/test_data_security.py:173:28: F821 undefined name 'generate_test_message'
+tests/security/test_data_security.py:174:11: F821 undefined name 'Fernet'
+tests/security/test_data_security.py:191:17: F821 undefined name 'create_test_dataset'
+tests/security/test_data_security.py:193:36: F821 undefined name 'datetime'
+tests/security/test_data_security.py:259:21: F821 undefined name 'generate_test_message'
+tests/security/test_data_security.py:260:25: F821 undefined name 'json'
+tests/security/test_data_security.py:281:18: F821 undefined name 'hashlib'
+tests/security/test_data_security.py:304:20: F821 undefined name 'secrets'
+tests/security/test_data_security.py:305:18: F821 undefined name 'secrets'
+tests/security/test_data_security.py:306:18: F821 undefined name 'secrets'
+tests/security/test_data_security.py:309:28: F821 undefined name 'secrets'
+tests/security/test_data_security.py:310:26: F821 undefined name 'secrets'
+tests/security/test_data_security.py:311:26: F821 undefined name 'secrets'
+tests/security/test_data_security.py:361:30: F722 syntax error in forward annotation '^[a-zA-Z0-9_-]+$'
+tests/security/test_data_security.py:384:9: E722 do not use bare 'except'
+tests/security/test_logger_security.py:2:1: F401 'pathlib.Path' imported but unused
+tests/security/test_rate_limiter_security.py:1:1: F401 'asyncio' imported but unused
+tests/security/test_rate_limiter_security.py:2:1: F401 'time' imported but unused
+tests/security/test_security.py:1:101: E501 line too long (307 > 100 characters)
+tests/security/test_security.py:6:101: E501 line too long (118 > 100 characters)
+tests/security/test_security.py:32:12: F821 undefined name 'ConfigManager'
+tests/security/test_security.py:55:20: F821 undefined name 'DataPreprocessor'
+tests/security/test_security.py:83:17: F821 undefined name 'DataValidator'
+tests/security/test_security.py:121:20: F821 undefined name 'SecureFileHandler'
+tests/security/test_security.py:135:12: F821 undefined name 'os'
+tests/security/test_security.py:138:16: F821 undefined name 'os'
+tests/security/test_security.py:151:14: F821 undefined name 'patch'
+tests/security/test_security.py:154:14: F821 undefined name 'patch'
+tests/security/test_security.py:183:5: F841 local variable 'packages' is assigned to but never used
+tests/security/test_security.py:190:23: F821 undefined name 'json'
+tests/security/test_security.py:201:15: F821 undefined name 'MalwareScanner'
+tests/test_configuration.py:4:101: E501 line too long (101 > 100 characters)
+tests/test_configuration.py:5:101: E501 line too long (105 > 100 characters)
+tests/unit/test_api_error_paths.py:1:1: F401 'logging' imported but unused
+tests/unit/test_api_error_paths.py:2:1: F401 'os' imported but unused
+tests/unit/test_api_error_paths.py:3:1: F401 'sys' imported but unused
+tests/unit/test_api_error_paths.py:4:1: F401 'pathlib.Path' imported but unused
+tests/unit/test_api_error_paths.py:7:1: F401 'pytest' imported but unused
+tests/unit/test_config_manager_more.py:1:1: F401 'os' imported but unused
+tests/unit/test_config_manager_roundtrip.py:1:1: F401 'os' imported but unused
+tests/unit/test_extractor_small.py:2:1: F401 'os' imported but unused
+tests/unit/test_extractor_small.py:4:1: F401 'pandas as pd' imported but unused
+tests/unit/test_jwt_exports.py:1:1: F401 'base64' imported but unused
+tests/unit/test_jwt_exports.py:4:1: F401 'json' imported but unused
+tests/unit/test_logger_manager.py:2:1: F401 'os' imported but unused
+tests/unit/test_logger_utils.py:2:1: F401 'os' imported but unused
+tests/unit/test_logger_utils.py:3:1: F401 'types' imported but unused
+tests/unit/test_logger_utils.py:5:1: F401 'pytest' imported but unused

@@ -65,15 +65,22 @@ def X_scaled():
     """
     import pandas as pd
     from sklearn.preprocessing import StandardScaler
+
     try:
         from dmv_scam_analysis.core.classifier import MLThreatClassifier
     except Exception:
         # Fallback import in case tests run from project root
         from ml_threat_classifier import MLThreatClassifier  # type: ignore
 
-    df = pd.DataFrame([
-        {"text": "test message", "is_from_me": 0, "readable_date": "2025-01-01T12:00:00"}
-    ])
+    df = pd.DataFrame(
+        [
+            {
+                "text": "test message",
+                "is_from_me": 0,
+                "readable_date": "2025-01-01T12:00:00",
+            }
+        ]
+    )
     clf = MLThreatClassifier()
     feat = clf.extract_ml_features(df)
     if not feat or "features" not in feat or feat["features"].empty:

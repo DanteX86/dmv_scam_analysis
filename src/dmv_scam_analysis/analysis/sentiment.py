@@ -140,12 +140,23 @@ class AdvancedNLPAnalyzer:
         # Entity patterns for extraction
         self.entity_patterns = {
             "phone_numbers": r"(?:\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}",
-            "urls": r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+",
-            "domains": r"[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.(?:com|org|net|gov|edu|vip|tk|ml|ga|cf)",
+            "urls": (
+                r"http[s]?://"
+                r"(?:[a-zA-Z]|[0-9]|[$-_@.\u0026+]|[!*\\(\\),]|"
+                r"(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+            ),
+            "domains": (
+                r"[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.(?:com|org|net|gov|"
+                r"edu|vip|tk|ml|ga|cf)"
+            ),
             "email_addresses": r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}",
             "amounts": r"\$[\d,]+(?:\.\d{2})?",
             "reference_numbers": r"(?:ref|reference|case|ticket|citation)[\s#:]*([a-zA-Z0-9]{6,})",
-            "dates": r"\b(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}(?:,\s*\d{4})?|\d{1,2}[/-]\d{1,2}[/-]\d{2,4})\b",
+            "dates": (
+                r"\b(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"
+                r"[a-z]*\s+\d{1,2}(?:,\s*\d{4})?|\d{1,2}[/-]\d{1,2}[/-]"
+                r"\d{2,4})\b"
+            ),
         }
 
     def extract_features(
@@ -1135,7 +1146,8 @@ class AdvancedNLPAnalyzer:
 
         if suspicious_entities.get("suspicious_phone_numbers"):
             risk_factors.append(
-                f"International phone numbers detected: {len(suspicious_entities['suspicious_phone_numbers'])}"
+                "International phone numbers detected: "
+                f"{len(suspicious_entities['suspicious_phone_numbers'])}"
             )
             risk_score += 20
 
@@ -1265,7 +1277,8 @@ class AdvancedNLPAnalyzer:
             if sentiment:
                 aggregate = sentiment.get("aggregate_statistics", {})
                 f.write(
-                    f"Overall Sentiment: {aggregate.get('overall_polarity_mean', 0):.2f} (polarity)\n"
+                    "Overall Sentiment: "
+                    f"{aggregate.get('overall_polarity_mean', 0):.2f} (polarity)\n"
                 )
 
             # Entity summary
@@ -1273,7 +1286,8 @@ class AdvancedNLPAnalyzer:
             if entities:
                 entity_stats = entities.get("entity_statistics", {})
                 f.write(
-                    f"Extracted Entities: {sum(stats.get('count', 0) for stats in entity_stats.values())}\n"
+                    "Extracted Entities: "
+                    f"{sum(stats.get('count', 0) for stats in entity_stats.values())}\n"
                 )
 
             # Threat vocabulary

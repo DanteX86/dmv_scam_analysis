@@ -22,4 +22,3 @@ def test_behavioral_analyzer_basic_paths():
     df_ts = pd.DataFrame({"text": ["ok"], "timestamp": ["not-a-date"]})
     with pytest.raises(ValueError):
         analyzer.analyze(df_ts)
-

@@ -360,14 +360,16 @@ class ThreatDashboard:
     <style>
         body {{ font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }}
         .dashboard {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }}
-        .card {{ background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }}
+        .card {{ background: white; padding: 20px; border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); }}
         .metric {{ font-size: 2em; font-weight: bold; color: #333; }}
         .label {{ font-size: 0.9em; color: #666; margin-top: 5px; }}
         .alert {{ background: #ffebee; border-left: 4px solid #f44336; }}
         .success {{ background: #e8f5e8; border-left: 4px solid #4caf50; }}
         .warning {{ background: #fff3e0; border-left: 4px solid #ff9800; }}
         h1 {{ text-align: center; color: #333; }}
-        .status-indicator {{ width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 10px; }}
+        .status-indicator {{ width: 20px; height: 20px; border-radius: 50%;
+            display: inline-block; margin-right: 10px; }}
         .status-green {{ background-color: #4caf50; }}
         .status-red {{ background-color: #f44336; }}
         .status-orange {{ background-color: #ff9800; }}
@@ -375,7 +377,9 @@ class ThreatDashboard:
 </head>
 <body>
     <h1>🛡️ DMV Scam Analysis - Threat Dashboard</h1>
-    <p style="text-align: center; color: #666;">Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+    <p style="text-align: center; color: #666;">
+        Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+    </p>
 
     <div class="dashboard">
         <div class="card">
@@ -388,12 +392,14 @@ class ThreatDashboard:
             <div class="label">Threats (Last 24 Hours)</div>
         </div>
 
-        <div class="card alert" style="{'display: block' if high_risk_count > 0 else 'display: none'}">
+        <div class="card alert"
+            style="{'display: block' if high_risk_count > 0 else 'display: none'}">
             <div class="metric" style="color: #f44336;">{high_risk_count}</div>
             <div class="label">High Risk Threats</div>
         </div>
 
-        <div class="card warning" style="{'display: block' if medium_risk_count > 0 else 'display: none'}">
+        <div class="card warning"
+            style="{'display: block' if medium_risk_count > 0 else 'display: none'}">
             <div class="metric" style="color: #ff9800;">{medium_risk_count}</div>
             <div class="label">Medium Risk Threats</div>
         </div>
@@ -404,8 +410,11 @@ class ThreatDashboard:
         </div>
 
         <div class="card {'alert' if active_alerts > 0 else 'success'}">
-            <span class="status-indicator {'status-red' if active_alerts > 0 else 'status-green'}"></span>
-            <div class="metric" style="color: {'#f44336' if active_alerts > 0 else '#4caf50'};">{active_alerts}</div>
+            <span class="status-indicator {'status-red' if active_alerts > 0 else 'status-green'}">
+            </span>
+            <div class="metric"
+                style="color: {'#f44336' if active_alerts > 0 else '#4caf50'};"\u003e
+                {active_alerts}\u003c/div\u003e
             <div class="label">Active Alerts</div>
         </div>
     </div>

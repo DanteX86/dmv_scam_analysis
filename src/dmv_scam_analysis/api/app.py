@@ -60,7 +60,9 @@ if os.getenv("PYTEST_CURRENT_TEST"):
 
         if callable(_orig_call):
 
-            def _shimmed_call(self: Any, function_to_benchmark: Any, *args: Any, **kwargs: Any) -> Any:
+            def _shimmed_call(
+                self: Any, function_to_benchmark: Any, *args: Any, **kwargs: Any
+            ) -> Any:
                 orig = cast(Callable[..., Any], _orig_call)
                 res = orig(self, function_to_benchmark, *args, **kwargs)
                 # If the original returns an object with .stats, keep it; else wrap
@@ -102,7 +104,8 @@ async def performance_monitoring(
             pass
 
         audit_logger.info(
-            f"[{request_id}] {request.method} {request.url.path} - Completed in {duration:.3f}s - Status: {response.status_code}"
+            f"[{request_id}] {request.method} {request.url.path} - Completed in "
+            f"{duration:.3f}s - Status: {response.status_code}"
         )
 
         # Add performance and security headers
@@ -124,7 +127,8 @@ async def performance_monitoring(
     except Exception as e:
         duration = time.time() - start_time
         audit_logger.error(
-            f"[{request_id}] {request.method} {request.url.path} - Error after {duration:.3f}s: {str(e)}"
+            f"[{request_id}] {request.method} {request.url.path} - Error after "
+            f"{duration:.3f}s: {str(e)}"
         )
         raise
 
@@ -191,7 +195,9 @@ async def get_token(request: Request) -> Dict[str, Any]:
                 "sub": "perf_tester",
                 "permissions": ["analyze:read", "analyze:write"],
             }
-        claims = jwt.decode(token, AUTH_SECRET, algorithms=["HS256"])  # runtime decode; typing Any
+        claims = jwt.decode(
+            token, AUTH_SECRET, algorithms=["HS256"]
+        )  # runtime decode; typing Any
         FAILED_ATTEMPTS[token] = []  # reset on success
         # Attach raw token for rate limiter isolation between tests
         try:
@@ -326,7 +332,10 @@ async def analyze_message(
         import re as _re
 
         if _re.search(
-            r"(?i)(union\s+select|;\s*drop\s+table|\.{2}/|\\\\\.\\\\\.|/etc/|file://|c:\\\\|\{\.\.__class__\})",
+            (
+                r"(?i)(union\s+select|;\s*drop\s+table|\.{2}/|\\\\\.\\\\\.|/etc/|"
+                r"file://|c:\\\\|\{\.\.__class__\})"
+            ),
             lower,
         ):
             raise HTTPException(status_code=400, detail="Invalid input")

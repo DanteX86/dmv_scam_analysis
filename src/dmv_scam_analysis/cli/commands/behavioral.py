@@ -115,7 +115,8 @@ def main() -> int:
             print("\nAutomation Analysis:")
             if results["automation_analysis"]:
                 print(
-                    f"- Overall automation score: {results['automation_analysis'].get('overall_automation_score', 0):.2f}"
+                    "- Overall automation score: "
+                    f"{results['automation_analysis'].get('overall_automation_score', 0):.2f}"
                 )
 
                 timing = results["automation_analysis"].get("timing_regularity", {})
@@ -153,7 +154,8 @@ def main() -> int:
             if results["automation_analysis"]:
                 print("\nAutomation Indicators:")
                 print(
-                    f"Overall score: {results['automation_analysis'].get('overall_automation_score', 0):.2f}"
+                    "Overall score: "
+                    f"{results['automation_analysis'].get('overall_automation_score', 0):.2f}"
                 )
 
                 content = results["automation_analysis"].get("content_similarity", {})

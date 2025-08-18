@@ -6,23 +6,23 @@
 from __future__ import annotations
 
 import os
+import sys
 import time
+from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, Callable, Optional
 
-import pytest
 import pandas as pd
+import pytest
 from sklearn.preprocessing import StandardScaler
-from pathlib import Path
-import sys
 
 # Ensure src is on sys.path so package imports work during early conftest import
 _src_path = Path(__file__).resolve().parent / "src"
 if str(_src_path) not in sys.path:
     sys.path.insert(0, str(_src_path))
 
-from dmv_scam_analysis.core.classifier import MLThreatClassifier
 from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
 
 def pytest_configure(config):  # noqa: D401 - pytest hook
@@ -141,9 +141,15 @@ def X_scaled():
     """Provide a minimal scaled feature matrix for anomaly tests at repo root.
     Extracts features from a synthetic message and scales them.
     """
-    df = pd.DataFrame([
-        {"text": "test message", "is_from_me": 0, "readable_date": "2025-01-01T12:00:00"}
-    ])
+    df = pd.DataFrame(
+        [
+            {
+                "text": "test message",
+                "is_from_me": 0,
+                "readable_date": "2025-01-01T12:00:00",
+            }
+        ]
+    )
     clf = MLThreatClassifier()
     feat = clf.extract_ml_features(df)
     if not feat or "features" not in feat or feat["features"].empty:

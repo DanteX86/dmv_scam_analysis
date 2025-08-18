@@ -5,8 +5,8 @@ import json
 from datetime import datetime, timedelta, timezone
 
 import jwt
-import yaml
 import pytest
+import yaml
 
 
 @pytest.mark.unit
@@ -60,7 +60,7 @@ class TestJWTExports:
 
         # Export to CSV in-memory
         buf = io.StringIO()
-        writer = csv.DictWriter(buf, fieldnames=["id", "token"]) 
+        writer = csv.DictWriter(buf, fieldnames=["id", "token"])
         writer.writeheader()
         writer.writerows(rows)
         csv_text = buf.getvalue()
@@ -76,4 +76,3 @@ class TestJWTExports:
         for rec in loaded:
             payload = jwt.decode(rec["token"], "s", algorithms=["HS256"])
             assert payload["i"] in (1, 2)
-

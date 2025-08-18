@@ -1,4 +1,5 @@
 import logging
+
 from dmv_scam_analysis.utils import logger as logmod
 
 
@@ -20,4 +21,3 @@ def test_context_and_audit_performance_logging(caplog):
     # Performance logger
     pl = logmod.PerformanceLogger("performance")
     pl.log_duration("op", 12.3)
-
