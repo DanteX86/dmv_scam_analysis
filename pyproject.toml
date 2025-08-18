@@ -63,3 +63,19 @@ module = [
 ]
 ignore_errors = true
 ignore_missing_imports = true
+
+[tool.bandit]
+# Restrict scanning to source tree and exclude common non-source directories
+exclude_dirs = [
+  "tests",
+  "docs",
+  ".venv",
+  "venv",
+  "build",
+  "dist",
+  ".mypy_cache",
+  ".pytest_cache",
+  "htmlcov",
+  "reports",
+]
+# Optional: you can also set severity/confidence thresholds via CLI if desired
