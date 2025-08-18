@@ -25,8 +25,8 @@ SOFTWARE.
 ## Additional Terms for Cybersecurity Research
 
 ### Educational and Research Use
-This project is intended for educational and cybersecurity research purposes only. 
-The tools and methodologies provided are designed to help security professionals, 
+This project is intended for educational and cybersecurity research purposes only.
+The tools and methodologies provided are designed to help security professionals,
 researchers, and law enforcement identify and analyze communication-based threats.
 
 ### Responsible Use
@@ -44,18 +44,18 @@ Users of this software agree to:
 - Sensitive intelligence should be shared only with appropriate authorities
 
 ### Disclaimer
-The analysis and tools provided in this project are based on specific threat 
-intelligence and may not be applicable to all situations. Users should validate 
-findings independently and consult with legal and cybersecurity professionals 
+The analysis and tools provided in this project are based on specific threat
+intelligence and may not be applicable to all situations. Users should validate
+findings independently and consult with legal and cybersecurity professionals
 before taking action based on the analysis results.
 
-The authors are not responsible for any misuse of the tools or methodologies 
+The authors are not responsible for any misuse of the tools or methodologies
 provided, or for any legal consequences resulting from their use.
 
 ### Contributing
-Contributions to improve the detection capabilities and analysis methodologies 
-are welcome. Please ensure all contributions maintain the educational and 
+Contributions to improve the detection capabilities and analysis methodologies
+are welcome. Please ensure all contributions maintain the educational and
 research focus of the project and do not include sensitive or personal data.
 
-For questions regarding appropriate use or contributions, please contact the 
+For questions regarding appropriate use or contributions, please contact the
 project maintainers through appropriate professional channels.

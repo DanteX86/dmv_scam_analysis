@@ -1,0 +1,41 @@
+{
+  "response_time": [
+    {
+      "timestamp": "2025-08-18T03:59:35.723980",
+      "value": 0.245,
+      "metadata": {}
+    },
+    {
+      "timestamp": "2025-08-18T03:59:35.724439",
+      "value": 0.189,
+      "metadata": {}
+    },
+    {
+      "timestamp": "2025-08-18T03:59:35.724656",
+      "value": 0.356,
+      "metadata": {}
+    },
+    {
+      "timestamp": "2025-08-18T03:59:35.724864",
+      "value": 0.298,
+      "metadata": {}
+    }
+  ],
+  "error_rate": [
+    {
+      "timestamp": "2025-08-18T03:59:35.725083",
+      "value": 2.1,
+      "metadata": {}
+    },
+    {
+      "timestamp": "2025-08-18T03:59:35.725323",
+      "value": 1.8,
+      "metadata": {}
+    },
+    {
+      "timestamp": "2025-08-18T03:59:35.725593",
+      "value": 2.3,
+      "metadata": {}
+    }
+  ]
+}

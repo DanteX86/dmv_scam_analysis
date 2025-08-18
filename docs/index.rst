@@ -33,7 +33,7 @@ Quick Start
 .. code-block:: python
 
    from dmv_scam_analysis import ScamAnalyzer
-   
+
    analyzer = ScamAnalyzer()
    result = analyzer.analyze_message("Your message here")
    print(result.threat_score)

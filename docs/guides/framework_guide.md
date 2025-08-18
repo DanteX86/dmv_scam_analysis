@@ -3,6 +3,7 @@
 ## Overview
 
 The Campaign Analysis Framework is a flexible system for analyzing messaging-based campaigns. It provides:
+
 - Configurable input/output handling
 - Data validation
 - Behavioral analysis
@@ -23,7 +24,7 @@ input:
     contact_id: str
     text: str
     is_from_me: bool
-    
+
   # Column name mappings for flexible input
   column_mappings:
     timestamp: datetime
@@ -42,7 +43,7 @@ Configure output formats and locations:
 output:
   # Base output directory
   output_dir: ./analysis_output
-  
+
   # Output formats
   formats:
     detailed_report: json
@@ -86,6 +87,7 @@ python scripts/campaign_analyzer.py \
 ## Input Data Format
 
 ### CSV Format
+
 ```csv
 datetime,contact_id,text,is_from_me
 2025-01-01T10:00:00,user123,"Hello",true
@@ -93,34 +95,38 @@ datetime,contact_id,text,is_from_me
 ```
 
 ### JSON Format
+
 ```json
 {
-    "messages": [
-        {
-            "datetime": "2025-01-01T10:00:00",
-            "contact_id": "user123",
-            "text": "Hello",
-            "is_from_me": true
-        }
-    ]
+  "messages": [
+    {
+      "datetime": "2025-01-01T10:00:00",
+      "contact_id": "user123",
+      "text": "Hello",
+      "is_from_me": true
+    }
+  ]
 }
 ```
 
 ## Analysis Modules
 
 ### 1. Temporal Analysis
+
 - Message timing patterns
 - Activity bursts
 - Response time analysis
 - Weekly/hourly distributions
 
 ### 2. Automation Detection
+
 - Timing regularity
 - Content similarity
 - Volume consistency
 - Response predictability
 
 ### 3. Risk Assessment
+
 - Behavioral risk scoring
 - Threat pattern recognition
 - Anomaly detection
@@ -129,6 +135,7 @@ datetime,contact_id,text,is_from_me
 ## Output Formats
 
 ### 1. Detailed JSON Report
+
 ```json
 {
     "analysis_metadata": {
@@ -143,6 +150,7 @@ datetime,contact_id,text,is_from_me
 ```
 
 ### 2. Summary Text Report
+
 ```
 Campaign Analysis Summary: Campaign_01
 ====================================
@@ -164,12 +172,14 @@ Automated Behavior: 25.0%
 ## Validation
 
 ### Input Validation
+
 - Required columns presence
 - Data type validation
 - Null value checking
 - Format consistency
 
 ### Output Validation
+
 - Path validation
 - Format validation
 - Permission checking
@@ -193,6 +203,7 @@ except Exception as e:
 ## Configuration Examples
 
 ### Different Input Formats
+
 ```yaml
 # CSV with custom columns
 input:
@@ -212,6 +223,7 @@ input:
 ```
 
 ### Custom Output Structure
+
 ```yaml
 output:
   directory_structure:
@@ -224,16 +236,19 @@ output:
 ## Best Practices
 
 1. **Data Preparation**
+
    - Validate input data before analysis
    - Handle missing values appropriately
    - Convert timestamps to consistent format
 
 2. **Configuration Management**
+
    - Use version control for configurations
    - Document custom configurations
    - Validate configurations before use
 
 3. **Output Organization**
+
    - Use consistent naming patterns
    - Organize outputs by campaign
    - Include timestamps in filenames
@@ -246,6 +261,7 @@ output:
 ## Testing
 
 Run the test suite:
+
 ```bash
 # Run all tests
 python -m pytest tests/
@@ -259,11 +275,13 @@ python -m pytest tests/test_configuration.py
 Common issues and solutions:
 
 1. **Invalid Input Format**
+
    - Check column names match configuration
    - Verify data types are correct
    - Ensure required columns are present
 
 2. **Output Errors**
+
    - Verify write permissions
    - Check disk space
    - Validate output paths
@@ -278,11 +296,13 @@ Common issues and solutions:
 Guidelines for contributing:
 
 1. **Code Style**
+
    - Follow PEP 8
    - Add docstrings
    - Include type hints
 
 2. **Testing**
+
    - Add tests for new features
    - Maintain test coverage
    - Use appropriate fixtures

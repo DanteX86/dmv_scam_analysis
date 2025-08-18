@@ -8,7 +8,7 @@ input:
     contact_id: str
     text: str
     is_from_me: bool
-    
+
   # Column name mappings for flexible input
   column_mappings:
     timestamp: datetime
@@ -19,7 +19,7 @@ input:
     content: text
     is_sent: is_from_me
     direction: is_from_me
-    
+
   # Data validation rules
   validation_rules:
     datetime:
@@ -36,7 +36,7 @@ input:
 output:
   # Base output directory
   output_dir: ./analysis_output
-  
+
   # Output formats for different components
   formats:
     detailed_report: json
@@ -44,7 +44,7 @@ output:
     statistics: json
     visualizations: html
     raw_data: json
-    
+
   # File naming patterns
   naming_patterns:
     detailed_report: campaign_analysis_{campaign_name}_{timestamp}
@@ -52,7 +52,7 @@ output:
     statistics: campaign_stats_{campaign_name}_{timestamp}
     visualizations: campaign_viz_{campaign_name}_{timestamp}
     raw_data: campaign_data_{campaign_name}_{timestamp}
-    
+
   # Output directory structure
   directory_structure:
     reports: "{output_dir}/reports"

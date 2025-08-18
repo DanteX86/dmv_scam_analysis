@@ -30,7 +30,7 @@ feature_extraction:
     - has_email
     - has_money
     - urgency_score
-  
+
   urgency_words:
     - urgent
     - immediately
@@ -46,4 +46,4 @@ export:
   save_interim: true
   save_processed: true
   file_format: csv
-  compression: none  # Options: none, gzip, zip
+  compression: none # Options: none, gzip, zip

@@ -1,0 +1,7 @@
+{
+  "threat_score": 0.0,
+  "classification": "low_risk",
+  "indicators": ["authority_impersonation"],
+  "confidence": 0.22000000000000003,
+  "analysis_id": "behavioral_111102"
+}

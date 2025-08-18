@@ -1,0 +1,9 @@
+# Bandit configuration
+# See: https://bandit.readthedocs.io/en/latest/config.html
+[bandit]
+targets: src
+skips: B101
+exclude_dirs: .venv, venv, tests, .git, build, dist
+severity: medium
+confidence: medium
+recursive: true

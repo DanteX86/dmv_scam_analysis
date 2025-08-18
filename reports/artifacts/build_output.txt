@@ -1,0 +1,95 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=42
+  - wheel
+* Getting build dependencies for sdist...
+running egg_info
+writing src/dmv_scam_analysis.egg-info/PKG-INFO
+writing dependency_links to src/dmv_scam_analysis.egg-info/dependency_links.txt
+writing entry points to src/dmv_scam_analysis.egg-info/entry_points.txt
+writing requirements to src/dmv_scam_analysis.egg-info/requires.txt
+writing top-level names to src/dmv_scam_analysis.egg-info/top_level.txt
+reading manifest file 'src/dmv_scam_analysis.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/dmv_scam_analysis.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src/dmv_scam_analysis.egg-info/PKG-INFO
+writing dependency_links to src/dmv_scam_analysis.egg-info/dependency_links.txt
+writing entry points to src/dmv_scam_analysis.egg-info/entry_points.txt
+writing requirements to src/dmv_scam_analysis.egg-info/requires.txt
+writing top-level names to src/dmv_scam_analysis.egg-info/top_level.txt
+reading manifest file 'src/dmv_scam_analysis.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/dmv_scam_analysis.egg-info/SOURCES.txt'
+running check
+creating dmv_scam_analysis-0.1.0
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/api
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/cli
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/dashboard
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/ml
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+creating dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/visualization
+creating dmv_scam_analysis-0.1.0/tests
+copying files to dmv_scam_analysis-0.1.0...
+copying LICENSE -> dmv_scam_analysis-0.1.0
+copying README.md -> dmv_scam_analysis-0.1.0
+copying pyproject.toml -> dmv_scam_analysis-0.1.0
+copying setup.py -> dmv_scam_analysis-0.1.0
+copying src/dmv_scam_analysis/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis
+copying src/dmv_scam_analysis.egg-info/PKG-INFO -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/SOURCES.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/dependency_links.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/entry_points.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/not-zip-safe -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/requires.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis.egg-info/top_level.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+copying src/dmv_scam_analysis/analysis/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/automation_analyzer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/behavioral.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/risk_analyzer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/sentiment.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/sentiment_analyzer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/temporal_analyzer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/analysis/threat_detector.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/analysis
+copying src/dmv_scam_analysis/api/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/api
+copying src/dmv_scam_analysis/api/app.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/api
+copying src/dmv_scam_analysis/cli/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/cli
+copying src/dmv_scam_analysis/cli/main.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/cli
+copying src/dmv_scam_analysis/cli/tui.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/cli
+copying src/dmv_scam_analysis/core/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+copying src/dmv_scam_analysis/core/analyzer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+copying src/dmv_scam_analysis/core/classifier.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+copying src/dmv_scam_analysis/core/extractor.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+copying src/dmv_scam_analysis/core/model_manager.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/core
+copying src/dmv_scam_analysis/dashboard/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/dashboard
+copying src/dmv_scam_analysis/dashboard/threat_dashboard.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/dashboard
+copying src/dmv_scam_analysis/ml/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/ml
+copying src/dmv_scam_analysis/ml/model_trainer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/ml
+copying src/dmv_scam_analysis/utils/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/config_manager.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/log_maintenance.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/logger.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/rate_limiter.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/test_helpers.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/utils/validation.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/utils
+copying src/dmv_scam_analysis/visualization/__init__.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/visualization
+copying src/dmv_scam_analysis/visualization/threat_visualizer.py -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis/visualization
+copying tests/test_configuration.py -> dmv_scam_analysis-0.1.0/tests
+copying src/dmv_scam_analysis.egg-info/SOURCES.txt -> dmv_scam_analysis-0.1.0/src/dmv_scam_analysis.egg-info
+Writing dmv_scam_analysis-0.1.0/setup.cfg
+Creating tar archive
+removing 'dmv_scam_analysis-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=42
+  - wheel
+* Getting build dependencies for wheel...
+
+ERROR Backend subprocess exited when trying to invoke get_requires_for_build_wheel

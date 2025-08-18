@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DMV Scam Analysis - Executive Dashboard</title>
+    <meta http-equiv="refresh" content="60" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #fbfbfb; }
+        .container { max-width: 1100px; margin: auto; }
+        .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .metric { font-size: 2em; font-weight: 700; color: #222; }
+        .label { font-size: 0.9em; color: #777; margin-top: 4px; }
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { color: #34495e; }
+        ul { line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔎 Executive Dashboard</h1>
+        <p style="text-align: center; color: #666;">Last Updated: {{ updated_at }}</p>
+
+        <div class="kpis">
+            <div class="card">
+                <div class="metric">{{ total_threats }}</div>
+                <div class="label">Total Threats</div>
+            </div>
+            <div class="card">
+                <div class="metric">{{ recent_threats_count }}</div>
+                <div class="label">Threats (24h)</div>
+            </div>
+            <div class="card">
+                <div class="metric">{{ high_risk_count }}</div>
+                <div class="label">High Risk</div>
+            </div>
+            <div class="card">
+                <div class="metric">{{ active_alerts }}</div>
+                <div class="label">Active Alerts</div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 24px;">
+            <h2>Recent High-Risk Threats</h2>
+            <ul>
+                {% if recent_high_risk and recent_high_risk|length > 0 %}
+                    {% for t in recent_high_risk %}
+                        <li>[{{ t.timestamp }}] Score: {{ '%.2f'|format(t.threat_score) }} - Source: {{ t.source }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>No high-risk threats detected in the last 24 hours.</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

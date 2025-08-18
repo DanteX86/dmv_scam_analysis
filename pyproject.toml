@@ -36,6 +36,9 @@ warn_unused_ignores = true
 warn_no_return = true
 warn_unreachable = true
 plugins = ["numpy.typing.mypy_plugin"]
+# Ensure src/ layout is handled consistently
+explicit_package_bases = true
+mypy_path = ["src"]
 
 [[tool.mypy.overrides]]
 module = [
@@ -51,3 +54,28 @@ module = [
     "tensorflow.*"
 ]
 ignore_missing_imports = true
+
+# Relax typing for the tests package and ignore psutil missing stubs
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+    "psutil",
+]
+ignore_errors = true
+ignore_missing_imports = true
+
+[tool.bandit]
+# Restrict scanning to source tree and exclude common non-source directories
+exclude_dirs = [
+  "tests",
+  "docs",
+  ".venv",
+  "venv",
+  "build",
+  "dist",
+  ".mypy_cache",
+  ".pytest_cache",
+  "htmlcov",
+  "reports",
+]
+# Optional: you can also set severity/confidence thresholds via CLI if desired

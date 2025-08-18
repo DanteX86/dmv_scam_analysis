@@ -22,18 +22,21 @@ config/
 ## Configuration Files
 
 ### Main Settings (settings.yaml)
+
 - Core application settings
 - Default values
 - Common configuration
 - Feature toggles
 
-### Environment Settings (environments/*.yaml)
+### Environment Settings (environments/\*.yaml)
+
 - Environment-specific overrides
 - Local development settings
 - Production configurations
 - Testing parameters
 
 ### Schema (schema.json)
+
 - Configuration validation rules
 - Required fields
 - Data types
@@ -42,6 +45,7 @@ config/
 ## Usage
 
 ### Basic Usage
+
 ```python
 from scripts.utils.config_manager import get_config
 
@@ -59,7 +63,9 @@ if config.is_development():
 ```
 
 ### Environment Variables
+
 Configuration can be overridden using environment variables:
+
 ```bash
 # Set environment
 export ENV=development
@@ -70,6 +76,7 @@ export DMV_ANALYSIS_DEBUG=true
 ```
 
 ### Configuration Validation
+
 ```python
 # Validate required settings
 config.validate_required([
@@ -84,6 +91,7 @@ config.reload()
 ## Configuration Sections
 
 ### 1. Environment
+
 ```yaml
 environment:
   name: development
@@ -93,6 +101,7 @@ environment:
 ```
 
 ### 2. Application
+
 ```yaml
 application:
   name: DMV Scam Analysis
@@ -102,6 +111,7 @@ application:
 ```
 
 ### 3. Storage
+
 ```yaml
 storage:
   database:
@@ -113,6 +123,7 @@ storage:
 ```
 
 ### 4. Analysis
+
 ```yaml
 analysis:
   ml_models:
@@ -128,12 +139,14 @@ analysis:
 ## Security
 
 ### Sensitive Data
+
 - Never commit secrets to VCS
 - Use environment variables
 - Keep encryption keys secure
 - Sanitize logged values
 
 ### Configuration Storage
+
 - Separate sensitive configs
 - Use appropriate permissions
 - Encrypt sensitive values
@@ -142,18 +155,21 @@ analysis:
 ## Environment Management
 
 ### Development
+
 - Debug mode enabled
 - Verbose logging
 - Mock services
 - Local resources
 
 ### Production
+
 - Performance optimized
 - Security enforced
 - Real services
 - Production resources
 
 ### Testing
+
 - Isolated environment
 - Test databases
 - Mocked services
@@ -162,18 +178,21 @@ analysis:
 ## Best Practices
 
 1. Configuration
+
    - Use YAML for readability
    - Keep configs DRY
    - Version control safe
    - Environment aware
 
 2. Security
+
    - No secrets in code
    - Use environment vars
    - Validate input
    - Secure storage
 
 3. Maintenance
+
    - Regular reviews
    - Keep documentation updated
    - Monitor for issues
@@ -190,6 +209,7 @@ analysis:
 ### Common Issues
 
 1. Configuration Not Found
+
 ```python
 # Check environment variable
 echo $ENV
@@ -199,6 +219,7 @@ ls config/environments/
 ```
 
 2. Validation Errors
+
 ```python
 # Check required fields
 config.validate_required(['key.path'])
@@ -208,6 +229,7 @@ config._validate_config()
 ```
 
 3. Environment Issues
+
 ```python
 # Print current environment
 print(config.environment())
@@ -219,6 +241,7 @@ print(config.as_dict())
 ### Support
 
 For configuration issues:
+
 1. Check environment variables
 2. Verify file permissions
 3. Validate configuration
@@ -227,12 +250,14 @@ For configuration issues:
 ## Additional Resources
 
 ### Internal Documentation
+
 - Architecture diagrams
 - Deployment guides
 - Security policies
 - Best practices
 
 ### Related Tools
+
 - JSON Schema validators
 - YAML linters
 - Configuration managers

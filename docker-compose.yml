@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   dmv-api:
@@ -21,7 +21,7 @@ services:
       retries: 3
       start_period: 40s
     restart: unless-stopped
-    
+
   # Redis for caching and rate limiting (optional)
   redis:
     image: redis:7-alpine
@@ -30,7 +30,7 @@ services:
     volumes:
       - redis_data:/data
     restart: unless-stopped
-    
+
   # PostgreSQL for production data storage (optional)
   postgres:
     image: postgres:15-alpine
@@ -53,10 +53,10 @@ services:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/etc/prometheus/console_libraries'
-      - '--web.console.templates=/etc/prometheus/consoles'
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--web.console.templates=/etc/prometheus/consoles"
     restart: unless-stopped
 
 volumes:

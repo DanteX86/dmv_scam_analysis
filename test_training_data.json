@@ -24,27 +24,11 @@
     "label": "scam"
   },
   {
-    "text": "DMV FINAL NOTICE: Your license will be suspended tomorrow. Pay $275 fine at quick-dmv-resolution.net now.",
-    "label": "legitimate"
-  },
-  {
-    "text": "CRITICAL: Outstanding DMV violation detected. Click dmv-violation-center.org to pay $425 and avoid legal consequences.",
-    "label": "scam"
-  },
-  {
-    "text": "This is a reminder that your vehicle registration will expire on 12/31/2024. Please renew at your local DMV office.",
+    "text": "DMV office hours: Monday-Friday 8AM-5PM, Saturday 9AM-1PM. Visit dmv.gov for locations and services.",
     "label": "legitimate"
   },
   {
     "text": "Your driver's license renewal notice has been mailed to your address. Visit www.dmv.gov for online renewal options.",
-    "label": "scam"
-  },
-  {
-    "text": "Thank you for visiting the DMV. Your appointment confirmation number is DMV-2024-1234. Please arrive 15 minutes early.",
-    "label": "legitimate"
-  },
-  {
-    "text": "DMV office hours: Monday-Friday 8AM-5PM, Saturday 9AM-1PM. Visit dmv.gov for locations and services.",
     "label": "scam"
   }
 ]

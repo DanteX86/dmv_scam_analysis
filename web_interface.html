@@ -10,14 +10,14 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -26,14 +26,14 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        
+
         .header {
             background: linear-gradient(45deg, #2196F3, #21CBF3);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
@@ -42,20 +42,20 @@
             justify-content: center;
             gap: 10px;
         }
-        
+
         .header p {
             font-size: 1.1rem;
             opacity: 0.9;
         }
-        
+
         .main-content {
             padding: 40px;
         }
-        
+
         .input-section {
             margin-bottom: 30px;
         }
-        
+
         .input-section label {
             display: block;
             font-weight: 600;
@@ -63,7 +63,7 @@
             color: #333;
             font-size: 1.1rem;
         }
-        
+
         .message-input {
             width: 100%;
             min-height: 120px;
@@ -75,13 +75,13 @@
             resize: vertical;
             transition: border-color 0.3s ease;
         }
-        
+
         .message-input:focus {
             outline: none;
             border-color: #2196F3;
             box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
         }
-        
+
         .analyze-button {
             background: linear-gradient(45deg, #4CAF50, #45a049);
             color: white;
@@ -99,50 +99,50 @@
             min-width: 200px;
             margin: 20px auto;
         }
-        
+
         .analyze-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
         }
-        
+
         .analyze-button:disabled {
             background: #ccc;
             cursor: not-allowed;
             transform: none;
         }
-        
+
         .loading {
             display: none;
             animation: spin 1s linear infinite;
         }
-        
+
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        
+
         .results {
             margin-top: 30px;
             padding: 20px;
             border-radius: 10px;
             display: none;
         }
-        
+
         .results.low-risk {
             background: #e8f5e8;
             border-left: 5px solid #4CAF50;
         }
-        
+
         .results.medium-risk {
             background: #fff3e0;
             border-left: 5px solid #ff9800;
         }
-        
+
         .results.high-risk {
             background: #ffebee;
             border-left: 5px solid #f44336;
         }
-        
+
         .threat-level {
             font-size: 1.5rem;
             font-weight: bold;
@@ -151,42 +151,42 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .metrics {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
-        
+
         .metric {
             text-align: center;
             padding: 10px;
             background: rgba(255,255,255,0.7);
             border-radius: 8px;
         }
-        
+
         .metric-value {
             font-size: 1.2rem;
             font-weight: bold;
             color: #333;
         }
-        
+
         .metric-label {
             font-size: 0.9rem;
             color: #666;
             margin-top: 5px;
         }
-        
+
         .indicators {
             margin-top: 20px;
         }
-        
+
         .indicators h3 {
             margin-bottom: 10px;
             color: #333;
         }
-        
+
         .indicator {
             background: rgba(255,255,255,0.8);
             padding: 8px 12px;
@@ -194,31 +194,31 @@
             border-radius: 5px;
             font-size: 0.9rem;
         }
-        
+
         .recommendations {
             margin-top: 20px;
             padding: 15px;
             background: rgba(255,255,255,0.9);
             border-radius: 8px;
         }
-        
+
         .recommendations h3 {
             margin-bottom: 10px;
             color: #333;
         }
-        
+
         .recommendation {
             padding: 5px 0;
             font-size: 0.95rem;
         }
-        
+
         .examples {
             margin-top: 30px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 10px;
         }
-        
+
         .example {
             margin: 10px 0;
             padding: 10px;
@@ -227,18 +227,18 @@
             cursor: pointer;
             transition: transform 0.2s ease;
         }
-        
+
         .example:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
         .example-label {
             font-weight: bold;
             color: #666;
             font-size: 0.9rem;
         }
-        
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -246,21 +246,21 @@
             color: #666;
             font-size: 0.9rem;
         }
-        
+
         .footer a {
             color: #2196F3;
             text-decoration: none;
         }
-        
+
         @media (max-width: 600px) {
             .header h1 {
                 font-size: 2rem;
             }
-            
+
             .main-content {
                 padding: 20px;
             }
-            
+
             .metrics {
                 grid-template-columns: 1fr;
             }
@@ -273,28 +273,28 @@
             <h1>🛡️ DMV Scam Checker</h1>
             <p>Advanced AI-powered protection against government impersonation scams</p>
         </div>
-        
+
         <div class="main-content">
             <div class="input-section">
                 <label for="messageInput">📱 Paste the suspicious message below:</label>
-                <textarea 
-                    id="messageInput" 
-                    class="message-input" 
+                <textarea
+                    id="messageInput"
+                    class="message-input"
                     placeholder="Example: 'Your DMV license expires soon. Click here to renew immediately or face suspension. Pay $45 fee now: bit.ly/dmv-renew'"
                 ></textarea>
-                
+
                 <button id="analyzeButton" class="analyze-button">
                     <span class="loading">⏳</span>
                     <span class="button-text">🔍 Check Message</span>
                 </button>
             </div>
-            
+
             <div id="results" class="results">
                 <div class="threat-level">
                     <span id="threatEmoji">⚠️</span>
                     <span id="threatText">THREAT LEVEL</span>
                 </div>
-                
+
                 <div class="metrics">
                     <div class="metric">
                         <div class="metric-value" id="threatScore">0.00</div>
@@ -309,40 +309,40 @@
                         <div class="metric-label">Analysis Time</div>
                     </div>
                 </div>
-                
+
                 <div class="indicators">
                     <h3>🔍 Threat Indicators:</h3>
                     <div id="indicatorsList"></div>
                 </div>
-                
+
                 <div class="recommendations">
                     <h3>💡 Recommendations:</h3>
                     <div id="recommendationsList"></div>
                 </div>
             </div>
-            
+
             <div class="examples">
                 <h3>📋 Try These Examples:</h3>
-                
+
                 <div class="example" onclick="useExample('Your PA DMV license expires in 2 days. Pay $45 fee immediately to avoid suspension. Click: bit.ly/pa-gov-renew')">
                     <div class="example-label">🚨 High Risk Example:</div>
                     <div>"Your PA DMV license expires in 2 days. Pay $45 fee immediately..."</div>
                 </div>
-                
+
                 <div class="example" onclick="useExample('URGENT: Department of Motor Vehicles requires immediate verification. Call 555-0123 now!')">
                     <div class="example-label">⚠️ Medium Risk Example:</div>
                     <div>"URGENT: Department of Motor Vehicles requires immediate verification..."</div>
                 </div>
-                
+
                 <div class="example" onclick="useExample('Reminder: Your vehicle registration renewal is due next month. Visit your local DMV office.')">
                     <div class="example-label">✅ Low Risk Example:</div>
                     <div>"Reminder: Your vehicle registration renewal is due next month..."</div>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer">
-            <p>🧠 Powered by Advanced AI & Machine Learning | 
+            <p>🧠 Powered by Advanced AI & Machine Learning |
             <a href="https://github.com/DanteX86/dmv_scam_analysis" target="_blank">Open Source Project</a></p>
         </div>
     </div>
@@ -358,70 +358,70 @@
                 }, 1000 + Math.random() * 1000);
             });
         }
-        
+
         function analyzeMessageLocally(message) {
             const text = message.toLowerCase();
             let threatScore = 0;
             const indicators = [];
-            
+
             // Government impersonation patterns
             if (text.match(/\b(dmv|motor vehicle|drivers?\s*license|vehicle\s*registration|pennsylvania\s*dmv|pa\s*dmv|state\s*dmv)\b/)) {
                 threatScore += 0.25;
                 indicators.push("🏛️ Government/DMV impersonation detected");
             }
-            
+
             // Urgency patterns
             if (text.match(/\b(urgent|immediate|expires?\s*(today|tomorrow|soon|in\s*\d+\s*days?)|deadline|act\s*now|respond\s*immediately)\b/)) {
                 threatScore += 0.20;
                 indicators.push("⏰ High-pressure urgency tactics");
             }
-            
+
             // Financial patterns
             if (text.match(/\$\d+|\b\d+\s*dollars?\b|\b(pay|fee|fine|penalty|cost|payment|money)\b/)) {
                 threatScore += 0.20;
                 indicators.push("💰 Financial information or payment requested");
             }
-            
+
             // Suspicious links
             if (text.match(/bit\.ly|tinyurl|t\.co|goo\.gl|short\.link|[a-z0-9-]+\.tk|\.ml|\.ga|\.cf/)) {
                 threatScore += 0.15;
                 indicators.push("🔗 Suspicious links or domains");
             }
-            
+
             // Action requests
             if (text.match(/\b(click|tap|visit|verify|confirm|update|call\s*now)\b/)) {
                 threatScore += 0.10;
                 indicators.push("📞 Call-to-action language detected");
             }
-            
+
             // Consequences
             if (text.match(/\b(suspend|revoke|cancel|terminate|arrest|legal\s*action)\b/)) {
                 threatScore += 0.15;
                 indicators.push("⚖️ Threatening consequences mentioned");
             }
-            
+
             // Generic language
             if (text.match(/\b(dear\s*(customer|user|resident|citizen)|valued\s*(customer|member))\b/)) {
                 threatScore += 0.10;
                 indicators.push("🎭 Generic/non-personalized language");
             }
-            
+
             // Phone numbers
             if (text.match(/\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/)) {
                 indicators.push("📞 Phone number present");
             }
-            
+
             // External links
             if (text.match(/http[s]?:\/\/[^\s]+/)) {
                 indicators.push("🔗 External links present");
             }
-            
+
             // Cap the score at 1.0
             threatScore = Math.min(threatScore, 1.0);
-            
+
             // Calculate confidence based on number of indicators
             const confidence = Math.min(indicators.length * 15, 100);
-            
+
             return {
                 threatScore: threatScore,
                 confidence: confidence,
@@ -429,7 +429,7 @@
                 analysisTime: 0.1 + Math.random() * 0.3
             };
         }
-        
+
         function displayResults(analysis) {
             const results = document.getElementById('results');
             const threatEmoji = document.getElementById('threatEmoji');
@@ -439,7 +439,7 @@
             const analysisTime = document.getElementById('analysisTime');
             const indicatorsList = document.getElementById('indicatorsList');
             const recommendationsList = document.getElementById('recommendationsList');
-            
+
             // Determine threat level
             let level, emoji, recommendations;
             if (analysis.threatScore >= 0.7) {
@@ -473,14 +473,14 @@
                     "🔒 Never share personal info via text/email"
                 ];
             }
-            
+
             // Update display
             threatEmoji.textContent = emoji;
             threatText.textContent = level;
             threatScore.textContent = analysis.threatScore.toFixed(3);
             confidence.textContent = `${analysis.confidence}%`;
             analysisTime.textContent = `${analysis.analysisTime.toFixed(2)}s`;
-            
+
             // Display indicators
             indicatorsList.innerHTML = '';
             if (analysis.indicators.length > 0) {
@@ -493,7 +493,7 @@
             } else {
                 indicatorsList.innerHTML = '<div class="indicator">No specific threat indicators detected</div>';
             }
-            
+
             // Display recommendations
             recommendationsList.innerHTML = '';
             recommendations.forEach(rec => {
@@ -502,16 +502,16 @@
                 div.textContent = rec;
                 recommendationsList.appendChild(div);
             });
-            
+
             results.style.display = 'block';
             results.scrollIntoView({ behavior: 'smooth' });
         }
-        
+
         function useExample(text) {
             document.getElementById('messageInput').value = text;
             document.getElementById('messageInput').focus();
         }
-        
+
         // Main analysis function
         async function analyzeMessage() {
             const button = document.getElementById('analyzeButton');
@@ -519,18 +519,18 @@
             const buttonText = button.querySelector('.button-text');
             const messageInput = document.getElementById('messageInput');
             const message = messageInput.value.trim();
-            
+
             if (!message) {
                 alert('Please enter a message to analyze');
                 messageInput.focus();
                 return;
             }
-            
+
             // Show loading state
             button.disabled = true;
             loading.style.display = 'inline';
             buttonText.textContent = 'Analyzing...';
-            
+
             try {
                 const analysis = await simulateAnalysis(message);
                 displayResults(analysis);
@@ -544,22 +544,22 @@
                 buttonText.textContent = '🔍 Check Message';
             }
         }
-        
+
         // Event listeners
         document.getElementById('analyzeButton').addEventListener('click', analyzeMessage);
-        
+
         document.getElementById('messageInput').addEventListener('keydown', function(e) {
             if (e.ctrlKey && e.key === 'Enter') {
                 analyzeMessage();
             }
         });
-        
+
         // Auto-resize textarea
         document.getElementById('messageInput').addEventListener('input', function() {
             this.style.height = 'auto';
             this.style.height = Math.max(120, this.scrollHeight) + 'px';
         });
-        
+
         // Show welcome message
         console.log('🛡️ DMV Scam Checker loaded successfully!');
         console.log('This is a demonstration of advanced threat detection capabilities.');

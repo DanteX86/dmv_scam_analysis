@@ -1,10 +1,13 @@
 # Data Flow Diagrams
+
 ## DMV Scam Analysis Project
 
 ### Overview
+
 This document provides data flow diagrams illustrating the interaction between various analysis tools within the DMV scam analysis project.
 
 ## Data Extraction and Processing
+
 ```mermaid
 graph TD;
     A[Extract Messages (message_extractor.py)] --2 CSV --> B[Process Data (process_raw_data.py)];
@@ -13,6 +16,7 @@ graph TD;
 ```
 
 ## Analysis and Visualization
+
 ```mermaid
 graph TD;
     D -- Validated IOCs --> E[Visualize Threats (threat_visualizer.py)];
@@ -20,6 +24,7 @@ graph TD;
 ```
 
 ## End-to-End Workflow
+
 ```mermaid
 graph TD;
     A[Start] -->|Extract & Process| B[Data Pipeline];
@@ -29,12 +34,13 @@ graph TD;
 ```
 
 ## Integration and Execution
+
 ```mermaid
 graph TD;
     subgraph Environment Setup
     A1[Python Environment] -- Setup --> A2[Database Configuration]
     end
-    
+
     subgraph Automation
     B1[Cron Jobs] -- Scheduled Run --> B2[Analysis Scripts]
     end
@@ -46,6 +52,7 @@ graph TD;
 ```
 
 ## Detailed Technical Flow
+
 ```mermaid
 graph TD;
     subgraph Data Extraction
@@ -77,6 +84,7 @@ graph TD;
 ```
 
 ## Data Transformations
+
 ```mermaid
 graph LR;
     subgraph Input
@@ -104,13 +112,14 @@ graph LR;
 ```
 
 ### Legend
+
 - **Nodes**: Represent steps or tools in the data flow
 - **Edges**: Indicate data or process flow between nodes
 - **Subgraphs**: Group related components or functions
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: June 2025  
-**Status**: Active  
+**Document Version**: 1.0
+**Last Updated**: June 2025
+**Status**: Active
 **Review Date**: December 2025

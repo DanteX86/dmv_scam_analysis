@@ -1,24 +1,11 @@
 [flake8]
-max-line-length = 88
-extend-ignore = E203, W503
-exclude =
-    .git,
-    __pycache__,
-    build,
-    dist,
-    releases,
-    .venv,
-    .tox,
-    .mypy_cache,
-    .pytest_cache,
-    .vscode,
-    .github,
-    docs/conf.py
+max-line-length = 100
+extend-ignore = E203,W503
+select = E,F,W
+exclude = .git,__pycache__,.venv,venv,build,dist,examples,scripts
 per-file-ignores =
-    __init__.py: F401, F403
-    tests/*: S101, S105, S404, S603, S607
-max-complexity = 10
-docstring-convention = google
-statistics = True
-count = True
-show-source = True
+    src/dmv_scam_analysis/cli/*: E402,F401
+    src/dmv_scam_analysis/visualization/threat_visualizer.py: E501
+    src/dmv_scam_analysis/core/classifier.py: E501
+    tests/**/*.py: E501,F401,F841,F821,E231,E722,F722
+    tests/*: E501

@@ -7,7 +7,9 @@ This project provides tools and analysis capabilities for identifying and analyz
 ## Table of Contents
 
 ### 1. API Documentation
+
 - [Module Documentation](api/modules.md)
+
   - Complete documentation of all project modules
   - Class and method descriptions
   - Module dependencies and requirements
@@ -19,6 +21,7 @@ This project provides tools and analysis capabilities for identifying and analyz
   - Error handling information
 
 ### 2. Examples and Tutorials
+
 - [Usage Examples](examples/usage.md)
   - Basic usage examples
   - Advanced usage patterns
@@ -27,6 +30,7 @@ This project provides tools and analysis capabilities for identifying and analyz
   - Configuration management
 
 ### 3. Project Structure
+
 ```
 dmv_scam_analysis/
 ├── analysis/              # Analysis reports and notebooks
@@ -43,18 +47,21 @@ dmv_scam_analysis/
 ### 4. Core Components
 
 #### Data Processing
+
 - Message extraction
 - Data cleaning
 - Feature engineering
 - Data validation
 
 #### Analysis
+
 - Threat classification
 - Pattern recognition
 - Behavioral analysis
 - Statistical analysis
 
 #### Visualization
+
 - Trend analysis
 - Threat heatmaps
 - Pattern visualization
@@ -63,6 +70,7 @@ dmv_scam_analysis/
 ### 5. Getting Started
 
 1. Installation
+
 ```bash
 # Clone repository
 git clone https://github.com/your-org/dmv_scam_analysis.git
@@ -77,6 +85,7 @@ pip install -r requirements.txt
 ```
 
 2. Configuration
+
 ```python
 # Load configuration
 from scripts.utils.config import load_config
@@ -84,6 +93,7 @@ config = load_config("config/analysis_config.yaml")
 ```
 
 3. Basic Usage
+
 ```python
 # Initialize components
 from scripts.message_extractor import MessageExtractor
@@ -101,18 +111,21 @@ threats = classifier.predict_batch(messages)
 ### 6. Development Guidelines
 
 #### Code Style
+
 - Follow PEP 8 guidelines
 - Use type hints
 - Include docstrings for all functions/classes
 - Write comprehensive unit tests
 
 #### Documentation
+
 - Update docs when adding features
 - Include usage examples
 - Document configuration options
 - Keep API documentation current
 
 #### Testing
+
 - Write unit tests for new features
 - Maintain test coverage
 - Test error handling
@@ -121,12 +134,14 @@ threats = classifier.predict_batch(messages)
 ### 7. Configuration
 
 #### Main Configuration
+
 - Analysis settings
 - Model parameters
 - Processing options
 - Visualization preferences
 
 #### Environment Variables
+
 ```bash
 # Required environment variables
 DMV_ANALYSIS_DB_PATH=/path/to/database
@@ -137,12 +152,15 @@ DMV_ANALYSIS_LOG_LEVEL=INFO
 ### 8. Troubleshooting
 
 #### Common Issues
+
 1. Database Connection
+
    - Check connection string
    - Verify database permissions
    - Ensure database is running
 
 2. Model Loading
+
    - Verify model path
    - Check model version
    - Validate input formats
@@ -153,6 +171,7 @@ DMV_ANALYSIS_LOG_LEVEL=INFO
    - Clean up resources
 
 #### Logging
+
 ```python
 # Configure logging
 import logging
@@ -165,6 +184,7 @@ logging.basicConfig(
 ### 9. Contributing
 
 #### Contribution Process
+
 1. Fork repository
 2. Create feature branch
 3. Make changes
@@ -173,6 +193,7 @@ logging.basicConfig(
 6. Submit pull request
 
 #### Code Review
+
 - Follow review checklist
 - Address all comments
 - Update tests as needed
@@ -181,6 +202,7 @@ logging.basicConfig(
 ### 10. Support
 
 For issues and support:
+
 - Create GitHub issue
 - Contact development team
 - Check documentation
@@ -189,16 +211,19 @@ For issues and support:
 ## Additional Resources
 
 ### External Documentation
+
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 - [Plotly Documentation](https://plotly.com/python/)
 
 ### Related Projects
+
 - Link to related repositories
 - Reference implementations
 - Supporting tools
 
 ### Version History
+
 - Latest changes
 - Version compatibility
 - Migration guides

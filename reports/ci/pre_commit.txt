@@ -1,0 +1,1778 @@
+trim trailing whitespace.................................................[41mFailed[m
+[2m- hook id: trailing-whitespace[m
+[2m- exit code: 1[m
+[2m- files were modified by this hook[m
+
+Fixing reports/artifacts/pre_commit_output.txt
+
+fix end of files.........................................................[41mFailed[m
+[2m- hook id: end-of-file-fixer[m
+[2m- exit code: 1[m
+[2m- files were modified by this hook[m
+
+Fixing reports/artifacts/pre_commit_output.txt
+
+check yaml...............................................................[42mPassed[m
+check json...............................................................[42mPassed[m
+check for added large files..............................................[42mPassed[m
+debug statements (python)................................................[42mPassed[m
+check python ast.........................................................[42mPassed[m
+check BOM - deprecated: use fix-byte-order-marker........................[42mPassed[m
+check for case conflicts.................................................[42mPassed[m
+check docstring is first.................................................[42mPassed[m
+check that executables have shebangs.....................................[42mPassed[m
+check for merge conflicts................................................[42mPassed[m
+check for broken symlinks............................(no files to check)[46;30mSkipped[m
+detect private key.......................................................[42mPassed[m
+mixed line ending........................................................[42mPassed[m
+black....................................................................[42mPassed[m
+isort....................................................................[42mPassed[m
+flake8...................................................................[41mFailed[m
+[2m- hook id: flake8[m
+[2m- exit code: 1[m
+
+[1mbehavioral_analyzer.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
+[1mconftest.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.analysis.behavioral.BehavioralAnalyzer' imported but unused
+[1mconftest.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mconftest.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdebug_training.py[m[36m:[m9[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_completion.py[m[36m:[m18[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_completion.py[m[36m:[m75[36m:[m9[36m:[m [1m[31mF841[m local variable 'predictions' is assigned to but never used
+[1mdemonstrate_task_completion.py[m[36m:[m81[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m23[36m:[m1[36m:[m [1m[31mF401[m 'typing.Any' imported but unused
+[1mdemonstrate_task_example.py[m[36m:[m30[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mdemonstrate_task_example.py[m[36m:[m47[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m53[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m59[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m86[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mdemonstrate_task_example.py[m[36m:[m125[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m126[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m126[36m:[m75[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdemonstrate_task_example.py[m[36m:[m161[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m4[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m87[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m88[36m:[m64[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m89[36m:[m52[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m50[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m194[36m:[m101[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m198[36m:[m57[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mdmv_cli_enhanced.py[m[36m:[m255[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m277[36m:[m101[36m:[m [1m[31mE501[m line too long (110 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m331[36m:[m17[36m:[m [1m[31mF841[m local variable 'prediction' is assigned to but never used
+[1mdmv_cli_enhanced.py[m[36m:[m333[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m335[36m:[m101[36m:[m [1m[31mE501[m line too long (116 > 100 characters)
+[1mdmv_cli_enhanced.py[m[36m:[m349[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mdmv_cli_enhanced.py[m[36m:[m421[36m:[m44[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m516[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mdmv_cli_enhanced.py[m[36m:[m516[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m42[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m71[36m:[m45[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mfinal_anomaly_test.py[m[36m:[m127[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m134[36m:[m101[36m:[m [1m[31mE501[m line too long (141 > 100 characters)
+[1mfinal_anomaly_test.py[m[36m:[m160[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m186[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m195[36m:[m27[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mfinal_anomaly_test.py[m[36m:[m195[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m28[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m247[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m33[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mfinal_anomaly_test.py[m[36m:[m260[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m26[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m96[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mgenerate_recommendations.py[m[36m:[m144[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m151[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m162[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m204[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m207[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mgenerate_recommendations.py[m[36m:[m359[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mintegration_test_ml_trainer.py[m[36m:[m17[36m:[m101[36m:[m [1m[31mE501[m line too long (153 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m20[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m23[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m26[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m29[36m:[m101[36m:[m [1m[31mE501[m line too long (152 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m33[36m:[m101[36m:[m [1m[31mE501[m line too long (129 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m36[36m:[m101[36m:[m [1m[31mE501[m line too long (127 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m39[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m43[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (137 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m49[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m52[36m:[m101[36m:[m [1m[31mE501[m line too long (122 > 100 characters)
+[1mintegration_test_ml_trainer.py[m[36m:[m69[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mintegration_test_ml_trainer.py[m[36m:[m87[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m92[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m93[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m94[36m:[m77[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m113[36m:[m37[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mintegration_test_ml_trainer.py[m[36m:[m113[36m:[m40[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m118[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mintegration_test_ml_trainer.py[m[36m:[m119[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mlauncher.py[m[36m:[m240[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mlauncher.py[m[36m:[m422[36m:[m43[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mml_threat_classifier.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.core.classifier.MLThreatClassifier' imported but unused
+[1mrun_tests.py[m[36m:[m51[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mrun_tests.py[m[36m:[m88[36m:[m55[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m111[36m:[m85[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m114[36m:[m99[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m114[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1mrun_tests.py[m[36m:[m117[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mrun_tests.py[m[36m:[m117[36m:[m107[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mrun_tests.py[m[36m:[m133[36m:[m5[36m:[m [1m[31mF841[m local variable 'classifier' is assigned to but never used
+[1mscripts/data_validation.py[m[36m:[m194[36m:[m9[36m:[m [1m[31mF841[m local variable 'raw_results' is assigned to but never used
+[1mscripts/data_validation.py[m[36m:[m198[36m:[m9[36m:[m [1m[31mF841[m local variable 'processed_results' is assigned to but never used
+[1mscripts/generate_synthetic_data.py[m[36m:[m153[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/generate_synthetic_data.py[m[36m:[m154[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/generate_synthetic_data.py[m[36m:[m155[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/image_analyzer.py[m[36m:[m88[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mscripts/image_analyzer.py[m[36m:[m89[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mscripts/ioc_validator.py[m[36m:[m288[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m289[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m290[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m313[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m318[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m322[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m323[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m326[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator.py[m[36m:[m329[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m274[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m275[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m276[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m299[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m304[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m308[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m309[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/ioc_validator_simple.py[m[36m:[m312[36m:[m29[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mscripts/threat_visualizer.py[m[36m:[m432[36m:[m9[36m:[m [1m[31mF841[m local variable 'bars' is assigned to but never used
+[1mscripts/threat_visualizer.py[m[36m:[m710[36m:[m101[36m:[m [1m[31mE501[m line too long (158 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m711[36m:[m101[36m:[m [1m[31mE501[m line too long (132 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m712[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m715[36m:[m101[36m:[m [1m[31mE501[m line too long (167 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m717[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m719[36m:[m101[36m:[m [1m[31mE501[m line too long (164 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m742[36m:[m101[36m:[m [1m[31mE501[m line too long (143 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m748[36m:[m101[36m:[m [1m[31mE501[m line too long (128 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m754[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m755[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m763[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m770[36m:[m101[36m:[m [1m[31mE501[m line too long (126 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m777[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m779[36m:[m101[36m:[m [1m[31mE501[m line too long (106 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m780[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m783[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m789[36m:[m101[36m:[m [1m[31mE501[m line too long (106 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m790[36m:[m101[36m:[m [1m[31mE501[m line too long (121 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m791[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m792[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m795[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mscripts/threat_visualizer.py[m[36m:[m797[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1msentinel_analyzer.py[m[36m:[m241[36m:[m93[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msentinel_analyzer.py[m[36m:[m390[36m:[m-742[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1msimple_ensemble_demo.py[m[36m:[m11[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1msimple_ensemble_demo.py[m[36m:[m16[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m19[36m:[m101[36m:[m [1m[31mE501[m line too long (148 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m22[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1msimple_ensemble_demo.py[m[36m:[m28[36m:[m101[36m:[m [1m[31mE501[m line too long (146 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m91[36m:[m13[36m:[m [1m[31mF841[m local variable '_' is assigned to but never used
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m174[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1039[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1128[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1163[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1184[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1184[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/behavioral.py[m[36m:[m1241[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m57[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m149[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m169[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m204[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m225[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/risk_analyzer.py[m[36m:[m225[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m143[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m144[36m:[m101[36m:[m [1m[31mE501[m line too long (104 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (144 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1138[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1268[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1268[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1msrc/dmv_scam_analysis/analysis/sentiment.py[m[36m:[m1276[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m107[36m:[m90[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m107[36m:[m101[36m:[m [1m[31mE501[m line too long (129 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m112[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m129[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m129[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1msrc/dmv_scam_analysis/api/app.py[m[36m:[m333[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m112[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m118[36m:[m101[36m:[m [1m[31mE501[m line too long (122 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m118[36m:[m117[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m124[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m148[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m156[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1msrc/dmv_scam_analysis/cli/commands/behavioral.py[m[36m:[m156[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m88[36m:[m31[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m110[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m127[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m181[36m:[m35[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m197[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m249[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m285[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m298[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m311[36m:[m27[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m359[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m395[36m:[m30[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m396[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/commands/debug.py[m[36m:[m397[36m:[m32[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m142[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m145[36m:[m72[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m170[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/main.py[m[36m:[m176[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/tui.py[m[36m:[m178[36m:[m37[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/cli/tui.py[m[36m:[m189[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m263[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m278[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m279[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m286[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m305[36m:[m77[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m410[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/analyzer.py[m[36m:[m411[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m18[36m:[m1[36m:[m [1m[31mF401[m 'typing.cast' imported but unused
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m753[36m:[m21[36m:[m [1m[31mF841[m local variable '_' is assigned to but never used
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1180[36m:[m67[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1275[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1313[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/classifier.py[m[36m:[m1770[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m111[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m142[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m161[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m278[36m:[m56[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m278[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/core/extractor.py[m[36m:[m576[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m316[36m:[m20[36m:[m [1m[31mE225[m missing whitespace around operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-113[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-57[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m-12[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m16[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m47[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m61[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m88[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m361[36m:[m89[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m22[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m36[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m68[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m79[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m362[36m:[m80[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m17[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m35[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m50[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m70[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m100[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m102[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ','
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m109[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m363[36m:[m110[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m19[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m34[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m53[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m66[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m364[36m:[m67[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m18[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m35[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m48[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m65[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m365[36m:[m66[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m18[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m38[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m70[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m366[36m:[m71[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m20[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m40[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m72[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m367[36m:[m73[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m20[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m40[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m72[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m368[36m:[m73[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m14[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m33[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m46[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m369[36m:[m47[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m29[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m41[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m55[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m75[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m98[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m118[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m370[36m:[m119[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m25[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m51[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m371[36m:[m52[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m23[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m49[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m372[36m:[m50[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m26[36m:[m [1m[31mE201[m whitespace after '{'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m52[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m373[36m:[m53[36m:[m [1m[31mE202[m whitespace before '}'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m-81[36m:[m [1m[31mE221[m multiple spaces before operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m-53[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m33[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m46[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m378[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m-56[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m-27[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m382[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-103[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-43[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m-28[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m387[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-77[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m391[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m392[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-71[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m396[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m397[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-108[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-51[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m-36[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m54[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m402[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-71[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-16[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m406[36m:[m-1[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m407[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m94[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m408[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-204[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-153[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-138[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-127[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-93[36m:[m [1m[31mE702[m multiple statements on one line (semicolon)
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-93[36m:[m [1m[31mE231[m missing whitespace after ';'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-90[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-63[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m-17[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m417[36m:[m0[36m:[m [1m[31mE222[m multiple spaces after operator
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m429[36m:[m71[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m467[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m481[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m481[36m:[m83[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m495[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m505[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/dashboard/threat_dashboard.py[m[36m:[m551[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/ml/model_trainer.py[m[36m:[m105[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/config_manager.py[m[36m:[m395[36m:[m45[36m:[m [1m[31mE713[m test for membership should be 'not in'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m220[36m:[m67[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m233[36m:[m35[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/log_maintenance.py[m[36m:[m235[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1msrc/dmv_scam_analysis/utils/test_helpers.py[m[36m:[m66[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1msrc/dmv_scam_analysis/utils/test_helpers.py[m[36m:[m131[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mstep_10_integration_test.py[m[36m:[m15[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m21[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m27[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m33[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m39[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (126 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m52[36m:[m101[36m:[m [1m[31mE501[m line too long (119 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m58[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mstep_10_integration_test.py[m[36m:[m80[36m:[m25[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mstep_10_integration_test.py[m[36m:[m89[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mstep_10_integration_test.py[m[36m:[m110[36m:[m31[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mstep_10_integration_test.py[m[36m:[m110[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtask_code_example.py[m[36m:[m16[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m8[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m10[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m11[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_analysis.py[m[36m:[m16[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_analysis.py[m[36m:[m22[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_analysis.py[m[36m:[m28[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_analysis.py[m[36m:[m34[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_analysis.py[m[36m:[m40[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_analysis.py[m[36m:[m65[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_analysis.py[m[36m:[m73[36m:[m44[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_analysis.py[m[36m:[m84[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m63[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m65[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m44[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m67[36m:[m41[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m118[36m:[m101[36m:[m [1m[31mE501[m line too long (140 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m136[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m148[36m:[m101[36m:[m [1m[31mE501[m line too long (132 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m177[36m:[m97[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m177[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m184[36m:[m23[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_detection.py[m[36m:[m184[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m213[36m:[m86[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mtest_anomaly_detection.py[m[36m:[m223[36m:[m108[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m22[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m40[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m65[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m281[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m43[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m295[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_detection.py[m[36m:[m336[36m:[m25[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m59[36m:[m90[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m68[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m68[36m:[m76[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m81[36m:[m53[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_direct.py[m[36m:[m82[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m82[36m:[m50[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m84[36m:[m49[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m84[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m120[36m:[m101[36m:[m [1m[31mE501[m line too long (185 > 100 characters)
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m19[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m74[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_direct.py[m[36m:[m195[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m29[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_anomaly_tuned.py[m[36m:[m30[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_anomaly_tuned.py[m[36m:[m59[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m59[36m:[m103[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m100[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m62[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m95[36m:[m101[36m:[m [1m[31mE501[m line too long (144 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m125[36m:[m37[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m125[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m126[36m:[m39[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m126[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m160[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m240[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m246[36m:[m19[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_anomaly_tuned.py[m[36m:[m270[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m271[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m271[36m:[m73[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m274[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m23[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m80[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_anomaly_tuned.py[m[36m:[m280[36m:[m110[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_anomaly_tuned.py[m[36m:[m290[36m:[m5[36m:[m [1m[31mF841[m local variable 'manual_results' is assigned to but never used
+[1mtest_behavioral.py[m[36m:[m9[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_behavioral.py[m[36m:[m17[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m24[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m31[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m38[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m45[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m68[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m76[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m76[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_behavioral.py[m[36m:[m85[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m91[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m97[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m99[36m:[m68[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_behavioral.py[m[36m:[m114[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_classification_as_requested.py[m[36m:[m16[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_classification_as_requested.py[m[36m:[m27[36m:[m23[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m29[36m:[m21[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m97[36m:[m17[36m:[m [1m[31mF841[m local variable 'accuracy' is assigned to but never used
+[1mtest_classification_as_requested.py[m[36m:[m102[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m115[36m:[m43[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m116[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m117[36m:[m72[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m118[36m:[m66[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m119[36m:[m70[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m129[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m135[36m:[m87[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_classification_as_requested.py[m[36m:[m159[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_classification_as_requested.py[m[36m:[m171[36m:[m19[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_classification_as_requested.py[m[36m:[m173[36m:[m17[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m7[36m:[m101[36m:[m [1m[31mE501[m line too long (102 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m22[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m23[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m25[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_ensemble_performance.py[m[36m:[m41[36m:[m101[36m:[m [1m[31mE501[m line too long (154 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (153 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m51[36m:[m101[36m:[m [1m[31mE501[m line too long (151 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m57[36m:[m101[36m:[m [1m[31mE501[m line too long (120 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m62[36m:[m101[36m:[m [1m[31mE501[m line too long (127 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m68[36m:[m101[36m:[m [1m[31mE501[m line too long (138 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m73[36m:[m101[36m:[m [1m[31mE501[m line too long (119 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m79[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m84[36m:[m101[36m:[m [1m[31mE501[m line too long (113 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m89[36m:[m101[36m:[m [1m[31mE501[m line too long (124 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m123[36m:[m33[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m123[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m124[36m:[m63[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m125[36m:[m31[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m125[36m:[m60[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m126[36m:[m33[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m126[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m30[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m128[36m:[m92[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m212[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m212[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m213[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m215[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m215[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m217[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m233[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m234[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m235[36m:[m35[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_ensemble_performance.py[m[36m:[m235[36m:[m46[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m241[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m281[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m282[36m:[m69[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m284[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtest_ensemble_performance.py[m[36m:[m284[36m:[m87[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m25[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m89[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m101[36m:[m [1m[31mE501[m line too long (125 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m296[36m:[m106[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m339[36m:[m101[36m:[m [1m[31mE501[m line too long (107 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m339[36m:[m101[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m342[36m:[m101[36m:[m [1m[31mE501[m line too long (110 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m342[36m:[m104[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m344[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m345[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m363[36m:[m82[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ensemble_performance.py[m[36m:[m381[36m:[m101[36m:[m [1m[31mE501[m line too long (112 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m407[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtest_ensemble_performance.py[m[36m:[m433[36m:[m5[36m:[m [1m[31mF841[m local variable 'final_report' is assigned to but never used
+[1mtest_ensemble_performance.py[m[36m:[m442[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m8[36m:[m101[36m:[m [1m[31mE501[m line too long (150 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m14[36m:[m101[36m:[m [1m[31mE501[m line too long (115 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m20[36m:[m101[36m:[m [1m[31mE501[m line too long (147 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m26[36m:[m101[36m:[m [1m[31mE501[m line too long (134 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m32[36m:[m101[36m:[m [1m[31mE501[m line too long (149 > 100 characters)
+[1mtest_ml_classifier.py[m[36m:[m53[36m:[m17[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m65[36m:[m51[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m66[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m67[36m:[m59[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m68[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m69[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m79[36m:[m33[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m79[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m89[36m:[m29[36m:[m [1m[31mE226[m missing whitespace around arithmetic operator
+[1mtest_ml_classifier.py[m[36m:[m89[36m:[m32[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m93[36m:[m79[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_ml_classifier.py[m[36m:[m107[36m:[m21[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_ml_classifier.py[m[36m:[m120[36m:[m13[36m:[m [1m[31mE221[m multiple spaces before operator
+[1mtest_model_persistence.py[m[36m:[m24[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_model_persistence.py[m[36m:[m32[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m38[36m:[m101[36m:[m [1m[31mE501[m line too long (117 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m44[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m70[36m:[m101[36m:[m [1m[31mE501[m line too long (108 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m76[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtest_model_persistence.py[m[36m:[m134[36m:[m95[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m212[36m:[m94[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m227[36m:[m31[36m:[m [1m[31mE241[m multiple spaces after ':'
+[1mtest_model_persistence.py[m[36m:[m238[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m238[36m:[m83[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m285[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m285[36m:[m81[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m292[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m292[36m:[m85[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m360[36m:[m9[36m:[m [1m[31mF841[m local variable 'training_results' is assigned to but never used
+[1mtest_model_persistence.py[m[36m:[m377[36m:[m45[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_model_persistence.py[m[36m:[m391[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mtest_production_integration.py[m[36m:[m58[36m:[m101[36m:[m [1m[31mE501[m line too long (103 > 100 characters)
+[1mtest_production_integration.py[m[36m:[m70[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_production_integration.py[m[36m:[m287[36m:[m17[36m:[m [1m[31mF841[m local variable 'prediction' is assigned to but never used
+[1mtest_threat_classification.py[m[36m:[m15[36m:[m1[36m:[m [1m[31mE402[m module level import not at top of file
+[1mtest_threat_classification.py[m[36m:[m102[36m:[m101[36m:[m [1m[31mE501[m line too long (116 > 100 characters)
+[1mtest_threat_classification.py[m[36m:[m111[36m:[m101[36m:[m [1m[31mE501[m line too long (114 > 100 characters)
+[1mtest_threat_classification.py[m[36m:[m133[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m142[36m:[m48[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m154[36m:[m64[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m160[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m176[36m:[m62[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m185[36m:[m47[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtest_threat_classification.py[m[36m:[m208[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/integration/test_data_pipeline.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (227 > 100 characters)
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m49[36m:[m53[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m49[36m:[m80[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m51[36m:[m56[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/integration/test_ml_pipeline.py[m[36m:[m237[36m:[m5[36m:[m [1m[31mF841[m local variable '_models' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (335 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m6[36m:[m101[36m:[m [1m[31mE501[m line too long (111 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m14[36m:[m9[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m13[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m36[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m15[36m:[m52[36m:[m [1m[31mF821[m undefined name 'string'
+[1mtests/performance/test_performance.py[m[36m:[m28[36m:[m16[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m29[36m:[m12[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m30[36m:[m14[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m31[36m:[m17[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m45[36m:[m27[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m41[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m57[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m61[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m68[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m84[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m88[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m93[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m95[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m101[36m:[m [1m[31mE501[m line too long (125 > 100 characters)
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m111[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m115[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m46[36m:[m120[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m38[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m54[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m62[36m:[m [1m[31mF821[m undefined name 'random'
+[1mtests/performance/test_performance.py[m[36m:[m48[36m:[m78[36m:[m [1m[31mE231[m missing whitespace after ','
+[1mtests/performance/test_performance.py[m[36m:[m59[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m74[36m:[m16[36m:[m [1m[31mF821[m undefined name 'NLPAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m89[36m:[m18[36m:[m [1m[31mF821[m undefined name 'ThreatClassifier'
+[1mtests/performance/test_performance.py[m[36m:[m103[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m115[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m118[36m:[m10[36m:[m [1m[31mF821[m undefined name 'ThreadPoolExecutor'
+[1mtests/performance/test_performance.py[m[36m:[m121[36m:[m19[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m124[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m125[36m:[m10[36m:[m [1m[31mF821[m undefined name 'ProcessPoolExecutor'
+[1mtests/performance/test_performance.py[m[36m:[m126[36m:[m9[36m:[m [1m[31mF841[m local variable 'results' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m128[36m:[m20[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m143[36m:[m16[36m:[m [1m[31mF821[m undefined name 'CampaignAnalyzer'
+[1mtests/performance/test_performance.py[m[36m:[m162[36m:[m10[36m:[m [1m[31mF821[m undefined name 'DatabaseHandler'
+[1mtests/performance/test_performance.py[m[36m:[m165[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m167[36m:[m24[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m170[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m171[36m:[m5[36m:[m [1m[31mF841[m local variable 'results' is assigned to but never used
+[1mtests/performance/test_performance.py[m[36m:[m174[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m201[36m:[m13[36m:[m [1m[31mF821[m undefined name 'CacheManager'
+[1mtests/performance/test_performance.py[m[36m:[m205[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m207[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m210[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m212[36m:[m17[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m230[36m:[m34[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m231[36m:[m29[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m259[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m261[36m:[m18[36m:[m [1m[31mF821[m undefined name 'time'
+[1mtests/performance/test_performance.py[m[36m:[m271[36m:[m9[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/performance/test_performance.py[m[36m:[m274[36m:[m9[36m:[m [1m[31mF821[m undefined name 'np'
+[1mtests/security/test_api_app_branches_security.py[m[36m:[m94[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtests/security/test_api_app_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'base64' imported but unused
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m10[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.api.app.http_exception_handler' imported but unused
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m42[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m43[36m:[m5[36m:[m [1m[31mF841[m local variable 'r2' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m62[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_auth_rate_and_handlers_security.py[m[36m:[m63[36m:[m5[36m:[m [1m[31mF841[m local variable 'r2' is assigned to but never used
+[1mtests/security/test_api_bruteforce_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m8[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.api.app.rate_limiter' imported but unused
+[1mtests/security/test_api_edgecases_security.py[m[36m:[m127[36m:[m5[36m:[m [1m[31mF841[m local variable 'r1' is assigned to but never used
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.UTC' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.datetime' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'datetime.timedelta' imported but unused
+[1mtests/security/test_api_middleware_security.py[m[36m:[m24[36m:[m101[36m:[m [1m[31mE501[m line too long (109 > 100 characters)
+[1mtests/security/test_api_middleware_security.py[m[36m:[m25[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/security/test_api_permissions_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_api_security.py[m[36m:[m192[36m:[m5[36m:[m [1m[31mF841[m local variable '_headers' is assigned to but never used
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'json' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m7[36m:[m1[36m:[m [1m[31mF401[m 'dmv_scam_analysis.utils.config_manager.ConfigurationError' imported but unused
+[1mtests/security/test_config_manager_extra_security.py[m[36m:[m33[36m:[m5[36m:[m [1m[31mF841[m local variable 'before' is assigned to but never used
+[1mtests/security/test_config_manager_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/security/test_data_security.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (255 > 100 characters)
+[1mtests/security/test_data_security.py[m[36m:[m32[36m:[m55[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/security/test_data_security.py[m[36m:[m44[36m:[m58[36m:[m [1m[31mE231[m missing whitespace after ':'
+[1mtests/security/test_data_security.py[m[36m:[m89[36m:[m26[36m:[m [1m[31mF821[m undefined name 'yaml'
+[1mtests/security/test_data_security.py[m[36m:[m126[36m:[m12[36m:[m [1m[31mF821[m undefined name 'sqlite3'
+[1mtests/security/test_data_security.py[m[36m:[m134[36m:[m16[36m:[m [1m[31mF821[m undefined name 'sqlite3'
+[1mtests/security/test_data_security.py[m[36m:[m173[36m:[m17[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_data_security.py[m[36m:[m173[36m:[m28[36m:[m [1m[31mF821[m undefined name 'generate_test_message'
+[1mtests/security/test_data_security.py[m[36m:[m174[36m:[m11[36m:[m [1m[31mF821[m undefined name 'Fernet'
+[1mtests/security/test_data_security.py[m[36m:[m191[36m:[m17[36m:[m [1m[31mF821[m undefined name 'create_test_dataset'
+[1mtests/security/test_data_security.py[m[36m:[m193[36m:[m36[36m:[m [1m[31mF821[m undefined name 'datetime'
+[1mtests/security/test_data_security.py[m[36m:[m259[36m:[m21[36m:[m [1m[31mF821[m undefined name 'generate_test_message'
+[1mtests/security/test_data_security.py[m[36m:[m260[36m:[m25[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_data_security.py[m[36m:[m281[36m:[m18[36m:[m [1m[31mF821[m undefined name 'hashlib'
+[1mtests/security/test_data_security.py[m[36m:[m304[36m:[m20[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m305[36m:[m18[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m306[36m:[m18[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m309[36m:[m28[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m310[36m:[m26[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m311[36m:[m26[36m:[m [1m[31mF821[m undefined name 'secrets'
+[1mtests/security/test_data_security.py[m[36m:[m361[36m:[m30[36m:[m [1m[31mF722[m syntax error in forward annotation '^[a-zA-Z0-9_-]+$'
+[1mtests/security/test_data_security.py[m[36m:[m384[36m:[m9[36m:[m [1m[31mE722[m do not use bare 'except'
+[1mtests/security/test_logger_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'pathlib.Path' imported but unused
+[1mtests/security/test_rate_limiter_security.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'asyncio' imported but unused
+[1mtests/security/test_rate_limiter_security.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'time' imported but unused
+[1mtests/security/test_security.py[m[36m:[m1[36m:[m101[36m:[m [1m[31mE501[m line too long (307 > 100 characters)
+[1mtests/security/test_security.py[m[36m:[m6[36m:[m101[36m:[m [1m[31mE501[m line too long (118 > 100 characters)
+[1mtests/security/test_security.py[m[36m:[m32[36m:[m12[36m:[m [1m[31mF821[m undefined name 'ConfigManager'
+[1mtests/security/test_security.py[m[36m:[m55[36m:[m20[36m:[m [1m[31mF821[m undefined name 'DataPreprocessor'
+[1mtests/security/test_security.py[m[36m:[m83[36m:[m17[36m:[m [1m[31mF821[m undefined name 'DataValidator'
+[1mtests/security/test_security.py[m[36m:[m121[36m:[m20[36m:[m [1m[31mF821[m undefined name 'SecureFileHandler'
+[1mtests/security/test_security.py[m[36m:[m135[36m:[m12[36m:[m [1m[31mF821[m undefined name 'os'
+[1mtests/security/test_security.py[m[36m:[m138[36m:[m16[36m:[m [1m[31mF821[m undefined name 'os'
+[1mtests/security/test_security.py[m[36m:[m151[36m:[m14[36m:[m [1m[31mF821[m undefined name 'patch'
+[1mtests/security/test_security.py[m[36m:[m154[36m:[m14[36m:[m [1m[31mF821[m undefined name 'patch'
+[1mtests/security/test_security.py[m[36m:[m183[36m:[m5[36m:[m [1m[31mF841[m local variable 'packages' is assigned to but never used
+[1mtests/security/test_security.py[m[36m:[m190[36m:[m23[36m:[m [1m[31mF821[m undefined name 'json'
+[1mtests/security/test_security.py[m[36m:[m201[36m:[m15[36m:[m [1m[31mF821[m undefined name 'MalwareScanner'
+[1mtests/test_configuration.py[m[36m:[m4[36m:[m101[36m:[m [1m[31mE501[m line too long (101 > 100 characters)
+[1mtests/test_configuration.py[m[36m:[m5[36m:[m101[36m:[m [1m[31mE501[m line too long (105 > 100 characters)
+[1mtests/unit/test_api_error_paths.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'logging' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m3[36m:[m1[36m:[m [1m[31mF401[m 'sys' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'pathlib.Path' imported but unused
+[1mtests/unit/test_api_error_paths.py[m[36m:[m7[36m:[m1[36m:[m [1m[31mF401[m 'pytest' imported but unused
+[1mtests/unit/test_config_manager_more.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_config_manager_roundtrip.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_extractor_small.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_extractor_small.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'pandas as pd' imported but unused
+[1mtests/unit/test_jwt_exports.py[m[36m:[m1[36m:[m1[36m:[m [1m[31mF401[m 'base64' imported but unused
+[1mtests/unit/test_jwt_exports.py[m[36m:[m4[36m:[m1[36m:[m [1m[31mF401[m 'json' imported but unused
+[1mtests/unit/test_logger_manager.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m2[36m:[m1[36m:[m [1m[31mF401[m 'os' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m3[36m:[m1[36m:[m [1m[31mF401[m 'types' imported but unused
+[1mtests/unit/test_logger_utils.py[m[36m:[m5[36m:[m1[36m:[m [1m[31mF401[m 'pytest' imported but unused
+[1mtests/utils/test_helpers.py[m[36m:[m57[36m:[m25[36m:[m [1m[31mE231[m missing whitespace after ':'
+
+mypy.....................................................................[41mFailed[m
+[2m- hook id: mypy[m
+[2m- exit code: 1[m
+
+fix_syntax.py: [34mnote:(B[m In function (B[m[1m"fix_unterminated_strings"(B[m:(B[m
+fix_syntax.py:13: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def fix_unterminated_strings(file_path):(B[m
+[31m    ^(B[m
+fix_syntax.py: [34mnote:(B[m In function (B[m[1m"find_and_fix_files"(B[m:(B[m
+fix_syntax.py:53: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def find_and_fix_files():(B[m
+[31m    ^(B[m
+fix_newline_corruption.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+fix_newline_corruption.py:80: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+src/dmv_scam_analysis/core/model_manager.py: [34mnote:(B[m In member (B[m[1m"list_models"(B[m of class (B[m[1m"ModelManager"(B[m:(B[m
+src/dmv_scam_analysis/core/model_manager.py:167: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            models.sort(key=lambda x: x["created_at"], reverse=True)(B[m
+[31m                                      ^(B[m
+src/dmv_scam_analysis/core/model_manager.py: [34mnote:(B[m In member (B[m[1m"cleanup_old_models"(B[m of class (B[m[1m"ModelManager"(B[m:(B[m
+src/dmv_scam_analysis/core/model_manager.py:229: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                models.sort(key=lambda x: x[1]["created_at"], reverse=True...(B[m
+[31m                                          ^(B[m
+scripts/ioc_validator_simple.py: [34mnote:(B[m In member (B[m[1m"check_known_malicious"(B[m of class (B[m[1m"IOCValidator"(B[m:(B[m
+scripts/ioc_validator_simple.py:134: [1m[31merror:(B[m Unsupported right operand type for
+in ((B[m[1m"object"(B[m)  (B[m[33m[operator](B[m
+[2;10m                if input_data in indicators:(B[m
+[31m                   ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+step_10_integration_test.py:103: [1m[31merror:(B[m List comprehension has incompatible
+type List[object]; expected List[str]  (B[m[33m[misc](B[m
+[2;10m        predictions = trainer.predict(model, [msg["text"] for msg in test_...(B[m
+[31m                                              ^~~~~~~~~~~(B[m
+integration_test_ml_trainer.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+integration_test_ml_trainer.py:11: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+integration_test_ml_trainer.py:11: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+launcher.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"SentinelLauncher"(B[m:(B[m
+launcher.py:63: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def __init__(self):(B[m
+[31m        ^(B[m
+launcher.py:63: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+launcher.py: [34mnote:(B[m At top level:(B[m
+launcher.py:135: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                    SentimentAnalyzer,  # type: ignore[import-not-found](B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+launcher.py:138: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                    ThreatDetector,  # type: ignore[import-not-found](B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+launcher.py:207: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                    ModelTrainer,  # type: ignore[import-not-found](B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+launcher.py:233: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                from scripts.api.server import create_app  # type: ignore[...(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+launcher.py:259: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                    create_dashboard,  # type: ignore[import-not-found](B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+launcher.py:347: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m                    config_dict: Dict[str, Any] = self._cfg().as_dict()  #...(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+launcher.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+launcher.py:576: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+launcher.py:576: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+scripts/ioc_validator.py: [34mnote:(B[m In member (B[m[1m"check_known_malicious"(B[m of class (B[m[1m"IOCValidator"(B[m:(B[m
+scripts/ioc_validator.py:136: [1m[31merror:(B[m Unsupported right operand type for in
+((B[m[1m"object"(B[m)  (B[m[33m[operator](B[m
+[2;10m                if input_data in indicators:(B[m
+[31m                   ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"create_test_data"(B[m:(B[m
+test_ensemble_performance.py:36: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def create_test_data():(B[m
+[31m    ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"evaluate_individual_models"(B[m:(B[m
+test_ensemble_performance.py:98: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def evaluate_individual_models(classifier, feature_data):(B[m
+[31m    ^(B[m
+test_ensemble_performance.py:147: [1m[31merror:(B[m Returning Any from function declared
+to return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                        key=lambda x: x[1],(B[m
+[31m                                      ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"test_ensemble_functionality"(B[m:(B[m
+test_ensemble_performance.py:157: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def test_ensemble_functionality(classifier, test_messages):(B[m
+[31m    ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"analyze_prediction_confidence_variance"(B[m:(B[m
+test_ensemble_performance.py:201: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def analyze_prediction_confidence_variance(predictions, test_messages)...(B[m
+[31m    ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"compare_ensemble_vs_individual"(B[m:(B[m
+test_ensemble_performance.py:258: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def compare_ensemble_vs_individual(classifier, test_messages):(B[m
+[31m    ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"generate_performance_report"(B[m:(B[m
+test_ensemble_performance.py:300: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_performance_report((B[m
+[31m    ^(B[m
+test_ensemble_performance.py:318: [1m[31merror:(B[m Returning Any from function declared
+to return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m    ...best_individual = max(model_performances, key=lambda x: x["f1_score"])(B[m
+[31m                                                               ^(B[m
+test_ensemble_performance.py:319: [1m[31merror:(B[m Returning Any from function declared
+to return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m    ...orst_individual = min(model_performances, key=lambda x: x["f1_score"])(B[m
+[31m                                                               ^(B[m
+test_ensemble_performance.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_ensemble_performance.py:375: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+src/dmv_scam_analysis/utils/test_helpers.py: [34mnote:(B[m In function (B[m[1m"_generate_message_content"(B[m:(B[m
+src/dmv_scam_analysis/utils/test_helpers.py:75: [1m[31merror:(B[m Returning Any from
+function declared to return (B[m[1m"str"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            return fake.text(max_nb_chars=200)(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/extractor.py: [34mnote:(B[m In member (B[m[1m"read_messages"(B[m of class (B[m[1m"iMessageAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/core/extractor.py:109: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"None"(B[m, target has type (B[m[1m"str"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                                msg["id"] = row.get("id")(B[m
+[31m                                            ^~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/extractor.py:130: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"None"(B[m, target has type (B[m[1m"str"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                                msg["source"] = row.get("source")(B[m
+[31m                                                ^~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/extractor.py: [34mnote:(B[m In member (B[m[1m"generate_timeline_analysis"(B[m of class (B[m[1m"iMessageAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/core/extractor.py:431: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                "first_message": messages_df["date_parsed"].min().isoforma...(B[m
+[31m                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/extractor.py:432: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                "last_message": messages_df["date_parsed"].max().isoformat...(B[m
+[31m                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/extractor.py:434: [1m[31merror:(B[m Unsupported left operand
+type for - (S1?)  (B[m[33m[operator](B[m
+[2;10m                    messages_df["date_parsed"].max() - messages_df["date_p...(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"extract_ml_features"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:130: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ...            message_features = self._extract_message_features(message)(B[m
+[31m                                                                     ^~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"_extract_temporal_features"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:272: [1m[31merror:(B[m Invalid index type
+(B[m[1m"List[int]"(B[m for (B[m[1m"Series"(B[m; expected type
+(B[m[1m"Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]]"(B[m
+ (B[m[33m[index](B[m
+[2;10m                hourly_dist[night_hours].sum() / len(messages_df)(B[m
+[31m                            ^~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py:277: [1m[31merror:(B[m Invalid index type
+(B[m[1m"List[int]"(B[m for (B[m[1m"Series"(B[m; expected type
+(B[m[1m"Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]]"(B[m
+ (B[m[33m[index](B[m
+[2;10m                hourly_dist[business_hours].sum() / len(messages_df)(B[m
+[31m                            ^~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"_extract_behavioral_features"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:399: [1m[31merror:(B[m Unsupported left operand
+type for - (S1?)  (B[m[33m[operator](B[m
+[2;10m                                subsequent_received.iloc[0]["datetime"](B[m
+[31m                                ^(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"_extract_statistical_features"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:456: [1m[31merror:(B[m Unsupported left operand
+type for - (S1?)  (B[m[33m[operator](B[m
+[2;10m                    messages_df["datetime"].max() - messages_df["datetime"...(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"train_threat_classifier"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:783: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                    successful_models, key=lambda k: training_results[k]["...(B[m
+[31m                                                     ^(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"predict_threat_classification"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:845: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m                message_features = self._extract_message_features(message)(B[m
+[31m                                                                  ^~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"predict"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:1003: [1m[31merror:(B[m Incompatible return value
+type (got (B[m[1m"ndarray"(B[m, expected (B[m[1m"List[float]"(B[m)  (B[m[33m[return-value](B[m
+[2;10m                return np.asarray(scores, dtype=float)(B[m
+[31m                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py:1022: [1m[31merror:(B[m Incompatible return value
+type (got (B[m[1m"ndarray"(B[m, expected (B[m[1m"List[float]"(B[m)  (B[m[33m[return-value](B[m
+[2;10m                return np.asarray(scores_list, dtype=float)(B[m
+[31m                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"train"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:1371: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ...            message_features = self._extract_message_features(message)(B[m
+[31m                                                                     ^~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"train_ensemble"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:1441: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ...            message_features = self._extract_message_features(message)(B[m
+[31m                                                                     ^~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"predict_ensemble"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:1528: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m                self._extract_message_features(message) for _, message in ...(B[m
+[31m                                               ^~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py: [34mnote:(B[m In member (B[m[1m"explain_prediction"(B[m of class (B[m[1m"MLThreatClassifier"(B[m:(B[m
+src/dmv_scam_analysis/core/classifier.py:1625: [1m[31merror:(B[m Argument 1 to
+(B[m[1m"_extract_message_features"(B[m of (B[m[1m"MLThreatClassifier"(B[m has incompatible type
+(B[m[1m"Series"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m            features = self._extract_message_features(df.iloc[0])(B[m
+[31m                                                      ^~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/classifier.py:1672: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            decision_path.sort(key=lambda x: x["importance"], reverse=True...(B[m
+[31m                                             ^(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py: [34mnote:(B[m In member (B[m[1m"_analyze_weekly_patterns"(B[m of class (B[m[1m"TemporalAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:88: [1m[31merror:(B[m Unsupported
+operand types for / ((B[m[1m"object"(B[m and (B[m[1m"int"(B[m)  (B[m[33m[operator](B[m
+[2;10m                weekly_stats["weekend_messages"] / total_messages(B[m
+[31m                ^(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py: [34mnote:(B[m In member (B[m[1m"_detect_message_bursts"(B[m of class (B[m[1m"TemporalAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:123: [1m[31merror:(B[m (B[m[1m"Hashable"(B[m has
+no attribute (B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "timestamp": timestamp.isoformat(),(B[m
+[31m                                         ^~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:126: [1m[31merror:(B[m No overload
+variant of (B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m
+(B[m[33m[call-overload](B[m
+[2;10m                                float(burst_threshold[timestamp])(B[m
+[31m                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:126: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:126: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:126: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:127: [1m[31merror:(B[m No overload
+variant of (B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m
+(B[m[33m[call-overload](B[m
+[2;10m                                if not pd.isna(burst_threshold[timestamp])(B[m
+[31m                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:127: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:127: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:127: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:131: [1m[31merror:(B[m No overload
+variant of (B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m
+(B[m[33m[call-overload](B[m
+[2;10m                                count, burst_threshold[timestamp](B[m
+[31m                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:131: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:131: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:131: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py: [34mnote:(B[m In member (B[m[1m"_detect_timing_anomalies"(B[m of class (B[m[1m"TemporalAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:181: [1m[31merror:(B[m S1? has no
+attribute (B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                                "message_timestamp": messages_sorted.iloc[...(B[m
+[31m                                                     ^(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py: [34mnote:(B[m In member (B[m[1m"_analyze_response_patterns"(B[m of class (B[m[1m"TemporalAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:226: [1m[31merror:(B[m Unsupported
+left operand type for - (S1?)  (B[m[33m[operator](B[m
+[2;10m                        next_received["datetime"] - sent_msg["datetime"](B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:230: [1m[31merror:(B[m S1? has no
+attribute (B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "sent_timestamp": sent_msg["datetime"].isoform...(B[m
+[31m                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/temporal_analyzer.py:231: [1m[31merror:(B[m S1? has no
+attribute (B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "received_timestamp": next_received["datetime"...(B[m
+[31m                                                  ^~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+src/dmv_scam_analysis/analysis/sentiment.py: [34mnote:(B[m In member (B[m[1m"extract_features"(B[m of class (B[m[1m"AdvancedNLPAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/sentiment.py:173: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"Series"(B[m, variable has type (B[m[1m"ndarray"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m                text_messages = messages_df.dropna(subset=["text"])["text"...(B[m
+[31m                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/sentiment.py: [34mnote:(B[m In member (B[m[1m"get_feature_importance"(B[m of class (B[m[1m"AdvancedNLPAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/sentiment.py:275: [1m[31merror:(B[m Value of type
+_ShapeT_co? is not indexable  (B[m[33m[index](B[m
+[2;10m            for feature_idx in range(features.shape[1]):(B[m
+[31m                                     ^~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/sentiment.py: [34mnote:(B[m In member (B[m[1m"_extract_semantic_topics"(B[m of class (B[m[1m"AdvancedNLPAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/sentiment.py:1074: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m    ...              topic_stats.items(), key=lambda x: x[1]["prevalence"], r...(B[m
+[31m                                                        ^(B[m
+src/dmv_scam_analysis/analysis/behavioral.py: [34mnote:(B[m In member (B[m[1m"_analyze_weekly_patterns"(B[m of class (B[m[1m"BehavioralAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:603: [1m[31merror:(B[m Unsupported operand
+types for / ((B[m[1m"object"(B[m and (B[m[1m"int"(B[m)  (B[m[33m[operator](B[m
+[2;10m                weekly_stats["weekend_messages"] / total_messages(B[m
+[31m                ^(B[m
+src/dmv_scam_analysis/analysis/behavioral.py: [34mnote:(B[m In member (B[m[1m"_detect_message_bursts"(B[m of class (B[m[1m"BehavioralAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:638: [1m[31merror:(B[m (B[m[1m"Hashable"(B[m has no
+attribute (B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "timestamp": timestamp.isoformat(),(B[m
+[31m                                         ^~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:641: [1m[31merror:(B[m No overload variant of
+(B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m  (B[m[33m[call-overload](B[m
+[2;10m                                float(burst_threshold[timestamp])(B[m
+[31m                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:641: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:641: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:641: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:642: [1m[31merror:(B[m No overload variant of
+(B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m  (B[m[33m[call-overload](B[m
+[2;10m                                if not pd.isna(burst_threshold[timestamp])(B[m
+[31m                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:642: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:642: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:642: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:646: [1m[31merror:(B[m No overload variant of
+(B[m[1m"__getitem__"(B[m of (B[m[1m"Series"(B[m matches argument type (B[m[1m"Hashable"(B[m  (B[m[33m[call-overload](B[m
+[2;10m                                count, burst_threshold[timestamp](B[m
+[31m                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:646: [34mnote:(B[m Possible overload variants:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:646: [34mnote:(B[m     def __getitem__(self, Union[List[str], Index, Series, slice, ndarray, List[builtins.bool], Tuple[Union[Hashable, slice], ...]], /) -> Series(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:646: [34mnote:(B[m     def __getitem__(self, Union[Union[str, bytes, date, datetime, timedelta, datetime64, timedelta64, bool, int, float, Timestamp, Timedelta], complex, integer, floating, complexfloating], /) -> S1?(B[m
+src/dmv_scam_analysis/analysis/behavioral.py: [34mnote:(B[m In member (B[m[1m"_detect_timing_anomalies"(B[m of class (B[m[1m"BehavioralAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:687: [1m[31merror:(B[m Item (B[m[1m"ExtensionArray"(B[m
+of (B[m[1m"Union[ExtensionArray, ndarray]"(B[m has no attribute (B[m[1m"reshape"(B[m  (B[m[33m[union-attr](B[m
+[2;10m            time_deltas_reshaped = time_deltas.values.reshape(-1, 1)(B[m
+[31m                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py: [34mnote:(B[m In member (B[m[1m"_analyze_response_patterns"(B[m of class (B[m[1m"BehavioralAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:750: [1m[31merror:(B[m Unsupported left
+operand type for - (S1?)  (B[m[33m[operator](B[m
+[2;10m                        next_received["datetime"] - sent_msg["datetime"](B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:754: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "sent_timestamp": sent_msg["datetime"].isoform...(B[m
+[31m                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:755: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "received_timestamp": next_received["datetime"...(B[m
+[31m                                                  ^~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+src/dmv_scam_analysis/analysis/behavioral.py: [34mnote:(B[m In member (B[m[1m"_calculate_automation_score"(B[m of class (B[m[1m"BehavioralAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/behavioral.py:1006: [1m[31merror:(B[m Returning Any from
+function declared to return (B[m[1m"float"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            return np.mean(scores) if scores else 0(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/analysis/automation_analyzer.py: [34mnote:(B[m In member (B[m[1m"_calculate_automation_score"(B[m of class (B[m[1m"AutomationAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/analysis/automation_analyzer.py:239: [1m[31merror:(B[m Returning Any
+from function declared to return (B[m[1m"float"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            return np.mean(scores) if scores else 0(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+scripts/data_validation.py: [34mnote:(B[m In member (B[m[1m"validate_dataframe"(B[m of class (B[m[1m"DataValidator"(B[m:(B[m
+scripts/data_validation.py:67: [1m[31merror:(B[m (B[m[1m"Sequence[str]"(B[m has no attribute (B[m[1m"append"(B[m
+ (B[m[33m[attr-defined](B[m
+[2;10m            results["checks"].append((B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+scripts/data_validation.py:80: [1m[31merror:(B[m (B[m[1m"Sequence[str]"(B[m has no attribute (B[m[1m"append"(B[m
+ (B[m[33m[attr-defined](B[m
+[2;10m            results["checks"].append((B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+scripts/data_validation.py:99: [1m[31merror:(B[m (B[m[1m"Sequence[str]"(B[m has no attribute (B[m[1m"append"(B[m
+ (B[m[33m[attr-defined](B[m
+[2;10m            results["checks"].append((B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+scripts/data_validation.py:120: [1m[31merror:(B[m (B[m[1m"Sequence[str]"(B[m has no attribute
+(B[m[1m"append"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m            results["checks"].append((B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+scripts/data_validation.py:141: [1m[31merror:(B[m (B[m[1m"Sequence[str]"(B[m has no attribute
+(B[m[1m"append"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m            results["checks"].append((B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+run_tests.py: [34mnote:(B[m In function (B[m[1m"validate_dataframe"(B[m:(B[m
+run_tests.py:29: [1m[31merror:(B[m Function is missing a type annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def validate_dataframe(df, required_columns=None):(B[m
+[31m    ^(B[m
+run_tests.py: [34mnote:(B[m In function (B[m[1m"run_timing_pattern_tests"(B[m:(B[m
+run_tests.py:63: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def run_timing_pattern_tests():(B[m
+[31m    ^(B[m
+run_tests.py:63: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+run_tests.py: [34mnote:(B[m In function (B[m[1m"run_conversation_pattern_tests"(B[m:(B[m
+run_tests.py:92: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def run_conversation_pattern_tests():(B[m
+[31m    ^(B[m
+run_tests.py:92: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+run_tests.py: [34mnote:(B[m In function (B[m[1m"run_comprehensive_tests"(B[m:(B[m
+run_tests.py:121: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def run_comprehensive_tests():(B[m
+[31m    ^(B[m
+run_tests.py:121: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+run_tests.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+run_tests.py:155: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_threat_classification.py: [34mnote:(B[m In function (B[m[1m"load_test_data"(B[m:(B[m
+test_threat_classification.py:18: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def load_test_data(dataset_name):(B[m
+[31m    ^(B[m
+test_threat_classification.py: [34mnote:(B[m In function (B[m[1m"run_classification_tests"(B[m:(B[m
+test_threat_classification.py:69: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def run_classification_tests():(B[m
+[31m    ^(B[m
+test_threat_classification.py:111: [1m[31merror:(B[m Item (B[m[1m"None"(B[m of
+(B[m[1m"Optional[Dict[str, Any]]"(B[m has no attribute (B[m[1m"get"(B[m  (B[m[33m[union-attr](B[m
+[2;10m    ... f"  ❌ Training failed for {dataset} dataset: {training_results.get('e...(B[m
+[31m                                                        ^~~~~~~~~~~~~~~~~~~~(B[m
+test_threat_classification.py:147: [1m[31merror:(B[m Need type annotation for
+(B[m[1m"pred_counts"(B[m (hint: (B[m[1m"pred_counts: Dict[<type>, <type>] = ..."(B[m)  (B[m[33m[var-annotated](B[m
+[2;10m                pred_counts = {}(B[m
+[31m                ^~~~~~~~~~~(B[m
+test_threat_classification.py:179: [1m[31merror:(B[m (B[m[1m"object"(B[m has no attribute (B[m[1m"get"(B[m
+(B[m[33m[attr-defined](B[m
+[2;10m                best_model = training_res.get("best_model", "unknown")(B[m
+[31m                             ^~~~~~~~~~~~~~~~(B[m
+test_threat_classification.py:180: [1m[31merror:(B[m (B[m[1m"object"(B[m has no attribute (B[m[1m"get"(B[m
+(B[m[33m[attr-defined](B[m
+[2;10m                if best_model in training_res.get("training_results", {}):(B[m
+[31m                                 ^~~~~~~~~~~~~~~~(B[m
+test_threat_classification.py:181: [1m[31merror:(B[m Value of type (B[m[1m"object"(B[m is not
+indexable  (B[m[33m[index](B[m
+[2;10m                    accuracy = training_res["training_results"][best_model...(B[m
+[31m                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"ProductionIntegrationTest"(B[m:(B[m
+test_production_integration.py:36: [1m[31merror:(B[m Incompatible default for argument
+(B[m[1m"api_key"(B[m (default has type (B[m[1m"None"(B[m, argument has type (B[m[1m"str"(B[m)  (B[m[33m[assignment](B[m
+[2;10m    ...self, api_base_url: str = "http://localhost:8000", api_key: str = None(B[m
+[31m                                                                         ^~~~(B[m
+test_production_integration.py:36: [34mnote:(B[m PEP 484 prohibits implicit Optional. Accordingly, mypy has changed its default to no_implicit_optional=True(B[m
+test_production_integration.py:36: [34mnote:(B[m Use [4mhttps://github.com/hauntsaninja/no_implicit_optional(B[m to automatically upgrade your codebase(B[m
+test_production_integration.py: [34mnote:(B[m In member (B[m[1m"run_all_tests"(B[m of class (B[m[1m"ProductionIntegrationTest"(B[m:(B[m
+test_production_integration.py:107: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                    results["tests"][test_name] = {(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:114: [1m[31merror:(B[m Value of type (B[m[1m"Collection[str]"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                        results["summary"]["passed"] += 1(B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:114: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                        results["summary"]["passed"] += 1(B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:116: [1m[31merror:(B[m Value of type (B[m[1m"Collection[str]"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                        results["summary"]["failed"] += 1(B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:116: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                        results["summary"]["failed"] += 1(B[m
+[31m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:120: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                    results["tests"][test_name] = {(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:125: [1m[31merror:(B[m Value of type (B[m[1m"Collection[str]"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                    results["summary"]["failed"] += 1(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:125: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                    results["summary"]["failed"] += 1(B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:127: [1m[31merror:(B[m Value of type (B[m[1m"Collection[str]"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                results["summary"]["total"] += 1(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:127: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["summary"]["total"] += 1(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:131: [1m[31merror:(B[m Value of type (B[m[1m"Collection[str]"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                results["summary"]["passed"] / results["summary"]["total"](B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py:133: [1m[31merror:(B[m Unsupported target for indexed
+assignment ((B[m[1m"Collection[str]"(B[m)  (B[m[33m[index](B[m
+[2;10m            results["summary"]["success_rate"] = round(success_rate, 2)(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_production_integration.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_production_integration.py:356: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_model_persistence.py: [34mnote:(B[m In function (B[m[1m"create_test_data"(B[m:(B[m
+test_model_persistence.py:27: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def create_test_data():(B[m
+[31m    ^(B[m
+test_model_persistence.py: [34mnote:(B[m In function (B[m[1m"create_incremental_data"(B[m:(B[m
+test_model_persistence.py:66: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def create_incremental_data():(B[m
+[31m    ^(B[m
+test_model_persistence.py: [34mnote:(B[m In function (B[m[1m"test_model_persistence"(B[m:(B[m
+test_model_persistence.py:86: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def test_model_persistence():(B[m
+[31m    ^(B[m
+test_model_persistence.py: [34mnote:(B[m In function (B[m[1m"demonstrate_code_example"(B[m:(B[m
+test_model_persistence.py:340: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def demonstrate_code_example():(B[m
+[31m    ^(B[m
+test_model_persistence.py:340: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+test_model_persistence.py:360: [1m[31merror:(B[m Argument 1 to (B[m[1m"train_threat_classifier"(B[m
+of (B[m[1m"MLThreatClassifier"(B[m has incompatible type (B[m[1m"Optional[Dict[str, Any]]"(B[m;
+expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ...   training_results = classifier.train_threat_classifier(feature_data)(B[m
+[31m                                                                ^~~~~~~~~~~~(B[m
+test_ml_classifier.py:75: [1m[31merror:(B[m Returning Any from function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                            key=lambda x: x[1],(B[m
+[31m                                          ^(B[m
+test_ml_classifier.py:90: [1m[31merror:(B[m Value of type S1? is not indexable  (B[m[33m[index](B[m
+[2;10m            print(f"Text: {text[:100]}...")(B[m
+[31m                          ^~~~~~~~~~~(B[m
+test_classification_as_requested.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_classification_as_requested.py:19: [1m[31merror:(B[m Function is missing a return
+type annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_classification_as_requested.py:19: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+test_classification_as_requested.py:78: [1m[31merror:(B[m Unsupported right operand type
+for in ((B[m[1m"Optional[Dict[str, Any]]"(B[m)  (B[m[33m[operator](B[m
+[2;10m                if "error" in training_results:(B[m
+[31m                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:79: [1m[31merror:(B[m Value of type
+(B[m[1m"Optional[Dict[str, Any]]"(B[m is not indexable  (B[m[33m[index](B[m
+[2;10m                    print(f"Training failed: {training_results['error']}")(B[m
+[31m                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:91: [1m[31merror:(B[m Item (B[m[1m"None"(B[m of
+(B[m[1m"Optional[Dict[str, Any]]"(B[m has no attribute (B[m[1m"get"(B[m  (B[m[33m[union-attr](B[m
+[2;10m                best_model = training_results.get("best_model", "unknown")(B[m
+[31m                             ^~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:92: [1m[31merror:(B[m Item (B[m[1m"None"(B[m of
+(B[m[1m"Optional[Dict[str, Any]]"(B[m has no attribute (B[m[1m"get"(B[m  (B[m[33m[union-attr](B[m
+[2;10m                if best_model in training_results.get("training_results", ...(B[m
+[31m                                 ^~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:93: [1m[31merror:(B[m Value of type
+(B[m[1m"Optional[Dict[str, Any]]"(B[m is not indexable  (B[m[33m[index](B[m
+[2;10m                    accuracy = training_results["training_results"][best_m...(B[m
+[31m                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:102: [1m[31merror:(B[m Value of type
+(B[m[1m"Optional[Dict[str, Any]]"(B[m is not indexable  (B[m[33m[index](B[m
+[2;10m                    f"Accuracy: {training_results['training_results']['ran...(B[m
+[31m                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_classification_as_requested.py:113: [1m[31merror:(B[m Value of type
+(B[m[1m"Optional[Dict[str, Any]]"(B[m is not indexable  (B[m[33m[index](B[m
+[2;10m                for model_name, results in training_results["training_resu...(B[m
+[31m                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+test_classification_as_requested.py:122: [1m[31merror:(B[m Need type annotation for
+(B[m[1m"pred_counts"(B[m (hint: (B[m[1m"pred_counts: Dict[<type>, <type>] = ..."(B[m)  (B[m[33m[var-annotated](B[m
+[2;10m                pred_counts = {}(B[m
+[31m                ^~~~~~~~~~~(B[m
+test_anomaly_tuned.py:26: [1m[31merror:(B[m Name (B[m[1m"MLThreatClassifier"(B[m already defined
+(possibly by an import)  (B[m[33m[no-redef](B[m
+[2;10m        from classifier import MLThreatClassifier(B[m
+[31m        ^(B[m
+test_anomaly_tuned.py: [34mnote:(B[m In function (B[m[1m"test_isolation_forest_parameters"(B[m:(B[m
+test_anomaly_tuned.py:33: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def test_isolation_forest_parameters((B[m
+[31m    ^(B[m
+test_anomaly_tuned.py: [34mnote:(B[m In function (B[m[1m"test_manual_anomaly_detection"(B[m:(B[m
+test_anomaly_tuned.py:68: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def test_manual_anomaly_detection():(B[m
+[31m    ^(B[m
+test_anomaly_tuned.py: [34mnote:(B[m In function (B[m[1m"create_extreme_anomaly_test"(B[m:(B[m
+test_anomaly_tuned.py:187: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def create_extreme_anomaly_test():(B[m
+[31m    ^(B[m
+test_anomaly_tuned.py:187: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+test_anomaly_tuned.py:243: [1m[31merror:(B[m Value of type S1? is not indexable  (B[m[33m[index](B[m
+[2;10m                row["text"][:50] + "..." if len(row["text"]) > 50 else row...(B[m
+[31m                ^~~~~~~~~~~~~~~~(B[m
+test_anomaly_tuned.py:246: [1m[31merror:(B[m Unsupported operand types for + ((B[m[1m"Hashable"(B[m
+and (B[m[1m"int"(B[m)  (B[m[33m[operator](B[m
+[2;10m                f"  {i+1}. [{row['readable_date']}] {text_preview} (length...(B[m
+[31m                    ^(B[m
+test_anomaly_tuned.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_anomaly_tuned.py:284: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_anomaly_tuned.py:325: [1m[31merror:(B[m Returning Any from function declared to
+return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                iso_results.keys(), key=lambda k: iso_results[k]["anomaly_...(B[m
+[31m                                                  ^(B[m
+test_anomaly_direct.py:22: [1m[31merror:(B[m Name (B[m[1m"MLThreatClassifier"(B[m already defined
+(possibly by an import)  (B[m[33m[no-redef](B[m
+[2;10m        from classifier import MLThreatClassifier(B[m
+[31m        ^(B[m
+test_anomaly_direct.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_anomaly_direct.py:25: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_anomaly_direct.py:38: [1m[31merror:(B[m Value of type S1? is not indexable  (B[m[33m[index](B[m
+[2;10m        print(f"Sample message: {df.iloc[0]['text'][:100]}...")(B[m
+[31m                                ^~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+test_anomaly_detection.py:29: [1m[31merror:(B[m Name (B[m[1m"MLThreatClassifier"(B[m already defined
+(possibly by an import)  (B[m[33m[no-redef](B[m
+[2;10m        from classifier import MLThreatClassifier(B[m
+[31m        ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"generate_normal_communication_pattern"(B[m:(B[m
+test_anomaly_detection.py:32: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_normal_communication_pattern():(B[m
+[31m    ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"generate_burst_messaging_pattern"(B[m:(B[m
+test_anomaly_detection.py:55: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_burst_messaging_pattern():(B[m
+[31m    ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"generate_unusual_timing_pattern"(B[m:(B[m
+test_anomaly_detection.py:78: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_unusual_timing_pattern():(B[m
+[31m    ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"generate_statistical_outliers"(B[m:(B[m
+test_anomaly_detection.py:99: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_statistical_outliers():(B[m
+[31m    ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"run_anomaly_test"(B[m:(B[m
+test_anomaly_detection.py:159: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def run_anomaly_test(test_name, messages, classifier):(B[m
+[31m    ^(B[m
+test_anomaly_detection.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+test_anomaly_detection.py:236: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+test_anomaly_detection.py:310: [1m[31merror:(B[m Argument (B[m[1m"key"(B[m to (B[m[1m"max"(B[m has incompatible
+type overloaded function; expected
+(B[m[1m"Callable[[str], Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]]"(B[m
+(B[m[33m[arg-type](B[m
+[2;10m            highest_anomaly = max(anomaly_scores, key=anomaly_scores.get)(B[m
+[31m                                                      ^~~~~~~~~~~~~~~~~~(B[m
+test_anomaly_detection.py:311: [1m[31merror:(B[m Argument (B[m[1m"key"(B[m to (B[m[1m"min"(B[m has incompatible
+type overloaded function; expected
+(B[m[1m"Callable[[str], Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]]"(B[m
+(B[m[33m[arg-type](B[m
+[2;10m            lowest_anomaly = min(anomaly_scores, key=anomaly_scores.get)(B[m
+[31m                                                     ^~~~~~~~~~~~~~~~~~(B[m
+test_anomaly_detection.py:328: [1m[31merror:(B[m Need type annotation for (B[m[1m"concern_types"(B[m
+(hint: (B[m[1m"concern_types: Dict[<type>, <type>] = ..."(B[m)  (B[m[33m[var-annotated](B[m
+[2;10m                concern_types = {}(B[m
+[31m                ^~~~~~~~~~~~~(B[m
+test_anomaly_detection.py:334: [1m[31merror:(B[m Returning Any from function declared to
+return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m    ...               concern_types.items(), key=lambda x: x[1], reverse=True(B[m
+[31m                                                           ^(B[m
+src/dmv_scam_analysis/core/analyzer.py: [34mnote:(B[m In member (B[m[1m"analyze_campaign"(B[m of class (B[m[1m"CampaignAnalyzer"(B[m:(B[m
+src/dmv_scam_analysis/core/analyzer.py:78: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "start": messages_df["datetime"].min().isoform...(B[m
+[31m                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/core/analyzer.py:79: [1m[31merror:(B[m S1? has no attribute
+(B[m[1m"isoformat"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m                            "end": messages_df["datetime"].max().isoformat...(B[m
+[31m                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/tui.py:46: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m            return df.to_dict("records")  # type: ignore[no-any-return](B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/tui.py: [34mnote:(B[m In function (B[m[1m"_load_messages_from_file"(B[m:(B[m
+src/dmv_scam_analysis/cli/tui.py:46: [1m[31merror:(B[m Incompatible return value type (got
+(B[m[1m"List[Dict[Hashable, Any]]"(B[m, expected (B[m[1m"List[Dict[str, Any]]"(B[m)  (B[m[33m[return-value](B[m
+[2;10m            return df.to_dict("records")  # type: ignore[no-any-return](B[m
+[31m                   ^~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/tui.py:46: [34mnote:(B[m Error code (B[m[1m"return-value"(B[m not covered by (B[m[1m"type: ignore"(B[m comment(B[m
+src/dmv_scam_analysis/cli/tui.py: [34mnote:(B[m In function (B[m[1m"_print_classifier_summary"(B[m:(B[m
+src/dmv_scam_analysis/cli/tui.py:177: [1m[31merror:(B[m Returning Any from function
+declared to return (B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m
+(B[m[33m[no-any-return](B[m
+[2;10m    ...     top3 = sorted(probs.items(), key=lambda kv: kv[1], reverse=True)[...(B[m
+[31m                                                        ^(B[m
+src/dmv_scam_analysis/cli/tui.py: [34mnote:(B[m In function (B[m[1m"run_tui"(B[m:(B[m
+src/dmv_scam_analysis/cli/tui.py:407: [1m[31merror:(B[m Incompatible types in assignment
+(expression has type (B[m[1m"Optional[DataFrame]"(B[m, variable has type (B[m[1m"DataFrame"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m                        df = im.extract_messages_by_contact(contact, limit...(B[m
+[31m                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+src/dmv_scam_analysis/cli/main.py: [34mnote:(B[m In function (B[m[1m"suggestions"(B[m:(B[m
+src/dmv_scam_analysis/cli/main.py:362: [1m[31merror:(B[m S1? has no attribute (B[m[1m"lower"(B[m
+(B[m[33m[attr-defined](B[m
+[2;10m                    tl = t.lower()(B[m
+[31m                         ^~~~~~~(B[m
+src/dmv_scam_analysis/cli/main.py:437: [1m[31merror:(B[m Incompatible types in assignment
+(expression has type (B[m[1m"None"(B[m, variable has type Module)  (B[m[33m[assignment](B[m
+[2;10m                        _pd2 = None(B[m
+[31m                               ^~~~(B[m
+src/dmv_scam_analysis/api/app.py:49: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m            import pytest_benchmark.fixture as _bench_fix  # type: ignore[...(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+generate_recommendations.py:19: [1m[31merror:(B[m Incompatible types in assignment
+(expression has type (B[m[1m"None"(B[m, variable has type Module)  (B[m[33m[assignment](B[m
+[2;10m        yaml = None(B[m
+[31m               ^~~~(B[m
+generate_recommendations.py: [34mnote:(B[m In function (B[m[1m"generate_recommendations"(B[m:(B[m
+generate_recommendations.py:29: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def generate_recommendations():(B[m
+[31m    ^(B[m
+generate_recommendations.py:29: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+generate_recommendations.py:114: [1m[31merror:(B[m Argument 2 to (B[m[1m"analyze_risk"(B[m of
+(B[m[1m"RiskAnalyzer"(B[m has incompatible type (B[m[1m"Optional[Dict[str, Any]]"(B[m; expected
+(B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m                        contact_id, temporal_analysis, automation_analysis(B[m
+[31m                                    ^~~~~~~~~~~~~~~~~(B[m
+generate_recommendations.py: [34mnote:(B[m In function (B[m[1m"_export_outputs"(B[m:(B[m
+generate_recommendations.py:295: [1m[31merror:(B[m Incompatible types in assignment
+(expression has type (B[m[1m"None"(B[m, variable has type Module)  (B[m[33m[assignment](B[m
+[2;10m                    _np = None(B[m
+[31m                          ^~~~(B[m
+generate_recommendations.py:299: [1m[31merror:(B[m Incompatible types in assignment
+(expression has type (B[m[1m"None"(B[m, variable has type Module)  (B[m[33m[assignment](B[m
+[2;10m                    _pd = None(B[m
+[31m                          ^~~~(B[m
+generate_recommendations.py:301: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m                def _json_default(o):(B[m
+[31m                ^(B[m
+generate_recommendations.py: [34mnote:(B[m In function (B[m[1m"test_recommendation_engine"(B[m:(B[m
+generate_recommendations.py:318: [1m[31merror:(B[m Function is missing a return type
+annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def test_recommendation_engine():(B[m
+[31m    ^(B[m
+generate_recommendations.py:318: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+generate_recommendations.py:352: [1m[31merror:(B[m Argument 2 to (B[m[1m"analyze_risk"(B[m of
+(B[m[1m"RiskAnalyzer"(B[m has incompatible type (B[m[1m"object"(B[m; expected (B[m[1m"Dict[str, Any]"(B[m
+(B[m[33m[arg-type](B[m
+[2;10m    ... risk_analyzer.analyze_risk(f"test_{test_name}", temporal, automation)(B[m
+[31m                                                        ^~~~~~~~(B[m
+generate_recommendations.py: [34mnote:(B[m At top level:(B[m
+generate_recommendations.py:413: [1m[31merror:(B[m Argument 2 to (B[m[1m"analyze_risk"(B[m of
+(B[m[1m"RiskAnalyzer"(B[m has incompatible type (B[m[1m"Optional[Dict[str, Any]]"(B[m; expected
+(B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ... report = risk_analyzer.analyze_risk(contact_id, temporal, automation)(B[m
+[31m                                                        ^~~~~~~~(B[m
+final_anomaly_test.py:30: [1m[31merror:(B[m Name (B[m[1m"MLThreatClassifier"(B[m already defined
+(possibly by an import)  (B[m[33m[no-redef](B[m
+[2;10m        from classifier import MLThreatClassifier(B[m
+[31m        ^(B[m
+final_anomaly_test.py: [34mnote:(B[m In function (B[m[1m"create_test_scenarios"(B[m:(B[m
+final_anomaly_test.py:33: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def create_test_scenarios():(B[m
+[31m    ^(B[m
+final_anomaly_test.py: [34mnote:(B[m In function (B[m[1m"test_scenario"(B[m:(B[m
+final_anomaly_test.py:144: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def test_scenario(scenario_name, messages, classifier):(B[m
+[31m    ^(B[m
+final_anomaly_test.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+final_anomaly_test.py:201: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+final_anomaly_test.py:270: [1m[31merror:(B[m Argument (B[m[1m"key"(B[m to (B[m[1m"max"(B[m has incompatible type
+overloaded function; expected
+(B[m[1m"Callable[[str], Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]]"(B[m
+(B[m[33m[arg-type](B[m
+[2;10m    ...          most_anomalous = max(anomaly_scores, key=anomaly_scores.get)(B[m
+[31m                                                          ^~~~~~~~~~~~~~~~~~(B[m
+demonstrate_task_example.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+demonstrate_task_example.py:82: [1m[31merror:(B[m Argument 1 to (B[m[1m"train_threat_classifier"(B[m
+of (B[m[1m"MLThreatClassifier"(B[m has incompatible type (B[m[1m"Optional[Dict[str, Any]]"(B[m;
+expected (B[m[1m"Dict[str, Any]"(B[m  (B[m[33m[arg-type](B[m
+[2;10m    ...   training_results = classifier.train_threat_classifier(feature_data)(B[m
+[31m                                                                ^~~~~~~~~~~~(B[m
+conftest.py: [34mnote:(B[m In function (B[m[1m"pytest_configure"(B[m:(B[m
+conftest.py:28: [1m[31merror:(B[m Function is missing a type annotation  (B[m[33m[no-untyped-def](B[m
+[2;10m    def pytest_configure(config):  # noqa: D401 - pytest hook(B[m
+[31m    ^(B[m
+conftest.py: [34mnote:(B[m At top level:(B[m
+conftest.py:31: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m            from pytest_benchmark.fixture import BenchmarkFixture  # type:...(B[m
+[31m            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+conftest.py: [34mnote:(B[m In function (B[m[1m"pytest_configure"(B[m:(B[m
+conftest.py:95: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m                def one_iter():(B[m
+[31m                ^(B[m
+conftest.py: [34mnote:(B[m At top level:(B[m
+conftest.py:112: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m        BenchmarkFixture.__call__ = patched_call  # type: ignore(B[m
+[31m        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+conftest.py:113: [1m[31merror:(B[m Unused (B[m[1m"type: ignore"(B[m comment(B[m[33m(B[m
+[2;10m        BenchmarkFixture.__agentmode_patched__ = True  # type: ignore(B[m
+[31m        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+conftest.py: [34mnote:(B[m In function (B[m[1m"classifier"(B[m:(B[m
+conftest.py:117: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def classifier():(B[m
+[31m    ^(B[m
+conftest.py: [34mnote:(B[m In function (B[m[1m"test_messages"(B[m:(B[m
+conftest.py:122: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def test_messages():(B[m
+[31m    ^(B[m
+conftest.py: [34mnote:(B[m In function (B[m[1m"X_scaled"(B[m:(B[m
+conftest.py:140: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def X_scaled():(B[m
+[31m    ^(B[m
+src/dmv_scam_analysis/cli/commands/debug.py: [34mnote:(B[m In function (B[m[1m"cli"(B[m:(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:49: [1m[31merror:(B[m (B[m[1m"DebugContext"(B[m has no
+attribute (B[m[1m"verbose"(B[m  (B[m[33m[attr-defined](B[m
+[2;10m        ctx.obj.verbose = verbose(B[m
+[31m        ^~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py: [34mnote:(B[m In function (B[m[1m"analyze_message"(B[m:(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:73: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"DataFrame"(B[m, variable has type (B[m[1m"None"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m        ctx.current_data = df(B[m
+[31m                           ^~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:79: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"Dict[str, Any]"(B[m, variable has type (B[m[1m"None"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m            ctx.current_features = features(B[m
+[31m                                   ^~~~~~~~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:99: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"Dict[str, Any]"(B[m, variable has type (B[m[1m"None"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m        ctx.last_prediction = prediction(B[m
+[31m                              ^~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py: [34mnote:(B[m In function (B[m[1m"analyze_file"(B[m:(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:160: [1m[31merror:(B[m Incompatible types in
+assignment (expression has type (B[m[1m"DataFrame"(B[m, variable has type (B[m[1m"None"(B[m)
+(B[m[33m[assignment](B[m
+[2;10m        ctx.current_data = df(B[m
+[31m                           ^~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:165: [1m[31merror:(B[m Unsupported operand
+types for + ((B[m[1m"Hashable"(B[m and (B[m[1m"int"(B[m)  (B[m[33m[operator](B[m
+[2;10m            console.print(f"\n[bold cyan]Message {idx + 1}[/bold cyan]")(B[m
+[31m                                                 ^(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:166: [1m[31merror:(B[m Unsupported operand
+types for + ((B[m[1m"Hashable"(B[m and (B[m[1m"int"(B[m)  (B[m[33m[operator](B[m
+[2;10m            console.print(Panel(row["text"], title=f"Message {idx + 1}"))(B[m
+[31m                                                             ^(B[m
+src/dmv_scam_analysis/cli/commands/debug.py: [34mnote:(B[m In function (B[m[1m"inspect_model"(B[m:(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:239: [1m[31merror:(B[m Value of type (B[m[1m"None"(B[m is
+not indexable  (B[m[33m[index](B[m
+[2;10m                    ctx.current_features["feature_names"](B[m
+[31m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:246: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m                importances.sort(key=lambda x: x[1], reverse=True)(B[m
+[31m                                               ^(B[m
+src/dmv_scam_analysis/cli/commands/debug.py: [34mnote:(B[m In function (B[m[1m"explain_prediction"(B[m:(B[m
+src/dmv_scam_analysis/cli/commands/debug.py:383: [1m[31merror:(B[m Returning Any from
+function declared to return
+(B[m[1m"Union[SupportsDunderLT[Any], SupportsDunderGT[Any]]"(B[m  (B[m[33m[no-any-return](B[m
+[2;10m            contributions.sort(key=lambda x: abs(x[3]), reverse=True)(B[m
+[31m                                             ^(B[m
+sentinel_analyzer.py:41: [1m[31merror:(B[m Cannot assign to a type  (B[m[33m[misc](B[m
+[2;10m        MLThreatClassifier = None(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:41: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"None"(B[m, variable has type (B[m[1m"Type[MLThreatClassifier]"(B[m)  (B[m[33m[assignment](B[m
+[2;10m        MLThreatClassifier = None(B[m
+[31m                             ^~~~(B[m
+sentinel_analyzer.py:50: [1m[31merror:(B[m Cannot assign to a type  (B[m[33m[misc](B[m
+[2;10m        BehavioralAnalyzer = None(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:50: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"None"(B[m, variable has type (B[m[1m"Type[BehavioralAnalyzer]"(B[m)  (B[m[33m[assignment](B[m
+[2;10m        BehavioralAnalyzer = None(B[m
+[31m                             ^~~~(B[m
+sentinel_analyzer.py: [34mnote:(B[m In function (B[m[1m"setup_logger"(B[m:(B[m
+sentinel_analyzer.py:73: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def setup_logger(name, log_dir):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"DataPreprocessor"(B[m:(B[m
+sentinel_analyzer.py:81: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def __init__(self):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:81: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"IOCValidator"(B[m:(B[m
+sentinel_analyzer.py:86: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def __init__(self):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:86: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"ThreatVisualizer"(B[m:(B[m
+sentinel_analyzer.py:91: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def __init__(self, output_dir):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"__init__"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:100: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def __init__(self, config_path=None, output_dir="./analysis_output...(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"init_module"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:132: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def init_module(self, module_name):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:141: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"MLThreatClassifier"(B[m, target has type (B[m[1m"None"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                    self.modules["ml"] = MLThreatClassifier(str(self.outpu...(B[m
+[31m                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+sentinel_analyzer.py:143: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"BehavioralAnalyzer"(B[m, target has type (B[m[1m"None"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                    self.modules["behavioral"] = BehavioralAnalyzer(str(se...(B[m
+[31m                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~...(B[m
+sentinel_analyzer.py:145: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"DataPreprocessor"(B[m, target has type (B[m[1m"None"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                    self.modules["preprocessing"] = DataPreprocessor()(B[m
+[31m                                                    ^~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:147: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"IOCValidator"(B[m, target has type (B[m[1m"None"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                    self.modules["ioc"] = IOCValidator()(B[m
+[31m                                          ^~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:149: [1m[31merror:(B[m Incompatible types in assignment (expression
+has type (B[m[1m"ThreatVisualizer"(B[m, target has type (B[m[1m"None"(B[m)  (B[m[33m[assignment](B[m
+[2;10m                    self.modules["visualization"] = ThreatVisualizer(str(s...(B[m
+[31m                                                    ^~~~~~~~~~~~~~~~~~~~~~...(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"load_data"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:157: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def load_data(self, file_path):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_nlp_analysis"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:177: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_nlp_analysis(self, data, contact_id="unknown"):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_ml_analysis"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:202: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_ml_analysis(self, data, contact_id="unknown", train_mode=F...(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_behavioral_analysis"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:249: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_behavioral_analysis(self, data, contact_id="unknown"):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_ioc_validation"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:266: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_ioc_validation(self, data):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_data_preprocessing"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:283: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_data_preprocessing(self, data):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_visualization"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:300: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_visualization(self, results, contact_id="unknown"):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"run_full_analysis"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:317: [1m[31merror:(B[m Function is missing a type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def run_full_analysis(self, data, contact_id="unknown", train_ml=F...(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:337: [1m[31merror:(B[m Unsupported target for indexed assignment
+((B[m[1m"object"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["results"]["nlp"] = nlp_results(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:342: [1m[31merror:(B[m Unsupported target for indexed assignment
+((B[m[1m"object"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["results"]["ml"] = ml_results(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:347: [1m[31merror:(B[m Unsupported target for indexed assignment
+((B[m[1m"object"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["results"]["behavioral"] = behavioral_results(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:352: [1m[31merror:(B[m Unsupported target for indexed assignment
+((B[m[1m"object"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["results"]["ioc"] = ioc_results(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py:357: [1m[31merror:(B[m Unsupported target for indexed assignment
+((B[m[1m"object"(B[m)  (B[m[33m[index](B[m
+[2;10m                results["results"]["visualization"] = viz_results(B[m
+[31m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(B[m
+sentinel_analyzer.py: [34mnote:(B[m In member (B[m[1m"print_banner"(B[m of class (B[m[1m"SentinelAnalyzer"(B[m:(B[m
+sentinel_analyzer.py:372: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m        def print_banner(self):(B[m
+[31m        ^(B[m
+sentinel_analyzer.py:372: [34mnote:(B[m Use (B[m[1m"-> None"(B[m if function does not return a value(B[m
+sentinel_analyzer.py: [34mnote:(B[m In function (B[m[1m"main"(B[m:(B[m
+sentinel_analyzer.py:394: [1m[31merror:(B[m Function is missing a return type annotation
+(B[m[33m[no-untyped-def](B[m
+[2;10m    def main():(B[m
+[31m    ^(B[m
+[1m[31mFound 211 errors in 36 files (checked 114 source files)(B[m
+
+bandit (src only; pyproject + baseline)..................................[41mFailed[m
+[2m- hook id: bandit[m
+[2m- exit code: 2[m
+
+usage: bandit [-h] [-r] [-a {file,vuln}] [-n CONTEXT_LINES] [-c CONFIG_FILE]
+              [-p PROFILE] [-t TESTS] [-s SKIPS] [-l |
+              --severity-level {all,low,medium,high}] [-i |
+              --confidence-level {all,low,medium,high}]
+              [-f {csv,custom,html,json,screen,txt,xml,yaml}]
+              [--msg-template MSG_TEMPLATE] [-o [OUTPUT_FILE]] [-v] [-d] [-q]
+              [--ignore-nosec] [-x EXCLUDED_PATHS] [-b BASELINE]
+              [--ini INI_PATH] [--exit-zero] [--version]
+              [targets ...]
+bandit: error: unrecognized arguments: behavioral_analyzer.py conftest.py debug_training.py demonstrate_task_completion.py demonstrate_task_example.py dmv_cli_enhanced.py final_anomaly_test.py fix_newline_corruption.py fix_syntax.py generate_recommendations.py integration_test_ml_trainer.py launcher.py ml_threat_classifier.py run_tests.py scripts/config/io_config.py scripts/data_preprocessing.py scripts/data_validation.py scripts/data_versioning.py scripts/generate_synthetic_data.py scripts/image_analyzer.py scripts/ioc_validator.py scripts/ioc_validator_simple.py scripts/threat_visualizer.py sentinel_analyzer.py setup.py simple_ensemble_demo.py src/dmv_scam_analysis/__init__.py src/dmv_scam_analysis/analysis/__init__.py src/dmv_scam_analysis/analysis/automation_analyzer.py src/dmv_scam_analysis/analysis/behavioral.py src/dmv_scam_analysis/analysis/risk_analyzer.py src/dmv_scam_analysis/analysis/sentiment.py src/dmv_scam_analysis/analysis/sentiment_analyzer.py src/dmv_scam_analysis/analysis/temporal_analyzer.py src/dmv_scam_analysis/analysis/threat_detector.py src/dmv_scam_analysis/api/__init__.py src/dmv_scam_analysis/api/app.py src/dmv_scam_analysis/cli/__init__.py src/dmv_scam_analysis/cli/commands/behavioral.py src/dmv_scam_analysis/cli/commands/debug.py src/dmv_scam_analysis/cli/main.py src/dmv_scam_analysis/cli/tui.py src/dmv_scam_analysis/core/__init__.py src/dmv_scam_analysis/core/analyzer.py src/dmv_scam_analysis/core/classifier.py src/dmv_scam_analysis/core/extractor.py src/dmv_scam_analysis/core/model_manager.py src/dmv_scam_analysis/dashboard/__init__.py src/dmv_scam_analysis/dashboard/threat_dashboard.py src/dmv_scam_analysis/ml/__init__.py src/dmv_scam_analysis/ml/model_trainer.py src/dmv_scam_analysis/utils/__init__.py src/dmv_scam_analysis/utils/config_manager.py src/dmv_scam_analysis/utils/log_maintenance.py src/dmv_scam_analysis/utils/logger.py src/dmv_scam_analysis/utils/rate_limiter.py src/dmv_scam_analysis/utils/test_helpers.py src/dmv_scam_analysis/utils/validation.py src/dmv_scam_analysis/visualization/__init__.py src/dmv_scam_analysis/visualization/threat_visualizer.py step_10_integration_test.py task_code_example.py test_analysis.py test_anomaly_detection.py test_anomaly_direct.py test_anomaly_tuned.py test_behavioral.py test_classification_as_requested.py test_ensemble_performance.py test_ml_classifier.py test_model_persistence.py test_production_integration.py test_threat_classification.py tests/conftest.py tests/functional/test_analysis_workflow.py tests/integration/test_data_pipeline.py tests/integration/test_ml_pipeline.py tests/performance/test_api_performance.py tests/performance/test_performance.py tests/security/test_api_analyze_success_security.py tests/security/test_api_app_branches_security.py tests/security/test_api_app_security.py tests/security/test_api_auth_errors_security.py tests/security/test_api_auth_rate_and_handlers_security.py tests/security/test_api_bruteforce_security.py tests/security/test_api_edgecases_security.py tests/security/test_api_headers_and_handlers_security.py tests/security/test_api_headers_security.py tests/security/test_api_middleware_security.py tests/security/test_api_permissions_security.py tests/security/test_api_security.py tests/security/test_config_manager_extra_security.py tests/security/test_config_manager_security.py tests/security/test_data_security.py tests/security/test_logger_security.py tests/security/test_model_security.py tests/security/test_rate_limiter_extra_security.py tests/security/test_rate_limiter_security.py tests/security/test_security.py tests/security/test_validation_security.py tests/test_configuration.py tests/unit/test_api_error_paths.py tests/unit/test_behavioral_analyzer_small.py tests/unit/test_config_manager.py tests/unit/test_config_manager_more.py tests/unit/test_config_manager_roundtrip.py tests/unit/test_extractor_small.py tests/unit/test_jwt_exports.py tests/unit/test_logger_manager.py tests/unit/test_logger_utils.py tests/unit/test_logger_utils_more.py tests/unit/test_rate_limiter.py tests/unit/test_validation_utils.py tests/utils/test_helpers.py
+
+prettier.................................................................[42mPassed[m
