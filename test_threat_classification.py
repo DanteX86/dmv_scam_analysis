@@ -7,12 +7,11 @@ import pandas as pd
 import json
 import os
 import sys
-from pathlib import Path
 
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
 def load_test_data(dataset_name):
     """Load test data from JSON files"""
@@ -156,7 +155,7 @@ def run_classification_tests():
             traceback.print_exc()
     
     # Summary
-    print(f"\n🎯 Test Summary")
+    print("\n🎯 Test Summary")
     print("=" * 30)
     
     if results:
@@ -171,7 +170,7 @@ def run_classification_tests():
                 print(f"  • {dataset}: {result['message_count']} messages processed")
         
         # Test ensemble functionality
-        print(f"\n🔧 Testing ensemble functionality...")
+        print("\n🔧 Testing ensemble functionality...")
         try:
             # Use the mixed dataset for ensemble testing
             if 'mixed' in results:
@@ -199,7 +198,7 @@ def run_classification_tests():
             print(f"  ❌ Ensemble testing failed: {e}")
         
         # Test anomaly detection
-        print(f"\n🔍 Testing anomaly detection...")
+        print("\n🔍 Testing anomaly detection...")
         try:
             if 'scam' in results:
                 scam_df = load_test_data('scam')
@@ -208,7 +207,7 @@ def run_classification_tests():
                     if 'error' not in anomaly_results:
                         isolation_forest = anomaly_results.get('isolation_forest', {})
                         overall = anomaly_results.get('overall_assessment', {})
-                        print(f"  ✓ Anomaly detection completed")
+                        print("  ✓ Anomaly detection completed")
                         print(f"    Anomaly detected: {isolation_forest.get('is_anomaly', False)}")
                         print(f"    Anomaly likelihood: {overall.get('anomaly_likelihood', 0)}%")
                     else:
@@ -219,7 +218,7 @@ def run_classification_tests():
     else:
         print("❌ No datasets were successfully processed")
     
-    print(f"\n🏁 Threat classification testing completed!")
+    print("\n🏁 Threat classification testing completed!")
     return results
 
 if __name__ == "__main__":

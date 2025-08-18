@@ -1,0 +1,89 @@
+digraph DMVScamAnalysisDeps {
+  rankdir=LR;
+  node [shape=box, fontsize=10];
+
+  subgraph cluster_cli {
+    label="CLI"; color=lightgrey;
+    cli_main [label="cli.main"];
+    cli_tui [label="cli.tui"];
+    cli_cmd_behavioral [label="cli.commands.behavioral"];
+    cli_cmd_debug [label="cli.commands.debug"];
+  }
+
+  subgraph cluster_api {
+    label="API"; color=lightblue;
+    api_app [label="api.app (FastAPI)"];
+  }
+
+  subgraph cluster_core {
+    label="Core"; color=lightyellow;
+    core_analyzer [label="core.analyzer (CampaignAnalyzer)"];
+    core_classifier [label="core.classifier (MLThreatClassifier)"];
+    core_extractor [label="core.extractor (iMessageAnalyzer)"];
+    core_model_manager [label="core.model_manager"];
+  }
+
+  subgraph cluster_analysis {
+    label="Analysis"; color=lightsalmon;
+    analysis_behavioral [label="analysis.behavioral (BehavioralAnalyzer)"];
+    analysis_automation [label="analysis.automation_analyzer"];
+    analysis_temporal [label="analysis.temporal_analyzer"];
+    analysis_risk [label="analysis.risk_analyzer"];
+    analysis_sentiment [label="analysis.sentiment (AdvancedNLPAnalyzer)"];
+    analysis_threat_detector [label="analysis.threat_detector"];
+  }
+
+  subgraph cluster_utils {
+    label="Utils"; color=white;
+    utils_logger [label="utils.logger (LogManager)"];
+    utils_config [label="utils.config_manager (ConfigManager)"];
+    utils_rate [label="utils.rate_limiter (RateLimiter)"];
+  }
+
+  subgraph cluster_dashboard {
+    label="Dashboard"; color=lightgreen;
+    dashboard_threat [label="dashboard.threat_dashboard (ThreatDashboard)"];
+  }
+
+  subgraph cluster_visualization {
+    label="Visualization"; color=white;
+    viz_threat [label="visualization.threat_visualizer"];
+  }
+
+  // Package root
+  pkg_root [label="dmv_scam_analysis.__init__", shape=oval, color=grey];
+
+  // Edges (imports)
+  cli_main -> analysis_behavioral;
+  cli_main -> core_classifier;
+  cli_main -> core_extractor;
+  cli_main -> utils_config;
+  cli_main -> cli_tui;
+
+  cli_tui -> analysis_behavioral;
+  cli_tui -> analysis_sentiment;
+  cli_tui -> core_extractor;
+  cli_tui -> core_classifier;
+
+  cli_cmd_behavioral -> analysis_behavioral;
+  cli_cmd_behavioral -> utils_config [style=dashed, color=grey];
+
+  cli_cmd_debug -> analysis_behavioral;
+  cli_cmd_debug -> core_classifier;
+
+  api_app -> analysis_behavioral;
+  api_app -> core_classifier;
+  api_app -> utils_rate;
+
+  core_analyzer -> analysis_automation;
+  core_analyzer -> analysis_temporal;
+  core_analyzer -> analysis_risk;
+
+  dashboard_threat -> utils_logger;
+
+  pkg_root -> analysis_behavioral;
+  pkg_root -> core_analyzer;
+  pkg_root -> core_classifier;
+  pkg_root -> core_extractor;
+}
+

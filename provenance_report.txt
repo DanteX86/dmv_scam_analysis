@@ -1,0 +1,22 @@
+== Full Commit History (all refs) ==
+1d9cc44 2025-08-13 18:56:52 -0400 DanteX86 Add web interface HTML file
+edfcb29 2025-08-13 13:17:09 -0400 DanteX86 🚀 Advanced Threat Detection System
+a51612f 2025-08-13 13:12:07 -0400 DanteX86 Add comprehensive CLI usage guide
+cb35603 2025-08-13 13:08:32 -0400 DanteX86 Update system info display
+0d6dda0 2025-08-13 12:58:53 -0400 DanteX86 Final session summary: Enhanced system with 98/100 production readiness
+78ee25c 2025-08-13 12:57:53 -0400 DanteX86 Phase 2: System Validation & Advanced Features
+d2ad26b 2025-08-13 12:49:00 -0400 DanteX86 Add comprehensive project continuation and completion summary
+8cd41b9 2025-08-13 12:48:12 -0400 DanteX86 Complete production deployment framework
+528f52f 2025-08-13 12:32:55 -0400 DanteX86 Complete ML testing enhancements and API integration
+66668e4 2025-07-27 01:59:51 -0400 DanteX86 Add comprehensive ML testing suite and documentation
+9f23d9d 2025-07-27 01:33:18 -0400 DanteX86 Step 7: Implement feature importance analysis framework
+b5d12a2 2025-06-24 12:16:43 -0400 DanteX86 Add comprehensive data visualization suite
+cd7003c 2025-06-24 12:06:30 -0400 DanteX86 Complete repository structure
+04287b3 2025-06-24 12:01:08 -0400 DanteX86 Initial commit: DMV scam analysis project
+
+== Contributors (commit counts, names, emails) ==
+    12	DanteX86 <Rob.JRitter@gmail.com>
+
+== Remotes (forks/upstreams) ==
+origin	https://github.com/DanteX86/dmv_scam_analysis.git (fetch)
+origin	https://github.com/DanteX86/dmv_scam_analysis.git (push)

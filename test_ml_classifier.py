@@ -1,5 +1,5 @@
 import pandas as pd
-from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
 # Test messages
 test_messages = [

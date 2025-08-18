@@ -15,12 +15,10 @@ Author: AI Assistant
 import pandas as pd
 import numpy as np
 import sys
-import os
 # Import the classifier directly from the file
 sys.path.insert(0, 'src/dmv_scam_analysis/core')
 from classifier import MLThreatClassifier
 import json
-import time
 from datetime import datetime
 try:
     import matplotlib.pyplot as plt
@@ -165,7 +163,7 @@ def test_ensemble_functionality(classifier, test_messages):
         print(f"❌ Ensemble training failed: {ensemble_results['error']}")
         return None
     
-    print(f"✅ Ensemble trained successfully!")
+    print("✅ Ensemble trained successfully!")
     print(f"   Ensemble size: {ensemble_results.get('ensemble_size', 0)} models")
     print(f"   Best model: {ensemble_results.get('best_model', 'Unknown')}")
     
@@ -177,7 +175,7 @@ def test_ensemble_functionality(classifier, test_messages):
         print(f"❌ Ensemble prediction failed: {predictions['error']}")
         return None
     
-    print(f"✅ Ensemble predictions completed!")
+    print("✅ Ensemble predictions completed!")
     
     # Display results as specified in task
     print(f"\nMean predictions: {predictions['mean_prediction']}")
@@ -195,14 +193,14 @@ def analyze_prediction_confidence_variance(predictions, test_messages):
     std_preds = np.array(predictions['std_prediction'])
     individual_preds = predictions['individual_predictions']
     
-    print(f"\nStatistical Summary:")
+    print("\nStatistical Summary:")
     print(f"   Mean prediction range: {mean_preds.min():.3f} - {mean_preds.max():.3f}")
     print(f"   Average confidence: {mean_preds.mean():.3f}")
     print(f"   Prediction variance range: {std_preds.min():.3f} - {std_preds.max():.3f}")
     print(f"   Average variance: {std_preds.mean():.3f}")
     
     # Analyze per message
-    print(f"\nPer-Message Analysis:")
+    print("\nPer-Message Analysis:")
     print("-" * 50)
     
     for i, (msg, mean_pred, std_pred) in enumerate(zip(test_messages, mean_preds, std_preds)):
@@ -248,7 +246,7 @@ def compare_ensemble_vs_individual(classifier, test_messages):
     # Get individual model predictions using the standard predict method
     individual_scores = classifier.predict(test_messages)
     
-    print(f"\nComparison Results:")
+    print("\nComparison Results:")
     print("-" * 30)
     
     ensemble_means = np.array(ensemble_preds['mean_prediction'])
@@ -259,7 +257,7 @@ def compare_ensemble_vs_individual(classifier, test_messages):
     print(f"Correlation coefficient: {np.corrcoef(ensemble_means, individual_array)[0,1]:.3f}")
     
     # Show differences per message
-    print(f"\nPer-Message Comparison:")
+    print("\nPer-Message Comparison:")
     for i, (msg, ensemble_score, individual_score) in enumerate(zip(test_messages, ensemble_means, individual_scores)):
         diff = abs(ensemble_score - individual_score)
         agreement = "AGREE" if diff < 0.1 else "DIFFER"
@@ -299,7 +297,7 @@ def generate_performance_report(model_performances, ensemble_results, confidence
             'ensemble_size': ensemble_results.get('ensemble_size', 0) if ensemble_results else 0
         }
         
-        print(f"\n📊 PERFORMANCE SUMMARY")
+        print("\n📊 PERFORMANCE SUMMARY")
         print(f"   Best Individual Model: {best_individual['model']} (F1: {best_individual['f1_score']:.3f})")
         print(f"   Worst Individual Model: {worst_individual['model']} (F1: {worst_individual['f1_score']:.3f})")
         print(f"   Average F1 Score: {avg_f1:.3f}")
@@ -310,7 +308,7 @@ def generate_performance_report(model_performances, ensemble_results, confidence
             print(f"   Ensemble Size: {ensemble_results.get('ensemble_size', 0)}")
         
         if confidence_analysis:
-            print(f"\n🎯 CONFIDENCE ANALYSIS")
+            print("\n🎯 CONFIDENCE ANALYSIS")
             stats = confidence_analysis.get('confidence_stats', {})
             print(f"   High Confidence Predictions: {stats.get('high_confidence_count', 0)}")
             print(f"   Medium Confidence Predictions: {stats.get('medium_confidence_count', 0)}")
@@ -384,7 +382,7 @@ def main():
     print("✅ Compared individual model performance")
     print("✅ Tested ensemble prediction averaging") 
     print("✅ Measured prediction confidence and variance")
-    print(f"✅ Generated comprehensive performance report")
+    print("✅ Generated comprehensive performance report")
     
     return 0
 

@@ -212,7 +212,7 @@ def test_ensemble_predictions(training_data, ml_pipeline_components):
     classifier = ml_pipeline_components["classifier"]
     
     # Train multiple models
-    models = classifier.train_ensemble(
+    _models = classifier.train_ensemble(
         texts=training_data["text"].values,
         labels=training_data["label"].values,
         n_models=3

@@ -12,7 +12,7 @@ import sys
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
 def main():
     """Run classification tests using the MLThreatClassifier as requested"""
@@ -95,13 +95,13 @@ def main():
             print(f"Accuracy: {training_results['training_results']['random_forest']['accuracy']:.3f}")
             
             # Additional detailed results
-            print(f"\nDetailed Results:")
+            print("\nDetailed Results:")
             print(f"  Messages processed: {len(df)}")
             print(f"  Best model: {best_model}")
             print(f"  Feature count: {len(features['feature_names'])}")
             
             # Show model performance for all trained models
-            print(f"\nModel Performance:")
+            print("\nModel Performance:")
             for model_name, results in training_results['training_results'].items():
                 if 'error' not in results:
                     print(f"  {model_name}:")
@@ -115,19 +115,19 @@ def main():
             for pred in predictions.get('predictions', []):
                 pred_counts[pred] = pred_counts.get(pred, 0) + 1
             
-            print(f"\nPrediction Distribution:")
+            print("\nPrediction Distribution:")
             for pred_type, count in pred_counts.items():
                 percentage = (count / len(predictions.get('predictions', [1]))) * 100
                 print(f"  {pred_type}: {count} ({percentage:.1f}%)")
             
             # Show confidence metrics
             if 'max_threat_probability' in predictions:
-                print(f"\nThreat Assessment:")
+                print("\nThreat Assessment:")
                 print(f"  Max threat probability: {predictions['max_threat_probability']:.3f}")
                 print(f"  Risk level: {predictions.get('threat_risk_level', 'UNKNOWN')}")
             
             # Test anomaly detection on this dataset
-            print(f"\nAnomaly Detection:")
+            print("\nAnomaly Detection:")
             anomaly_results = classifier.detect_anomalies(df.head(10))  # Test with subset
             if 'error' not in anomaly_results:
                 isolation_forest = anomaly_results.get('isolation_forest', {})
@@ -138,7 +138,7 @@ def main():
                 # Show primary concerns if any
                 concerns = overall.get('primary_concerns', [])
                 if concerns:
-                    print(f"  Primary concerns:")
+                    print("  Primary concerns:")
                     for concern in concerns[:3]:  # Show top 3
                         print(f"    - {concern}")
             else:

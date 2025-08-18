@@ -45,13 +45,13 @@ def main():
     print(f"Primary concerns: {anomaly_results['overall_assessment']['primary_concerns']}")
     
     # Show additional details
-    print(f"\nDetailed Results:")
+    print("\nDetailed Results:")
     print(f"  Isolation Forest Anomaly: {anomaly_results['isolation_forest']['is_anomaly']}")
     print(f"  Isolation Forest Score: {anomaly_results['isolation_forest']['anomaly_score']:.3f}")
     print(f"  Statistical Outliers: {anomaly_results['statistical_outliers']['outlier_count']}")
     
     if anomaly_results['statistical_outliers']['outlier_features']:
-        print(f"  Top Outlier Features:")
+        print("  Top Outlier Features:")
         for feature in anomaly_results['statistical_outliers']['outlier_features'][:3]:
             print(f"    - {feature['feature']}: z-score={feature['z_score']:.2f}")
     
@@ -155,7 +155,7 @@ def main():
     print(f"  Primary concerns: {anomaly_results['overall_assessment']['primary_concerns']}")
     
     if anomaly_results['statistical_outliers']['outlier_features']:
-        print(f"  Outlier features detected:")
+        print("  Outlier features detected:")
         for feature in anomaly_results['statistical_outliers']['outlier_features']:
             print(f"    - {feature['feature']}: z-score={feature['z_score']:.2f}, value={feature['value']:.2f}")
     

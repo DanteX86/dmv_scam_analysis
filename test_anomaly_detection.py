@@ -11,7 +11,6 @@ Comprehensive testing of anomaly detection system with various scenarios:
 """
 
 import pandas as pd
-import json
 from datetime import datetime, timedelta
 import numpy as np
 import sys
@@ -141,7 +140,7 @@ def generate_statistical_outliers():
 
 def run_anomaly_test(test_name, messages, classifier):
     """Run anomaly detection test on a set of messages"""
-    print(f"\n" + "="*60)
+    print("\n" + "="*60)
     print(f"Testing: {test_name}")
     print("="*60)
     
@@ -176,7 +175,7 @@ def run_anomaly_test(test_name, messages, classifier):
         anomaly_likelihood = overall_assessment.get('anomaly_likelihood', 0)
         primary_concerns = overall_assessment.get('primary_concerns', [])
         
-        print(f"\n🔍 ANOMALY DETECTION RESULTS:")
+        print("\n🔍 ANOMALY DETECTION RESULTS:")
         print(f"Anomaly likelihood: {anomaly_likelihood}%")
         print(f"Primary concerns: {primary_concerns}")
         
@@ -184,13 +183,13 @@ def run_anomaly_test(test_name, messages, classifier):
         iso_forest = anomaly_results.get('isolation_forest', {})
         statistical_outliers = anomaly_results.get('statistical_outliers', {})
         
-        print(f"\n📊 Detailed Analysis:")
+        print("\n📊 Detailed Analysis:")
         print(f"  Isolation Forest - Anomaly detected: {iso_forest.get('is_anomaly', False)}")
         print(f"  Isolation Forest - Anomaly score: {iso_forest.get('anomaly_score', 0):.3f}")
         print(f"  Statistical outliers count: {statistical_outliers.get('outlier_count', 0)}")
         
         if statistical_outliers.get('outlier_features'):
-            print(f"  Outlier features:")
+            print("  Outlier features:")
             for feature in statistical_outliers['outlier_features'][:5]:  # Show top 5
                 print(f"    - {feature['feature']}: z-score={feature['z_score']:.2f}, value={feature['value']:.2f}")
         
@@ -233,7 +232,7 @@ def main():
             all_results[test_name] = result
     
     # Comparative analysis
-    print(f"\n" + "="*80)
+    print("\n" + "="*80)
     print("COMPARATIVE ANALYSIS")
     print("="*80)
     
@@ -252,7 +251,7 @@ def main():
         print(f"{test_name:<45} {anomaly_pct:<12}% {is_anomaly:<18} {outlier_count:<10}")
     
     # Summary and insights
-    print(f"\n" + "="*80)
+    print("\n" + "="*80)
     print("SUMMARY AND INSIGHTS")
     print("="*80)
     
@@ -274,7 +273,7 @@ def main():
             all_concerns.extend(concerns)
         
         if all_concerns:
-            print(f"\n🔍 Most common concern types:")
+            print("\n🔍 Most common concern types:")
             concern_types = {}
             for concern in all_concerns:
                 concern_type = concern.split(':')[0] if ':' in concern else concern
@@ -283,9 +282,9 @@ def main():
             for concern_type, count in sorted(concern_types.items(), key=lambda x: x[1], reverse=True):
                 print(f"  - {concern_type}: {count} occurrences")
     
-    print(f"\n✅ Anomaly detection testing completed successfully!")
-    print(f"   All test scenarios executed and analyzed.")
-    print(f"   Results saved to ./test_output/ directory.")
+    print("\n✅ Anomaly detection testing completed successfully!")
+    print("   All test scenarios executed and analyzed.")
+    print("   Results saved to ./test_output/ directory.")
     
     return 0
 

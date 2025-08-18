@@ -102,7 +102,7 @@ def test_manual_anomaly_detection():
     print(f"📊 Extracted {len(X.columns)} features from {len(X)} messages")
     
     # Print some feature values
-    print(f"Feature values for comparison:")
+    print("Feature values for comparison:")
     for i, col in enumerate(X.columns[:10]):  # Show first 10 features
         print(f"  {col}: {X[col].values}")
     
@@ -111,7 +111,7 @@ def test_manual_anomaly_detection():
     X_scaled = scaler.fit_transform(X)
     
     print(f"Scaled feature matrix shape: {X_scaled.shape}")
-    print(f"Scaled feature statistics:")
+    print("Scaled feature statistics:")
     print(f"  Min: {np.min(X_scaled):.3f}, Max: {np.max(X_scaled):.3f}")
     print(f"  Mean: {np.mean(X_scaled):.3f}, Std: {np.std(X_scaled):.3f}")
     
@@ -119,7 +119,7 @@ def test_manual_anomaly_detection():
     iso_results = test_isolation_forest_parameters(X_scaled)
     
     # Test statistical outliers with different thresholds
-    print(f"\n🔧 Testing Statistical Outlier Detection:")
+    print("\n🔧 Testing Statistical Outlier Detection:")
     thresholds = [1.0, 1.5, 2.0, 2.5, 3.0]
     
     for threshold in thresholds:
@@ -145,13 +145,13 @@ def test_manual_anomaly_detection():
         print(f"  Threshold {threshold}: {outlier_count} outliers across {len(outlier_features)} feature-message pairs")
     
     # Try the classifier's detect_anomalies method
-    print(f"\n🔧 Testing Classifier's detect_anomalies Method:")
+    print("\n🔧 Testing Classifier's detect_anomalies Method:")
     anomaly_results = classifier.detect_anomalies(df)
     
     if 'error' in anomaly_results:
         print(f"❌ Error: {anomaly_results['error']}")
     else:
-        print(f"✅ Results from classifier:")
+        print("✅ Results from classifier:")
         print(f"  Anomaly likelihood: {anomaly_results['overall_assessment']['anomaly_likelihood']}%")
         print(f"  Primary concerns: {anomaly_results['overall_assessment']['primary_concerns']}")
         print(f"  Isolation Forest anomaly: {anomaly_results['isolation_forest']['is_anomaly']}")
@@ -216,7 +216,7 @@ def create_extreme_anomaly_test():
     # Test anomaly detection
     anomaly_results = classifier.detect_anomalies(df)
     
-    print(f"\n🔍 EXTREME ANOMALY TEST RESULTS:")
+    print("\n🔍 EXTREME ANOMALY TEST RESULTS:")
     if 'error' in anomaly_results:
         print(f"❌ Error: {anomaly_results['error']}")
     else:
@@ -232,16 +232,16 @@ def create_extreme_anomaly_test():
         iso_forest = anomaly_results.get('isolation_forest', {})
         statistical_outliers = anomaly_results.get('statistical_outliers', {})
         
-        print(f"\nDetailed Results:")
-        print(f"  Isolation Forest:")
+        print("\nDetailed Results:")
+        print("  Isolation Forest:")
         print(f"    - Anomaly detected: {iso_forest.get('is_anomaly', False)}")
         print(f"    - Anomaly score: {iso_forest.get('anomaly_score', 0):.3f}")
         
-        print(f"  Statistical Outliers:")
+        print("  Statistical Outliers:")
         print(f"    - Count: {statistical_outliers.get('outlier_count', 0)}")
         
         if statistical_outliers.get('outlier_features'):
-            print(f"    - Top outlier features:")
+            print("    - Top outlier features:")
             for feature in statistical_outliers['outlier_features'][:5]:
                 print(f"      * {feature['feature']}: z-score={feature['z_score']:.2f}, value={feature['value']:.2f}")
 
@@ -287,8 +287,8 @@ def main():
         print(f"\n🎯 Best contamination parameter: {best_contamination}")
         print(f"   Detected {iso_results[best_contamination]['anomaly_count']} anomalies")
     
-    print(f"\n✅ Enhanced anomaly detection testing completed!")
-    print(f"   Tested multiple parameter configurations and extreme cases.")
+    print("\n✅ Enhanced anomaly detection testing completed!")
+    print("   Tested multiple parameter configurations and extreme cases.")
     
     return 0
 

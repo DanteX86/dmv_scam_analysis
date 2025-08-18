@@ -1,13 +1,11 @@
 import sys
 import os
-import json
-from datetime import datetime
 import pandas as pd
 
 # Add scripts directory to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'scripts'))
 
-from src.dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
+from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
 
 # Initialize analyzer
 analyzer = BehavioralAnalyzer(output_dir="./analysis_output")

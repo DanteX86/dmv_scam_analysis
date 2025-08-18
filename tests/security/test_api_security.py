@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 from fastapi.testclient import TestClient
 from dmv_scam_analysis.api.app import app
 from dmv_scam_analysis.utils.test_helpers import generate_test_message
-import re
 import base64
 import json
 import secrets
@@ -184,7 +183,7 @@ def test_cors_configuration(test_client):
 
 def test_http_security_headers(test_client, valid_token):
     """Test security-related HTTP headers."""
-    headers = {"Authorization": f"Bearer {valid_token}"}
+    _headers = {"Authorization": f"Bearer {valid_token}"}
     response = test_client.get("/health")
     
     security_headers = {

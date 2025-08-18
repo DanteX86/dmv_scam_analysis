@@ -17,7 +17,6 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
-import logging
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'scripts'))

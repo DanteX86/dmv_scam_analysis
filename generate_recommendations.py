@@ -79,7 +79,7 @@ def generate_recommendations():
                 
                 # Show risk assessment
                 risk_assessment = report.get('risk_assessment', {})
-                print(f"\n📊 Risk Assessment:")
+                print("\n📊 Risk Assessment:")
                 print(f"   Risk Level: {risk_assessment.get('risk_level', 'UNKNOWN')}")
                 print(f"   Risk Score: {risk_assessment.get('behavioral_risk_score', 0)}/100")
                 
@@ -132,12 +132,12 @@ def generate_recommendations():
         
         # Show risk assessment
         risk_assessment = report.get('risk_assessment', {})
-        print(f"\n📊 Risk Assessment:")
+        print("\n📊 Risk Assessment:")
         print(f"   Risk Level: {risk_assessment.get('risk_level', 'UNKNOWN')}")
         print(f"   Risk Score: {risk_assessment.get('behavioral_risk_score', 0)}/100")
         
-        print(f"\n📄 Full analysis report saved to: analysis_output/behavioral_analysis_high_risk_demo.json")
-        print(f"📄 Human-readable summary saved to: analysis_output/behavioral_summary_high_risk_demo.txt")
+        print("\n📄 Full analysis report saved to: analysis_output/behavioral_analysis_high_risk_demo.json")
+        print("📄 Human-readable summary saved to: analysis_output/behavioral_summary_high_risk_demo.txt")
     
     print("\n✅ Recommendations generation complete!")
     print("\n📂 Check the analysis_output/ directory for detailed reports:")

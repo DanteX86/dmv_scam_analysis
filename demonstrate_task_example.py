@@ -18,6 +18,7 @@ predictions = new_classifier.predict(test_messages)
 ```
 """
 
+from typing import Any
 import os
 import sys
 import pandas as pd
@@ -27,7 +28,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
-def main():
+def main() -> int:
     print("🎯 Demonstrating Exact Task Code Example")
     print("=" * 45)
     
@@ -76,8 +77,8 @@ def main():
     feature_data = classifier.extract_ml_features(test_messages, include_labels=True)
     training_results = classifier.train_threat_classifier(feature_data)
     
-    if 'error' in training_results:
-        print(f"❌ Failed to train classifier: {training_results['error']}")
+    if not training_results or 'error' in training_results:
+        print(f"❌ Failed to train classifier: {training_results['error'] if training_results else 'unknown error'}")
         return 1
     
     print(f"✅ Classifier trained successfully (best model: {training_results['best_model']})")

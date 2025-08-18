@@ -4,7 +4,7 @@ Integration test for MLThreatClassifier and ModelTrainer
 """
 
 import json
-from src.dmv_scam_analysis.ml.model_trainer import ModelTrainer
+from dmv_scam_analysis.ml.model_trainer import ModelTrainer
 
 def main():
     print("🧪 Starting integration test for MLThreatClassifier and ModelTrainer")

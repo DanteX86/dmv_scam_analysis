@@ -13,7 +13,6 @@ Using the exact code from the task specification.
 """
 
 import pandas as pd
-import json
 import sys
 import os
 from datetime import datetime, timedelta
@@ -137,7 +136,7 @@ def create_test_scenarios():
 def test_scenario(scenario_name, messages, classifier):
     """Test a specific scenario and display results using task specification format"""
     
-    print(f"\n" + "="*70)
+    print("\n" + "="*70)
     print(f"TESTING SCENARIO: {scenario_name.upper()}")
     print("="*70)
     
@@ -159,7 +158,7 @@ def test_scenario(scenario_name, messages, classifier):
         return None
     
     # Display results as requested in the task specification
-    print(f"\n🔍 ANOMALY DETECTION RESULTS:")
+    print("\n🔍 ANOMALY DETECTION RESULTS:")
     print(f"Anomaly likelihood: {anomaly_results['overall_assessment']['anomaly_likelihood']}%")
     print(f"Primary concerns: {anomaly_results['overall_assessment']['primary_concerns']}")
     
@@ -167,16 +166,16 @@ def test_scenario(scenario_name, messages, classifier):
     iso_forest = anomaly_results.get('isolation_forest', {})
     statistical_outliers = anomaly_results.get('statistical_outliers', {})
     
-    print(f"\n📈 Detailed Analysis:")
-    print(f"  Isolation Forest:")
+    print("\n📈 Detailed Analysis:")
+    print("  Isolation Forest:")
     print(f"    • Anomaly detected: {iso_forest.get('is_anomaly', False)}")
     print(f"    • Anomaly score: {iso_forest.get('anomaly_score', 0):.4f}")
     
-    print(f"  Statistical Outliers:")
+    print("  Statistical Outliers:")
     print(f"    • Count: {statistical_outliers.get('outlier_count', 0)}")
     
     if statistical_outliers.get('outlier_features'):
-        print(f"    • Top outlier features:")
+        print("    • Top outlier features:")
         for i, feature in enumerate(statistical_outliers['outlier_features'][:3]):
             print(f"      {i+1}. {feature['feature']}: z-score={feature['z_score']:.2f}")
     
@@ -223,7 +222,7 @@ def main():
             all_results[scenario_name] = result
     
     # Summary analysis
-    print(f"\n" + "="*80)
+    print("\n" + "="*80)
     print("SUMMARY ANALYSIS")
     print("="*80)
     
@@ -250,11 +249,11 @@ def main():
             most_anomalous = max(anomaly_scores, key=anomaly_scores.get)
             print(f"\n🎯 Most anomalous scenario: {most_anomalous} ({anomaly_scores[most_anomalous]}%)")
         else:
-            print(f"\n🤔 No anomalies detected in any scenario")
-            print(f"   This may indicate:")
-            print(f"   • Need for parameter tuning")
-            print(f"   • Insufficient feature diversity")
-            print(f"   • Model requires more training data")
+            print("\n🤔 No anomalies detected in any scenario")
+            print("   This may indicate:")
+            print("   • Need for parameter tuning")
+            print("   • Insufficient feature diversity")
+            print("   • Model requires more training data")
         
         # Show all primary concerns
         all_concerns = []
@@ -263,19 +262,19 @@ def main():
             all_concerns.extend(concerns)
         
         if all_concerns:
-            print(f"\n🔍 All detected concerns:")
+            print("\n🔍 All detected concerns:")
             for i, concern in enumerate(set(all_concerns), 1):
                 print(f"   {i}. {concern}")
         else:
-            print(f"\n🔍 No specific concerns identified across all scenarios")
+            print("\n🔍 No specific concerns identified across all scenarios")
     
-    print(f"\n" + "="*80)
+    print("\n" + "="*80)
     print("TESTING COMPLETED")
     print("="*80)
-    print(f"✅ Anomaly detection testing completed successfully!")
+    print("✅ Anomaly detection testing completed successfully!")
     print(f"   • Tested {len(scenarios)} different scenarios")
-    print(f"   • Used exact code from task specification")
-    print(f"   • Results demonstrate anomaly detection capabilities")
+    print("   • Used exact code from task specification")
+    print("   • Results demonstrate anomaly detection capabilities")
     
     return 0
 

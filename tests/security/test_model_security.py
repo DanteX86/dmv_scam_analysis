@@ -1,15 +1,13 @@
 """Security tests for machine learning models and analysis components."""
-import pytest
 import numpy as np
 from tests.utils.test_helpers import (
-    generate_test_message,
     create_test_dataset,
     create_test_embeddings
 )
 
 def test_model_input_sanitization():
     """Test input sanitization for model predictions."""
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     
     classifier = ThreatClassifier()
     
@@ -62,8 +60,8 @@ def test_model_input_sanitization():
 
 def test_model_output_validation():
     """Test validation of model outputs."""
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
-    from src.dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
     
     classifier = ThreatClassifier()
     analyzer = BehavioralAnalyzer()
@@ -104,7 +102,7 @@ def test_model_memory_security():
     import os
     
     process = psutil.Process(os.getpid())
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     
     # Monitor memory before model load
     memory_before = process.memory_info().rss
@@ -136,7 +134,7 @@ def test_model_memory_security():
 
 def test_model_timing_attacks():
     """Test protection against timing attacks."""
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     import time
     
     classifier = ThreatClassifier()
@@ -162,7 +160,7 @@ def test_model_timing_attacks():
 
 def test_adversarial_input_protection():
     """Test protection against adversarial inputs."""
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     
     classifier = ThreatClassifier()
     
@@ -237,7 +235,8 @@ def test_embedding_security():
 def test_model_isolation():
     """Test model isolation and resource cleanup."""
     import gc
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    import psutil
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     
     def create_and_use_model():
         classifier = ThreatClassifier()
@@ -262,7 +261,7 @@ def test_model_isolation():
 
 def test_confidence_score_security():
     """Test security of confidence score calculations."""
-    from src.dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
+    from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
     
     analyzer = BehavioralAnalyzer()
     test_data = create_test_dataset(size=10)
@@ -281,7 +280,7 @@ def test_confidence_score_security():
 
 def test_feature_extraction_security():
     """Test security of feature extraction process."""
-    from src.dmv_scam_analysis.core.classifier import ThreatClassifier
+    from dmv_scam_analysis.core.classifier import ThreatClassifier
     
     classifier = ThreatClassifier()
     

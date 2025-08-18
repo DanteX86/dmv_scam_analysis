@@ -32,11 +32,10 @@ Examples:
 
 import argparse
 import sys
-import os
 import subprocess
 import json
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import List, Optional, Dict, Any
 import logging
 from datetime import datetime
 
@@ -60,10 +59,10 @@ class SentinelLauncher:
     """Main launcher class for SentinelAnalyzer."""
     
     def __init__(self):
-        self.project_root = PROJECT_ROOT
-        self.config = None
-        self.logger = None
-        self.start_time = datetime.now()
+        self.project_root: Path = PROJECT_ROOT
+        self.config: Optional[ConfigManager] = None
+        self.logger: Optional[logging.Logger] = None
+        self.start_time: datetime = datetime.now()
         
     def setup_environment(self) -> bool:
         """Setup the project environment and dependencies."""
@@ -74,12 +73,12 @@ class SentinelLauncher:
             # Setup logging
             self.logger = setup_logging(
                 name="SentinelLauncher",
-                level=logging.DEBUG if self.config.get('environment.debug') else logging.INFO
+                level=logging.DEBUG if self._cfg().get('environment.debug') else logging.INFO
             )
             
-            self.logger.info("🚀 SentinelAnalyzer Launcher Starting...")
-            self.logger.info(f"📁 Project Root: {self.project_root}")
-            self.logger.info(f"🔧 Environment: {self.config.get('environment.name')}")
+            self._log().info("🚀 SentinelAnalyzer Launcher Starting...")
+            self._log().info(f"📁 Project Root: {self.project_root}")
+            self._log().info(f"🔧 Environment: {self._cfg().get('environment.name')}")
             
             # Verify critical paths
             self._verify_paths()
@@ -95,41 +94,41 @@ class SentinelLauncher:
     
     def _verify_paths(self) -> None:
         """Verify that critical project paths exist."""
-        critical_paths = [
-            self.config.get('storage.files.raw_data'),
-            self.config.get('storage.files.processed_data'),
-            self.config.get('storage.files.interim_data'),
-            self.config.get('paths.logs'),
-            self.config.get('paths.models')
+        critical_paths: List[Optional[str]] = [
+            self._cfg().get('storage.files.raw_data'),
+            self._cfg().get('storage.files.processed_data'),
+            self._cfg().get('storage.files.interim_data'),
+            self._cfg().get('paths.logs'),
+            self._cfg().get('paths.models')
         ]
         
         for path_str in critical_paths:
             if path_str:
                 path = Path(path_str)
                 if not path.exists():
-                    self.logger.info(f"📁 Creating directory: {path}")
+                    self._log().info(f"📁 Creating directory: {path}")
                     path.mkdir(parents=True, exist_ok=True)
     
     def _check_dependencies(self) -> None:
         """Check if required dependencies are installed."""
-        required_packages = self.config.get('dependencies.required_packages', [])
+        required_packages = self._cfg().get('dependencies.required_packages', [])
         
         for package in required_packages:
             package_name = package.split('>=')[0].split('==')[0]
             try:
                 __import__(package_name.replace('-', '_'))
-                self.logger.debug(f"✓ {package_name} is available")
+                self._log().debug(f"✓ {package_name} is available")
             except ImportError:
-                self.logger.warning(f"⚠️  {package_name} is not installed")
+                self._log().warning(f"⚠️  {package_name} is not installed")
     
     def analyze(self, args: argparse.Namespace) -> int:
         """Run scam analysis on input data."""
-        self.logger.info("🔍 Starting scam analysis...")
+        self._log().info("🔍 Starting scam analysis...")
         
         try:
             # Import analysis module
-            from scripts.analysis.sentiment_analyzer import SentimentAnalyzer
-            from scripts.analysis.threat_detector import ThreatDetector
+            from scripts.analysis.sentiment_analyzer import SentimentAnalyzer  # type: ignore[import-not-found]
+            from scripts.analysis.threat_detector import ThreatDetector  # type: ignore[import-not-found]
             
             # Initialize analyzers
             sentiment_analyzer = SentimentAnalyzer(self.config)
@@ -139,10 +138,10 @@ class SentinelLauncher:
             if args.input:
                 input_path = Path(args.input)
                 if not input_path.exists():
-                    self.logger.error(f"❌ Input file not found: {input_path}")
+                    self._log().error(f"❌ Input file not found: {input_path}")
                     return 1
                 
-                self.logger.info(f"📂 Processing input: {input_path}")
+                self._log().info(f"📂 Processing input: {input_path}")
                 
                 # Load and process data
                 with open(input_path, 'r', encoding='utf-8') as f:
@@ -171,24 +170,24 @@ class SentinelLauncher:
                 with open(output_path, 'w', encoding='utf-8') as f:
                     json.dump(results, f, indent=2, ensure_ascii=False)
                 
-                self.logger.info(f"✅ Analysis complete. Results saved to: {output_path}")
+                self._log().info(f"✅ Analysis complete. Results saved to: {output_path}")
                 return 0
                 
             else:
-                self.logger.error("❌ No input file specified")
+                self._log().error("❌ No input file specified")
                 return 1
                 
         except Exception as e:
-            self.logger.error(f"❌ Analysis failed: {e}")
+            self._log().error(f"❌ Analysis failed: {e}")
             return 1
     
     def train(self, args: argparse.Namespace) -> int:
         """Train machine learning models."""
-        self.logger.info("🎓 Starting model training...")
+        self._log().info("🎓 Starting model training...")
         
         try:
             # Import training modules
-            from scripts.ml.model_trainer import ModelTrainer
+            from scripts.ml.model_trainer import ModelTrainer  # type: ignore[import-not-found]
             
             trainer = ModelTrainer(self.config)
             
@@ -203,70 +202,70 @@ class SentinelLauncher:
                     output_path=args.output
                 )
             else:
-                self.logger.error(f"❌ Unknown model type: {args.model}")
+                self._log().error(f"❌ Unknown model type: {args.model}")
                 return 1
             
-            self.logger.info("✅ Model training complete")
+            self._log().info("✅ Model training complete")
             return 0
             
         except Exception as e:
-            self.logger.error(f"❌ Training failed: {e}")
+            self._log().error(f"❌ Training failed: {e}")
             return 1
     
     def serve(self, args: argparse.Namespace) -> int:
         """Start the API server."""
-        self.logger.info("🌐 Starting API server...")
+        self._log().info("🌐 Starting API server...")
         
         try:
             # Import server module
-            from scripts.api.server import create_app
+            from scripts.api.server import create_app  # type: ignore[import-not-found]
             
             app = create_app(self.config)
             
-            host = args.host or self.config.get('server.host', 'localhost')
-            port = args.port or self.config.get('server.port', 5000)
+            host = args.host or self._cfg().get('server.host', 'localhost')
+            port = args.port or self._cfg().get('server.port', 5000)
             
-            self.logger.info(f"🚀 Server starting on {host}:{port}")
+            self._log().info(f"🚀 Server starting on {host}:{port}")
             
             app.run(
                 host=host,
                 port=port,
-                debug=self.config.get('environment.debug', False)
+                debug=self._cfg().get('environment.debug', False)
             )
             
             return 0
             
         except Exception as e:
-            self.logger.error(f"❌ Server failed to start: {e}")
+            self._log().error(f"❌ Server failed to start: {e}")
             return 1
     
     def dashboard(self, args: argparse.Namespace) -> int:
         """Launch interactive dashboard."""
-        self.logger.info("📊 Starting dashboard...")
+        self._log().info("📊 Starting dashboard...")
         
         try:
             # Import dashboard module
-            from scripts.dashboard.app import create_dashboard
+            from scripts.dashboard.app import create_dashboard  # type: ignore[import-not-found]
             
             dashboard = create_dashboard(self.config)
             
-            port = args.port or self.config.get('dashboard.port', 8050)
+            port = args.port or self._cfg().get('dashboard.port', 8050)
             
-            self.logger.info(f"🎯 Dashboard starting on port {port}")
+            self._log().info(f"🎯 Dashboard starting on port {port}")
             dashboard.run_server(
                 port=port,
-                debug=self.config.get('environment.debug', False)
+                debug=self._cfg().get('environment.debug', False)
             )
             
             return 0
             
         except Exception as e:
-            self.logger.error(f"❌ Dashboard failed to start: {e}")
+            self._log().error(f"❌ Dashboard failed to start: {e}")
             return 1
     
     def test(self, args: argparse.Namespace) -> int:
         """Run the test suite."""
-        self.logger.info("🧪 Running test suite...")
+        self._log().info("🧪 Running test suite...")
         
         try:
             cmd = ["python", "-m", "pytest"]
@@ -286,25 +285,25 @@ class SentinelLauncher:
             result = subprocess.run(cmd, cwd=self.project_root)
             
             if result.returncode == 0:
-                self.logger.info("✅ All tests passed")
+                self._log().info("✅ All tests passed")
             else:
-                self.logger.error("❌ Some tests failed")
+                self._log().error("❌ Some tests failed")
             
             return result.returncode
             
         except Exception as e:
-            self.logger.error(f"❌ Test execution failed: {e}")
+            self._log().error(f"❌ Test execution failed: {e}")
             return 1
     
     def setup(self, args: argparse.Namespace) -> int:
         """Setup project environment."""
-        self.logger.info("⚙️  Setting up project environment...")
+        self._log().info("⚙️  Setting up project environment...")
         
         try:
             # Create virtual environment if it doesn't exist
             venv_path = self.project_root / "venv"
             if not venv_path.exists():
-                self.logger.info("📦 Creating virtual environment...")
+                self._log().info("📦 Creating virtual environment...")
                 subprocess.run([sys.executable, "-m", "venv", str(venv_path)])
             
             # Install dependencies
@@ -313,19 +312,19 @@ class SentinelLauncher:
                 pip_path = venv_path / "Scripts" / "pip.exe"  # Windows
             
             if pip_path.exists():
-                self.logger.info("📥 Installing dependencies...")
+                self._log().info("📥 Installing dependencies...")
                 subprocess.run([str(pip_path), "install", "-r", "requirements.txt"])
             
             # Setup configuration for specified environment
             if args.environment:
-                self.logger.info(f"🔧 Setting up {args.environment} environment...")
+                self._log().info(f"🔧 Setting up {args.environment} environment...")
                 # Environment-specific setup logic here
             
-            self.logger.info("✅ Environment setup complete")
+            self._log().info("✅ Environment setup complete")
             return 0
             
         except Exception as e:
-            self.logger.error(f"❌ Setup failed: {e}")
+            self._log().error(f"❌ Setup failed: {e}")
             return 1
     
     def config_cmd(self, args: argparse.Namespace) -> int:
@@ -334,28 +333,28 @@ class SentinelLauncher:
             if args.show:
                 print("📋 Current Configuration:")
                 print("=" * 50)
-                config_dict = self.config.as_dict()
+                config_dict: Dict[str, Any] = self._cfg().as_dict()  # type: ignore[assignment]
                 print(json.dumps(config_dict, indent=2))
                 
             elif args.set:
                 key, value = args.set.split('=', 1)
-                self.config.set(key, value)
-                self.config.save()
-                self.logger.info(f"✅ Configuration updated: {key} = {value}")
+                self._cfg().set(key, value)
+                self._cfg().save()
+                self._log().info(f"✅ Configuration updated: {key} = {value}")
                 
             elif args.get:
-                value = self.config.get(args.get)
+                value = self._cfg().get(args.get)
                 print(f"{args.get} = {value}")
                 
             return 0
             
         except Exception as e:
-            self.logger.error(f"❌ Configuration operation failed: {e}")
+            self._log().error(f"❌ Configuration operation failed: {e}")
             return 1
     
     def doctor(self, args: argparse.Namespace) -> int:
         """System health check."""
-        self.logger.info("🏥 Running system health check...")
+        self._log().info("🏥 Running system health check...")
         
         issues = []
         
@@ -367,53 +366,56 @@ class SentinelLauncher:
             if python_version < required_version:
                 issues.append(f"Python version {python_version} < {required_version}")
             else:
-                self.logger.info(f"✅ Python version: {python_version}")
+                self._log().info(f"✅ Python version: {python_version}")
             
             # Check dependencies
-            required_packages = self.config.get('dependencies.required_packages', [])
+            required_packages = self._cfg().get('dependencies.required_packages', [])
             for package in required_packages:
                 package_name = package.split('>=')[0].split('==')[0]
                 try:
                     __import__(package_name.replace('-', '_'))
-                    self.logger.info(f"✅ {package_name} is available")
+                    self._log().info(f"✅ {package_name} is available")
                 except ImportError:
                     issues.append(f"Missing package: {package_name}")
             
             # Check file system
             critical_paths = [
-                self.config.get('storage.files.raw_data'),
-                self.config.get('storage.files.processed_data'),
-                self.config.get('paths.logs'),
-                self.config.get('paths.models')
+                self._cfg().get('storage.files.raw_data'),
+                self._cfg().get('storage.files.processed_data'),
+                self._cfg().get('paths.logs'),
+                self._cfg().get('paths.models')
             ]
             
             for path_str in critical_paths:
                 if path_str:
                     path = Path(path_str)
                     if path.exists():
-                        self.logger.info(f"✅ Directory exists: {path}")
+                        self._log().info(f"✅ Directory exists: {path}")
                     else:
                         issues.append(f"Missing directory: {path}")
             
             # Check configuration
             try:
-                self.config._validate_config()
-                self.logger.info("✅ Configuration is valid")
-            except ConfigurationError as e:
+                # Validate configuration if method is available
+                validate = getattr(self._cfg(), "_validate_config", None)
+                if callable(validate):
+                    validate()
+                self._log().info("✅ Configuration is valid")
+            except Exception as e:
                 issues.append(f"Configuration error: {e}")
             
             # Summary
             if issues:
-                self.logger.warning("⚠️  Issues found:")
+                self._log().warning("⚠️  Issues found:")
                 for issue in issues:
-                    self.logger.warning(f"  - {issue}")
+                    self._log().warning(f"  - {issue}")
                 return 1
             else:
-                self.logger.info("✅ All health checks passed")
+                self._log().info("✅ All health checks passed")
                 return 0
                 
         except Exception as e:
-            self.logger.error(f"❌ Health check failed: {e}")
+            self._log().error(f"❌ Health check failed: {e}")
             return 1
     
     def run(self, args: List[str]) -> int:
@@ -448,15 +450,15 @@ class SentinelLauncher:
                 return 1
                 
         except KeyboardInterrupt:
-            self.logger.info("🛑 Operation interrupted by user")
+            self._log().info("🛑 Operation interrupted by user")
             return 130
         except Exception as e:
-            self.logger.error(f"❌ Unexpected error: {e}")
+            self._log().error(f"❌ Unexpected error: {e}")
             return 1
         finally:
             if self.logger:
                 duration = datetime.now() - self.start_time
-                self.logger.info(f"⏱️  Total execution time: {duration}")
+                self._log().info(f"⏱️  Total execution time: {duration}")
     
     def _create_parser(self) -> argparse.ArgumentParser:
         """Create argument parser."""
@@ -518,6 +520,16 @@ class SentinelLauncher:
         doctor_parser.add_argument('--fix', action='store_true', help='Attempt to fix issues')
         
         return parser
+
+    def _cfg(self) -> ConfigManager:
+        if self.config is None:
+            raise RuntimeError("Configuration is not initialized. Call setup_environment() first.")
+        return self.config
+
+    def _log(self) -> logging.Logger:
+        if self.logger is None:
+            raise RuntimeError("Logger is not initialized. Call setup_environment() first.")
+        return self.logger
 
 
 def main():

@@ -5,6 +5,7 @@ Step 4: Test the threat classification system with diverse data
 This script demonstrates the exact implementation requested in the task.
 """
 
+from typing import Any
 import pandas as pd
 import json
 import sys
@@ -13,9 +14,9 @@ import os
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
-def main():
+def main() -> None:
     """
     Run classification tests using the MLThreatClassifier:
     Exactly as requested in the task specification
@@ -62,14 +63,17 @@ def main():
         
         # Extract features and train
         features = classifier.extract_ml_features(df, include_labels=True)
-        training_results = classifier.train_threat_classifier(features)
+        training_results = classifier.train_threat_classifier(features) if features else None
         
         # Make predictions
-        predictions = classifier.predict_threat_classification(df)
+        predictions: dict[str, Any] = classifier.predict_threat_classification(df)
         
         # Evaluate accuracy
         print(f"Dataset: {dataset}")
-        print(f"Accuracy: {training_results['training_results']['random_forest']['accuracy']:.3f}")
+        if training_results and 'training_results' in training_results:
+            print(f"Accuracy: {training_results['training_results']['random_forest']['accuracy']:.3f}")
+        else:
+            print("Accuracy: N/A (training failed)")
         
         print()
 

@@ -1,7 +1,6 @@
 import sys
 sys.path.append('/Users/romulusaugustus/dmv_scam_analysis/scripts')
 import sys
-import os
 sys.path.append('/Users/romulusaugustus/dmv_scam_analysis/scripts')
 
 from ml_threat_classifier import MLThreatClassifier

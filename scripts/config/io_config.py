@@ -3,9 +3,10 @@ Input/Output Configuration Module
 Handles configuration of data input and output parameters.
 """
 
-from dataclasses import dataclass
-from typing import Dict, List, Optional, Union
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Union, Any
 from pathlib import Path
+from datetime import datetime
 import yaml
 import json
 
@@ -14,15 +15,15 @@ class InputConfig:
     """Configuration for input data sources"""
     
     # Required columns and their expected types
-    required_columns: Dict[str, str] = None
+    required_columns: Dict[str, str] = field(default_factory=dict)
     
     # Column name mappings (for flexible column names)
-    column_mappings: Dict[str, str] = None
+    column_mappings: Dict[str, str] = field(default_factory=dict)
     
     # Data validation rules
-    validation_rules: Dict[str, List[str]] = None
+    validation_rules: Dict[str, List[str]] = field(default_factory=dict)
     
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """Initialize with default values if none provided"""
         if self.required_columns is None:
             self.required_columns = {
@@ -59,15 +60,15 @@ class OutputConfig:
     output_dir: Path
     
     # Output formats for different components
-    formats: Dict[str, str] = None
+    formats: Dict[str, str] = field(default_factory=dict)
     
     # File naming patterns
-    naming_patterns: Dict[str, str] = None
+    naming_patterns: Dict[str, str] = field(default_factory=dict)
     
     # Output organization structure
-    directory_structure: Dict[str, str] = None
+    directory_structure: Dict[str, str] = field(default_factory=dict)
     
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """Initialize with default values if none provided"""
         if self.formats is None:
             self.formats = {
@@ -96,7 +97,7 @@ class OutputConfig:
 class IOConfiguration:
     """Manages input/output configuration for analysis framework"""
     
-    def __init__(self, config_file: Optional[Union[str, Path]] = None):
+    def __init__(self, config_file: Optional[Union[str, Path]] = None) -> None:
         """
         Initialize IO configuration
         
@@ -109,7 +110,7 @@ class IOConfiguration:
         if config_file:
             self.load_config(config_file)
     
-    def load_config(self, config_file: Union[str, Path]):
+    def load_config(self, config_file: Union[str, Path]) -> None:
         """Load configuration from file"""
         config_path = Path(config_file)
         
@@ -132,7 +133,7 @@ class IOConfiguration:
         if 'output' in config:
             self._update_output_config(config['output'])
     
-    def _update_input_config(self, config: dict):
+    def _update_input_config(self, config: Dict[str, Any]) -> None:
         """Update input configuration"""
         if 'required_columns' in config:
             self.input_config.required_columns.update(config['required_columns'])
@@ -141,7 +142,7 @@ class IOConfiguration:
         if 'validation_rules' in config:
             self.input_config.validation_rules.update(config['validation_rules'])
     
-    def _update_output_config(self, config: dict):
+    def _update_output_config(self, config: Dict[str, Any]) -> None:
         """Update output configuration"""
         if 'output_dir' in config:
             self.output_config.output_dir = Path(config['output_dir'])
@@ -185,7 +186,7 @@ class IOConfiguration:
         extension = self.output_config.formats[output_type]
         return Path(base_dir) / f"{filename}.{extension}"
     
-    def save_config(self, config_file: Union[str, Path]):
+    def save_config(self, config_file: Union[str, Path]) -> None:
         """Save current configuration to file"""
         config_path = Path(config_file)
         

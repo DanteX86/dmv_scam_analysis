@@ -5,8 +5,6 @@ Demonstrates the exact code example from the task requirements
 """
 
 import sys
-import pandas as pd
-import numpy as np
 
 # Import the classifier directly from the file
 sys.path.insert(0, 'src/dmv_scam_analysis/core')

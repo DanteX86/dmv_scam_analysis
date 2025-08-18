@@ -1,0 +1,40 @@
+[
+  {
+    "id": "high_threat_detected_1755503975",
+    "type": "high_threat_detected",
+    "message": "High threat detected with score 0.90",
+    "severity": "high",
+    "timestamp": "2025-08-18T03:59:35.197495",
+    "resolved": false,
+    "metadata": {
+      "threat_record": {
+        "timestamp": "2025-08-18T03:59:35.197323",
+        "threat_score": 0.9,
+        "classification": "high_risk",
+        "confidence": 0.85,
+        "source": "sms",
+        "analysis_id": "demo_1",
+        "indicators": []
+      }
+    }
+  },
+  {
+    "id": "high_threat_detected_1755503975",
+    "type": "high_threat_detected",
+    "message": "High threat detected with score 0.95",
+    "severity": "high",
+    "timestamp": "2025-08-18T03:59:35.513879",
+    "resolved": false,
+    "metadata": {
+      "threat_record": {
+        "timestamp": "2025-08-18T03:59:35.513292",
+        "threat_score": 0.95,
+        "classification": "high_risk",
+        "confidence": 0.88,
+        "source": "sms",
+        "analysis_id": "demo_4",
+        "indicators": []
+      }
+    }
+  }
+]

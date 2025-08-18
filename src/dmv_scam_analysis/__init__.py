@@ -13,9 +13,4 @@ from .core.classifier import MLThreatClassifier as ThreatClassifier
 from .core.extractor import MessageExtractor
 from .analysis.behavioral import BehavioralAnalyzer
 
-__all__ = [
-    "CampaignAnalyzer",
-    "ThreatClassifier", 
-    "MessageExtractor",
-    "BehavioralAnalyzer"
-]
+__all__ = ["CampaignAnalyzer", "ThreatClassifier", "MessageExtractor", "BehavioralAnalyzer"]

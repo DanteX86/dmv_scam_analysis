@@ -10,15 +10,15 @@ import time
 import json
 import requests
 from datetime import datetime
-from typing import Dict, List, Any
+from typing import Dict, Any
 import logging
 
 # Add src to path for imports
 sys.path.insert(0, 'src')
 
 try:
-    from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
-    from src.dmv_scam_analysis.core.model_manager import ModelManager
+    from dmv_scam_analysis.core.classifier import MLThreatClassifier
+    from dmv_scam_analysis.core.model_manager import ModelManager
 except ImportError as e:
     print(f"Import error: {e}")
     print("Note: Some tests will be skipped due to missing components")
@@ -232,13 +232,11 @@ class ProductionIntegrationTest:
             # Test Python path and imports
             import_results = {}
             try:
-                from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
                 import_results['classifier'] = 'success'
             except Exception as e:
                 import_results['classifier'] = str(e)
             
             try:
-                from src.dmv_scam_analysis.core.model_manager import ModelManager
                 import_results['model_manager'] = 'success'
             except Exception as e:
                 import_results['model_manager'] = str(e)

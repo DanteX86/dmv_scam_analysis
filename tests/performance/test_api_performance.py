@@ -100,7 +100,7 @@ def test_stats_endpoint_response_time(test_client, test_token, benchmark):
 
 def test_memory_usage(test_client, test_token, test_messages):
     """Test memory usage during heavy load."""
-    import psutil
+    import psutil  # type: ignore[import-untyped]
     import os
     
     process = psutil.Process(os.getpid())
@@ -127,7 +127,7 @@ def test_memory_usage(test_client, test_token, test_messages):
 
 def test_cpu_usage(test_client, test_token, test_messages):
     """Test CPU usage during heavy load."""
-    import psutil
+    import psutil  # type: ignore[import-untyped]
     import os
     
     process = psutil.Process(os.getpid())

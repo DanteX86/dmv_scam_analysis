@@ -66,13 +66,13 @@ def run_timing_pattern_tests():
     
     # Verify burst detection
     bursts = temporal_analysis['burst_detection']
-    print(f"\nBurst Detection:")
+    print("\nBurst Detection:")
     print(f"Total bursts: {bursts['total_bursts']}")
     print(f"Max burst intensity: {bursts['max_burst_intensity']}")
     
     # Verify timing anomalies
     anomalies = temporal_analysis['anomalous_timing']
-    print(f"\nTiming Anomalies:")
+    print("\nTiming Anomalies:")
     print(f"Anomaly score: {anomalies['anomaly_score']:.2f}")
     print(f"Number of anomalies: {len(anomalies['anomalies'])}")
 
@@ -93,7 +93,7 @@ def run_conversation_pattern_tests():
     automation_analysis = analyzer.detect_automation_indicators(df)
     
     # Print results
-    print(f"\nAutomation Analysis:")
+    print("\nAutomation Analysis:")
     print(f"Overall automation score: {automation_analysis['overall_automation_score']:.2f}")
     print(f"Content similarity score: {automation_analysis['content_similarity']['similarity_score']:.2f}")
     print(f"Response predictability: {automation_analysis['response_predictability']['predictability_score']:.2f}")
@@ -124,7 +124,7 @@ def run_comprehensive_tests():
     )
     
     # Print summary
-    print(f"\nBehavioral Analysis Results:")
+    print("\nBehavioral Analysis Results:")
     print(f"Risk Score: {report['risk_assessment']['behavioral_risk_score']}/100")
     print(f"Risk Level: {report['risk_assessment']['risk_level']}")
     

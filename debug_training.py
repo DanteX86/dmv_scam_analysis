@@ -6,7 +6,6 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from scripts.ml_threat_classifier import MLThreatClassifier
-import numpy as np
 
 # Create a small dataset for testing
 texts = [

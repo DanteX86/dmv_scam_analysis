@@ -14,10 +14,8 @@ This script tests:
 import os
 import sys
 import pandas as pd
-import numpy as np
 import tempfile
 import shutil
-from pathlib import Path
 
 # Add the src directory to the path to import our modules
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
@@ -110,7 +108,7 @@ def test_model_persistence():
         if not training_results or 'error' in training_results:
             raise Exception("Failed to train classifier")
         
-        print(f"✅ Training completed successfully")
+        print("✅ Training completed successfully")
         print(f"   Best model: {training_results.get('best_model', 'unknown')}")
         print(f"   Features extracted: {len(feature_data.get('feature_names', []))}")
         
@@ -122,7 +120,7 @@ def test_model_persistence():
         if 'error' in initial_predictions:
             raise Exception(f"Initial prediction failed: {initial_predictions['error']}")
         
-        print(f"✅ Initial predictions successful")
+        print("✅ Initial predictions successful")
         print(f"   Predictions: {initial_predictions.get('predictions', [])}")
         print(f"   Max threat probability: {initial_predictions.get('max_threat_probability', 0):.3f}")
         
@@ -137,7 +135,7 @@ def test_model_persistence():
             raise Exception(f"Model file was not created at {model_path}")
         
         file_size = os.path.getsize(model_path)
-        print(f"✅ Models saved successfully")
+        print("✅ Models saved successfully")
         print(f"   File path: {model_path}")
         print(f"   File size: {file_size} bytes")
         
@@ -152,7 +150,7 @@ def test_model_persistence():
         classifier.models.clear()
         classifier.scalers.clear()
         
-        print(f"✅ Classifier instance cleared")
+        print("✅ Classifier instance cleared")
         print(f"   Models cleared: {original_models_count}")
         print(f"   Scalers cleared: {original_scalers_count}")
         
@@ -181,7 +179,7 @@ def test_model_persistence():
         if not load_success:
             raise Exception("Failed to load models")
         
-        print(f"✅ Models loaded successfully")
+        print("✅ Models loaded successfully")
         print(f"   Models loaded: {len(new_classifier.models)}")
         print(f"   Scalers loaded: {len(new_classifier.scalers)}")
         print(f"   Threat categories: {len(new_classifier.threat_categories)}")
@@ -194,7 +192,7 @@ def test_model_persistence():
         if 'error' in loaded_predictions:
             raise Exception(f"Predictions failed after loading: {loaded_predictions['error']}")
         
-        print(f"✅ Predictions work after loading")
+        print("✅ Predictions work after loading")
         print(f"   Predictions: {loaded_predictions.get('predictions', [])}")
         print(f"   Max threat probability: {loaded_predictions.get('max_threat_probability', 0):.3f}")
         
@@ -273,7 +271,7 @@ def test_model_persistence():
         
         if os.path.exists(updated_model_path):
             updated_size = os.path.getsize(updated_model_path)
-            print(f"✅ Updated models saved")
+            print("✅ Updated models saved")
             print(f"   File path: {updated_model_path}")
             print(f"   File size: {updated_size} bytes")
         else:
@@ -284,12 +282,12 @@ def test_model_persistence():
         
         # Summary of test results
         print("\n📋 Test Summary:")
-        print(f"✅ Model training: SUCCESS")
-        print(f"✅ Model saving: SUCCESS")
-        print(f"✅ Model loading: SUCCESS")
-        print(f"✅ Prediction consistency: SUCCESS")
-        print(f"✅ Incremental learning: SUCCESS")
-        print(f"✅ Method compatibility: SUCCESS")
+        print("✅ Model training: SUCCESS")
+        print("✅ Model saving: SUCCESS")
+        print("✅ Model loading: SUCCESS")
+        print("✅ Prediction consistency: SUCCESS")
+        print("✅ Incremental learning: SUCCESS")
+        print("✅ Method compatibility: SUCCESS")
         
         return True
         

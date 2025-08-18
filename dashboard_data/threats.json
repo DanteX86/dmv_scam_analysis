@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2025-08-18T03:59:35.197323",
+    "threat_score": 0.9,
+    "classification": "high_risk",
+    "confidence": 0.85,
+    "source": "sms",
+    "analysis_id": "demo_1",
+    "indicators": []
+  },
+  {
+    "timestamp": "2025-08-18T03:59:35.302713",
+    "threat_score": 0.3,
+    "classification": "low_risk",
+    "confidence": 0.92,
+    "source": "email",
+    "analysis_id": "demo_2",
+    "indicators": []
+  },
+  {
+    "timestamp": "2025-08-18T03:59:35.408008",
+    "threat_score": 0.7,
+    "classification": "medium_risk",
+    "confidence": 0.78,
+    "source": "sms",
+    "analysis_id": "demo_3",
+    "indicators": []
+  },
+  {
+    "timestamp": "2025-08-18T03:59:35.513292",
+    "threat_score": 0.95,
+    "classification": "high_risk",
+    "confidence": 0.88,
+    "source": "sms",
+    "analysis_id": "demo_4",
+    "indicators": []
+  },
+  {
+    "timestamp": "2025-08-18T03:59:35.618410",
+    "threat_score": 0.2,
+    "classification": "low_risk",
+    "confidence": 0.95,
+    "source": "email",
+    "analysis_id": "demo_5",
+    "indicators": []
+  }
+]

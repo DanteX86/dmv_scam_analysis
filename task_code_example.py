@@ -3,6 +3,7 @@
 This file contains the exact code example from the task specification
 """
 
+from typing import Any
 import pandas as pd
 import json
 import sys
@@ -11,7 +12,7 @@ import os
 # Add src to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from src.dmv_scam_analysis.core.classifier import MLThreatClassifier
+from dmv_scam_analysis.core.classifier import MLThreatClassifier
 
 # Initialize classifier
 classifier = MLThreatClassifier()
@@ -46,11 +47,14 @@ for dataset in ['legitimate', 'scam', 'mixed']:
     
     # Extract features and train
     features = classifier.extract_ml_features(df, include_labels=True)
-    training_results = classifier.train_threat_classifier(features)
+    training_results = classifier.train_threat_classifier(features) if features else None
     
     # Make predictions
-    predictions = classifier.predict_threat_classification(df)
+    predictions: dict[str, Any] = classifier.predict_threat_classification(df)
     
     # Evaluate accuracy
     print(f"Dataset: {dataset}")
-    print(f"Accuracy: {training_results['training_results']['random_forest']['accuracy']}")
+    if training_results and 'training_results' in training_results:
+        print(f"Accuracy: {training_results['training_results']['random_forest']['accuracy']}")
+    else:
+        print("Accuracy: N/A")

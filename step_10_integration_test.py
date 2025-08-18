@@ -6,7 +6,7 @@ Test the integration between MLThreatClassifier and ModelTrainer
 """
 
 import json
-from src.dmv_scam_analysis.ml.model_trainer import ModelTrainer
+from dmv_scam_analysis.ml.model_trainer import ModelTrainer
 
 # Test messages from the original test_ml_classifier.py
 test_messages = [
