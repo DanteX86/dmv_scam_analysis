@@ -18,7 +18,7 @@ class ThreatVisualizer:
 
     def create_visualizations(
         self, messages: Optional[list] = None, analysis_results: Optional[dict] = None
-    ) -e Dict[str, str]:
+    ) -> Dict[str, str]:
         """Generate a simple HTML dashboard page and a minimal timeline image.
 
         Returns a mapping of artifact names to file paths expected by tests.
@@ -30,9 +30,7 @@ class ThreatVisualizer:
         try:
             import base64
 
-            png_b64 = (
-                "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
-            )
+            png_b64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
             png_bytes = base64.b64decode(png_b64)
             timeline_path = self.output_dir / "threat_timeline.png"
             with open(timeline_path, "wb") as f:
@@ -41,7 +39,17 @@ class ThreatVisualizer:
             timeline_path = self.output_dir / "threat_timeline.png"
             timeline_path.write_bytes(b"")
 
-        return {"dashboard": str(html_path), "timeline": str(timeline_path)}
+        # Provide a minimal network artifact placeholder (HTML)
+        network_path = self.output_dir / "threat_network.html"
+        network_path.write_text(
+            "<html><body><p>Network placeholder</p></body></html>", encoding="utf-8"
+        )
+
+        return {
+            "dashboard": str(html_path),
+            "timeline": str(timeline_path),
+            "network": str(network_path),
+        }
 
 
 def _basic_dashboard_html() -> str:
@@ -96,4 +104,3 @@ ThreatVisualizationSuite = ThreatVisualizer
 if __name__ == "__main__":
     path_map = ThreatVisualizer().create_visualizations()
     print(path_map)
-
