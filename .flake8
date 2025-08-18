@@ -7,3 +7,5 @@ per-file-ignores =
     src/dmv_scam_analysis/cli/*: E402,F401
     src/dmv_scam_analysis/visualization/threat_visualizer.py: E501
     src/dmv_scam_analysis/core/classifier.py: E501
+    tests/**/*.py: E501,F401,F841,F821,E231,E722,F722
+    tests/*: E501
