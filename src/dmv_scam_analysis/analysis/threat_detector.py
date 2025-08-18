@@ -50,7 +50,9 @@ class ThreatDetector:
 
         # Search for key phrases
         text_lower = text.lower()
-        detected_phrases = [phrase for phrase in self.key_phrases if phrase in text_lower]
+        detected_phrases = [
+            phrase for phrase in self.key_phrases if phrase in text_lower
+        ]
         threat_detected = bool(detected_phrases)
 
         # Calculate confidence as heuristic based on number of key phrases detected

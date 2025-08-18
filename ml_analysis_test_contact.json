@@ -1,7 +1,7 @@
 {
   "analysis_metadata": {
     "contact_analyzed": "test_contact",
-    "analysis_timestamp": "2025-07-27T02:19:38.200667",
+    "analysis_timestamp": "2025-08-18T13:36:58.411995",
     "analysis_type": "machine_learning_classification"
   },
   "ml_analysis": {
@@ -71,7 +71,7 @@
   "risk_assessment": {
     "ml_risk_score": 30,
     "risk_factors": [
-      "Threat classification detected: predictions, feature_count, prediction_codes, threat_risk_level, max_threat_probability, confidence_scores, message_count"
+      "Threat classification detected: confidence_scores, feature_count, predictions, prediction_codes, threat_risk_level, max_threat_probability, message_count"
     ],
     "risk_level": "MEDIUM"
   },

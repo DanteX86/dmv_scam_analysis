@@ -7,6 +7,7 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Threat Actor Classification
 
 ### Identity & Attribution
+
 - **Type**: Organized Criminal Group
 - **Location**: Philippines (Primary Operations)
 - **Infrastructure**: Distributed across multiple regions
@@ -14,6 +15,7 @@ This document provides a detailed analysis of the threat actor group responsible
 - **Motivation**: Financial gain through identity theft and fraud
 
 ### Capability Assessment
+
 - **Technical Sophistication**: Moderate to High
 - **Operational Security**: Moderate
 - **Resource Level**: Well-funded
@@ -22,7 +24,9 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Tactical Operations
 
 ### Social Engineering Capabilities
+
 1. **Message Crafting**
+
    - Professional-grade communication
    - Convincing government document templates
    - Effective urgency creation
@@ -35,7 +39,9 @@ This document provides a detailed analysis of the threat actor group responsible
    - Time-zone aware operation scheduling
 
 ### Technical Infrastructure
+
 1. **Communication Infrastructure**
+
    - Primary Phone: +639127911810 (Globe Telecom, Philippines)
    - Secondary Numbers: [Redacted - See IOC Report]
    - SMS Gateway Services
@@ -50,18 +56,22 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Operational Patterns
 
 ### Daily Operations
+
 - **Active Hours**: 09:00-17:00 EST (Night shift in Philippines)
 - **Message Frequency**: 500-1000 SMS/day
 - **Response Management**: Semi-automated
 - **Target Selection**: Database-driven
 
 ### Campaign Lifecycle
+
 1. **Initial Contact Phase**
+
    - Mass SMS distribution
    - Government authority impersonation
    - Urgent action requirement
 
 2. **Engagement Phase**
+
    - Web redirect to phishing site
    - Credential harvesting
    - Personal information collection
@@ -74,13 +84,16 @@ This document provides a detailed analysis of the threat actor group responsible
 ## OPSEC Analysis
 
 ### Security Measures
+
 - VPN Usage
 - Domain Privacy Services
 - Multiple Phone Numbers
 - Automated Message Distribution
 
 ### OPSEC Failures
+
 1. **Infrastructure Leaks**
+
    - Philippine phone numbers for US operations
    - Reused hosting infrastructure
    - Common domain registration patterns
@@ -95,12 +108,14 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Behavioral Analysis
 
 ### Communication Patterns
+
 - Formal business language
 - Urgency-based manipulation
 - Authority impersonation
 - Multi-channel follow-up
 
 ### Adaptation Capabilities
+
 - Quick infrastructure rotation
 - Message template evolution
 - Response to blocking measures
@@ -109,7 +124,9 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Related Activities
 
 ### Known Campaigns
+
 1. **Similar Operations**
+
    - Other state DMV impersonation
    - Federal agency impersonation
    - Tax authority scams
@@ -124,7 +141,9 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Threat Actor Goals
 
 ### Primary Objectives
+
 1. **Financial Gain**
+
    - Direct payment fraud
    - Identity theft
    - Credential harvesting
@@ -139,7 +158,9 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Mitigation Recommendations
 
 ### Technical Controls
+
 1. **Infrastructure Blocking**
+
    - Phone number blacklisting
    - Domain pattern blocking
    - IP range restrictions
@@ -152,7 +173,9 @@ This document provides a detailed analysis of the threat actor group responsible
    - Behavioral analytics
 
 ### Operational Response
+
 1. **Law Enforcement Coordination**
+
    - International cooperation
    - Evidence preservation
    - Victim identification
@@ -167,12 +190,14 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Future Threat Projection
 
 ### Expected Evolution
+
 - Infrastructure hardening
 - Improved OPSEC measures
 - New targeting methods
 - Enhanced social engineering
 
 ### Emerging Threats
+
 - Multi-channel attacks
 - Advanced payment schemes
 - Improved language localization
@@ -181,16 +206,19 @@ This document provides a detailed analysis of the threat actor group responsible
 ## Appendices
 
 ### A. Infrastructure Details
+
 [Detailed technical specifications in IOC report]
 
 ### B. Message Templates
+
 [Sanitized examples of observed communications]
 
 ### C. Timeline of Activities
+
 [Chronological operation breakdown]
 
 ---
 
-**Classification**: TLP:AMBER  
-**Last Updated**: [Current Date]  
+**Classification**: TLP:AMBER
+**Last Updated**: [Current Date]
 **Analysis Status**: Active Investigation

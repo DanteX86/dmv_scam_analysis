@@ -6,9 +6,10 @@ import json
 import random
 import uuid
 from datetime import datetime
-from typing import Dict, List, Any, Optional, cast
-import pandas as pd
+from typing import Any, Dict, List, Optional, cast
+
 import numpy as np
+import pandas as pd
 from faker import Faker
 from numpy.typing import NDArray
 
@@ -38,7 +39,10 @@ def generate_test_message(
         "message": _generate_message_content(message_type),
         "label": message_type,
         "threat_score": threat_level,
-        "metadata": {"source": "test_generator", "created_at": datetime.now().isoformat()},
+        "metadata": {
+            "source": "test_generator",
+            "created_at": datetime.now().isoformat(),
+        },
     }
 
     # Override with any provided kwargs
@@ -72,54 +76,84 @@ def _generate_message_content(message_type: str) -> str:
 
 
 def create_test_dataset(
-    num_samples: int = 100,
+    size: int = 100,
     scam_ratio: float = 0.4,
-    legitimate_ratio: float = 0.6,
+    legitimate_ratio: Optional[float] = None,
     include_metadata: bool = True,
-) -> List[Dict[str, Any]]:
+    random_seed: int = 42,
+    num_samples: Optional[int] = None,  # backward-compat alias
+) -> pd.DataFrame:
     """
-    Create a balanced test dataset
+    Create a balanced synthetic dataset as a pandas DataFrame.
 
-    Args:
-        num_samples: Total number of samples to generate
-        scam_ratio: Ratio of scam messages
-        legitimate_ratio: Ratio of legitimate messages
-        include_metadata: Whether to include metadata fields
+    This mirrors the signature used in tests (size, scam_ratio) while preserving
+    backward compatibility via num_samples.
+
+    Behavior:
+    - If only scam_ratio is provided, legitimate_ratio is set to 1 - scam_ratio.
+    - If both are provided, they must sum to 1.0 (within tolerance).
 
     Returns:
-        list: List of test messages
+        pd.DataFrame: Columns [text, is_scam, confidence, source, timestamp]
     """
-    if abs(scam_ratio + legitimate_ratio - 1.0) > 0.001:
-        raise ValueError("Ratios must sum to 1.0")
+    # Normalize parameter name
+    if num_samples is not None:
+        size = num_samples
 
-    dataset = []
+    # Compute or validate ratios
+    if legitimate_ratio is None:
+        legitimate_ratio = 1.0 - float(scam_ratio)
+    else:
+        if abs(scam_ratio + legitimate_ratio - 1.0) > 0.001:
+            raise ValueError("Ratios must sum to 1.0")
 
-    # Generate scam messages
-    num_scam = int(num_samples * scam_ratio)
-    for _ in range(num_scam):
-        message = generate_test_message(message_type="scam", threat_level=random.uniform(0.6, 1.0))
-        if not include_metadata:
-            message.pop("metadata", None)
-        dataset.append(message)
+    np.random.seed(random_seed)
 
-    # Generate legitimate messages
-    num_legitimate = num_samples - num_scam
-    for _ in range(num_legitimate):
-        message = generate_test_message(
-            message_type="legitimate", threat_level=random.uniform(0.0, 0.3)
-        )
-        if not include_metadata:
-            message.pop("metadata", None)
-        dataset.append(message)
+    scam_count = int(round(size * scam_ratio))
+    non_scam_count = size - scam_count
 
-    # Shuffle the dataset
-    random.shuffle(dataset)
+    scam_templates = [
+        "URGENT: Your license will be suspended. Pay ${} now",
+        "DMV Alert: Your registration needs renewal. Click {}",
+        "Final Warning: License expiration. Visit {}",
+    ]
 
-    return dataset
+    non_scam_templates = [
+        "Your license renewal is due on {}",
+        "DMV: Schedule your test for {}",
+        "Registration reminder for {}",
+    ]
+
+    def _gen(is_scam: bool) -> Dict[str, Any]:
+        if is_scam:
+            template = np.random.choice(scam_templates)
+            value = f"${np.random.randint(50, 500)}"
+            url = f"http://scam-{np.random.randint(1000, 9999)}.com"
+            text = template.format(value if "{}" in template else url)
+        else:
+            template = np.random.choice(non_scam_templates)
+            date = pd.Timestamp.now() + pd.Timedelta(days=np.random.randint(1, 90))
+            text = template.format(date.strftime("%Y-%m-%d"))
+        return {
+            "text": text,
+            "is_scam": is_scam,
+            "confidence": float(np.random.uniform(0.7, 1.0)),
+            "source": np.random.choice(["email", "sms", "web"]).item()
+            if hasattr(np.random.choice(["email", "sms", "web"]), "item")
+            else np.random.choice(["email", "sms", "web"]),
+            "timestamp": pd.Timestamp.now().isoformat(),
+        }
+
+    data = [_gen(True) for _ in range(scam_count)] + [
+        _gen(False) for _ in range(non_scam_count)
+    ]
+    return pd.DataFrame(data)
 
 
 def create_test_dataframe(
-    num_samples: int = 100, include_nulls: bool = False, include_duplicates: bool = False
+    num_samples: int = 100,
+    include_nulls: bool = False,
+    include_duplicates: bool = False,
 ) -> pd.DataFrame:
     """
     Create a test pandas DataFrame
@@ -274,13 +308,17 @@ def validate_test_results(
         # Check for missing fields
         missing_fields = [field for field in expected_fields if field not in result]
         if missing_fields:
-            validation_report["errors"].append(f"Result {i}: Missing fields: {missing_fields}")
+            validation_report["errors"].append(
+                f"Result {i}: Missing fields: {missing_fields}"
+            )
             validation_report["is_valid"] = False
 
         # Check for null values in required fields
         for field in expected_fields:
             if field in result and result[field] is None:
-                validation_report["warnings"].append(f"Result {i}: Field '{field}' is null")
+                validation_report["warnings"].append(
+                    f"Result {i}: Field '{field}' is null"
+                )
 
     return validation_report
 
@@ -303,11 +341,15 @@ def create_test_embeddings(
         np.random.seed(seed)
 
     # Generate embeddings with some structure to simulate real embeddings
-    embeddings: NDArray[np.float64] = np.random.normal(0, 1, (num_samples, embedding_dim))
+    embeddings: NDArray[np.float64] = np.random.normal(
+        0, 1, (num_samples, embedding_dim)
+    )
 
     # Normalize embeddings to unit length (common for sentence embeddings)
     norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
-    embeddings = embeddings / (norms + 1e-8)  # Add small epsilon to avoid division by zero
+    embeddings = embeddings / (
+        norms + 1e-8
+    )  # Add small epsilon to avoid division by zero
 
     return embeddings
 
@@ -344,7 +386,9 @@ def create_test_embeddings_with_labels(
     return embeddings, labels
 
 
-def create_test_similarity_matrix(num_samples: int = 100, seed: Optional[int] = None) -> NDArray[np.float64]:
+def create_test_similarity_matrix(
+    num_samples: int = 100, seed: Optional[int] = None
+) -> NDArray[np.float64]:
     """
     Create a test similarity matrix for clustering/similarity testing
 

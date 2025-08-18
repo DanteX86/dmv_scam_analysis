@@ -15,7 +15,7 @@ datasources:
       timeInterval: "5s"
       queryTimeout: "30s"
       httpMethod: "POST"
-      
+
   - name: PostgreSQL
     type: postgres
     url: db:5432

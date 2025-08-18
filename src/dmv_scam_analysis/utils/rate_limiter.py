@@ -1,9 +1,9 @@
 """Rate limiter implementation for API request throttling."""
 
-import time
-from typing import Dict, Tuple, Optional
 import asyncio
+import time
 from collections import defaultdict
+from typing import Dict, Optional, Tuple
 
 
 class RateLimiter:
@@ -36,7 +36,9 @@ class RateLimiter:
 
             # Clean up old requests
             self._request_history[token] = [
-                ts for ts in self._request_history[token] if now - ts <= self.time_window
+                ts
+                for ts in self._request_history[token]
+                if now - ts <= self.time_window
             ]
 
             # Check if we're over the limit
@@ -61,7 +63,9 @@ class RateLimiter:
 
             # Clean up old requests
             self._request_history[token] = [
-                ts for ts in self._request_history[token] if now - ts <= self.time_window
+                ts
+                for ts in self._request_history[token]
+                if now - ts <= self.time_window
             ]
 
             # Calculate remaining requests
@@ -71,7 +75,11 @@ class RateLimiter:
             # Calculate time until reset
             if used_requests > 0:
                 oldest_request = min(self._request_history[token])
-                reset_time = max(0, int(oldest_request + self.time_window - now))
+                import math
+
+                reset_time = max(
+                    0, int(math.ceil(oldest_request + self.time_window - now))
+                )
             else:
                 reset_time = 0
 

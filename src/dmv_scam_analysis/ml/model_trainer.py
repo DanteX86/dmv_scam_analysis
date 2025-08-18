@@ -7,12 +7,12 @@ import logging
 import pickle
 from datetime import datetime
 from pathlib import Path
-from typing import Optional, Dict, List, Tuple, Any, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
 logger = logging.getLogger(__name__)
@@ -34,7 +34,9 @@ class ModelTrainer:
         self.models: Dict[str, Any] = {}
         self.vectorizers: Dict[str, Any] = {}
 
-    def train_classifier(self, data_path: str, output_path: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    def train_classifier(
+        self, data_path: str, output_path: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
         """
         Train a text classification model for threat detection
 
@@ -64,7 +66,10 @@ class ModelTrainer:
         # Create pipeline
         pipeline = Pipeline(
             [
-                ("vectorizer", TfidfVectorizer(max_features=5000, stop_words="english")),
+                (
+                    "vectorizer",
+                    TfidfVectorizer(max_features=5000, stop_words="english"),
+                ),
                 ("classifier", LogisticRegression(random_state=42, max_iter=1000)),
             ]
         )
@@ -101,7 +106,9 @@ class ModelTrainer:
 
         return results
 
-    def train_embeddings(self, data_path: str, output_path: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    def train_embeddings(
+        self, data_path: str, output_path: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
         """
         Train text embeddings model
 
@@ -176,7 +183,9 @@ class ModelTrainer:
             logger.error(f"❌ Error loading training data: {e}")
             return []
 
-    def _prepare_classification_data(self, data: List[Dict[str, Any]]) -> Tuple[List[str], List[int]]:
+    def _prepare_classification_data(
+        self, data: List[Dict[str, Any]]
+    ) -> Tuple[List[str], List[int]]:
         """Prepare data for classification training"""
         texts = []
         labels = []
@@ -196,8 +205,19 @@ class ModelTrainer:
                 label = label_map.get(item["label"], 0)
             else:
                 # Simple heuristic: messages with threat keywords are labeled as threats
-                threat_keywords = ["urgent", "penalty", "suspend", "arrest", "legal action", "fine"]
-                label = 1 if any(keyword in text.lower() for keyword in threat_keywords) else 0
+                threat_keywords = [
+                    "urgent",
+                    "penalty",
+                    "suspend",
+                    "arrest",
+                    "legal action",
+                    "fine",
+                ]
+                label = (
+                    1
+                    if any(keyword in text.lower() for keyword in threat_keywords)
+                    else 0
+                )
 
             labels.append(label)
 

@@ -86,4 +86,3 @@ digraph DMVScamAnalysisDeps {
   pkg_root -> core_classifier;
   pkg_root -> core_extractor;
 }
-

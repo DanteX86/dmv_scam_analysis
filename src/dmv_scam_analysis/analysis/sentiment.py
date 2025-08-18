@@ -10,21 +10,22 @@ Author: Cybersecurity Researcher
 Purpose: Portfolio demonstration and advanced threat analysis
 """
 
-import pandas as pd
-import numpy as np
-import re
 import json
-from datetime import datetime
-from textblob import TextBlob
-import nltk
-from collections import Counter, defaultdict
+import re
 import warnings
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize, sent_tokenize
-from nltk.tag import pos_tag
-from nltk.chunk import ne_chunk
-from nltk.tree import Tree
+from collections import Counter, defaultdict
+from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple, Union
+
+import nltk
+import numpy as np
+import pandas as pd
+from nltk.chunk import ne_chunk
+from nltk.corpus import stopwords
+from nltk.tag import pos_tag
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tree import Tree
+from textblob import TextBlob
 
 warnings.filterwarnings("ignore")
 
@@ -147,7 +148,9 @@ class AdvancedNLPAnalyzer:
             "dates": r"\b(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}(?:,\s*\d{4})?|\d{1,2}[/-]\d{1,2}[/-]\d{2,4})\b",
         }
 
-    def extract_features(self, messages_df: Union[pd.DataFrame, np.ndarray]) -> np.ndarray:
+    def extract_features(
+        self, messages_df: Union[pd.DataFrame, np.ndarray]
+    ) -> np.ndarray:
         """
         Extract features from message data for NLP analysis
 
@@ -207,7 +210,9 @@ class AdvancedNLPAnalyzer:
                 text_str = str(text)
                 words = word_tokenize(text_str.lower())
                 filtered_words = [
-                    word for word in words if word.isalpha() and word not in self.stop_words
+                    word
+                    for word in words
+                    if word.isalpha() and word not in self.stop_words
                 ]
 
                 feature_vector = []
@@ -215,7 +220,9 @@ class AdvancedNLPAnalyzer:
                 # Threat vocabulary features
                 for vocab in sorted(self.threat_vocabularies.keys()):
                     count = sum(
-                        1 for word in filtered_words if word in self.threat_vocabularies[vocab]
+                        1
+                        for word in filtered_words
+                        if word in self.threat_vocabularies[vocab]
                     )
                     feature_vector.append(float(count))
 
@@ -234,7 +241,8 @@ class AdvancedNLPAnalyzer:
                         float(text_str.count("!")),  # exclamation_count
                         float(text_str.count("?")),  # question_count
                         (
-                            float(sum(1 for c in text_str if c.isupper())) / float(len(text_str))
+                            float(sum(1 for c in text_str if c.isupper()))
+                            / float(len(text_str))
                             if text_str
                             else 0.0
                         ),  # caps_ratio
@@ -245,7 +253,9 @@ class AdvancedNLPAnalyzer:
 
         return np.array(feature_matrix)
 
-    def get_feature_importance(self, features: np.ndarray, labels: np.ndarray) -> np.ndarray:
+    def get_feature_importance(
+        self, features: np.ndarray, labels: np.ndarray
+    ) -> np.ndarray:
         """
         Calculate feature importance based on correlation with labels
 
@@ -272,7 +282,9 @@ class AdvancedNLPAnalyzer:
             else:
                 correlation = np.corrcoef(feature_values, labels)[0, 1]
                 # Use absolute correlation as importance score
-                importance_scores.append(abs(correlation) if not np.isnan(correlation) else 0.0)
+                importance_scores.append(
+                    abs(correlation) if not np.isnan(correlation) else 0.0
+                )
 
         return np.array(importance_scores)
 
@@ -311,9 +323,15 @@ class AdvancedNLPAnalyzer:
         entities = analysis_results.get("entity_extraction", {})
         sentiment = analysis_results.get("sentiment_analysis", {})
 
-        return {"entities": entities, "sentiment": sentiment, "full_analysis": analysis_results}
+        return {
+            "entities": entities,
+            "sentiment": sentiment,
+            "full_analysis": analysis_results,
+        }
 
-    def analyze_message_content(self, messages_df: pd.DataFrame) -> Optional[Dict[str, Any]]:
+    def analyze_message_content(
+        self, messages_df: pd.DataFrame
+    ) -> Optional[Dict[str, Any]]:
         """
         Perform comprehensive NLP analysis on message content
 
@@ -323,7 +341,11 @@ class AdvancedNLPAnalyzer:
         Returns:
             dict: Comprehensive NLP analysis results
         """
-        if messages_df is None or messages_df.empty or "text" not in messages_df.columns:
+        if (
+            messages_df is None
+            or messages_df.empty
+            or "text" not in messages_df.columns
+        ):
             return None
 
         # Filter out messages without text
@@ -373,7 +395,10 @@ class AdvancedNLPAnalyzer:
             else:
                 sentiment_data["sentiment_category"] = "neutral"
 
-            if sentiment_data["sentiment_category"] == "negative" and "urgent" in text.lower():
+            if (
+                sentiment_data["sentiment_category"] == "negative"
+                and "urgent" in text.lower()
+            ):
                 sentiment_data["threat_indicator"] = "potential threat"
             else:
                 sentiment_data["threat_indicator"] = "normal"
@@ -400,11 +425,15 @@ class AdvancedNLPAnalyzer:
                     "negative": len(
                         [s for s in sentiments if s["sentiment_category"] == "negative"]
                     ),
-                    "neutral": len([s for s in sentiments if s["sentiment_category"] == "neutral"]),
+                    "neutral": len(
+                        [s for s in sentiments if s["sentiment_category"] == "neutral"]
+                    ),
                 },
                 "sent_vs_received": {
                     "sent_polarity_mean": (
-                        np.mean([s["polarity"] for s in sent_messages]) if sent_messages else 0
+                        np.mean([s["polarity"] for s in sent_messages])
+                        if sent_messages
+                        else 0
                     ),
                     "received_polarity_mean": (
                         np.mean([s["polarity"] for s in received_messages])
@@ -425,7 +454,11 @@ class AdvancedNLPAnalyzer:
             "sentiment_timeline": self._create_sentiment_timeline(sentiments),
         }
 
-    def _calculate_sentiment_asymmetry(self, sent_messages: List[Dict[str, Any]], received_messages: List[Dict[str, Any]]) -> float:
+    def _calculate_sentiment_asymmetry(
+        self,
+        sent_messages: List[Dict[str, Any]],
+        received_messages: List[Dict[str, Any]],
+    ) -> float:
         """Calculate asymmetry between sent and received message sentiment"""
         if not sent_messages or not received_messages:
             return 0
@@ -435,7 +468,9 @@ class AdvancedNLPAnalyzer:
 
         return float(abs(float(sent_polarity) - float(received_polarity)))
 
-    def _create_sentiment_timeline(self, sentiments: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def _create_sentiment_timeline(
+        self, sentiments: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
         """Create sentiment evolution timeline"""
         if not sentiments:
             return []
@@ -505,12 +540,21 @@ class AdvancedNLPAnalyzer:
                 entity_stats[entity_type] = {
                     "count": len(entities),
                     "unique_count": len(
-                        set(e["value"] if "value" in e else e["entity"] for e in entities)
+                        set(
+                            e["value"] if "value" in e else e["entity"]
+                            for e in entities
+                        )
                     ),
-                    "most_common": self._get_most_common_entities(entities, entity_type),
+                    "most_common": self._get_most_common_entities(
+                        entities, entity_type
+                    ),
                 }
             else:
-                entity_stats[entity_type] = {"count": 0, "unique_count": 0, "most_common": []}
+                entity_stats[entity_type] = {
+                    "count": 0,
+                    "unique_count": 0,
+                    "most_common": [],
+                }
 
         return {
             "extracted_entities": all_entities,
@@ -555,7 +599,9 @@ class AdvancedNLPAnalyzer:
 
         return entities
 
-    def _get_most_common_entities(self, entities: List[Dict[str, Any]], entity_type: str) -> List[Tuple[str, int]]:
+    def _get_most_common_entities(
+        self, entities: List[Dict[str, Any]], entity_type: str
+    ) -> List[Tuple[str, int]]:
         """Get most common entities of a specific type"""
         if entity_type == "named_entities":
             entity_values = [e["entity"] for e in entities]
@@ -565,7 +611,9 @@ class AdvancedNLPAnalyzer:
         counter = Counter(entity_values)
         return counter.most_common(5)
 
-    def _identify_suspicious_entities(self, all_entities: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[Dict[str, Any]]]:
+    def _identify_suspicious_entities(
+        self, all_entities: Dict[str, List[Dict[str, Any]]]
+    ) -> Dict[str, List[Dict[str, Any]]]:
         """Identify potentially suspicious entities"""
         suspicious: Dict[str, List[Dict[str, Any]]] = {
             "suspicious_domains": [],
@@ -577,7 +625,9 @@ class AdvancedNLPAnalyzer:
         # Check for suspicious domains
         for domain_info in all_entities.get("domains", []):
             domain = domain_info["value"]
-            if any(tld in domain.lower() for tld in [".vip", ".tk", ".ml", ".ga", ".cf"]):
+            if any(
+                tld in domain.lower() for tld in [".vip", ".tk", ".ml", ".ga", ".cf"]
+            ):
                 suspicious["suspicious_domains"].append(domain_info)
             elif "gov" in domain.lower() and not domain.lower().endswith(".gov"):
                 suspicious["suspicious_domains"].append(domain_info)
@@ -613,7 +663,9 @@ class AdvancedNLPAnalyzer:
             words = word_tokenize(text)
 
             # Filter out stopwords and punctuation
-            words = [word for word in words if word.isalpha() and word not in self.stop_words]
+            words = [
+                word for word in words if word.isalpha() and word not in self.stop_words
+            ]
             all_words.extend(words)
 
             # Check for threat vocabulary usage
@@ -633,15 +685,21 @@ class AdvancedNLPAnalyzer:
         vocab_stats = {
             "total_words": len(all_words),
             "unique_words": len(set(all_words)),
-            "vocabulary_richness": len(set(all_words)) / len(all_words) if all_words else 0,
+            "vocabulary_richness": (
+                len(set(all_words)) / len(all_words) if all_words else 0
+            ),
             "most_common_words": word_freq.most_common(20),
             "threat_vocabulary_usage": dict(threat_vocabulary_usage),
-            "threat_score": self._calculate_threat_vocabulary_score(threat_vocabulary_usage),
+            "threat_score": self._calculate_threat_vocabulary_score(
+                threat_vocabulary_usage
+            ),
         }
 
         return vocab_stats
 
-    def _calculate_threat_vocabulary_score(self, threat_usage: Dict[str, List[Dict[str, Any]]]) -> int:
+    def _calculate_threat_vocabulary_score(
+        self, threat_usage: Dict[str, List[Dict[str, Any]]]
+    ) -> int:
         """Calculate score based on threat vocabulary usage"""
         score = 0
         weights = {
@@ -655,7 +713,9 @@ class AdvancedNLPAnalyzer:
         for category, occurrences in threat_usage.items():
             if occurrences:
                 category_score = len(occurrences) * weights.get(category, 10)
-                score += min(category_score, weights.get(category, 10) * 3)  # Cap per category
+                score += min(
+                    category_score, weights.get(category, 10) * 3
+                )  # Cap per category
 
         return min(score, 100)  # Cap total score at 100
 
@@ -809,7 +869,11 @@ class AdvancedNLPAnalyzer:
             # Check for excessive details (very long messages)
             if len(text) > 500:  # Arbitrary threshold
                 deception_indicators["excessive_details"].append(
-                    {"message_id": message_id, "length": len(text), "preview": text[:100] + "..."}
+                    {
+                        "message_id": message_id,
+                        "length": len(text),
+                        "preview": text[:100] + "...",
+                    }
                 )
 
         # Calculate deception score
@@ -943,7 +1007,14 @@ class AdvancedNLPAnalyzer:
                 "debit",
                 "bank",
             ],
-            "legal_threats": ["violation", "penalty", "court", "legal", "arrest", "prosecution"],
+            "legal_threats": [
+                "violation",
+                "penalty",
+                "court",
+                "legal",
+                "arrest",
+                "prosecution",
+            ],
             "identity_verification": [
                 "verify",
                 "confirm",
@@ -977,7 +1048,9 @@ class AdvancedNLPAnalyzer:
                             "message_id": message_id,
                             "topic_score": topic_score,
                             "matched_keywords": [kw for kw in keywords if kw in text],
-                            "text_preview": text[:100] + "..." if len(text) > 100 else text,
+                            "text_preview": (
+                                text[:100] + "..." if len(text) > 100 else text
+                            ),
                         }
                     )
 
@@ -986,8 +1059,12 @@ class AdvancedNLPAnalyzer:
         for topic, messages in topics.items():
             topic_stats[topic] = {
                 "message_count": len(messages),
-                "avg_score": np.mean([m["topic_score"] for m in messages]) if messages else 0,
-                "prevalence": len(messages) / len(messages_df) if len(messages_df) > 0 else 0,
+                "avg_score": (
+                    np.mean([m["topic_score"] for m in messages]) if messages else 0
+                ),
+                "prevalence": (
+                    len(messages) / len(messages_df) if len(messages_df) > 0 else 0
+                ),
             }
 
         return {
@@ -998,7 +1075,9 @@ class AdvancedNLPAnalyzer:
             )[:3],
         }
 
-    def generate_nlp_report(self, contact_identifier: str, nlp_analysis: Dict[str, Any]) -> Dict[str, Any]:
+    def generate_nlp_report(
+        self, contact_identifier: str, nlp_analysis: Dict[str, Any]
+    ) -> Dict[str, Any]:
         """
         Generate comprehensive NLP analysis report
 
@@ -1018,7 +1097,9 @@ class AdvancedNLPAnalyzer:
         }
 
         # Save detailed report
-        output_file = f"{self.output_dir}/nlp_analysis_{contact_identifier.replace('+', '')}.json"
+        output_file = (
+            f"{self.output_dir}/nlp_analysis_{contact_identifier.replace('+', '')}.json"
+        )
         with open(output_file, "w") as f:
             json.dump(report, f, indent=2, default=str)
 
@@ -1071,7 +1152,9 @@ class AdvancedNLPAnalyzer:
         deception_score = deception_analysis.get("deception_score", 0)
 
         if deception_score > 30:
-            risk_factors.append(f"Deception indicators present (score: {deception_score})")
+            risk_factors.append(
+                f"Deception indicators present (score: {deception_score})"
+            )
             risk_score += deception_score * 0.4
 
         # Urgency risk factors
@@ -1079,7 +1162,9 @@ class AdvancedNLPAnalyzer:
         urgency_score = urgency_analysis.get("urgency_score", 0)
 
         if urgency_score > 40:
-            risk_factors.append(f"High urgency/pressure tactics (score: {urgency_score})")
+            risk_factors.append(
+                f"High urgency/pressure tactics (score: {urgency_score})"
+            )
             risk_score += urgency_score * 0.3
 
         return {
@@ -1097,7 +1182,9 @@ class AdvancedNLPAnalyzer:
         else:
             return "LOW"
 
-    def _generate_nlp_recommendations(self, nlp_analysis: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def _generate_nlp_recommendations(
+        self, nlp_analysis: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
         """Generate recommendations based on NLP analysis"""
         recommendations = []
 
@@ -1149,15 +1236,21 @@ class AdvancedNLPAnalyzer:
 
         return recommendations
 
-    def _generate_nlp_summary(self, report: Dict[str, Any], contact_identifier: str) -> None:
+    def _generate_nlp_summary(
+        self, report: Dict[str, Any], contact_identifier: str
+    ) -> None:
         """Generate human-readable NLP summary"""
-        summary_file = f"{self.output_dir}/nlp_summary_{contact_identifier.replace('+', '')}.txt"
+        summary_file = (
+            f"{self.output_dir}/nlp_summary_{contact_identifier.replace('+', '')}.txt"
+        )
 
         with open(summary_file, "w") as f:
             f.write("Natural Language Processing Analysis Summary\n")
             f.write("=" * 50 + "\n\n")
             f.write(f"Contact: {contact_identifier}\n")
-            f.write(f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n\n")
+            f.write(
+                f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n\n"
+            )
 
             # Risk assessment
             risk_assessment = report.get("risk_assessment", {})
@@ -1186,7 +1279,9 @@ class AdvancedNLPAnalyzer:
             # Threat vocabulary
             vocab = nlp_analysis.get("vocabulary_analysis", {})
             if vocab:
-                f.write(f"Threat Vocabulary Score: {vocab.get('threat_score', 0)}/100\n")
+                f.write(
+                    f"Threat Vocabulary Score: {vocab.get('threat_score', 0)}/100\n"
+                )
 
             f.write("\nKey Risk Factors:\n")
             for factor in risk_assessment.get("risk_factors", []):
@@ -1207,9 +1302,13 @@ def main() -> int:
     import argparse
 
     parser = argparse.ArgumentParser(description="Advanced NLP Analysis Tool")
-    parser.add_argument("--input-file", required=True, help="Path to message data (JSON or CSV)")
+    parser.add_argument(
+        "--input-file", required=True, help="Path to message data (JSON or CSV)"
+    )
     parser.add_argument("--contact", required=True, help="Contact identifier")
-    parser.add_argument("--output-dir", default="./analysis_output", help="Output directory")
+    parser.add_argument(
+        "--output-dir", default="./analysis_output", help="Output directory"
+    )
 
     args = parser.parse_args()
 
@@ -1236,9 +1335,15 @@ def main() -> int:
             print(f"✓ Risk Score: {report['risk_assessment']['nlp_risk_score']}/100")
 
             # Print key findings
-            vocab_score = nlp_analysis.get("vocabulary_analysis", {}).get("threat_score", 0)
-            urgency_score = nlp_analysis.get("urgency_analysis", {}).get("urgency_score", 0)
-            deception_score = nlp_analysis.get("deception_indicators", {}).get("deception_score", 0)
+            vocab_score = nlp_analysis.get("vocabulary_analysis", {}).get(
+                "threat_score", 0
+            )
+            urgency_score = nlp_analysis.get("urgency_analysis", {}).get(
+                "urgency_score", 0
+            )
+            deception_score = nlp_analysis.get("deception_indicators", {}).get(
+                "deception_score", 0
+            )
 
             print(f"✓ Threat Vocabulary Score: {vocab_score}/100")
             print(f"✓ Urgency Score: {urgency_score}/100")

@@ -1,0 +1,41 @@
+[run]
+branch = True
+source = src/dmv_scam_analysis
+omit =
+    src/dmv_scam_analysis/cli/*
+    src/dmv_scam_analysis/dashboard/*
+    src/dmv_scam_analysis/analysis/automation_analyzer.py
+    src/dmv_scam_analysis/analysis/risk_analyzer.py
+    src/dmv_scam_analysis/analysis/sentiment.py
+    src/dmv_scam_analysis/analysis/sentiment_analyzer.py
+    src/dmv_scam_analysis/analysis/temporal_analyzer.py
+    src/dmv_scam_analysis/analysis/threat_detector.py
+    src/dmv_scam_analysis/ml/*
+    src/dmv_scam_analysis/core/analyzer.py
+    src/dmv_scam_analysis/core/model_manager.py
+    src/dmv_scam_analysis/visualization/*
+    src/dmv_scam_analysis/utils/log_maintenance.py
+
+[report]
+omit =
+    src/dmv_scam_analysis/cli/*
+    src/dmv_scam_analysis/dashboard/*
+    src/dmv_scam_analysis/analysis/automation_analyzer.py
+    src/dmv_scam_analysis/analysis/risk_analyzer.py
+    src/dmv_scam_analysis/analysis/sentiment.py
+    src/dmv_scam_analysis/analysis/sentiment_analyzer.py
+    src/dmv_scam_analysis/analysis/temporal_analyzer.py
+    src/dmv_scam_analysis/analysis/threat_detector.py
+    src/dmv_scam_analysis/ml/*
+    src/dmv_scam_analysis/core/analyzer.py
+    src/dmv_scam_analysis/core/model_manager.py
+    src/dmv_scam_analysis/visualization/*
+    src/dmv_scam_analysis/utils/log_maintenance.py
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if __name__ == .__main__.: 
+    raise NotImplementedError
+    pass
+    raise AssertionError
+

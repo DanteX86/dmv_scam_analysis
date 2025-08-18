@@ -3,12 +3,14 @@
 ## Setup
 
 1. **Clone the Repository**
+
 ```bash
 git clone <repository-url>
 cd campaign-analysis-framework
 ```
 
 2. **Install Dependencies**
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # or `venv\Scripts\activate` on Windows
@@ -16,7 +18,8 @@ pip install -r requirements.txt
 ```
 
 3. **Prepare Your Data**
-Ensure your data includes these columns:
+   Ensure your data includes these columns:
+
 - datetime: Message timestamp
 - contact_id: Unique identifier for each contact
 - text: Message content
@@ -25,6 +28,7 @@ Ensure your data includes these columns:
 ## Basic Usage
 
 ### 1. Simple Analysis
+
 ```bash
 python scripts/campaign_analyzer.py \
     --input data/messages.csv \
@@ -33,6 +37,7 @@ python scripts/campaign_analyzer.py \
 ```
 
 ### 2. Custom Configuration
+
 ```bash
 # Create config file
 cat > config.yaml << EOL
@@ -56,6 +61,7 @@ python scripts/campaign_analyzer.py \
 ```
 
 ### 3. View Results
+
 ```bash
 # View summary
 cat results/campaign_summary_Custom_Campaign.txt
@@ -67,16 +73,19 @@ cat results/campaign_analysis_Custom_Campaign.json
 ## Key Features
 
 ### 1. Input Flexibility
+
 - CSV or JSON input
 - Configurable column mappings
 - Data validation
 
 ### 2. Analysis Capabilities
+
 - Temporal pattern analysis
 - Automation detection
 - Risk assessment
 
 ### 3. Output Options
+
 - JSON detailed reports
 - Text summaries
 - Custom output formats
@@ -84,11 +93,13 @@ cat results/campaign_analysis_Custom_Campaign.json
 ## Next Steps
 
 1. **Customize Configuration**
+
    - Edit config/analysis_config.yaml
    - Adjust validation rules
    - Configure output formats
 
 2. **Add Data Sources**
+
    - Prepare input data
    - Map column names
    - Validate formats
@@ -101,6 +112,7 @@ cat results/campaign_analysis_Custom_Campaign.json
 ## Common Commands
 
 ### Different Input Formats
+
 ```bash
 # CSV input
 python scripts/campaign_analyzer.py \
@@ -115,6 +127,7 @@ python scripts/campaign_analyzer.py \
 ```
 
 ### Output Formats
+
 ```bash
 # JSON output
 python scripts/campaign_analyzer.py \
@@ -130,6 +143,7 @@ python scripts/campaign_analyzer.py \
 ```
 
 ### Analysis Options
+
 ```bash
 # Specify campaign type
 python scripts/campaign_analyzer.py \
@@ -149,6 +163,7 @@ python scripts/campaign_analyzer.py \
 ### Common Issues
 
 1. **Invalid Input Format**
+
 ```bash
 # Check data format
 head -n 5 data.csv
@@ -156,6 +171,7 @@ head -n 5 data.csv
 ```
 
 2. **Missing Dependencies**
+
 ```bash
 # Update dependencies
 pip install -r requirements.txt
@@ -164,6 +180,7 @@ python --version
 ```
 
 3. **Output Errors**
+
 ```bash
 # Check permissions
 ls -l results/
@@ -174,11 +191,13 @@ df -h
 ## Getting Help
 
 1. **Documentation**
+
    - Read framework_guide.md
    - Check configuration examples
    - Review troubleshooting guide
 
 2. **Test Data**
+
    - Use sample_messages.json
    - Try example configurations
    - Review test cases

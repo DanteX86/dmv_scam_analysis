@@ -1,0 +1,13 @@
+[
+  {
+    "message_id": "msg_000",
+    "timestamp": "2024-05-01T10:00:00Z",
+    "threat_score": 0.0,
+    "risk_level": "low",
+    "indicators": [
+      "authority_impersonation"
+    ],
+    "confidence": 0.30000000000000004,
+    "analysis_id": "behavioral_455084"
+  }
+]

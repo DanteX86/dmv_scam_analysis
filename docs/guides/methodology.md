@@ -9,15 +9,17 @@ This document outlines the comprehensive methodology employed in the analysis of
 ### 1. Digital Forensics Approach
 
 #### Database Analysis
+
 - **Target**: macOS iMessage database (chat.db)
 - **Location**: `~/Library/Messages/chat.db`
 - **Access Method**: Direct SQLite database connection
 - **Schema Analysis**: Complete table structure documentation
 
 #### Data Extraction Process
+
 ```sql
 -- Primary message extraction query
-SELECT 
+SELECT
     m.ROWID,
     m.text,
     m.date,
@@ -35,6 +37,7 @@ ORDER BY m.date DESC
 ```
 
 #### Timeline Reconstruction
+
 - **Chronological Ordering**: Message sequence based on timestamp analysis
 - **Duration Mapping**: Campaign timeframe identification
 - **Pattern Recognition**: Communication frequency and timing analysis
@@ -42,12 +45,14 @@ ORDER BY m.date DESC
 ### 2. Threat Intelligence Methodology
 
 #### OSINT Collection
+
 - **Domain Analysis**: WHOIS data, DNS records, registration patterns
 - **Telecommunications Intelligence**: Carrier attribution, geographic origin
 - **Infrastructure Mapping**: Related domains, IP addresses, hosting patterns
 - **Social Media Monitoring**: Public reporting of similar campaigns
 
 #### Attribution Techniques
+
 - **Geographic Indicators**: Phone number country codes, domain patterns
 - **Language Analysis**: Terminology usage, grammar patterns
 - **Infrastructure Patterns**: Hosting choices, domain registration patterns
@@ -56,6 +61,7 @@ ORDER BY m.date DESC
 ### 3. Automated Analysis Implementation
 
 #### Pattern Recognition Engine
+
 ```python
 class ThreatPatternAnalyzer:
     def __init__(self):
@@ -87,6 +93,7 @@ class ThreatPatternAnalyzer:
 ```
 
 #### Risk Assessment Algorithm
+
 ```python
 def calculate_risk_score(threat_indicators, message_count):
     base_scores = {
@@ -95,29 +102,32 @@ def calculate_risk_score(threat_indicators, message_count):
         'suspicious_infrastructure': 20,
         'international_indicators': 15
     }
-    
+
     risk_score = 0
     for category, count in threat_indicators.items():
         if category in base_scores:
             risk_score += base_scores[category]
             risk_score += count * 5  # Additional points per occurrence
-    
+
     # Bonus for multiple categories
     risk_score += len(threat_indicators) * 10
-    
+
     return min(100, risk_score)
 ```
 
 ### 4. Data Sanitization Process
 
 #### Privacy Protection Measures
+
 1. **Personal Information Removal**
+
    - Contact details anonymization
    - Location data scrubbing
    - Device identifiers removal
    - User account information redaction
 
 2. **Content Sanitization**
+
    - Message content generalization
    - Personally identifiable information masking
    - Pattern preservation for analysis
@@ -129,6 +139,7 @@ def calculate_risk_score(threat_indicators, message_count):
    - Network information anonymization
 
 #### Ethical Considerations
+
 - **Consent**: Analysis performed on researcher's own data
 - **Purpose Limitation**: Cybersecurity research and community protection
 - **Data Minimization**: Only relevant data retained for analysis
@@ -137,12 +148,14 @@ def calculate_risk_score(threat_indicators, message_count):
 ### 5. Analysis Validation Techniques
 
 #### Cross-Reference Verification
+
 - **Multiple Source Validation**: OSINT confirmation of findings
 - **Pattern Consistency**: Verification across different data points
 - **Technical Verification**: Infrastructure analysis confirmation
 - **Timeline Verification**: Event sequence logical validation
 
 #### False Positive Mitigation
+
 - **Context Analysis**: Message content contextual review
 - **Pattern Refinement**: Iterative improvement of detection rules
 - **Manual Verification**: Human review of automated findings
@@ -151,12 +164,14 @@ def calculate_risk_score(threat_indicators, message_count):
 ### 6. Intelligence Product Development
 
 #### Report Generation Process
+
 1. **Technical Analysis**: Detailed technical findings documentation
 2. **Executive Summary**: High-level overview for decision makers
 3. **Law Enforcement Package**: Actionable intelligence for investigations
 4. **Community Alert**: Public awareness and protection guidance
 
 #### Quality Assurance
+
 - **Accuracy Verification**: All technical details validated
 - **Completeness Review**: Comprehensive coverage of findings
 - **Clarity Assessment**: Accessibility for target audiences
@@ -165,6 +180,7 @@ def calculate_risk_score(threat_indicators, message_count):
 ### 7. Tools and Technologies
 
 #### Primary Analysis Tools
+
 - **Python 3.x**: Core analysis scripting language
 - **SQLite3**: Database analysis and querying
 - **Pandas**: Data manipulation and analysis
@@ -172,32 +188,34 @@ def calculate_risk_score(threat_indicators, message_count):
 - **JSON**: Data serialization and reporting
 
 #### Supporting Technologies
+
 - **Git**: Version control for analysis scripts
 - **Markdown**: Documentation and reporting format
 - **Command Line Tools**: System integration and automation
 - **OSINT Frameworks**: Intelligence gathering support
 
 #### Custom Tool Development
+
 ```python
 # Example: Message extraction and analysis pipeline
 class iMessageForensicsPipeline:
     def __init__(self, db_path):
         self.db_path = db_path
         self.analyzer = ThreatPatternAnalyzer()
-        
+
     def execute_full_analysis(self, contact_id):
         # 1. Extract messages
         messages = self.extract_messages(contact_id)
-        
+
         # 2. Analyze content
         threat_analysis = self.analyzer.analyze_content(messages)
-        
+
         # 3. Generate timeline
         timeline = self.generate_timeline(messages)
-        
+
         # 4. Calculate risk
         risk_score = self.calculate_risk(threat_analysis)
-        
+
         # 5. Generate reports
         self.export_intelligence_products(threat_analysis, timeline, risk_score)
 ```
@@ -205,12 +223,14 @@ class iMessageForensicsPipeline:
 ### 8. Continuous Improvement Process
 
 #### Methodology Refinement
+
 - **Lessons Learned Documentation**: Post-analysis improvement identification
 - **Pattern Updates**: Threat pattern database enhancement
 - **Tool Enhancement**: Analysis capability improvements
 - **Community Feedback**: External validation and improvement suggestions
 
 #### Knowledge Sharing
+
 - **Methodology Documentation**: Detailed process documentation
 - **Tool Open Source**: Community tool availability
 - **Best Practices**: Technique and approach sharing
@@ -219,9 +239,11 @@ class iMessageForensicsPipeline:
 ## Version Control and Change History
 
 ### Version 1.0
+
 - **December 2024**: Initial creation of the methodology document, outlining the digital forensics and threat intelligence approach for the DMV scam analysis.
 
 ### Version 1.1
+
 - **June 2025**: Added detailed sections on data sanitization processes and automated pattern recognition techniques.
 - Enhanced the data collection and intelligence product development methodologies based on initial investigation feedback.
 
@@ -233,7 +255,7 @@ The techniques documented here can be adapted and applied to various communicati
 
 ---
 
-**Methodology Version**: 1.1  
-**Last Updated**: June 2025  
-**Classification**: Unclassified  
+**Methodology Version**: 1.1
+**Last Updated**: June 2025
+**Classification**: Unclassified
 **Distribution**: Open Source

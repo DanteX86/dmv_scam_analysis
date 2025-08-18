@@ -1,9 +1,11 @@
 # Communication Analysis
 
 ## Overview
+
 This document provides an analysis of message content patterns observed in the DMV impersonation scam campaign.
 
 ### Key Findings:
+
 - Repeated use of urgency and government impersonation keywords.
 - Common patterns indicating fraudulent activities.
 
@@ -12,12 +14,14 @@ This document provides an analysis of message content patterns observed in the D
 ### Communication Vector Analysis
 
 #### Initial Contact Method
+
 - **Vector**: SMS messaging to mobile devices
 - **Timing**: Strategic targeting during business hours
 - **Content**: Professional mimicry of government communications
 - **Urgency**: False time pressure to compel immediate action
 
 #### Message Structure Analysis
+
 ```
 [SANITIZED EXAMPLE STRUCTURE]
 From: +639127911810
@@ -33,6 +37,7 @@ Content Pattern:
 ## Message Content Patterns
 
 ### Government Impersonation
+
 - **Keywords:**
   - "DMV" OR "Department of Motor Vehicles"
   - "license.*suspend" OR "violation.*notice"
@@ -40,6 +45,7 @@ Content Pattern:
   - "penalty.*avoid" OR "immediate.*action"
 
 ### Financial Threat Indicators
+
 - **Motifs:**
   - "payment.*required" OR "pay.*immediately"
   - "urgent.*payment" OR "overdue.*payment"
@@ -48,6 +54,7 @@ Content Pattern:
 ## Targeting Techniques
 
 ### Behavioral Characteristics
+
 - **International Origin:**
   - Messages sent from non-US numbers, often Philippines-based.
 - **Urgency and Time Sensitivity:**

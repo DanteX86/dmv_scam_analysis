@@ -1,12 +1,15 @@
 # Installation and Setup Guide
+
 ## DMV Scam Analysis Environment
 
 ### Overview
+
 This guide provides step-by-step instructions for setting up the analysis environment used in the DMV scam investigation. It covers all required dependencies, tools, and configuration steps needed to reproduce the analysis environment.
 
 ## Prerequisites
 
 ### System Requirements
+
 - **Operating System**: macOS 12.0+ (ARM64/Intel)
 - **RAM**: 8GB minimum, 16GB recommended
 - **Storage**: 10GB free space
@@ -14,6 +17,7 @@ This guide provides step-by-step instructions for setting up the analysis enviro
 - **Git**: 2.30.0+
 
 ### Development Tools
+
 - Command-line tools (Terminal)
 - Text editor or IDE (VS Code recommended)
 - Web browser for interactive visualizations
@@ -22,6 +26,7 @@ This guide provides step-by-step instructions for setting up the analysis enviro
 ## Installation Steps
 
 ### 1. Python Environment Setup
+
 ```bash
 # Install Homebrew if not already installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -34,6 +39,7 @@ python3 --version
 ```
 
 ### 2. Project Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/your-org/dmv-scam-analysis.git
@@ -45,6 +51,7 @@ source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 # Install required Python packages
 pip install -r requirements.txt
@@ -54,6 +61,7 @@ python3 -c "import pandas; import matplotlib; import plotly; import seaborn; imp
 ```
 
 ### 4. Database Configuration
+
 ```bash
 # Set up SQLite database permissions
 chmod 644 data/chat.db
@@ -63,6 +71,7 @@ python3 scripts/test_db_connection.py
 ```
 
 ### 5. Visualization Dependencies
+
 ```bash
 # Install additional visualization dependencies
 pip install notebook  # For Jupyter notebooks
@@ -73,7 +82,9 @@ pip install -U plotly  # Ensure latest Plotly version
 ## Configuration
 
 ### 1. Environment Variables
+
 Create a `.env` file in the project root:
+
 ```ini
 # Database Configuration
 DB_PATH=/path/to/chat.db
@@ -91,6 +102,7 @@ INTERACTIVE_PORT=8050
 ```
 
 ### 2. Directory Structure Setup
+
 ```bash
 # Create necessary directories
 mkdir -p data/raw
@@ -103,6 +115,7 @@ mkdir -p logs
 ### 3. Tool Configuration
 
 #### SQLite Configuration
+
 ```bash
 # Configure SQLite settings
 cat << EOF > .sqliterc
@@ -113,7 +126,9 @@ EOF
 ```
 
 #### Matplotlib Configuration
+
 Create `matplotlibrc` in the project root:
+
 ```ini
 # Figure settings
 figure.figsize: 12, 8
@@ -133,18 +148,21 @@ savefig.bbox: tight
 ## Verification Steps
 
 ### 1. Environment Check
+
 ```bash
 # Run environment verification script
 python3 scripts/verify_environment.py
 ```
 
 ### 2. Data Access Test
+
 ```bash
 # Test data access and processing
 python3 scripts/test_data_access.py
 ```
 
 ### 3. Visualization Test
+
 ```bash
 # Generate test visualization
 python3 scripts/test_visualization.py
@@ -153,14 +171,18 @@ python3 scripts/test_visualization.py
 ## Common Issues and Solutions
 
 ### 1. Database Access
+
 **Issue**: Permission denied when accessing chat.db
+
 ```bash
 # Solution
 chmod 644 data/chat.db
 ```
 
 ### 2. Python Dependencies
+
 **Issue**: Package conflicts
+
 ```bash
 # Solution
 pip install --upgrade pip
@@ -168,7 +190,9 @@ pip install -r requirements.txt --no-cache-dir
 ```
 
 ### 3. Visualization Errors
+
 **Issue**: Plotly displays not rendering
+
 ```bash
 # Solution
 pip install -U plotly
@@ -178,23 +202,27 @@ pip install --upgrade nbformat
 ## Development Environment Setup
 
 ### 1. VS Code Configuration
+
 Install recommended extensions:
+
 - Python
 - Jupyter
 - SQLite
 - Git Lens
 
 settings.json configuration:
+
 ```json
 {
-    "python.defaultInterpreterPath": "./venv/bin/python",
-    "python.linting.enabled": true,
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true
+  "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true
 }
 ```
 
 ### 2. Git Configuration
+
 ```bash
 # Configure Git
 git config --global user.name "Your Name"
@@ -208,6 +236,7 @@ chmod +x .git/hooks/pre-commit
 ## Running the Analysis
 
 ### 1. Data Processing
+
 ```bash
 # Process raw data
 python3 scripts/process_raw_data.py
@@ -217,6 +246,7 @@ python3 scripts/generate_analysis_data.py
 ```
 
 ### 2. Generate Visualizations
+
 ```bash
 # Create all visualizations
 python3 scripts/generate_visualizations.py
@@ -226,6 +256,7 @@ python3 scripts/generate_visualizations.py --type timeline
 ```
 
 ### 3. Generate Reports
+
 ```bash
 # Generate all reports
 python3 scripts/generate_reports.py
@@ -237,6 +268,7 @@ python3 scripts/generate_reports.py --type executive
 ## Maintenance and Updates
 
 ### 1. Environment Updates
+
 ```bash
 # Update all packages
 pip install -U -r requirements.txt
@@ -246,6 +278,7 @@ pip freeze > requirements.txt
 ```
 
 ### 2. Data Updates
+
 ```bash
 # Update analysis datasets
 python3 scripts/update_datasets.py
@@ -257,19 +290,22 @@ python3 scripts/regenerate_visualizations.py
 ## Support and Documentation
 
 ### Additional Resources
+
 - Project Wiki: [Internal Wiki Link]
 - API Documentation: [API Docs Link]
 - Team Contact: [Team Email]
 
 ### Troubleshooting
+
 For additional help:
+
 1. Check the logs in `logs/`
 2. Review error messages in terminal
 3. Contact the development team
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: June 2025  
-**Author**: [Your Name]  
+**Document Version**: 1.0
+**Last Updated**: June 2025
+**Author**: [Your Name]
 **Status**: Active

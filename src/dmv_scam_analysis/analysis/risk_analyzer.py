@@ -3,8 +3,8 @@ Risk Analysis Module
 Assesses behavioral risk patterns and generates recommendations.
 """
 
-from datetime import datetime
 import json
+from datetime import datetime
 from typing import Any, Dict, List
 
 
@@ -20,7 +20,12 @@ class RiskAnalyzer:
         """
         self.output_dir = output_dir
 
-    def analyze_risk(self, contact_identifier: str, temporal_analysis: Dict[str, Any], automation_analysis: Dict[str, Any]) -> Dict[str, Any]:
+    def analyze_risk(
+        self,
+        contact_identifier: str,
+        temporal_analysis: Dict[str, Any],
+        automation_analysis: Dict[str, Any],
+    ) -> Dict[str, Any]:
         """
         Generate comprehensive risk analysis report
 
@@ -40,16 +45,16 @@ class RiskAnalyzer:
             },
             "temporal_patterns": temporal_analysis,
             "automation_indicators": automation_analysis,
-            "risk_assessment": self._assess_behavioral_risk(temporal_analysis, automation_analysis),
+            "risk_assessment": self._assess_behavioral_risk(
+                temporal_analysis, automation_analysis
+            ),
             "recommendations": self._generate_recommendations(
                 temporal_analysis, automation_analysis
             ),
         }
 
         # Save detailed report
-        output_file = (
-            f"{self.output_dir}/behavioral_analysis_{contact_identifier.replace('+', '')}.json"
-        )
+        output_file = f"{self.output_dir}/behavioral_analysis_{contact_identifier.replace('+', '')}.json"
         with open(output_file, "w") as f:
             json.dump(report, f, indent=2, default=str)
 
@@ -60,7 +65,9 @@ class RiskAnalyzer:
 
         return report
 
-    def _assess_behavioral_risk(self, temporal_analysis: Dict[str, Any], automation_analysis: Dict[str, Any]) -> Dict[str, Any]:
+    def _assess_behavioral_risk(
+        self, temporal_analysis: Dict[str, Any], automation_analysis: Dict[str, Any]
+    ) -> Dict[str, Any]:
         """Assess risk based on behavioral patterns"""
         risk_factors = []
         risk_score = 0
@@ -73,7 +80,9 @@ class RiskAnalyzer:
                 risk_score += 20
 
         if temporal_analysis and temporal_analysis.get("anomalous_timing"):
-            anomaly_score = temporal_analysis["anomalous_timing"].get("anomaly_score", 0)
+            anomaly_score = temporal_analysis["anomalous_timing"].get(
+                "anomaly_score", 0
+            )
             if anomaly_score > 0.3:
                 risk_factors.append("Anomalous timing patterns detected")
                 risk_score += 15
@@ -91,7 +100,9 @@ class RiskAnalyzer:
         # Off-hours activity
         if temporal_analysis and temporal_analysis.get("hourly_distribution"):
             night_hours = [0, 1, 2, 3, 4, 5]
-            hourly_dist = temporal_analysis["hourly_distribution"].get("distribution", {})
+            hourly_dist = temporal_analysis["hourly_distribution"].get(
+                "distribution", {}
+            )
             night_activity = sum(hourly_dist.get(str(hour), 0) for hour in night_hours)
             total_activity = sum(hourly_dist.values()) if hourly_dist.values() else 1
 
@@ -114,11 +125,43 @@ class RiskAnalyzer:
         else:
             return "LOW"
 
-    def _generate_recommendations(self, temporal_analysis: Dict[str, Any], automation_analysis: Dict[str, Any]) -> List[Dict[str, str]]:
+    def _generate_recommendations(
+        self, temporal_analysis: Dict[str, Any], automation_analysis: Dict[str, Any]
+    ) -> List[Dict[str, str]]:
         """Generate recommendations based on analysis results"""
         recommendations = []
 
-        if automation_analysis and automation_analysis.get("overall_automation_score", 0) > 0.6:
+        # Content-based triggers (if provided by upstream pipeline)
+        content = (
+            automation_analysis.get("content_indicators", {})
+            if automation_analysis
+            else {}
+        )
+        keyword_hits = int(content.get("keyword_hits", 0))
+        url_count = int(content.get("url_count", 0))
+        payment_signals = int(content.get("payment_signals", 0))
+        urgency_signals = int(content.get("urgency_signals", 0))
+        if payment_signals >= 2 or urgency_signals >= 2:
+            recommendations.append(
+                {
+                    "priority": "HIGH",
+                    "recommendation": "Escalate due to coercive/payment language",
+                    "rationale": f"Detected {payment_signals} payment and {urgency_signals} urgency cues in content",
+                }
+            )
+        elif keyword_hits >= 3 or url_count >= 2:
+            recommendations.append(
+                {
+                    "priority": "MEDIUM",
+                    "recommendation": "Flag messages for manual review (scam indicators present)",
+                    "rationale": f"Found {keyword_hits} scam keywords and {url_count} URLs/domains",
+                }
+            )
+
+        if (
+            automation_analysis
+            and automation_analysis.get("overall_automation_score", 0) > 0.4
+        ):
             recommendations.append(
                 {
                     "priority": "HIGH",
@@ -129,7 +172,7 @@ class RiskAnalyzer:
 
         if (
             temporal_analysis
-            and temporal_analysis.get("burst_detection", {}).get("total_bursts", 0) > 2
+            and temporal_analysis.get("burst_detection", {}).get("total_bursts", 0) > 1
         ):
             recommendations.append(
                 {
@@ -143,7 +186,7 @@ class RiskAnalyzer:
             "rapid_responses"
         ):
             rapid_count = len(temporal_analysis["response_patterns"]["rapid_responses"])
-            if rapid_count > 3:
+            if rapid_count > 1:
                 recommendations.append(
                     {
                         "priority": "MEDIUM",
@@ -154,17 +197,19 @@ class RiskAnalyzer:
 
         return recommendations
 
-    def _generate_summary(self, report: Dict[str, Any], contact_identifier: str) -> None:
+    def _generate_summary(
+        self, report: Dict[str, Any], contact_identifier: str
+    ) -> None:
         """Generate human-readable summary report"""
-        summary_file = (
-            f"{self.output_dir}/behavioral_summary_{contact_identifier.replace('+', '')}.txt"
-        )
+        summary_file = f"{self.output_dir}/behavioral_summary_{contact_identifier.replace('+', '')}.txt"
 
         with open(summary_file, "w") as f:
             f.write("Behavioral Analysis Summary\n")
             f.write("=" * 40 + "\n\n")
             f.write(f"Contact: {contact_identifier}\n")
-            f.write(f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n\n")
+            f.write(
+                f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n\n"
+            )
 
             # Risk assessment
             risk_assessment = report.get("risk_assessment", {})

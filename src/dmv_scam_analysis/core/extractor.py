@@ -10,14 +10,15 @@ Author: Cybersecurity Researcher
 Purpose: Educational and threat detection demonstration
 """
 
-import sqlite3
-import pandas as pd
-import re
-from datetime import datetime
-import json
 import argparse
+import json
 import os
+import re
+import sqlite3
+from datetime import datetime
 from typing import Any, Dict, List, Optional
+
+import pandas as pd
 
 
 class iMessageAnalyzer:
@@ -109,7 +110,13 @@ class iMessageAnalyzer:
                         else:
                             msg["id"] = f"msg_{i:03d}"
                         # Timestamp detection
-                        ts_cols = ["timestamp", "date", "datetime", "time", "readable_date"]
+                        ts_cols = [
+                            "timestamp",
+                            "date",
+                            "datetime",
+                            "time",
+                            "readable_date",
+                        ]
                         ts_val = None
                         for c in ts_cols:
                             if c in df.columns:
@@ -144,7 +151,11 @@ class iMessageAnalyzer:
                     if not isinstance(msg, dict):
                         # If message is a simple string, wrap it
                         msg = {"text": str(msg)}
-                    if "text" not in msg or msg["text"] is None or str(msg["text"]).strip() == "":
+                    if (
+                        "text" not in msg
+                        or msg["text"] is None
+                        or str(msg["text"]).strip() == ""
+                    ):
                         # Skip empty text entries
                         continue
                     msg.setdefault("id", f"msg_{i:03d}")
@@ -168,11 +179,34 @@ class iMessageAnalyzer:
     def extract_all(self) -> List[Dict[str, Any]]:
         """
         Extract all messages for demonstration.
+        Prefers a messages.json file in the configured output_dir if present.
+        If new_messages.json exists alongside, append its contents.
+
         Returns:
             list: A list of extracted message dictionaries
         """
-        # This is a placeholder demonstrating extraction
-        # Real implementation would call read_messages for files
+        # Prefer test/fixture data in the output directory
+        base_path = os.path.join(self.output_dir, "messages.json")
+        new_path = os.path.join(self.output_dir, "new_messages.json")
+        if os.path.exists(base_path):
+            msgs = self.read_messages(base_path)
+            if os.path.exists(new_path):
+                try:
+                    new_msgs = self.read_messages(new_path)
+                    # Append and ensure unique ids if any collisions
+                    existing_ids = {m.get("id") for m in msgs if isinstance(m, dict)}
+                    for m in new_msgs:
+                        if isinstance(m, dict):
+                            mid = m.get("id")
+                            if mid and mid in existing_ids:
+                                # De-duplicate by skipping duplicates
+                                continue
+                            msgs.append(m)
+                except Exception:
+                    # If anything goes wrong reading new messages, proceed with base only
+                    pass
+            return msgs
+        # Fallback to default
         return self.read_messages()
 
     def _load_threat_patterns(self) -> Dict[str, List[str]]:
@@ -243,11 +277,16 @@ class iMessageAnalyzer:
         for table in tables:
             cursor.execute(f"PRAGMA table_info({table});")
             columns = cursor.fetchall()
-            schema[table] = {"columns": [col[1] for col in columns], "column_details": columns}
+            schema[table] = {
+                "columns": [col[1] for col in columns],
+                "column_details": columns,
+            }
 
         return schema
 
-    def extract_messages_by_contact(self, contact_identifier: str, limit: Optional[int] = None) -> Optional[pd.DataFrame]:
+    def extract_messages_by_contact(
+        self, contact_identifier: str, limit: Optional[int] = None
+    ) -> Optional[pd.DataFrame]:
         """
         Extract messages associated with a specific contact
 
@@ -263,7 +302,7 @@ class iMessageAnalyzer:
             return None
 
         query = """
-        SELECT 
+        SELECT
             m.ROWID,
             m.text,
             m.date,
@@ -286,7 +325,9 @@ class iMessageAnalyzer:
 
         try:
             df = pd.read_sql_query(
-                query, self.conn, params=[f"%{contact_identifier}%", f"%{contact_identifier}%"]
+                query,
+                self.conn,
+                params=[f"%{contact_identifier}%", f"%{contact_identifier}%"],
             )
             print(f"✓ Extracted {len(df)} messages for contact: {contact_identifier}")
             return df
@@ -294,7 +335,9 @@ class iMessageAnalyzer:
             print(f"✗ Message extraction failed: {e}")
             return None
 
-    def analyze_message_content(self, messages_df: pd.DataFrame) -> Optional[Dict[str, Any]]:
+    def analyze_message_content(
+        self, messages_df: pd.DataFrame
+    ) -> Optional[Dict[str, Any]]:
         """
         Perform automated threat analysis on message content
 
@@ -344,7 +387,9 @@ class iMessageAnalyzer:
                         "message_id": message["ROWID"],
                         "date": message["readable_date"],
                         "content_preview": (
-                            message_text[:100] + "..." if len(message_text) > 100 else message_text
+                            message_text[:100] + "..."
+                            if len(message_text) > 100
+                            else message_text
                         ),
                         "threat_categories": message_threats,
                         "is_from_me": message["is_from_me"],
@@ -364,7 +409,9 @@ class iMessageAnalyzer:
 
         return analysis_results
 
-    def generate_timeline_analysis(self, messages_df: pd.DataFrame) -> Optional[Dict[str, Any]]:
+    def generate_timeline_analysis(
+        self, messages_df: pd.DataFrame
+    ) -> Optional[Dict[str, Any]]:
         """
         Generate timeline analysis of message patterns
 
@@ -421,7 +468,12 @@ class iMessageAnalyzer:
             print(f"✗ CSV export failed: {e}")
             return False
 
-    def export_analysis_report(self, contact_identifier: str, analysis_results: Dict[str, Any], timeline_results: Dict[str, Any]) -> None:
+    def export_analysis_report(
+        self,
+        contact_identifier: str,
+        analysis_results: Dict[str, Any],
+        timeline_results: Dict[str, Any],
+    ) -> None:
         """
         Export comprehensive analysis report
 
@@ -444,7 +496,8 @@ class iMessageAnalyzer:
 
         # Export as JSON
         output_file = os.path.join(
-            self.output_dir, f"analysis_report_{contact_identifier.replace('+', '')}.json"
+            self.output_dir,
+            f"analysis_report_{contact_identifier.replace('+', '')}.json",
         )
         with open(output_file, "w") as f:
             json.dump(report, f, indent=2, default=str)
@@ -492,7 +545,9 @@ class iMessageAnalyzer:
 
         return recommendations
 
-    def _generate_summary_report(self, report: Dict[str, Any], contact_identifier: str) -> None:
+    def _generate_summary_report(
+        self, report: Dict[str, Any], contact_identifier: str
+    ) -> None:
         """
         Generate human-readable summary report
 
@@ -508,12 +563,18 @@ class iMessageAnalyzer:
             f.write("iMessage Threat Analysis Summary\n")
             f.write("=" * 40 + "\n\n")
             f.write(f"Contact Analyzed: {contact_identifier}\n")
-            f.write(f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n")
+            f.write(
+                f"Analysis Date: {report['analysis_metadata']['analysis_timestamp']}\n"
+            )
             f.write(f"Risk Score: {report['threat_analysis']['risk_score']}/100\n\n")
 
             f.write("Threat Indicators Found:\n")
-            for category, count in report["threat_analysis"]["threat_indicators"].items():
-                f.write(f"  - {category.replace('_', ' ').title()}: {count} occurrences\n")
+            for category, count in report["threat_analysis"][
+                "threat_indicators"
+            ].items():
+                f.write(
+                    f"  - {category.replace('_', ' ').title()}: {count} occurrences\n"
+                )
 
             suspicious_count = len(report["threat_analysis"]["suspicious_messages"])
             f.write(f"\nSuspicious Messages: {suspicious_count}\n\n")
@@ -539,9 +600,13 @@ def main() -> int:
     """
     Main execution function for command-line usage
     """
-    parser = argparse.ArgumentParser(description="iMessage Database Threat Analysis Tool")
+    parser = argparse.ArgumentParser(
+        description="iMessage Database Threat Analysis Tool"
+    )
     parser.add_argument("--db-path", required=True, help="Path to chat.db file")
-    parser.add_argument("--contact", required=True, help="Contact identifier to analyze")
+    parser.add_argument(
+        "--contact", required=True, help="Contact identifier to analyze"
+    )
     parser.add_argument(
         "--output-dir", default="./analysis_output", help="Output directory for reports"
     )
@@ -571,7 +636,9 @@ def main() -> int:
             return 1
 
         # Export reports
-        analyzer.export_analysis_report(args.contact, analysis_results, timeline_results)
+        analyzer.export_analysis_report(
+            args.contact, analysis_results, timeline_results
+        )
 
         print(f"\n✓ Analysis complete for contact: {args.contact}")
         print(f"✓ Risk Score: {analysis_results['risk_score']}/100")

@@ -22,9 +22,8 @@ from rich.table import Table
 
 from ..analysis.behavioral import BehavioralAnalyzer
 from ..analysis.sentiment import AdvancedNLPAnalyzer
-from ..core.extractor import iMessageAnalyzer
 from ..core.classifier import MLThreatClassifier as ThreatClassifier
-
+from ..core.extractor import iMessageAnalyzer
 
 console = Console()
 
@@ -101,7 +100,9 @@ def _show_main_menu() -> int:
     table.add_row("6", "Generate Dashboard (HTML)")
     table.add_row("0", "Quit")
     console.print(table)
-    choice = IntPrompt.ask("Choose an option", choices=["0", "1", "2", "3", "4", "5", "6"])
+    choice = IntPrompt.ask(
+        "Choose an option", choices=["0", "1", "2", "3", "4", "5", "6"]
+    )
     return int(choice)
 
 
@@ -124,7 +125,9 @@ def _print_behavioral_summary(report: Dict[str, Any]) -> None:
         lines.append("Key Risk Factors:")
         for f in factors:
             lines.append(f"• {f}")
-    console.print(Panel("\n".join(lines), title="Behavioral Summary", border_style="green"))
+    console.print(
+        Panel("\n".join(lines), title="Behavioral Summary", border_style="green")
+    )
 
 
 def _print_nlp_summary(nlp_report: Dict[str, Any]) -> None:
@@ -153,7 +156,10 @@ def _print_classifier_summary(pred_result: Any) -> None:
 
         if isinstance(pred_result, dict):
             # Try common shapes
-            if isinstance(pred_result.get("predictions"), list) and pred_result["predictions"]:
+            if (
+                isinstance(pred_result.get("predictions"), list)
+                and pred_result["predictions"]
+            ):
                 label = str(pred_result["predictions"][0])
             elif isinstance(pred_result.get("label"), str):
                 label = pred_result.get("label", "Unknown")
@@ -189,7 +195,9 @@ def _print_classifier_summary(pred_result: Any) -> None:
         console.print(Panel("\n".join(lines), title=title, border_style="blue"))
     except Exception as e:  # noqa: BLE001
         console.print(
-            Panel(f"Failed to render classification: {e}", title=title, border_style="red")
+            Panel(
+                f"Failed to render classification: {e}", title=title, border_style="red"
+            )
         )
 
 
@@ -230,7 +238,9 @@ def _generate_csv_filename(contact: str) -> str:
     return f"messages_{sanitized}_{timestamp}.csv"
 
 
-def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = None) -> int:
+def run_tui(
+    output_dir: Optional[str] = None, dashboard_path: Optional[str] = None
+) -> int:
     """Run interactive TUI.
 
     Args:
@@ -259,7 +269,8 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
             if choice == 1:
                 # Analyze file
                 file_in = Prompt.ask(
-                    "Enter path to messages file (.json or .csv)", default="messages.json"
+                    "Enter path to messages file (.json or .csv)",
+                    default="messages.json",
                 )
                 file_path = Path(file_in).expanduser()
                 try:
@@ -294,7 +305,11 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
                     console.print(f"[yellow]Classifier unavailable[/yellow]: {e}")
 
                 console.print(
-                    Panel(f"Reports saved to: {out_dir}", border_style="cyan", title="Saved")
+                    Panel(
+                        f"Reports saved to: {out_dir}",
+                        border_style="cyan",
+                        title="Saved",
+                    )
                 )
                 click.pause()
 
@@ -342,7 +357,8 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
                 if files:
                     if Confirm.ask("Open a file?", default=False):
                         idx = IntPrompt.ask(
-                            "Enter # to open", choices=[str(i) for i in range(1, len(files) + 1)]
+                            "Enter # to open",
+                            choices=[str(i) for i in range(1, len(files) + 1)],
                         )
                         target = files[int(idx) - 1]
                         try:
@@ -390,7 +406,9 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
                         continue
                     df = im.extract_messages_by_contact(contact, limit_val)
                     if df is None or df.empty:
-                        console.print(f"[yellow]No messages found for {contact}[/yellow]")
+                        console.print(
+                            f"[yellow]No messages found for {contact}[/yellow]"
+                        )
                         click.pause()
                         continue
 
@@ -449,11 +467,17 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
                 # Generate Dashboard (HTML)
                 from ..dashboard.threat_dashboard import ThreatDashboard
 
-                out_name = Prompt.ask("Output HTML file name", default="threat_dashboard.html")
-                data_dir = Prompt.ask("Dashboard data directory", default="dashboard_data")
+                out_name = Prompt.ask(
+                    "Output HTML file name", default="threat_dashboard.html"
+                )
+                data_dir = Prompt.ask(
+                    "Dashboard data directory", default="dashboard_data"
+                )
                 # Discover templates and present a menu
                 templates = _list_dashboard_templates()
-                table = Table(title="Available Templates", show_header=True, header_style="bold")
+                table = Table(
+                    title="Available Templates", show_header=True, header_style="bold"
+                )
                 table.add_column("#", justify="right", width=3)
                 table.add_column("Template")
                 for idx, t in enumerate(templates, start=1):
@@ -470,7 +494,9 @@ def run_tui(output_dir: Optional[str] = None, dashboard_path: Optional[str] = No
                     path = dash.generate_dashboard_html(
                         output_file=out_name, template=template_base
                     )
-                    console.print(Panel(f"Dashboard generated: {path}", border_style="green"))
+                    console.print(
+                        Panel(f"Dashboard generated: {path}", border_style="green")
+                    )
 
                     # Offer to open
                     if Confirm.ask("Open in browser?", default=False):

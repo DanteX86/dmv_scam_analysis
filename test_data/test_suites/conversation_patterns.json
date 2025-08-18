@@ -1,42 +1,42 @@
 [
-    {
-        "text": "Your license needs renewal at dmv-verify.tk",
-        "source": "sms",
-        "timestamp": "2025-06-27T14:00:00Z",
-        "is_from_me": 0,
-        "readable_date": "2025-06-27T14:00:00Z",
-        "is_scam": 1
-    },
-    {
-        "text": "Is this really from DMV?",
-        "source": "sms",
-        "timestamp": "2025-06-27T14:01:00Z",
-        "is_from_me": 1,
-        "readable_date": "2025-06-27T14:01:00Z",
-        "is_scam": 0
-    },
-    {
-        "text": "Yes, please pay immediately at dmv-verify.tk",
-        "source": "sms",
-        "timestamp": "2025-06-27T14:01:30Z",
-        "is_from_me": 0,
-        "readable_date": "2025-06-27T14:01:30Z",
-        "is_scam": 1
-    },
-    {
-        "text": "This seems suspicious",
-        "source": "sms",
-        "timestamp": "2025-06-27T14:02:00Z",
-        "is_from_me": 1,
-        "readable_date": "2025-06-27T14:02:00Z",
-        "is_scam": 0
-    },
-    {
-        "text": "Final warning: Pay now or face suspension",
-        "source": "sms",
-        "timestamp": "2025-06-27T14:02:30Z",
-        "is_from_me": 0,
-        "readable_date": "2025-06-27T14:02:30Z",
-        "is_scam": 1
-    }
+  {
+    "text": "Your license needs renewal at dmv-verify.tk",
+    "source": "sms",
+    "timestamp": "2025-06-27T14:00:00Z",
+    "is_from_me": 0,
+    "readable_date": "2025-06-27T14:00:00Z",
+    "is_scam": 1
+  },
+  {
+    "text": "Is this really from DMV?",
+    "source": "sms",
+    "timestamp": "2025-06-27T14:01:00Z",
+    "is_from_me": 1,
+    "readable_date": "2025-06-27T14:01:00Z",
+    "is_scam": 0
+  },
+  {
+    "text": "Yes, please pay immediately at dmv-verify.tk",
+    "source": "sms",
+    "timestamp": "2025-06-27T14:01:30Z",
+    "is_from_me": 0,
+    "readable_date": "2025-06-27T14:01:30Z",
+    "is_scam": 1
+  },
+  {
+    "text": "This seems suspicious",
+    "source": "sms",
+    "timestamp": "2025-06-27T14:02:00Z",
+    "is_from_me": 1,
+    "readable_date": "2025-06-27T14:02:00Z",
+    "is_scam": 0
+  },
+  {
+    "text": "Final warning: Pay now or face suspension",
+    "source": "sms",
+    "timestamp": "2025-06-27T14:02:30Z",
+    "is_from_me": 0,
+    "readable_date": "2025-06-27T14:02:30Z",
+    "is_scam": 1
+  }
 ]

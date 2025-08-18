@@ -4,14 +4,16 @@ Behavioral Analysis CLI
 Provides command-line interface for behavioral analysis of messages
 """
 
-import sys
-import os
-import json
 import argparse
-import pandas as pd
-from datetime import datetime
-from typing import List, Dict, Any
+import json
+import os
+import sys
 import warnings
+from datetime import datetime
+from typing import Any, Dict, List
+
+import pandas as pd
+
 from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
 
 warnings.filterwarnings("ignore")
@@ -61,18 +63,28 @@ def main() -> int:
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # analyze-file command
-    file_parser = subparsers.add_parser("analyze-file", help="Analyze messages from a file")
+    file_parser = subparsers.add_parser(
+        "analyze-file", help="Analyze messages from a file"
+    )
     file_parser.add_argument("file", help="Path to message file (.json or .csv)")
     file_parser.add_argument(
-        "--output-dir", default="./analysis_output", help="Output directory for analysis results"
+        "--output-dir",
+        default="./analysis_output",
+        help="Output directory for analysis results",
     )
 
     # analyze-message command
-    message_parser = subparsers.add_parser("analyze-message", help="Analyze a single message")
+    message_parser = subparsers.add_parser(
+        "analyze-message", help="Analyze a single message"
+    )
     message_parser.add_argument("message", help="Message text to analyze")
-    message_parser.add_argument("--source", default="cli", help="Message source (e.g., sms, email)")
     message_parser.add_argument(
-        "--output-dir", default="./analysis_output", help="Output directory for analysis results"
+        "--source", default="cli", help="Message source (e.g., sms, email)"
+    )
+    message_parser.add_argument(
+        "--output-dir",
+        default="./analysis_output",
+        help="Output directory for analysis results",
     )
 
     args = parser.parse_args()
@@ -96,7 +108,9 @@ def main() -> int:
                 print(f"- Message bursts detected: {bursts.get('total_bursts', 0)}")
 
                 anomalies = results["temporal_analysis"].get("anomalous_timing", {})
-                print(f"- Timing anomaly score: {anomalies.get('anomaly_score', 0):.2f}")
+                print(
+                    f"- Timing anomaly score: {anomalies.get('anomaly_score', 0):.2f}"
+                )
 
             print("\nAutomation Analysis:")
             if results["automation_analysis"]:
@@ -106,7 +120,9 @@ def main() -> int:
 
                 timing = results["automation_analysis"].get("timing_regularity", {})
                 if timing:
-                    print(f"- Timing regularity score: {timing.get('regularity_score', 0):.2f}")
+                    print(
+                        f"- Timing regularity score: {timing.get('regularity_score', 0):.2f}"
+                    )
                     print(f"- Analysis: {timing.get('analysis', 'N/A')}")
 
             if "report" in results and "risk_assessment" in results["report"]:

@@ -1,13 +1,13 @@
 """Model management system for production deployment."""
 
+import hashlib
+import json
+import logging
 import os
 import pickle
-import json
-import hashlib
 from datetime import datetime
-from typing import Dict, List, Tuple, Any, Optional
 from pathlib import Path
-import logging
+from typing import Any, Dict, List, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 
@@ -176,7 +176,9 @@ class ModelManager:
 
         # Prevent deletion of active model without force
         if not force and model_info.get("status") == "active":
-            raise ValueError(f"Cannot delete active model {model_id} without force=True")
+            raise ValueError(
+                f"Cannot delete active model {model_id} without force=True"
+            )
 
         # Delete model file
         model_path = Path(model_info["file_path"])
@@ -237,6 +239,7 @@ class ModelManager:
 
         logger.info(f"Cleaned up {len(deleted_models)} old models")
         return deleted_models
+
     def _load_metadata(self) -> Dict[str, Any]:
         """Load model metadata from file."""
         if self.metadata_file.exists():

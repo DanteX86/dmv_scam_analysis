@@ -3,8 +3,9 @@ Sentiment Analyzer for DMV Scam Analysis
 """
 
 from datetime import datetime
-from textblob import TextBlob
 from typing import Any, Dict, Optional
+
+from textblob import TextBlob
 
 
 class SentimentAnalyzer:

@@ -4,22 +4,25 @@ Campaign Analysis Orchestrator
 Framework for analyzing messaging-based scam campaigns.
 """
 
-import pandas as pd
 import argparse
-from pathlib import Path
 import json
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from ..analysis.temporal_analyzer import TemporalAnalyzer
+import pandas as pd
+
 from ..analysis.automation_analyzer import AutomationAnalyzer
 from ..analysis.risk_analyzer import RiskAnalyzer
+from ..analysis.temporal_analyzer import TemporalAnalyzer
 
 
 class CampaignAnalyzer:
     """Orchestrates analysis of messaging-based scam campaigns"""
 
-    def __init__(self, campaign_name: str, output_dir: str = "./analysis_output") -> None:
+    def __init__(
+        self, campaign_name: str, output_dir: str = "./analysis_output"
+    ) -> None:
         """
         Initialize campaign analyzer
 
@@ -48,7 +51,9 @@ class CampaignAnalyzer:
             "automation_indicators": [],
         }
 
-    def analyze_campaign(self, data_source: Any, campaign_type: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    def analyze_campaign(
+        self, data_source: Any, campaign_type: Optional[str] = None
+    ) -> Optional[Dict[str, Any]]:
         """
         Analyze an entire messaging campaign
 
@@ -82,39 +87,54 @@ class CampaignAnalyzer:
                 contact_analysis = self._analyze_contact(contact, contact_messages)
 
                 if contact_analysis:
-                    contacts_analyzed: List[Dict[str, Any]] = self.results["contacts_analyzed"]
+                    contacts_analyzed: List[Dict[str, Any]] = self.results[
+                        "contacts_analyzed"
+                    ]
                     contacts_analyzed.append(
                         {
                             "contact_id": contact,
-                            "risk_level": contact_analysis["risk_assessment"]["risk_level"],
-                            "automation_score": contact_analysis["automation_indicators"][
-                                "overall_automation_score"
+                            "risk_level": contact_analysis["risk_assessment"][
+                                "risk_level"
                             ],
+                            "automation_score": contact_analysis[
+                                "automation_indicators"
+                            ]["overall_automation_score"],
                         }
                     )
 
                     # Track high-risk contacts
                     if contact_analysis["risk_assessment"]["risk_level"] == "HIGH":
-                        high_risk_contacts: List[Dict[str, Any]] = self.results["high_risk_contacts"]
+                        high_risk_contacts: List[Dict[str, Any]] = self.results[
+                            "high_risk_contacts"
+                        ]
                         high_risk_contacts.append(
                             {
                                 "contact_id": contact,
                                 "risk_score": contact_analysis["risk_assessment"][
                                     "behavioral_risk_score"
                                 ],
-                                "risk_factors": contact_analysis["risk_assessment"]["risk_factors"],
+                                "risk_factors": contact_analysis["risk_assessment"][
+                                    "risk_factors"
+                                ],
                             }
                         )
 
                     # Track automation indicators
-                    if contact_analysis["automation_indicators"]["overall_automation_score"] > 0.7:
-                        automation_indicators: List[Dict[str, Any]] = self.results["automation_indicators"]
+                    if (
+                        contact_analysis["automation_indicators"][
+                            "overall_automation_score"
+                        ]
+                        > 0.7
+                    ):
+                        automation_indicators: List[Dict[str, Any]] = self.results[
+                            "automation_indicators"
+                        ]
                         automation_indicators.append(
                             {
                                 "contact_id": contact,
-                                "automation_score": contact_analysis["automation_indicators"][
-                                    "overall_automation_score"
-                                ],
+                                "automation_score": contact_analysis[
+                                    "automation_indicators"
+                                ]["overall_automation_score"],
                                 "indicators": contact_analysis["automation_indicators"],
                             }
                         )
@@ -155,7 +175,9 @@ class CampaignAnalyzer:
 
         return df
 
-    def _analyze_contact(self, contact_id: str, messages_df: pd.DataFrame) -> Optional[Dict[str, Any]]:
+    def _analyze_contact(
+        self, contact_id: str, messages_df: pd.DataFrame
+    ) -> Optional[Dict[str, Any]]:
         """Analyze messages from a single contact"""
         try:
             # Temporal analysis
@@ -164,7 +186,9 @@ class CampaignAnalyzer:
                 return None
 
             # Automation detection
-            automation_analysis = self.automation_analyzer.detect_automation(messages_df)
+            automation_analysis = self.automation_analyzer.detect_automation(
+                messages_df
+            )
             if automation_analysis is None:
                 return None
 
@@ -192,13 +216,25 @@ class CampaignAnalyzer:
             "automated_percentage": (automated_contacts / analyzed_contacts) * 100,
             "risk_distribution": {
                 "HIGH": len(
-                    [c for c in self.results["contacts_analyzed"] if c["risk_level"] == "HIGH"]
+                    [
+                        c
+                        for c in self.results["contacts_analyzed"]
+                        if c["risk_level"] == "HIGH"
+                    ]
                 ),
                 "MEDIUM": len(
-                    [c for c in self.results["contacts_analyzed"] if c["risk_level"] == "MEDIUM"]
+                    [
+                        c
+                        for c in self.results["contacts_analyzed"]
+                        if c["risk_level"] == "MEDIUM"
+                    ]
                 ),
                 "LOW": len(
-                    [c for c in self.results["contacts_analyzed"] if c["risk_level"] == "LOW"]
+                    [
+                        c
+                        for c in self.results["contacts_analyzed"]
+                        if c["risk_level"] == "LOW"
+                    ]
                 ),
             },
         }
@@ -220,12 +256,18 @@ class CampaignAnalyzer:
             # Campaign overview
             f.write("Campaign Overview\n")
             f.write("-" * 20 + "\n")
-            f.write(f"Analysis Date: {self.results['campaign_metadata']['analysis_timestamp']}\n")
+            f.write(
+                f"Analysis Date: {self.results['campaign_metadata']['analysis_timestamp']}\n"
+            )
             f.write(
                 f"Campaign Type: {self.results['campaign_metadata'].get('campaign_type', 'Unknown')}\n"
             )
-            f.write(f"Total Messages: {self.results['campaign_metadata']['total_messages']}\n")
-            f.write(f"Date Range: {self.results['campaign_metadata']['date_range']['start']} to ")
+            f.write(
+                f"Total Messages: {self.results['campaign_metadata']['total_messages']}\n"
+            )
+            f.write(
+                f"Date Range: {self.results['campaign_metadata']['date_range']['start']} to "
+            )
             f.write(f"{self.results['campaign_metadata']['date_range']['end']}\n\n")
 
             # Key statistics
@@ -325,10 +367,14 @@ Example usage:
         """,
     )
 
-    parser.add_argument("--input", required=True, help="Path to campaign data file (JSON or CSV)")
+    parser.add_argument(
+        "--input", required=True, help="Path to campaign data file (JSON or CSV)"
+    )
     parser.add_argument("--name", required=True, help="Campaign name/identifier")
     parser.add_argument("--type", help="Campaign type (e.g., sms, email)", default=None)
-    parser.add_argument("--input-format", choices=["csv", "json"], help="Specify input file format")
+    parser.add_argument(
+        "--input-format", choices=["csv", "json"], help="Specify input file format"
+    )
     parser.add_argument(
         "--output-format",
         choices=["json", "txt"],
@@ -336,7 +382,9 @@ Example usage:
         help="Specify output file format",
     )
     parser.add_argument(
-        "--output-dir", default="./analysis_output", help="Output directory for analysis results"
+        "--output-dir",
+        default="./analysis_output",
+        help="Output directory for analysis results",
     )
 
     args = parser.parse_args()
@@ -351,7 +399,9 @@ Example usage:
 
         analyzer = CampaignAnalyzer(campaign_name=args.name, output_dir=args.output_dir)
 
-        results = analyzer.analyze_campaign(data_source=input_df, campaign_type=args.type)
+        results = analyzer.analyze_campaign(
+            data_source=input_df, campaign_type=args.type
+        )
 
         if results:
             stats = results["campaign_stats"]

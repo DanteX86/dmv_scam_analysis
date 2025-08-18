@@ -31,10 +31,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "debug"
-      ]
+      "required": ["name", "debug"]
     },
     "analysis": {
       "type": "object",
@@ -65,8 +62,5 @@
       }
     }
   },
-  "required": [
-    "environment",
-    "analysis"
-  ]
+  "required": ["environment", "analysis"]
 }

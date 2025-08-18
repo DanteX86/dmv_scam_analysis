@@ -7,6 +7,7 @@ This document presents a chronological analysis of the DMV impersonation campaig
 ## Campaign Timeline
 
 ### Initial Campaign Detection
+
 - **2024-11-15**: First reported SMS messages in Pennsylvania
 - **2024-11-16**: Initial domain registration (pa.gov-jad.vip)
 - **2024-11-17**: First phishing page deployment
@@ -15,6 +16,7 @@ This document presents a chronological analysis of the DMV impersonation campaig
 ### Operational Phases
 
 #### Phase 1: Campaign Setup (2024-11-15 to 2024-11-20)
+
 ```
 2024-11-15 09:00 EST - First SMS messages detected
 2024-11-16 02:30 EST - Domain registration
@@ -26,6 +28,7 @@ This document presents a chronological analysis of the DMV impersonation campaig
 ```
 
 #### Phase 2: Active Campaign (2024-11-20 to 2024-12-10)
+
 ```
 2024-11-20 - 2024-11-25: Initial mass SMS distribution
 2024-11-26 - 2024-11-30: Peak victim engagement period
@@ -34,6 +37,7 @@ This document presents a chronological analysis of the DMV impersonation campaig
 ```
 
 #### Phase 3: Detection & Response (2024-12-10 to 2024-12-20)
+
 ```
 2024-12-10: Law enforcement notification
 2024-12-12: Initial blocking measures implemented
@@ -45,12 +49,14 @@ This document presents a chronological analysis of the DMV impersonation campaig
 ## Message Volume Analysis
 
 ### Daily Message Patterns
+
 - **Week 1**: 500-700 messages/day
 - **Week 2**: 800-1000 messages/day (peak)
 - **Week 3**: 600-800 messages/day
 - **Week 4**: 300-400 messages/day (decline)
 
 ### Time Distribution
+
 ```
 Hour (EST) | Message Volume | Success Rate
 00:00-04:00    Low             15%
@@ -64,11 +70,14 @@ Hour (EST) | Message Volume | Success Rate
 ## Infrastructure Evolution
 
 ### Domain Changes
+
 1. **Initial Setup** (2024-11-15 to 2024-11-20)
+
    - Primary: pa.gov-jad.vip
    - Backup: pa-dmv-gov.vip
 
 2. **First Rotation** (2024-11-21 to 2024-12-01)
+
    - New domains added
    - Load balancing implemented
    - Backup infrastructure activated
@@ -79,6 +88,7 @@ Hour (EST) | Message Volume | Success Rate
    - Infrastructure hardening attempts
 
 ### Communication Infrastructure
+
 ```
 Timeline    | Phone Numbers | SMS Gateways
 Week 1      | 2            | 1
@@ -90,11 +100,13 @@ Week 4      | 6            | 3
 ## Victim Interaction Patterns
 
 ### Response Times
+
 - **Initial Contact to Click**: 15-30 minutes (average)
 - **Click to Data Entry**: 5-10 minutes (average)
 - **Complete Interaction**: 20-45 minutes (total)
 
 ### Success Rates
+
 ```
 Stage               | Completion Rate
 SMS Delivery       | 95%
@@ -106,12 +118,15 @@ Payment Attempt    | 8%
 ## Detection & Response Timeline
 
 ### Investigation Milestones
+
 1. **Initial Detection** (2024-12-10)
+
    - First reports analyzed
    - Infrastructure identified
    - Attribution evidence gathered
 
 2. **Analysis Phase** (2024-12-11 to 2024-12-15)
+
    - Technical investigation
    - Pattern identification
    - Attribution confirmation
@@ -124,6 +139,7 @@ Payment Attempt    | 8%
 ## Pattern Analysis
 
 ### Message Evolution
+
 ```
 Version | Date Range        | Key Changes
 1.0     | 11/15 - 11/20    | Initial template
@@ -133,7 +149,9 @@ Version | Date Range        | Key Changes
 ```
 
 ### Technical Adaptations
+
 1. **Infrastructure Changes**
+
    - Domain rotation frequency increased
    - New hosting providers added
    - SMS gateway diversification
@@ -146,6 +164,7 @@ Version | Date Range        | Key Changes
 ## Impact Assessment
 
 ### Temporal Analysis
+
 ```
 Period          | Victims | Financial Impact
 Week 1          | 50-75   | $5,000-7,500
@@ -155,6 +174,7 @@ Week 4          | 25-50   | $2,500-5,000
 ```
 
 ### Geographic Distribution
+
 - **Initial**: Philadelphia metro area
 - **Peak**: Statewide Pennsylvania
 - **Final**: Multi-state expansion attempt
@@ -162,7 +182,9 @@ Week 4          | 25-50   | $2,500-5,000
 ## Investigative Methodology
 
 ### Timeline Reconstruction
+
 1. **Data Sources**
+
    - SMS message logs
    - Domain registration records
    - Victim reports
@@ -177,7 +199,9 @@ Week 4          | 25-50   | $2,500-5,000
 ## Lessons Learned
 
 ### Detection Improvements
+
 1. **Early Warning Indicators**
+
    - Domain registration patterns
    - SMS gateway activities
    - Phone number clustering
@@ -190,16 +214,19 @@ Week 4          | 25-50   | $2,500-5,000
 ## Appendices
 
 ### A. Detailed Message Logs
+
 [Reference to sanitized message database]
 
 ### B. Infrastructure Changes
+
 [Detailed technical timeline]
 
 ### C. Response Actions
+
 [Chronological response documentation]
 
 ---
 
-**Classification**: TLP:AMBER  
-**Last Updated**: [Current Date]  
+**Classification**: TLP:AMBER
+**Last Updated**: [Current Date]
 **Analysis Status**: Complete

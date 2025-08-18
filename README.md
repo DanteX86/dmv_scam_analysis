@@ -5,6 +5,7 @@ A comprehensive framework for analyzing messaging-based scam campaigns, with adv
 ## 🎯 Overview
 
 This framework provides tools and methodologies for analyzing messaging-based scam campaigns, with capabilities for:
+
 - Temporal pattern analysis
 - Automation detection
 - Behavioral risk assessment
@@ -21,16 +22,19 @@ This framework provides tools and methodologies for analyzing messaging-based sc
 ## 🛠️ Analysis Methodology
 
 ### 1. Digital Forensics
+
 - **Source**: iMessage database extraction and analysis
 - **Tools**: Custom SQLite analysis scripts, sentiment analysis
 - **Scope**: Communication pattern analysis and threat identification
 
 ### 2. Technical Investigation
+
 - **Domain Analysis**: Infrastructure investigation of fraudulent sites
 - **Telecom Intelligence**: International phone number attribution
 - **OSINT**: Open source intelligence gathering
 
 ### 3. Threat Actor Profiling
+
 - **Operational Security Assessment**: OPSEC failure identification
 - **Geographic Attribution**: Philippines-based operations
 - **Capability Assessment**: Professional-grade criminal network
@@ -38,12 +42,14 @@ This framework provides tools and methodologies for analyzing messaging-based sc
 ## 🎯 Key Findings
 
 ### Technical Indicators
+
 - **Phone Number**: +639127911810 (Globe Telecom, Philippines)
 - **Fraudulent Domain**: pa.gov-jad.vip (now offline)
 - **Target Vector**: SMS-to-web redirection attack
 - **Payment Processing**: Integrated fraudulent financial systems
 
 ### Operational Characteristics
+
 - ✅ Professional social engineering techniques
 - ✅ Geographic and demographic targeting
 - ✅ Multi-stage attack methodology
@@ -90,16 +96,19 @@ dmv_scam_analysis/
 ## 🔬 Technical Skills Demonstrated
 
 ### Digital Forensics
+
 - **Database Analysis**: SQLite database extraction and parsing
 - **Communication Forensics**: Message content and metadata analysis
 - **Timeline Reconstruction**: Event sequence mapping
 
 ### Threat Intelligence
+
 - **OSINT Collection**: Open source intelligence gathering
 - **Infrastructure Analysis**: Domain and network investigation
 - **Attribution Assessment**: Geographic and organizational attribution
 
 ### Data Visualization & Analytics
+
 - **Interactive Dashboards**: Plotly-based dynamic threat assessment dashboards
 - **Statistical Visualization**: Risk scoring, trend analysis, and pattern recognition charts
 - **Network Mapping**: Threat infrastructure relationship visualization
@@ -107,11 +116,13 @@ dmv_scam_analysis/
 - **Timeline Analysis**: Multi-dimensional temporal threat progression mapping
 
 ### Automation & Scripting
+
 - **Python Development**: Custom analysis tools and automation
 - **Data Processing**: Large-scale message parsing and analysis
 - **Pattern Recognition**: Automated threat detection algorithms
 
 ### Reporting & Communication
+
 - **Technical Writing**: Detailed analysis documentation
 - **Executive Briefings**: High-level summary preparation
 - **Multi-Audience Reporting**: LE, technical, and public formats
@@ -123,55 +134,67 @@ This section contains tools and scripts for analyzing DMV-related scams and frau
 ## Installed Tools
 
 ### Phone Number Analysis
+
 - **PhoneInfoGA** - Phone number investigation tool
   - Usage: `phoneinfoga scan -n "+27618264263"`
 
 ### Email Analysis
+
 - **Holehe** - Email account finder across platforms
   - Usage: `holehe suspicious@example.com`
 
 ### Username Investigation
+
 - **Sherlock** - Username lookup across social networks
   - Usage: `sherlock username123`
 
 ### Domain/URL Analysis
+
 - **Whois** - Domain registration lookup
   - Usage: `/opt/homebrew/opt/whois/bin/whois domain.com`
 - **Nmap** - Network scanning tool
   - Usage: `nmap -F target.com`
 
 ### File/Evidence Analysis
+
 - **ExifTool** - Metadata extraction from files
   - Usage: `exiftool suspicious_document.pdf`
 
 ### Utility Tools
+
 - **Retry** - Retry failed commands
   - Usage: `retry -t 3 curl https://unreliable-site.com`
 
 ## Custom Scripts
 
 ### Quick Lookup Script
+
 - **quick_lookup.sh** - Analyze phone, email, or username
 
 ### URL/Domain Analysis Script
+
 - **url_analysis.sh** - Analyze domain for scam indicators
 
 ### Evidence Analysis Script
+
 - **evidence_analysis.sh** - Analyze file metadata and type
 
 ## 🎯 Impact \u0026 Outcomes
 
 ### Law Enforcement Value
+
 - Actionable intelligence for criminal investigation
 - International cooperation coordination points
 - Victim identification and protection guidance
 
 ### Community Protection
+
 - Public awareness campaign materials
 - Scam identification training resources
 - Prevention strategy documentation
 
 ### Cybersecurity Community
+
 - Threat intelligence sharing (IOCs)
 - Methodology documentation for similar investigations
 - OSINT techniques and tools demonstration
@@ -179,6 +202,7 @@ This section contains tools and scripts for analyzing DMV-related scams and frau
 ## 🛡️ Privacy & Ethics
 
 All analysis was conducted using:
+
 - **Sanitized Data**: Personal information removed/anonymized
 - **Responsible Disclosure**: Appropriate authority notification
 - **Legal Compliance**: Analysis within authorized scope
@@ -187,19 +211,23 @@ All analysis was conducted using:
 ## 📊 Data Visualizations
 
 ### Interactive Dashboards
+
 🌐 **[View Complete Visualization Suite](./visualizations/visualization_index.html)**
 
 #### 1. Risk Assessment Dashboard
+
 - **Multi-panel interactive dashboard** with risk scoring, geographic distribution, and threat actor capabilities
 - **Real-time filtering** and hover tooltips for detailed analysis
 - **Executive-ready** presentation with professional styling
 
 #### 2. Threat Intelligence Network
+
 - **Interactive network diagram** showing infrastructure relationships
 - **Color-coded entities** (threat actors, infrastructure, targets)
 - **Dynamic positioning** based on relationship proximity
 
 #### 3. Executive Summary Dashboard
+
 - **KPI gauges and indicators** for campaign impact and mitigation status
 - **Progress tracking** with milestone markers and trend analysis
 - **At-a-glance status** assessment for leadership briefings
@@ -207,39 +235,47 @@ All analysis was conducted using:
 ### Static Analysis Charts
 
 #### 4. Threat Timeline Analysis
+
 ![Threat Timeline](./visualizations/threat_timeline.png)
+
 - **Message activity frequency** over campaign duration
 - **IOC discovery timeline** with annotated investigation milestones
 - **Campaign phase identification** and threat escalation patterns
 
 #### 5. Detection Analytics
+
 ![Detection Analytics](./visualizations/detection_analytics.png)
+
 - **Detection method effectiveness** with accuracy metrics
 - **Pattern confidence scoring** and algorithm reliability
 - **Automation efficiency** comparison (manual vs. automated)
 - **Risk score evolution** throughout investigation
 
 ### Visualization Technologies
+
 - **Interactive**: Plotly with HTML5/JavaScript
 - **Static**: Matplotlib/Seaborn with high-resolution PNG output
 - **Professional**: Corporate styling, responsive design, accessibility compliance
 
 ### Portfolio Value
-✅ **Data Science Skills**: Statistical analysis, visualization design, interactive development  
-✅ **Executive Communication**: Technical-to-business translation, KPI dashboards  
-✅ **Professional Presentation**: Corporate-ready deliverables, multi-audience targeting  
+
+✅ **Data Science Skills**: Statistical analysis, visualization design, interactive development
+✅ **Executive Communication**: Technical-to-business translation, KPI dashboards
+✅ **Professional Presentation**: Corporate-ready deliverables, multi-audience targeting
 
 ---
 
 ## 📚 Tools & Technologies
 
 ### Primary Tools
+
 - **Python 3.x**: Analysis scripting and automation
 - **SQLite**: Database analysis and extraction
 - **macOS Forensics**: Native message database access
 - **OSINT Frameworks**: Domain and infrastructure investigation
 
 ### Analysis Libraries
+
 - **Pandas**: Data manipulation and analysis
 - **Matplotlib/Seaborn**: Statistical visualization and charting
 - **Plotly**: Interactive dashboard development
@@ -249,6 +285,7 @@ All analysis was conducted using:
 - **Datetime**: Timeline analysis and correlation
 
 ### Visualization Stack
+
 - **Frontend**: HTML5, CSS3, JavaScript (via Plotly)
 - **Backend**: Python visualization libraries
 - **Output**: High-res PNG (300 DPI), Interactive HTML
@@ -276,6 +313,7 @@ This project demonstrates proficiency in:
 ## 🔗 Professional Applications
 
 This analysis demonstrates capabilities relevant to:
+
 - **SOC Analyst**: Threat detection and analysis
 - **Digital Forensics**: Communication forensics and investigation
 - **Threat Intelligence**: Analyst and researcher roles

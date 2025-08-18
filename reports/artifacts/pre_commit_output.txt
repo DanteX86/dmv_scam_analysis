@@ -1,0 +1,692 @@
+[INFO][m Initializing environment for https://github.com/psf/black.
+[INFO][m Initializing environment for https://github.com/pycqa/isort.
+[INFO][m Initializing environment for https://github.com/pycqa/flake8.
+[INFO][m Initializing environment for https://github.com/pycqa/flake8:flake8-docstrings,flake8-bugbear,flake8-comprehensions,flake8-simplify.
+[INFO][m Initializing environment for https://github.com/pre-commit/mirrors-mypy.
+[INFO][m Initializing environment for https://github.com/pre-commit/mirrors-mypy:types-requests,types-PyYAML,types-python-dateutil,numpy,pandas-stubs.
+[INFO][m Initializing environment for https://github.com/pycqa/bandit.
+[INFO][m Initializing environment for https://github.com/pycqa/bandit:bandit[toml].
+[INFO][m Initializing environment for https://github.com/pre-commit/mirrors-prettier.
+[INFO][m Initializing environment for https://github.com/pre-commit/mirrors-prettier:prettier@3.0.0-alpha.9-for-vscode.
+[INFO][m Installing environment for https://github.com/psf/black.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+[INFO][m Installing environment for https://github.com/pycqa/isort.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+[INFO][m Installing environment for https://github.com/pycqa/flake8.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+[INFO][m Installing environment for https://github.com/pre-commit/mirrors-mypy.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+[INFO][m Installing environment for https://github.com/pycqa/bandit.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+[INFO][m Installing environment for https://github.com/pre-commit/mirrors-prettier.
+[INFO][m Once installed this environment will be reused.
+[INFO][m This may take a few minutes...
+trim trailing whitespace.................................................[41mFailed[m
+[2m- hook id: trailing-whitespace[m
+[2m- exit code: 1[m
+[2m- files were modified by this hook[m
+
+Fixing demonstrate_task_example.py
+Fixing run_tests.py
+Fixing dmv_cli_enhanced.py
+Fixing sentinel_analyzer.py
+Fixing docs/guides/installation_setup.md
+Fixing tests/security/test_validation_security.py
+Fixing dashboard_data/demo_threat_dashboard.html
+Fixing docs/guides/framework_guide.md
+Fixing pytest.ini
+Fixing scripts/generate_synthetic_data.py
+Fixing docs/guides/lessons_learned.md
+Fixing docs/guides/CONTRIBUTING.md
+Fixing config/logging_config.yaml
+Fixing test_ensemble_performance.py
+Fixing CONTINUATION_SESSION_SUMMARY.md
+Fixing test_behavioral.py
+Fixing final_anomaly_test.py
+Fixing test_anomaly_direct.py
+Fixing scripts/config/io_config.py
+Fixing visualizations/visualization_index.html
+Fixing config/preprocessing_config.yaml
+Fixing visualizations/threat_network.html
+Fixing test_anomaly_detection.py
+Fixing launcher.py
+Fixing src/dmv_scam_analysis/dashboard/threat_dashboard.py.backup2
+Fixing test_production_integration.py
+Fixing scripts/data_preprocessing.py
+Fixing scripts/data_versioning.py
+Fixing scripts/ioc_validator_simple.py
+Fixing web_interface.html
+Fixing fix_newline_corruption.py
+Fixing .github/workflows/ci.yml
+Fixing docs/guides/data_flow_diagrams.md
+Fixing test_analysis.py
+Fixing docs/index.rst
+Fixing fix_syntax.py
+Fixing docs/api/modules.md
+Fixing test_anomaly_tuned.py
+Fixing visualizations/executive_dashboard.html
+Fixing src/dmv_scam_analysis/dashboard/threat_dashboard.py
+Fixing scripts/image_analyzer.py
+Fixing docs/api/functions.md
+Fixing .github/workflows/main.yml
+Fixing docs/guides/analysis_tools_configuration.md
+Fixing scripts/ioc_validator.py
+Fixing PROJECT_CONTINUATION_SUMMARY.md
+Fixing tests/conftest.py
+Fixing docs/guides/tools_used.md
+Fixing ml_test_report.md
+Fixing analysis_reports/law_enforcement_report.md
+Fixing analysis_reports/threat_actor_profile.md
+Fixing config/analysis_config.yaml
+Fixing scripts/data_validation.py
+Fixing analysis_reports/timeline_analysis.md
+Fixing README.md
+Fixing test_model_persistence.py
+Fixing config/settings.yaml
+Fixing analysis_reports/executive_summary.md
+Fixing test_classification_as_requested.py
+Fixing test_threat_classification.py
+Fixing scripts/threat_visualizer.py
+Fixing analysis_reports/unified_campaign_report.md
+Fixing test_ml_classifier.py
+Fixing coverage-security.ini
+Fixing docs/guides/troubleshooting_guide.md
+Fixing src/dmv_scam_analysis/visualization/threat_visualizer.py
+Fixing docs/guides/methodology.md
+Fixing analysis_reports/technical_report.md
+Fixing ENSEMBLE_TASK_COMPLETION.md
+Fixing docs/guides/data_sanitization.md
+Fixing CONTINUATION_SESSION_SUMMARY.md.tmp.html
+Fixing task_code_example.py
+Fixing src/dmv_scam_analysis/core/extractor.py
+Fixing PROJECT_SETUP_COMPLETION.md
+Fixing integration_test_ml_trainer.py
+Fixing PUBLICATION_SUMMARY.md
+Fixing demonstrate_task_completion.py
+Fixing debug_training.py
+Fixing docs/examples/usage.md
+Fixing PRODUCTION_DEPLOYMENT.md
+Fixing LICENSE
+Fixing generate_recommendations.py
+Fixing deployment/monitoring/grafana/provisioning/datasources/datasources.yml
+Fixing docs/guides/visualizations.md
+Fixing PUBLICATION_READINESS_REPORT.md
+Fixing docker-compose.yml
+Fixing visualizations/risk_dashboard.html
+Fixing scripts/IOC_VALIDATOR_USAGE.md
+Fixing RESTRUCTURE_COMPLETION_REPORT.md
+Fixing TASK_COMPLETION_SUMMARY.md
+Fixing public_awareness_guide.md
+Fixing step_10_integration_test.py
+Fixing docs/guides/tool_integration.md
+
+fix end of files.........................................................[41mFailed[m
+[2m- hook id: end-of-file-fixer[m
+[2m- exit code: 1[m
+[2m- files were modified by this hook[m
+
+Fixing WARP.md
+Fixing docs/module_dependency_graph.dot
+Fixing tests/security/test_validation_security.py
+Fixing dashboard_data/demo_threat_dashboard.html
+Fixing tests/security/test_config_manager_security.py
+Fixing tests/security/test_api_middleware_security.py
+Fixing tests/security/test_api_auth_rate_and_handlers_security.py
+Fixing tests/security/test_logger_security.py
+Fixing tests/security/test_rate_limiter_security.py
+Fixing src/dmv_scam_analysis/dashboard/templates/detailed.html.j2
+Fixing visualizations/threat_network.html
+Fixing tests/security/test_api_edgecases_security.py
+Fixing tests/security/test_api_app_security.py
+Fixing system_validation_results.json
+Fixing tests/security/test_rate_limiter_extra_security.py
+Fixing src/dmv_scam_analysis/dashboard/templates/executive.html.j2
+Fixing nonexistent_directory/schema.json
+Fixing visualizations/executive_dashboard.html
+Fixing tests/security/test_api_headers_security.py
+Fixing test_training_data.json
+Fixing tests/security/test_api_auth_errors_security.py
+Fixing tests/security/test_api_bruteforce_security.py
+Fixing docs/guides/analysis_tools_configuration.md
+Fixing scripts/ioc_validator.py
+Fixing dashboard_data/alerts.json
+Fixing docs/guides/tools_used.md
+Fixing ml_test_report.md
+Fixing tests/security/test_api_analyze_success_security.py
+Fixing tests/security/test_config_manager_extra_security.py
+Fixing test_data/balanced_messages.json
+Fixing test-results/junit.xml
+Fixing src/dmv_scam_analysis/dashboard/templates/threat_dashboard.html.j2
+Fixing coverage-security.ini
+Fixing tests/security/test_api_headers_and_handlers_security.py
+Fixing tests/security/test_api_permissions_security.py
+Fixing conftest.py
+Fixing docs/ARCHITECTURE.md
+Fixing .bandit
+Fixing dashboard_data/metrics.json
+Fixing system_validation_report.txt
+Fixing tests/security/test_api_app_branches_security.py
+Fixing ml_analysis_test_contact.json
+Fixing ensemble_performance_report.json
+Fixing visualizations/risk_dashboard.html
+Fixing batch_analysis_results.json
+Fixing docs/guides/tool_integration.md
+Fixing dashboard_data/threats.json
+
+check yaml...............................................................[42mPassed[m
+check json...............................................................[42mPassed[m
+check for added large files..............................................[42mPassed[m
+debug statements (python)................................................[41mFailed[m
+[2m- hook id: debug-statements[m
+[2m- exit code: 1[m
+
+src/dmv_scam_analysis/visualization/threat_visualizer.py - Could not parse ast
+
+	Traceback (most recent call last):
+	  File "/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/debug_statement_hook.py", line 56, in check_file
+	    ast_obj = ast.parse(f.read(), filename=filename)
+	  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ast.py", line 50, in parse
+	    return compile(source, filename, mode, flags,
+	                   _feature_version=feature_version, optimize=optimize)
+	SyntaxError: source code string cannot contain null bytes
+	
+
+dmv_cli_enhanced.py - Could not parse ast
+
+	Traceback (most recent call last):
+	  File "/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/debug_statement_hook.py", line 56, in check_file
+	    ast_obj = ast.parse(f.read(), filename=filename)
+	  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ast.py", line 50, in parse
+	    return compile(source, filename, mode, flags,
+	                   _feature_version=feature_version, optimize=optimize)
+	SyntaxError: source code string cannot contain null bytes
+
+check python ast.........................................................[41mFailed[m
+[2m- hook id: check-ast[m
+[2m- exit code: 1[m
+
+src/dmv_scam_analysis/visualization/threat_visualizer.py: failed parsing with CPython 3.13.6:
+
+    Traceback (most recent call last):
+      File "/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_ast.py", line 21, in main
+        ast.parse(f.read(), filename=filename)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ast.py", line 50, in parse
+        return compile(source, filename, mode, flags,
+                       _feature_version=feature_version, optimize=optimize)
+    SyntaxError: source code string cannot contain null bytes
+    
+dmv_cli_enhanced.py: failed parsing with CPython 3.13.6:
+
+    Traceback (most recent call last):
+      File "/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_ast.py", line 21, in main
+        ast.parse(f.read(), filename=filename)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ast.py", line 50, in parse
+        return compile(source, filename, mode, flags,
+                       _feature_version=feature_version, optimize=optimize)
+    SyntaxError: source code string cannot contain null bytes
+
+check BOM - deprecated: use fix-byte-order-marker........................[42mPassed[m
+check for case conflicts.................................................[42mPassed[m
+check docstring is first.................................................[41mFailed[m
+[2m- hook id: check-docstring-first[m
+[2m- exit code: 1[m
+
+File [35m"<string>"[0m, line [35m377[0m
+    def create_visualizations(self, messages: list | None = None, analysis_results: dict | None = None) -
+[1;35mSyntaxError[0m: [35msource code cannot contain null bytes[0m
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/bin/check-docstring-first"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_docstring_first.py"[0m, line [35m59[0m, in [35mmain[0m
+    retv |= [31mcheck_docstring_first[0m[1;31m(contents, filename=filename)[0m
+            [31m~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_docstring_first.py"[0m, line [35m26[0m, in [35mcheck_docstring_first[0m
+    for tok_type, _, (sline, scol), _, _ in [1;31mtok_gen[0m:
+                                            [1;31m^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py"[0m, line [35m492[0m, in [35mtokenize[0m
+    yield from _generate_tokens_from_c_tokenizer(rl_gen.__next__, encoding, extra_tokens=True)
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py"[0m, line [35m583[0m, in [35m_generate_tokens_from_c_tokenizer[0m
+    yield [31mTokenInfo._make[0m[1;31m(info)[0m
+          [31m~~~~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/collections/__init__.py"[0m, line [35m452[0m, in [35m_make[0m
+    result = tuple_new(cls, iterable)
+[1;35mSystemError[0m: [35m<built-in method __new__ of type object at 0x10563da30> returned a result with an exception set[0m
+  File [35m"<string>"[0m, line [35m568[0m
+    high_risk = sum(1 for r in session_results if float(r.get('threat_score', 0.0)) 
+[1;35mSyntaxError[0m: [35msource code cannot contain null bytes[0m
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/bin/check-docstring-first"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_docstring_first.py"[0m, line [35m59[0m, in [35mmain[0m
+    retv |= [31mcheck_docstring_first[0m[1;31m(contents, filename=filename)[0m
+            [31m~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo9fmm15_l/py_env-python3.13/lib/python3.13/site-packages/pre_commit_hooks/check_docstring_first.py"[0m, line [35m26[0m, in [35mcheck_docstring_first[0m
+    for tok_type, _, (sline, scol), _, _ in [1;31mtok_gen[0m:
+                                            [1;31m^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py"[0m, line [35m492[0m, in [35mtokenize[0m
+    yield from _generate_tokens_from_c_tokenizer(rl_gen.__next__, encoding, extra_tokens=True)
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py"[0m, line [35m583[0m, in [35m_generate_tokens_from_c_tokenizer[0m
+    yield [31mTokenInfo._make[0m[1;31m(info)[0m
+          [31m~~~~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/collections/__init__.py"[0m, line [35m452[0m, in [35m_make[0m
+    result = tuple_new(cls, iterable)
+[1;35mSystemError[0m: [35m<built-in method __new__ of type object at 0x105705a30> returned a result with an exception set[0m
+
+check that executables have shebangs.....................................[41mFailed[m
+[2m- hook id: check-executables-have-shebangs[m
+[2m- files were modified by this hook[m
+check for merge conflicts................................................[41mFailed[m
+[2m- hook id: check-merge-conflict[m
+[2m- files were modified by this hook[m
+check for broken symlinks............................(no files to check)[46;30mSkipped[m
+detect private key.......................................................[42mPassed[m
+mixed line ending........................................................[42mPassed[m
+black....................................................................[41mFailed[m
+[2m- hook id: black[m
+[2m- exit code: 123[m
+[2m- files were modified by this hook[m
+
+[1mreformatted debug_training.py[0m
+[1mreformatted conftest.py[0m
+[1mreformatted demonstrate_task_completion.py[0m
+[1mreformatted fix_newline_corruption.py[0m
+[1mreformatted demonstrate_task_example.py[0m
+[1mreformatted fix_syntax.py[0m
+[1mreformatted integration_test_ml_trainer.py[0m
+[31merror: cannot format dmv_cli_enhanced.py: Cannot parse: 558:0:                 if user_input.lower() == 'quit':[0m
+[1mreformatted run_tests.py[0m
+[1mreformatted scripts/data_preprocessing.py[0m
+[1mreformatted final_anomaly_test.py[0m
+[1mreformatted scripts/config/io_config.py[0m
+[1mreformatted scripts/data_validation.py[0m
+[1mreformatted scripts/image_analyzer.py[0m
+[1mreformatted scripts/data_versioning.py[0m
+[1mreformatted setup.py[0m
+[1mreformatted simple_ensemble_demo.py[0m
+[1mreformatted src/dmv_scam_analysis/__init__.py[0m
+[1mreformatted scripts/generate_synthetic_data.py[0m
+[1mreformatted scripts/ioc_validator.py[0m
+[1mreformatted scripts/ioc_validator_simple.py[0m
+[1mreformatted src/dmv_scam_analysis/analysis/risk_analyzer.py[0m
+[1mreformatted generate_recommendations.py[0m
+[1mreformatted launcher.py[0m
+[1mreformatted sentinel_analyzer.py[0m
+[1mreformatted scripts/threat_visualizer.py[0m
+[1mreformatted src/dmv_scam_analysis/utils/rate_limiter.py[0m
+[1mreformatted src/dmv_scam_analysis/api/app.py[0m
+[1mreformatted src/dmv_scam_analysis/visualization/__init__.py[0m
+[31merror: cannot format src/dmv_scam_analysis/visualization/threat_visualizer.py: Cannot parse: 377:104:     def create_visualizations(self, messages: list | None = None, analysis_results: dict | None = None) - 3e Dict[str, str]:[0m
+[1mreformatted test_analysis.py[0m
+[1mreformatted step_10_integration_test.py[0m
+[1mreformatted task_code_example.py[0m
+[1mreformatted src/dmv_scam_analysis/cli/main.py[0m
+[1mreformatted test_behavioral.py[0m
+[1mreformatted test_anomaly_direct.py[0m
+[1mreformatted src/dmv_scam_analysis/core/extractor.py[0m
+[1mreformatted src/dmv_scam_analysis/utils/test_helpers.py[0m
+[1mreformatted test_classification_as_requested.py[0m
+[1mreformatted test_ml_classifier.py[0m
+[1mreformatted src/dmv_scam_analysis/dashboard/threat_dashboard.py[0m
+[1mreformatted test_anomaly_detection.py[0m
+[1mreformatted test_anomaly_tuned.py[0m
+[1mreformatted tests/security/test_api_analyze_success_security.py[0m
+[1mreformatted tests/security/test_api_bruteforce_security.py[0m
+[1mreformatted tests/security/test_api_auth_errors_security.py[0m
+[1mreformatted tests/security/test_api_app_security.py[0m
+[1mreformatted tests/security/test_api_app_branches_security.py[0m
+[1mreformatted test_threat_classification.py[0m
+[1mreformatted tests/security/test_api_permissions_security.py[0m
+[1mreformatted src/dmv_scam_analysis/analysis/behavioral.py[0m
+[1mreformatted test_model_persistence.py[0m
+[1mreformatted tests/security/test_api_headers_and_handlers_security.py[0m
+[1mreformatted tests/security/test_validation_security.py[0m
+[1mreformatted test_ensemble_performance.py[0m
+[1mreformatted tests/security/test_api_edgecases_security.py[0m
+[1mreformatted test_production_integration.py[0m
+
+[1mOh no! 💥 💔 💥[0m
+[34m[1m55 files [0m[1mreformatted[0m, [34m45 files [0mleft unchanged, [31m2 files failed to reformat[0m.
+
+isort....................................................................[41mFailed[m
+[2m- hook id: isort[m
+[2m- files were modified by this hook[m
+
+Fixing /Users/romulusaugustus/dmv_scam_analysis/debug_training.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/demonstrate_task_completion.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/demonstrate_task_example.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/dmv_cli_enhanced.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/final_anomaly_test.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/generate_recommendations.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/integration_test_ml_trainer.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/launcher.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/run_tests.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/config/io_config.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/data_preprocessing.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/data_validation.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/data_versioning.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/generate_synthetic_data.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/image_analyzer.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/ioc_validator.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/ioc_validator_simple.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/scripts/threat_visualizer.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/sentinel_analyzer.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/setup.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/src/dmv_scam_analysis/cli/main.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/src/dmv_scam_analysis/visualization/__init__.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/step_10_integration_test.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/task_code_example.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_analysis.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_anomaly_detection.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_anomaly_direct.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_anomaly_tuned.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_behavioral.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_classification_as_requested.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_ensemble_performance.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_ml_classifier.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_model_persistence.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_production_integration.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/test_threat_classification.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_analyze_success_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_app_branches_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_app_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_auth_rate_and_handlers_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_bruteforce_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_edgecases_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_headers_and_handlers_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_middleware_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_permissions_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_api_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_config_manager_extra_security.py
+Fixing /Users/romulusaugustus/dmv_scam_analysis/tests/security/test_config_manager_security.py
+
+flake8...................................................................[41mFailed[m
+[2m- hook id: flake8[m
+[2m- exit code: 1[m
+
+[1;35mmultiprocessing.pool.RemoteTraceback[0m: [35m
+"""
+Traceback (most recent call last):
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py", line 524, in run_checks
+    self.run_ast_checks()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py", line 416, in run_ast_checks
+    ast = self.processor.build_ast()
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/processor.py", line 218, in build_ast
+    return ast.parse("".join(self.lines))
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+                   _feature_version=feature_version, optimize=optimize)
+SyntaxError: source code string cannot contain null bytes
+
+During handling of the above exception, another exception occurred:
+
+  File "<string>", line 568
+    high_risk = sum(1 for r in session_results if float(r.get('threat_score', 0.0)) 
+SyntaxError: source code cannot contain null bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py", line 81, in _mp_run
+    ).run_checks()
+      ~~~~~~~~~~^^
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py", line 529, in run_checks
+    self.report(code, row, column, f"{type(e).__name__}: {e.args[0]}")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py", line 322, in report
+    line = self.processor.noqa_line_for(line_number)
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/processor.py", line 281, in noqa_line_for
+    file_tokens = self.file_tokens
+                  ^^^^^^^^^^^^^^^^
+  File "/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/processor.py", line 125, in file_tokens
+    self._file_tokens = list(
+                        ~~~~^
+        tokenize.generate_tokens(lambda: next(line_iter))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py", line 583, in _generate_tokens_from_c_tokenizer
+    yield TokenInfo._make(info)
+          ~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/collections/__init__.py", line 452, in _make
+    result = tuple_new(cls, iterable)
+SystemError: <built-in method __new__ of type object at 0x100fd5a30> returned a result with an exception set
+"""[0m
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/bin/flake8"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/main/cli.py"[0m, line [35m23[0m, in [35mmain[0m
+    [31mapp.run[0m[1;31m(argv)[0m
+    [31m~~~~~~~[0m[1;31m^^^^^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/main/application.py"[0m, line [35m198[0m, in [35mrun[0m
+    [31mself._run[0m[1;31m(argv)[0m
+    [31m~~~~~~~~~[0m[1;31m^^^^^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/main/application.py"[0m, line [35m187[0m, in [35m_run[0m
+    [31mself.run_checks[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/main/application.py"[0m, line [35m103[0m, in [35mrun_checks[0m
+    [31mself.file_checker_manager.run[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py"[0m, line [35m234[0m, in [35mrun[0m
+    [31mself.run_parallel[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repory3473h6/py_env-python3.13/lib/python3.13/site-packages/flake8/checker.py"[0m, line [35m203[0m, in [35mrun_parallel[0m
+    self.results = [31mlist[0m[1;31m(pool.imap_unordered(_mp_run, self.filenames))[0m
+                   [31m~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/homebrew/Cellar/python@3.13/3.13.6/Frameworks/Python.framework/Versions/3.13/lib/python3.13/multiprocessing/pool.py"[0m, line [35m873[0m, in [35mnext[0m
+    raise value
+[1;35mSystemError[0m: [35m<built-in method __new__ of type object at 0x100fd5a30> returned a result with an exception set[0m
+
+mypy.....................................................................[41mFailed[m
+[2m- hook id: mypy[m
+[2m- exit code: 2[m
+
+dmv_cli_enhanced.py: [1m[31merror:(B[m source code string cannot contain null bytes 
+(B[m[33m[syntax](B[m
+[1m[31mFound 1 error in 1 file (errors prevented further checking)(B[m
+
+bandit...................................................................[41mFailed[m
+[2m- hook id: bandit[m
+[2m- exit code: 1[m
+
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+Traceback (most recent call last):
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/bin/bandit"[0m, line [35m7[0m, in [35m<module>[0m
+    sys.exit([31mmain[0m[1;31m()[0m)
+             [31m~~~~[0m[1;31m^^[0m
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/cli/main.py"[0m, line [35m455[0m, in [35mmain[0m
+    b_conf = b_config.BanditConfig(config_file=args.config_file)
+  File [35m"/Users/romulusaugustus/.cache/pre-commit/repo1l8fbywu/py_env-python3/lib/python3.13/site-packages/bandit/core/config.py"[0m, line [35m56[0m, in [35m__init__[0m
+    self._config = [31mtomllib.load(f)["tool"][0m[1;31m["bandit"][0m
+                   [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'bandit'[0m
+
+prettier.................................................................[41mFailed[m
+[2m- hook id: prettier[m
+[2m- files were modified by this hook[m
+
+docs/api/functions.md[2K[1Gdocs/api/functions.md
+ensemble_performance_report.json[2K[1Gml_test_report.md[2K[1Gml_test_report.md
+config/analysis_config_template.yaml[2K[1Gconfig/analysis_config_template.yaml
+public_awareness_guide.md[2K[1Gpublic_awareness_guide.md
+nonexistent_directory/settings.yaml[2K[1Gnonexistent_directory/settings.yaml
+docs/guides/data_sanitization.md[2K[1Gdocs/guides/data_sanitization.md
+WARP.md[2K[1GWARP.md
+nonexistent_directory/schema.json[2K[1Gnonexistent_directory/schema.json
+tests/test_data/sample_messages.json[2K[1Gtests/test_data/sample_messages.json
+ml_analysis_test_contact.json[2K[1Gml_analysis_test_contact.json
+test_data/test_suites/conversation_patterns.json[2K[1Gtest_data/test_suites/conversation_patterns.json
+PRODUCTION_DEPLOYMENT.md[2K[1GPRODUCTION_DEPLOYMENT.md
+config/data_validation_config.yaml[2K[1Ganalysis_reports/law_enforcement_report.md[2K[1Ganalysis_reports/law_enforcement_report.md
+dashboard_data/threats.json[2K[1Ganalysis_reports/findings/indicators_of_compromise.md[2K[1Ganalysis_reports/findings/indicators_of_compromise.md
+test_training_data.json[2K[1Gdocs/guides/quick_start.md[2K[1Gdocs/guides/quick_start.md
+test_data/mixed_messages.json[2K[1Gtest_data/legitimate_messages.json[2K[1Gsystem_validation_results.json[2K[1Gsystem_validation_results.json
+data/README.md[2K[1Gdata/README.md
+config/analysis_config.yaml[2K[1Gdocs/guides/data_flow_diagrams.md[2K[1Gdocs/guides/data_flow_diagrams.md
+analysis_reports/findings/infrastructure_analysis.md[2K[1Ganalysis_reports/findings/infrastructure_analysis.md
+PROJECT_CONTINUATION_SUMMARY.md[2K[1GPROJECT_CONTINUATION_SUMMARY.md
+NEWLINE_FIX_SUMMARY.md[2K[1GNEWLINE_FIX_SUMMARY.md
+test_data/comprehensive_test.json[2K[1Gtest_data/comprehensive_test.json
+dashboard_data/metrics.json[2K[1GPROJECT_SETUP_COMPLETION.md[2K[1GPROJECT_SETUP_COMPLETION.md
+batch_analysis_results.json[2K[1Gscripts/README.md[2K[1Gscripts/README.md
+docs/guides/methodology.md[2K[1Gdocs/guides/methodology.md
+nonexistent_directory/environments/development.yaml[2K[1Gdocs/guides/installation_setup.md[2K[1Gdocs/guides/installation_setup.md
+test_data/test_messages.json[2K[1Gtest_data/test_messages.json
+dashboard_data/alerts.json[2K[1Ganalysis_reports/technical_report.md[2K[1Ganalysis_reports/technical_report.md
+config/schema.json[2K[1Gconfig/schema.json
+analysis_reports/executive_summary.md[2K[1Ganalysis_reports/executive_summary.md
+docs/api/modules.md[2K[1Gdocs/api/modules.md
+docs/guides/lessons_learned.md[2K[1Gdocs/guides/lessons_learned.md
+docker-compose.yml[2K[1Gdocker-compose.yml
+analysis_reports/timeline_analysis.md[2K[1Ganalysis_reports/timeline_analysis.md
+analysis_reports/unified_campaign_report.md[2K[1Ganalysis_reports/unified_campaign_report.md
+ENSEMBLE_TASK_COMPLETION.md[2K[1GENSEMBLE_TASK_COMPLETION.md
+TASK_COMPLETION_SUMMARY.md[2K[1GTASK_COMPLETION_SUMMARY.md
+docs/guides/visualizations.md[2K[1Gdocs/guides/visualizations.md
+.github/workflows/ci.yml[2K[1G.github/workflows/ci.yml
+scripts/IOC_VALIDATOR_USAGE.md[2K[1Gscripts/IOC_VALIDATOR_USAGE.md
+docs/index.md[2K[1Gdocs/index.md
+README.md[2K[1GREADME.md
+config/logging_config.yaml[2K[1Gconfig/logging_config.yaml
+RESTRUCTURE_COMPLETION_REPORT.md[2K[1GRESTRUCTURE_COMPLETION_REPORT.md
+docs/guides/tool_integration.md[2K[1Gdocs/guides/tool_integration.md
+.github/workflows/main.yml[2K[1G.github/workflows/main.yml
+config/settings.yaml[2K[1Gconfig/settings.yaml
+deployment/monitoring/grafana/provisioning/datasources/datasources.yml[2K[1Gtest_data/edge_cases.json[2K[1GCONTINUATION_SESSION_SUMMARY.md[2K[1GCONTINUATION_SESSION_SUMMARY.md
+analysis_reports/threat_actor_profile.md[2K[1Ganalysis_reports/threat_actor_profile.md
+.pre-commit-config.yaml[2K[1Gdeployment/monitoring/prometheus/prometheus.yml[2K[1Gdeployment/monitoring/prometheus/prometheus.yml
+config/environments/production.yaml[2K[1Gtest_data/scam_messages.json[2K[1Gdocs/examples/usage.md[2K[1Gdocs/examples/usage.md
+deployment/docker/docker-compose.yml[2K[1Gdeployment/docker/docker-compose.yml
+test_data/test_suites/timing_patterns.json[2K[1Gtest_data/test_suites/timing_patterns.json
+docs/ARCHITECTURE.md[2K[1Gdocs/ARCHITECTURE.md
+PROJECT_RESTRUCTURE_PLAN.md[2K[1GPROJECT_RESTRUCTURE_PLAN.md
+deployment/monitoring/grafana/provisioning/dashboards/dashboards.yml[2K[1Gdeployment/monitoring/grafana/provisioning/dashboards/dashboards.yml
+docs/guides/CONTRIBUTING.md[2K[1Gdocs/guides/CONTRIBUTING.md
+config/preprocessing_config.yaml[2K[1Gconfig/preprocessing_config.yaml
+test_data/README.md[2K[1Gtest_data/README.md
+test_data/test_suites/error_cases.json[2K[1Gtest_data/test_suites/error_cases.json
+docs/guides/framework_guide.md[2K[1Gdocs/guides/framework_guide.md
+PUBLICATION_READINESS_REPORT.md[2K[1GPUBLICATION_READINESS_REPORT.md
+PUBLICATION_SUMMARY.md[2K[1GPUBLICATION_SUMMARY.md
+docs/guides/analysis_tools_configuration.md[2K[1Gdocs/guides/analysis_tools_configuration.md
+analysis_reports/findings/communication_analysis.md[2K[1Ganalysis_reports/findings/communication_analysis.md
+nonexistent_directory/environments/production.yaml[2K[1Gconfig/environments/development.yaml[2K[1Gdocs/guides/troubleshooting_guide.md[2K[1Gdocs/guides/troubleshooting_guide.md
+test_data/sample_messages.json[2K[1Gdeployment/monitoring/grafana/provisioning/dashboards/analysis_metrics.json[2K[1Gdeployment/monitoring/grafana/provisioning/dashboards/analysis_metrics.json
+data/raw/test_messages.json[2K[1Gdata/raw/test_messages.json
+config/README.md[2K[1Gconfig/README.md
+test_data/balanced_messages.json[2K[1Gtest_data/balanced_messages.json
+docs/guides/tools_used.md[2K[1Gdocs/guides/tools_used.md
+sample_messages.json[2K[1G
+

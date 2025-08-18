@@ -7,22 +7,25 @@ Provides logging setup and custom logging functionality.
 import logging
 import logging.config
 import logging.handlers
-import yaml
-from pathlib import Path
-import time
 import sys
-from functools import wraps
-from typing import Optional, Callable, Any, Dict, Union
-from datetime import datetime
 import threading
+import time
+from datetime import datetime
+from functools import wraps
+from pathlib import Path
 from types import TracebackType
+from typing import Any, Callable, Dict, Optional, Union
+
+import yaml
 
 # Thread-local storage for context variables
 thread_local = threading.local()
 
 
 def setup_logging(
-    name: str, level: int = logging.INFO, config_path: str = "config/logging_config.yaml"
+    name: str,
+    level: int = logging.INFO,
+    config_path: str = "config/logging_config.yaml",
 ) -> logging.Logger:
     """
     Set up logging configuration from a YAML file or use basic configuration.
@@ -46,7 +49,9 @@ def setup_logging(
         return setup_logger(name, level=level)
 
 
-def load_logging_config(config_path: Union[str, Path] = "config/logging_config.yaml") -> None:
+def load_logging_config(
+    config_path: Union[str, Path] = "config/logging_config.yaml",
+) -> None:
     """
     Load logging configuration from YAML file.
 
@@ -83,7 +88,9 @@ def get_logger(name: str) -> logging.Logger:
     return logging.getLogger(name)
 
 
-def setup_logger(name: str, log_dir: str = "./logs", level: int = logging.INFO) -> logging.Logger:
+def setup_logger(
+    name: str, log_dir: str = "./logs", level: int = logging.INFO
+) -> logging.Logger:
     """
     Set up a logger with basic configuration.
 
@@ -115,7 +122,9 @@ def setup_logger(name: str, log_dir: str = "./logs", level: int = logging.INFO) 
         console_handler.setLevel(level)
 
         # Create formatter
-        formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+        formatter = logging.Formatter(
+            "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        )
         file_handler.setFormatter(formatter)
         console_handler.setFormatter(formatter)
 
@@ -196,7 +205,9 @@ class PerformanceLogger:
             clear_context()
 
 
-def log_execution_time(logger: Optional[logging.Logger] = None) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
+def log_execution_time(
+    logger: Optional[logging.Logger] = None,
+) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     """
     Decorator to log function execution time.
 
@@ -218,7 +229,8 @@ def log_execution_time(logger: Optional[logging.Logger] = None) -> Callable[[Cal
             finally:
                 duration_ms = (time.time() - start_time) * 1000
                 perf_logger.log_duration(
-                    operation=f"{func.__module__}.{func.__name__}", duration_ms=duration_ms
+                    operation=f"{func.__module__}.{func.__name__}",
+                    duration_ms=duration_ms,
                 )
 
         return wrapper
@@ -293,7 +305,10 @@ class LogManager:
         for handler in logging.root.handlers:
             if isinstance(
                 handler,
-                (logging.handlers.RotatingFileHandler, logging.handlers.TimedRotatingFileHandler),
+                (
+                    logging.handlers.RotatingFileHandler,
+                    logging.handlers.TimedRotatingFileHandler,
+                ),
             ):
                 handler.doRollover()
 
@@ -336,7 +351,9 @@ def main() -> None:
         app_logger.info("Application started")
 
         # Audit logging
-        audit_logger.log_event(action="user_login", user="test_user", details={"ip": "127.0.0.1"})
+        audit_logger.log_event(
+            action="user_login", user="test_user", details={"ip": "127.0.0.1"}
+        )
 
         # Performance logging
         set_context(operation="data_processing")

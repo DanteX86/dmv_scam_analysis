@@ -4,19 +4,21 @@ Log maintenance script for managing log files.
 Handles log rotation, archival, and cleanup.
 """
 
-import shutil
-from pathlib import Path
 import argparse
-from datetime import datetime, timedelta
-import logging
 import gzip
-from typing import List, Optional, Dict, Any
+import logging
+import shutil
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 
 class LogMaintenance:
     """Class for managing log maintenance tasks."""
 
-    def __init__(self, log_dir: str = "logs", archive_dir: str = "logs/archive") -> None:
+    def __init__(
+        self, log_dir: str = "logs", archive_dir: str = "logs/archive"
+    ) -> None:
         """
         Initialize log maintenance.
 
@@ -174,7 +176,10 @@ def main() -> None:
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Log maintenance utility")
     parser.add_argument(
-        "--archive-days", type=int, default=7, help="Archive logs older than this many days"
+        "--archive-days",
+        type=int,
+        default=7,
+        help="Archive logs older than this many days",
     )
     parser.add_argument(
         "--keep-days", type=int, default=30, help="Keep archives for this many days"
@@ -186,7 +191,8 @@ def main() -> None:
 
     # Configure logging
     logging.basicConfig(
-        level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
 
     # Initialize maintenance

@@ -4,17 +4,18 @@ Provides live visualization of threats, system performance, and analytics.
 """
 
 import json
+import logging
 import time
 from datetime import datetime, timedelta
-from typing import Dict, Any, Optional
 from pathlib import Path
-import logging
+from typing import Any, Dict, Optional
 
 # Dashboard dependencies
 try:
+    import pandas as pd
     import plotly.graph_objects as go
     from plotly.subplots import make_subplots
-    import pandas as pd
+
     PLOTLY_AVAILABLE = True
 except ImportError:
     PLOTLY_AVAILABLE = False
@@ -25,177 +26,189 @@ logger = logging.getLogger(__name__)
 
 class ThreatDashboard:
     """Real-time threat monitoring dashboard."""
-    
+
     def __init__(self, data_dir: str = "dashboard_data"):
         """
         Initialize threat dashboard.
-        
+
         Args:
             data_dir: Directory to store dashboard data
         """
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(exist_ok=True)
-        
+
         # Data storage files
         self.threats_file = self.data_dir / "threats.json"
         self.metrics_file = self.data_dir / "metrics.json"
         self.alerts_file = self.data_dir / "alerts.json"
-        
+
         # Initialize data stores
         self.threats_data = self._load_data(self.threats_file, [])
         self.metrics_data = self._load_data(self.metrics_file, {})
         self.alerts_data = self._load_data(self.alerts_file, [])
-        
+
         # Dashboard configuration
         self.alert_thresholds = {
-            'high_risk_percentage': 20.0,  # Alert if >20% of messages are high risk
-            'response_time': 2.0,          # Alert if response time >2s
-            'error_rate': 5.0,             # Alert if error rate >5%
-            'threat_spike': 50             # Alert if threats spike by 50%
+            "high_risk_percentage": 20.0,  # Alert if >20% of messages are high risk
+            "response_time": 2.0,  # Alert if response time >2s
+            "error_rate": 5.0,  # Alert if error rate >5%
+            "threat_spike": 50,  # Alert if threats spike by 50%
         }
-    
+
     def record_threat_analysis(self, analysis_result: Dict[str, Any]) -> None:
         """
         Record a new threat analysis result.
-        
+
         Args:
             analysis_result: Result from threat analysis
         """
         threat_record = {
-            'timestamp': datetime.now().isoformat(),
-            'threat_score': analysis_result.get('threat_score', 0.0),
-            'classification': analysis_result.get('classification', 'unknown'),
-            'confidence': analysis_result.get('confidence', 0.0),
-            'source': analysis_result.get('source', 'unknown'),
-            'analysis_id': analysis_result.get('analysis_id', 'unknown'),
-            'indicators': analysis_result.get('indicators', [])
+            "timestamp": datetime.now().isoformat(),
+            "threat_score": analysis_result.get("threat_score", 0.0),
+            "classification": analysis_result.get("classification", "unknown"),
+            "confidence": analysis_result.get("confidence", 0.0),
+            "source": analysis_result.get("source", "unknown"),
+            "analysis_id": analysis_result.get("analysis_id", "unknown"),
+            "indicators": analysis_result.get("indicators", []),
         }
-        
+
         self.threats_data.append(threat_record)
-        
+
         # Keep only last 1000 records for performance
         if len(self.threats_data) > 1000:
             self.threats_data = self.threats_data[-1000:]
-        
+
         self._save_data(self.threats_file, self.threats_data)
-        
+
         # Check for alerts
         self._check_threat_alerts(threat_record)
-        
-        logger.info(f"Recorded threat analysis: {analysis_result.get('classification', 'unknown')}")
-    
-    def record_system_metric(self, metric_name: str, value: float, metadata: Optional[Dict[str, Any]] = None) -> None:
+
+        logger.info(
+            f"Recorded threat analysis: {analysis_result.get('classification', 'unknown')}"
+        )
+
+    def record_system_metric(
+        self, metric_name: str, value: float, metadata: Optional[Dict[str, Any]] = None
+    ) -> None:
         """
         Record a system performance metric.
-        
+
         Args:
             metric_name: Name of the metric
             value: Metric value
             metadata: Additional metadata
         """
         timestamp = datetime.now().isoformat()
-        
+
         if metric_name not in self.metrics_data:
             self.metrics_data[metric_name] = []
-        
+
         metric_record = {
-            'timestamp': timestamp,
-            'value': value,
-            'metadata': metadata or {}
+            "timestamp": timestamp,
+            "value": value,
+            "metadata": metadata or {},
         }
-        
+
         self.metrics_data[metric_name].append(metric_record)
-        
+
         # Keep only last 500 records per metric
         if len(self.metrics_data[metric_name]) > 500:
             self.metrics_data[metric_name] = self.metrics_data[metric_name][-500:]
-        
+
         self._save_data(self.metrics_file, self.metrics_data)
-        
+
         # Check for performance alerts
         self._check_performance_alerts(metric_name, value)
-    
-    def generate_dashboard_html(self, output_file: str = "threat_dashboard.html", template: Optional[str] = None) -> str:
+
+    def generate_dashboard_html(
+        self, output_file: str = "threat_dashboard.html", template: Optional[str] = None
+    ) -> str:
         """
         Generate an HTML dashboard file.
-        
+
         Args:
             output_file: Output filename for the dashboard
-            
+
         Returns:
             Path to the generated HTML file
         """
         if not PLOTLY_AVAILABLE:
             return self._generate_basic_html_dashboard(output_file)
-        
+
         # Create dashboard with multiple visualizations
         fig = make_subplots(
-            rows=3, cols=2,
+            rows=3,
+            cols=2,
             subplot_titles=(
-                'Threat Classification Distribution',
-                'Threat Scores Over Time',
-                'Response Time Metrics',
-                'System Alert Status',
-                'Daily Threat Summary',
-                'Performance Overview'
+                "Threat Classification Distribution",
+                "Threat Scores Over Time",
+                "Response Time Metrics",
+                "System Alert Status",
+                "Daily Threat Summary",
+                "Performance Overview",
             ),
             specs=[
                 [{"type": "pie"}, {"type": "scatter"}],
                 [{"type": "scatter"}, {"type": "indicator"}],
-                [{"type": "bar"}, {"type": "table"}]
-            ]
+                [{"type": "bar"}, {"type": "table"}],
+            ],
         )
-        
+
         # 1. Threat Classification Pie Chart
         if self.threats_data:
-            classifications = [t['classification'] for t in self.threats_data[-100:]]  # Last 100
+            classifications = [
+                t["classification"] for t in self.threats_data[-100:]
+            ]  # Last 100
             classification_counts = pd.Series(classifications).value_counts()
-            
+
             fig.add_trace(
                 go.Pie(
                     labels=classification_counts.index.tolist(),
                     values=classification_counts.values.tolist(),
-                    name="Classifications"
+                    name="Classifications",
                 ),
-                row=1, col=1
+                row=1,
+                col=1,
             )
-        
+
         # 2. Threat Scores Timeline
         if self.threats_data:
             df_threats = pd.DataFrame(self.threats_data[-200:])  # Last 200
-            df_threats['timestamp'] = pd.to_datetime(df_threats['timestamp'])
-            
+            df_threats["timestamp"] = pd.to_datetime(df_threats["timestamp"])
+
             fig.add_trace(
                 go.Scatter(
-                    x=df_threats['timestamp'],
-                    y=df_threats['threat_score'],
-                    mode='lines+markers',
-                    name='Threat Score',
-                    line=dict(color='red', width=2)
+                    x=df_threats["timestamp"],
+                    y=df_threats["threat_score"],
+                    mode="lines+markers",
+                    name="Threat Score",
+                    line=dict(color="red", width=2),
                 ),
-                row=1, col=2
+                row=1,
+                col=2,
             )
-        
+
         # 3. Response Time Metrics
-        if 'response_time' in self.metrics_data:
-            df_response = pd.DataFrame(self.metrics_data['response_time'][-100:])
-            df_response['timestamp'] = pd.to_datetime(df_response['timestamp'])
-            
+        if "response_time" in self.metrics_data:
+            df_response = pd.DataFrame(self.metrics_data["response_time"][-100:])
+            df_response["timestamp"] = pd.to_datetime(df_response["timestamp"])
+
             fig.add_trace(
                 go.Scatter(
-                    x=df_response['timestamp'],
-                    y=df_response['value'],
-                    mode='lines',
-                    name='Response Time (s)',
-                    line=dict(color='blue', width=2)
+                    x=df_response["timestamp"],
+                    y=df_response["value"],
+                    mode="lines",
+                    name="Response Time (s)",
+                    line=dict(color="blue", width=2),
                 ),
-                row=2, col=1
+                row=2,
+                col=1,
             )
-        
+
         # 4. Alert Status Indicator
         # 4. Alert Status Indicator
         active_alerts = len(
-            [a for a in self.alerts_data if not a.get('resolved', False)][-10:]
+            [a for a in self.alerts_data if not a.get("resolved", False)][-10:]
         )
         alert_color = "red" if active_alerts > 0 else "green"
         # Note: alert_status string computed previously is not used; gauge conveys status visually
@@ -319,7 +332,8 @@ class ThreatDashboard:
         recent_threats = [
             t
             for t in self.threats_data
-            if datetime.now() - datetime.fromisoformat(t["timestamp"]) < timedelta(hours=24)
+            if datetime.now() - datetime.fromisoformat(t["timestamp"])
+            < timedelta(hours=24)
         ]
 
         high_risk_count = len(
@@ -332,7 +346,9 @@ class ThreatDashboard:
             [t for t in recent_threats if t["classification"] == "low_risk"]
         )
 
-        active_alerts = len([a for a in self.alerts_data if not a.get("resolved", False)])
+        active_alerts = len(
+            [a for a in self.alerts_data if not a.get("resolved", False)]
+        )
 
         # Generate HTML
         html_content = f"""
@@ -360,40 +376,40 @@ class ThreatDashboard:
 <body>
     <h1>🛡️ DMV Scam Analysis - Threat Dashboard</h1>
     <p style="text-align: center; color: #666;">Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-    
+
     <div class="dashboard">
         <div class="card">
             <div class="metric">{total_threats}</div>
             <div class="label">Total Threats Analyzed</div>
         </div>
-        
+
         <div class="card">
             <div class="metric">{len(recent_threats)}</div>
             <div class="label">Threats (Last 24 Hours)</div>
         </div>
-        
+
         <div class="card alert" style="{'display: block' if high_risk_count > 0 else 'display: none'}">
             <div class="metric" style="color: #f44336;">{high_risk_count}</div>
             <div class="label">High Risk Threats</div>
         </div>
-        
+
         <div class="card warning" style="{'display: block' if medium_risk_count > 0 else 'display: none'}">
             <div class="metric" style="color: #ff9800;">{medium_risk_count}</div>
             <div class="label">Medium Risk Threats</div>
         </div>
-        
+
         <div class="card success">
             <div class="metric" style="color: #4caf50;">{low_risk_count}</div>
             <div class="label">Low Risk Messages</div>
         </div>
-        
+
         <div class="card {'alert' if active_alerts > 0 else 'success'}">
             <span class="status-indicator {'status-red' if active_alerts > 0 else 'status-green'}"></span>
             <div class="metric" style="color: {'#f44336' if active_alerts > 0 else '#4caf50'};">{active_alerts}</div>
             <div class="label">Active Alerts</div>
         </div>
     </div>
-    
+
     <div style="margin-top: 20px;">
         <div class="card">
             <h3>Recent High-Risk Threats</h3>
@@ -406,7 +422,9 @@ class ThreatDashboard:
         ][-5:]
         if recent_high_risk:
             for threat in recent_high_risk:
-                timestamp = datetime.fromisoformat(threat["timestamp"]).strftime("%H:%M:%S")
+                timestamp = datetime.fromisoformat(threat["timestamp"]).strftime(
+                    "%H:%M:%S"
+                )
                 html_content += (
                     f"<li>[{timestamp}] Score: {threat['threat_score']:.2f} - "
                     f"Source: {threat['source']}</li>"
@@ -418,7 +436,7 @@ class ThreatDashboard:
             </ul>
         </div>
     </div>
-    
+
     <div style="margin-top: 20px;">
         <div class="card">
             <h3>System Status</h3>
@@ -468,7 +486,10 @@ class ThreatDashboard:
     def _check_performance_alerts(self, metric_name: str, value: float) -> None:
         """Check if performance metric triggers alerts."""
 
-        if metric_name == "response_time" and value > self.alert_thresholds["response_time"]:
+        if (
+            metric_name == "response_time"
+            and value > self.alert_thresholds["response_time"]
+        ):
             self._create_alert(
                 "slow_response",
                 f"Slow response time detected: {value:.2f}s",
@@ -476,7 +497,9 @@ class ThreatDashboard:
                 {"metric": metric_name, "value": value},
             )
 
-        elif metric_name == "error_rate" and value > self.alert_thresholds["error_rate"]:
+        elif (
+            metric_name == "error_rate" and value > self.alert_thresholds["error_rate"]
+        ):
             self._create_alert(
                 "high_error_rate",
                 f"High error rate detected: {value:.1f}%",
@@ -485,7 +508,11 @@ class ThreatDashboard:
             )
 
     def _create_alert(
-        self, alert_type: str, message: str, severity: str, metadata: Optional[Dict[str, Any]] = None
+        self,
+        alert_type: str,
+        message: str,
+        severity: str,
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> None:
         """Create a new alert."""
 
@@ -536,7 +563,8 @@ class ThreatDashboard:
             recent_threats = [
                 t
                 for t in self.threats_data
-                if datetime.now() - datetime.fromisoformat(t["timestamp"]) < timedelta(hours=1)
+                if datetime.now() - datetime.fromisoformat(t["timestamp"])
+                < timedelta(hours=1)
             ]
             threat_rate = len(recent_threats)
             summary["Threats/Hour"] = {
@@ -551,11 +579,17 @@ class ThreatDashboard:
             }
 
         # Active alerts
-        active_alerts = len([a for a in self.alerts_data if not a.get("resolved", False)])
+        active_alerts = len(
+            [a for a in self.alerts_data if not a.get("resolved", False)]
+        )
         summary["Active Alerts"] = {
             "value": str(active_alerts),
             "status": (
-                "✅ Clear" if active_alerts == 0 else "⚠️ Some" if active_alerts < 3 else "❌ Many"
+                "✅ Clear"
+                if active_alerts == 0
+                else "⚠️ Some"
+                if active_alerts < 3
+                else "❌ Many"
             ),
         }
 
@@ -572,7 +606,8 @@ class ThreatDashboard:
                     [
                         t
                         for t in self.threats_data
-                        if datetime.now() - datetime.fromisoformat(t["timestamp"]) < timedelta(hours=24)
+                        if datetime.now() - datetime.fromisoformat(t["timestamp"])
+                        < timedelta(hours=24)
                     ]
                 ),
                 "active_alerts": len(

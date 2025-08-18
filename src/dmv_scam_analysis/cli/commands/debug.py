@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """Debug CLI for DMV scam analysis system."""
-import click
 import json
-import sys
 import os
+import sys
 from datetime import datetime
+from typing import Any, Dict, List
+
+import click
 import pandas as pd
-from rich.console import Console
-from rich.table import Table
-from rich.panel import Panel
-
-from ml_threat_classifier import MLThreatClassifier
 from behavioral_analyzer import BehavioralAnalyzer
-
-from typing import List, Dict, Any
+from ml_threat_classifier import MLThreatClassifier
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
 
 console = Console()
 
@@ -32,7 +31,9 @@ class DebugContext:
     def log(self, message: str, level: str = "INFO") -> None:
         """Add message to debug log."""
         timestamp = datetime.now().isoformat()
-        self.debug_log.append({"timestamp": timestamp, "level": level, "message": message})
+        self.debug_log.append(
+            {"timestamp": timestamp, "level": level, "message": message}
+        )
 
 
 pass_debug = click.make_pass_decorator(DebugContext, ensure=True)
@@ -82,7 +83,9 @@ def analyze_message(ctx: DebugContext, message: str) -> None:
         table.add_column("Value", style="magenta")
 
         for name, value in features["features"].iloc[0].items():
-            table.add_row(name, f"{value:.4f}" if isinstance(value, float) else str(value))
+            table.add_row(
+                name, f"{value:.4f}" if isinstance(value, float) else str(value)
+            )
 
         console.print(table)
     else:
@@ -102,7 +105,9 @@ def analyze_message(ctx: DebugContext, message: str) -> None:
         if "predictions" in prediction:
             table.add_row("Classification", str(prediction["predictions"][0]))
         if "max_threat_probability" in prediction:
-            table.add_row("Threat Probability", f"{prediction['max_threat_probability']:.2f}")
+            table.add_row(
+                "Threat Probability", f"{prediction['max_threat_probability']:.2f}"
+            )
         if "threat_risk_level" in prediction:
             table.add_row("Risk Level", prediction["threat_risk_level"])
 
@@ -203,7 +208,10 @@ def inspect_model(ctx: DebugContext) -> None:
     console.print("\n[bold blue]Model Inspection[/bold blue]")
 
     # Get model information
-    if hasattr(ctx.classifier, "models") and "threat_classifier" in ctx.classifier.models:
+    if (
+        hasattr(ctx.classifier, "models")
+        and "threat_classifier" in ctx.classifier.models
+    ):
         model = ctx.classifier.models["threat_classifier"]
 
         # Model metadata
@@ -272,7 +280,9 @@ def debug_features(ctx: DebugContext, message: str) -> None:
     text_table.add_column("Value", style="magenta")
 
     for name, value in text_features.items():
-        text_table.add_row(name, f"{value:.4f}" if isinstance(value, float) else str(value))
+        text_table.add_row(
+            name, f"{value:.4f}" if isinstance(value, float) else str(value)
+        )
 
     console.print(text_table)
 
@@ -283,7 +293,9 @@ def debug_features(ctx: DebugContext, message: str) -> None:
     behavioral_table.add_column("Value", style="magenta")
 
     for name, value in behavioral_features.items():
-        behavioral_table.add_row(name, f"{value:.4f}" if isinstance(value, float) else str(value))
+        behavioral_table.add_row(
+            name, f"{value:.4f}" if isinstance(value, float) else str(value)
+        )
 
     console.print(behavioral_table)
 
@@ -294,7 +306,9 @@ def debug_features(ctx: DebugContext, message: str) -> None:
     statistical_table.add_column("Value", style="magenta")
 
     for name, value in statistical_features.items():
-        statistical_table.add_row(name, f"{value:.4f}" if isinstance(value, float) else str(value))
+        statistical_table.add_row(
+            name, f"{value:.4f}" if isinstance(value, float) else str(value)
+        )
 
     console.print(statistical_table)
 
@@ -340,7 +354,9 @@ def explain_prediction(ctx: DebugContext, message: str) -> None:
     if "predictions" in prediction:
         pred_table.add_row("Classification", str(prediction["predictions"][0]))
     if "max_threat_probability" in prediction:
-        pred_table.add_row("Threat Probability", f"{prediction['max_threat_probability']:.2f}")
+        pred_table.add_row(
+            "Threat Probability", f"{prediction['max_threat_probability']:.2f}"
+        )
     if "threat_risk_level" in prediction:
         pred_table.add_row("Risk Level", prediction["threat_risk_level"])
 
@@ -423,8 +439,8 @@ def system_info(ctx: DebugContext) -> None:
     dep_table.add_column("Package", style="cyan")
     dep_table.add_column("Version", style="magenta")
 
-    import pandas as pd
     import numpy as np
+    import pandas as pd
     import sklearn
 
     dep_table.add_row("pandas", pd.__version__)

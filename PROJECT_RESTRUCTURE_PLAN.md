@@ -3,6 +3,7 @@
 ## Current Structure Analysis
 
 **Current Issues:**
+
 - Mixed loose files and organized directories
 - Inconsistent naming conventions
 - Scripts scattered between root and scripts/
@@ -100,17 +101,20 @@ dmv_scam_analysis/
 ## 🔄 Migration Strategy
 
 ### Phase 1: Core Structure Setup
+
 1. Create new directory structure
 2. Move main source code to `src/dmv_scam_analysis/`
 3. Consolidate and organize modules
 
 ### Phase 2: Clean Up and Reorganize
+
 1. Remove duplicate files
 2. Standardize naming conventions
 3. Update import statements
 4. Consolidate documentation
 
 ### Phase 3: Update Configuration
+
 1. Update setup.py/pyproject.toml
 2. Fix import paths
 3. Update GitHub workflows
@@ -119,6 +123,7 @@ dmv_scam_analysis/
 ## 📋 Detailed Migration Plan
 
 ### Step 1: Create New Structure
+
 ```bash
 # Create new directory structure
 mkdir -p src/dmv_scam_analysis/{core,analysis,ml,api,cli,utils,visualization}
@@ -131,6 +136,7 @@ mkdir -p analysis_reports/{findings,archived}
 ```
 
 ### Step 2: Move Core Files
+
 ```bash
 # Move main analyzer components
 mv scripts/behavioral_analyzer.py src/dmv_scam_analysis/analysis/behavioral.py
@@ -141,6 +147,7 @@ mv scripts/campaign_analyzer.py src/dmv_scam_analysis/core/analyzer.py
 ```
 
 ### Step 3: Organize Analysis Modules
+
 ```bash
 # Move analysis modules
 mv scripts/analysis_modules/* src/dmv_scam_analysis/analysis/
@@ -148,6 +155,7 @@ mv scripts/analysis/* src/dmv_scam_analysis/analysis/
 ```
 
 ### Step 4: API and CLI
+
 ```bash
 # Move API components
 mv scripts/api/* src/dmv_scam_analysis/api/
@@ -157,6 +165,7 @@ mv scripts/debug_cli.py src/dmv_scam_analysis/cli/commands/debug.py
 ```
 
 ### Step 5: Utilities and Configuration
+
 ```bash
 # Move utilities
 mv scripts/utils/* src/dmv_scam_analysis/utils/
@@ -164,6 +173,7 @@ mv scripts/config/* src/dmv_scam_analysis/utils/
 ```
 
 ### Step 6: Documentation Consolidation
+
 ```bash
 # Organize documentation
 mv documentation/* docs/guides/
@@ -173,6 +183,7 @@ mv reports/* analysis_reports/
 ```
 
 ### Step 7: Deployment and Monitoring
+
 ```bash
 # Move deployment configs
 mv docker-compose.yml deployment/docker/
@@ -183,21 +194,25 @@ mv monitoring/* deployment/monitoring/
 ## 📝 Files to Update After Restructure
 
 ### 1. Package Configuration
+
 - `pyproject.toml` - Update package paths
 - `setup.py` - Update entry points and package discovery
 - `requirements.txt` - Review and clean up dependencies
 
 ### 2. Import Statements
+
 - Update all relative imports
 - Fix CLI entry points
 - Update test imports
 
 ### 3. GitHub Configuration
+
 - `.github/workflows/` - Update paths in CI/CD
 - Update issue templates
 - Update pull request templates
 
 ### 4. Documentation
+
 - Update README.md with new structure
 - Update installation instructions
 - Update API documentation links
@@ -205,18 +220,21 @@ mv monitoring/* deployment/monitoring/
 ## 🎯 Benefits of New Structure
 
 ### Professional Organization
+
 - ✅ Clear separation of concerns
 - ✅ Standard Python package structure
 - ✅ Easy navigation and maintenance
 - ✅ Better IDE support
 
 ### Development Efficiency
+
 - ✅ Faster imports and testing
 - ✅ Cleaner CI/CD pipelines
 - ✅ Better code organization
 - ✅ Easier collaboration
 
 ### Deployment Ready
+
 - ✅ Docker containerization
 - ✅ Kubernetes deployment
 - ✅ Monitoring integration
@@ -225,21 +243,25 @@ mv monitoring/* deployment/monitoring/
 ## 🚀 Implementation Timeline
 
 ### Week 1: Structure Setup
+
 - Create new directory structure
 - Move core files
 - Update basic imports
 
 ### Week 2: Code Organization
+
 - Consolidate analysis modules
 - Clean up duplicate files
 - Update tests
 
 ### Week 3: Documentation
+
 - Reorganize documentation
 - Update README and guides
 - Fix broken links
 
 ### Week 4: Final Testing
+
 - Comprehensive testing
 - CI/CD updates
 - Performance validation

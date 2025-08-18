@@ -7,6 +7,7 @@ This guide provides essential information for community members to recognize, pr
 ## Understanding the Threat
 
 ### Current Scam Landscape
+
 Recent analysis has revealed a sophisticated criminal organization conducting multi-phase scam campaigns:
 
 - **Phase 1**: DMV impersonation via SMS messages
@@ -14,6 +15,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 - **Phase 3**: Advanced social engineering with physical materials
 
 ### Threat Actor Profile
+
 - **Origin**: Philippines-based criminal organization
 - **Capabilities**: Professional-grade materials, advanced social engineering
 - **Target**: Pennsylvania residents (with expansion potential)
@@ -22,7 +24,9 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Warning Signs to Watch For
 
 ### Red Flags in Communications
+
 🚨 **Immediate Red Flags:**
+
 - Unsolicited messages claiming to be from the DMV
 - Urgent language requiring "immediate action"
 - Threats of license suspension or legal consequences
@@ -31,6 +35,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 - Phone numbers with international prefixes (like +63 for Philippines)
 
 ### Common Scam Tactics
+
 1. **Authority Impersonation**: Pretending to be government officials
 2. **Urgency Creation**: "Your license expires today" or "Immediate action required"
 3. **Threat of Consequences**: "Pay now or face legal action"
@@ -40,13 +45,16 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Verification Procedures
 
 ### How to Verify Legitimate Communications
+
 ✅ **Always verify through official channels:**
+
 1. Visit the official PA DMV website: dmv.pa.gov
 2. Call the official DMV customer service line
 3. Visit your local DMV office in person
 4. Check official government social media accounts
 
 ### Questions to Ask Yourself
+
 - Did I request this service or information?
 - Is this communication from an official .gov domain?
 - Are they asking for information the DMV would already have?
@@ -55,6 +63,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Protective Actions
 
 ### If You Receive a Suspicious Message
+
 1. **Do NOT click any links**
 2. **Do NOT provide personal information**
 3. **Do NOT make any payments**
@@ -62,6 +71,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 5. **Report to authorities immediately**
 
 ### Personal Protection Measures
+
 - **Enable two-factor authentication** on all accounts
 - **Monitor your credit reports** regularly
 - **Set up fraud alerts** with credit bureaus
@@ -71,7 +81,9 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Community Response Protocol
 
 ### Individual Actions
+
 1. **Report Suspicious Activity**
+
    - FBI Internet Crime Complaint Center (IC3): ic3.gov
    - Pennsylvania Attorney General's Office
    - Local law enforcement
@@ -84,7 +96,9 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
    - Any financial losses
 
 ### Community-Wide Actions
+
 1. **Share Information**
+
    - Alert family and friends
    - Post warnings on community boards
    - Share on social media platforms
@@ -99,15 +113,19 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Reporting Procedures
 
 ### Who to Contact
+
 1. **FBI Internet Crime Complaint Center (IC3)**
+
    - Website: ic3.gov
    - For all internet-related crimes
 
 2. **Pennsylvania Attorney General's Office**
+
    - Consumer Protection Bureau
    - Phone: 1-800-441-2555
 
 3. **Federal Trade Commission (FTC)**
+
    - Website: reportfraud.ftc.gov
    - Phone: 1-877-FTC-HELP
 
@@ -115,6 +133,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
    - For immediate threats or if money was lost
 
 ### What Information to Provide
+
 - Complete message content
 - Phone numbers and email addresses
 - Websites visited
@@ -125,7 +144,9 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Special Considerations
 
 ### Vulnerable Populations
+
 **Extra protection needed for:**
+
 - Elderly community members
 - Non-English speakers
 - Those with limited technology experience
@@ -133,6 +154,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 - Low-income individuals
 
 ### Common Misconceptions
+
 ❌ **Myth**: "The government never contacts people by text"
 ✅ **Truth**: Some legitimate government communications do occur via text, but they never ask for personal information or immediate payment
 
@@ -142,7 +164,9 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Emergency Response
 
 ### If You've Been Victimized
+
 1. **Immediate Actions**
+
    - Contact your bank and credit card companies
    - Place fraud alerts on your credit reports
    - Change passwords for all online accounts
@@ -155,6 +179,7 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
    - Follow up with law enforcement
 
 ### Financial Protection
+
 - **Credit Monitoring**: Set up alerts for new accounts
 - **Account Monitoring**: Check statements regularly
 - **Identity Protection**: Consider freezing credit reports
@@ -163,12 +188,14 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Prevention Strategies
 
 ### Technology-Based Protection
+
 1. **Spam Filtering**: Enable on phones and email
 2. **Caller ID Apps**: Use apps that identify suspicious calls
 3. **Security Software**: Keep antivirus and anti-malware updated
 4. **Browser Security**: Use browsers with phishing protection
 
 ### Education and Awareness
+
 1. **Regular Training**: Stay updated on new scam tactics
 2. **Information Sharing**: Participate in community awareness programs
 3. **Skeptical Mindset**: Question unexpected communications
@@ -177,12 +204,14 @@ Recent analysis has revealed a sophisticated criminal organization conducting mu
 ## Community Resources
 
 ### Local Support
+
 - **Pennsylvania DMV Customer Service**: 1-800-932-4600
 - **Pennsylvania Attorney General**: 1-800-441-2555
 - **Local Police Department**: [Your local number]
 - **Community Action Groups**: [Local contact information]
 
 ### National Resources
+
 - **FBI IC3**: ic3.gov
 - **FTC Consumer Sentinel**: consumer.ftc.gov
 - **AARP Fraud Watch**: aarp.org/fraudwatchnetwork
@@ -197,14 +226,15 @@ Remember: When in doubt, verify independently. The DMV will never demand immedia
 ---
 
 **For More Information:**
+
 - Visit the official PA DMV website: dmv.pa.gov
 - Report scams to FBI IC3: ic3.gov
 - Contact local law enforcement for immediate threats
 
-**Last Updated**: July 14, 2025  
-**Status**: Active - Community Distribution Approved  
+**Last Updated**: July 14, 2025
+**Status**: Active - Community Distribution Approved
 **Classification**: Public Distribution
 
 ---
 
-*This guide is based on actual threat intelligence from ongoing investigations. Share freely to protect your community.*
+_This guide is based on actual threat intelligence from ongoing investigations. Share freely to protect your community._

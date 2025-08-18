@@ -1,18 +1,19 @@
 """Command-line interface for DMV scam analysis tools."""
 
-import click
+import json
 import logging
 import os
 import sys
-import json
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from ..core.classifier import MLThreatClassifier as ThreatClassifier
+import click
+
 from ..analysis.behavioral import BehavioralAnalyzer
-from ..utils.config_manager import ConfigManager
+from ..core.classifier import MLThreatClassifier as ThreatClassifier
 from ..core.extractor import iMessageAnalyzer
+from ..utils.config_manager import ConfigManager
 
 # Configure logging
 logging.basicConfig(
@@ -30,7 +31,9 @@ class AnalysisCLI:
         self.classifier = ThreatClassifier()
         self.analyzer = BehavioralAnalyzer()
         # Initialize extractor with default database path (can be overridden)
-        default_db_path = self.config.get("extractor.db_path", "~/Library/Messages/chat.db")
+        default_db_path = self.config.get(
+            "extractor.db_path", "~/Library/Messages/chat.db"
+        )
         self.extractor = iMessageAnalyzer(default_db_path)
 
 
@@ -56,9 +59,13 @@ def cli(ctx: click.Context, debug: bool, config: Optional[str]) -> None:
 @cli.command()
 @click.argument("input_file", type=click.Path(exists=True))
 @click.option("--output", "-o", type=click.Path(), help="Output file path")
-@click.option("--format", "-f", type=click.Choice(["json", "csv", "txt"]), default="json")
+@click.option(
+    "--format", "-f", type=click.Choice(["json", "csv", "txt"]), default="json"
+)
 @click.pass_context
-def analyze(ctx: click.Context, input_file: str, output: Optional[str], format: str) -> None:
+def analyze(
+    ctx: click.Context, input_file: str, output: Optional[str], format: str
+) -> None:
     """Analyze messages from input file for potential scams."""
     try:
         # Read input file
@@ -85,7 +92,11 @@ def analyze(ctx: click.Context, input_file: str, output: Optional[str], format: 
                 "timestamp": message.get("timestamp", datetime.now().isoformat()),
                 "threat_score": float(threat_score),
                 "risk_level": (
-                    "high" if threat_score > 0.7 else "medium" if threat_score > 0.3 else "low"
+                    "high"
+                    if threat_score > 0.7
+                    else "medium"
+                    if threat_score > 0.3
+                    else "low"
                 ),
                 "indicators": behavior_analysis["indicators"],
                 "confidence": behavior_analysis["confidence"],
@@ -174,7 +185,9 @@ def quick_check(ctx: click.Context, message_text: str) -> None:
 @click.argument("end_date", type=click.DateTime())
 @click.option("--output", "-o", type=click.Path(), help="Output file path")
 @click.pass_context
-def generate_report(ctx: click.Context, start_date: datetime, end_date: datetime, output: Optional[str]) -> None:
+def generate_report(
+    ctx: click.Context, start_date: datetime, end_date: datetime, output: Optional[str]
+) -> None:
     """Generate analysis report for a date range."""
     try:
         # Get statistics
@@ -246,6 +259,215 @@ def model_info(ctx: click.Context, output: Optional[str]) -> None:
         sys.exit(1)
 
 
+@cli.command("suggestions")
+@click.argument("file", type=click.Path(exists=True, dir_okay=False, readable=True))
+@click.option(
+    "--export-json",
+    "export_json_path",
+    type=click.Path(dir_okay=False),
+    help="Path to write full report JSON",
+)
+@click.option(
+    "--export-csv",
+    "export_csv_path",
+    type=click.Path(dir_okay=False),
+    help="Path to write recommendations CSV",
+)
+@click.option(
+    "--export-yaml",
+    "export_yaml_path",
+    type=click.Path(dir_okay=False),
+    help="Path to write full report YAML",
+)
+@click.option(
+    "--keyword-threshold",
+    type=int,
+    default=3,
+    show_default=True,
+    help="Content keyword hit threshold for MEDIUM recommendation",
+)
+@click.option(
+    "--payment-urgency-threshold",
+    type=int,
+    default=2,
+    show_default=True,
+    help="Payment/Urgency cue threshold for HIGH recommendation",
+)
+@click.pass_context
+def suggestions(
+    ctx: click.Context,
+    file: str,
+    export_json_path: Optional[str],
+    export_csv_path: Optional[str],
+    export_yaml_path: Optional[str],
+    keyword_threshold: int,
+    payment_urgency_threshold: int,
+) -> None:
+    """Generate suggestions (recommendations) from a JSON dataset with export options."""
+    try:
+        # Lazy imports to avoid affecting other commands
+        import csv as _csv
+        import re
+
+        import pandas as pd
+
+        from dmv_scam_analysis.analysis.automation_analyzer import AutomationAnalyzer
+        from dmv_scam_analysis.analysis.risk_analyzer import RiskAnalyzer
+        from dmv_scam_analysis.analysis.temporal_analyzer import TemporalAnalyzer
+
+        # Optional YAML support
+        from typing import Any as _Any
+        _yaml: _Any = None
+        try:
+            import yaml as _yaml
+        except Exception:
+            _yaml = None
+
+        def _compute_content_indicators(df: pd.DataFrame) -> dict:
+            texts = df.get("text", pd.Series([], dtype=str)).astype(str).tolist()
+            url_pattern = re.compile(r"https?://|\b[a-z0-9.-]+\.[a-z]{2,}\b", re.I)
+            keywords = [
+                "dmv",
+                "license",
+                "suspend",
+                "suspension",
+                "renew",
+                "verify",
+                "verification",
+                "refund",
+                "pay",
+                "payment",
+                "ticket",
+                "fine",
+                "immediate",
+                "urgent",
+                "now",
+                "account",
+                "login",
+                "password",
+                "confirm",
+                "update",
+            ]
+            payment_words = ["pay", "payment", "fine", "fee", "$", "usd"]
+            urgency_words = [
+                "urgent",
+                "immediate",
+                "now",
+                "last chance",
+                "final notice",
+            ]
+            keyword_hits = url_count = payment_signals = urgency_signals = 0
+            for t in texts:
+                tl = t.lower()
+                if url_pattern.search(t):
+                    url_count += 1
+                if any(w in tl for w in keywords):
+                    keyword_hits += 1
+                if any(w in tl for w in payment_words):
+                    payment_signals += 1
+                if any(w in tl for w in urgency_words):
+                    urgency_signals += 1
+            return {
+                "keyword_hits": keyword_hits,
+                "url_count": url_count,
+                "payment_signals": payment_signals,
+                "urgency_signals": urgency_signals,
+                "keywords_scanned": keywords,
+                "thresholds": {
+                    "keyword": keyword_threshold,
+                    "payment_urgency": payment_urgency_threshold,
+                },
+            }
+
+        # Load
+        with open(file, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+        records = (
+            raw["messages"]
+            if isinstance(raw, dict) and isinstance(raw.get("messages"), list)
+            else raw
+        )
+        df = pd.DataFrame(records)
+        if "readable_date" not in df.columns and "timestamp" in df.columns:
+            parsed = pd.to_datetime(df["timestamp"], errors="coerce")
+            df["readable_date"] = parsed.dt.strftime("%Y-%m-%d %H:%M:%S")
+        if "is_from_me" not in df.columns:
+            df["is_from_me"] = 0
+
+        # Analyze
+        temporal = TemporalAnalyzer().analyze_patterns(df) or {}
+        auto = AutomationAnalyzer().detect_automation(df) or {}
+        auto["content_indicators"] = _compute_content_indicators(df)
+        contact_id = f"analysis_{Path(file).stem}"
+        report = RiskAnalyzer(output_dir="./analysis_output").analyze_risk(
+            contact_id, temporal, auto
+        )
+
+        # Export
+        if export_json_path:
+            with open(export_json_path, "w", encoding="utf-8") as jf:
+                json.dump(report, jf, indent=2, ensure_ascii=False, default=str)
+            click.echo(f"Wrote JSON: {export_json_path}")
+        if export_csv_path:
+            recs = report.get("recommendations", [])
+            with open(export_csv_path, "w", encoding="utf-8", newline="") as cf:
+                writer = _csv.DictWriter(
+                    cf, fieldnames=["priority", "recommendation", "rationale"]
+                )
+                writer.writeheader()
+                writer.writerows(recs)
+            click.echo(f"Wrote CSV: {export_csv_path}")
+        if export_yaml_path:
+            if _yaml is None:
+                click.echo("PyYAML not installed; skipping YAML export")
+            else:
+                # Convert to YAML-serializable native types
+                # Optional numeric and pandas support
+                from typing import Any as _Any
+                _np: _Any = None
+                try:
+                    import numpy as _np
+                except Exception:
+                    _np = None
+                try:
+                    import pandas as _pd2
+                except Exception:
+                    _pd2 = None
+
+                def _json_default(o: _Any) -> _Any:
+                    if _np is not None and hasattr(_np, "generic") and isinstance(o, _np.generic):
+                        return o.item()
+                    if _pd2 is not None and hasattr(_pd2, "Timestamp") and isinstance(o, _pd2.Timestamp):
+                        return o.isoformat()
+                    return str(o)
+
+                native_report = json.loads(json.dumps(report, default=_json_default))
+                with open(export_yaml_path, "w", encoding="utf-8") as yf:
+                    _yaml.safe_dump(
+                        native_report, yf, sort_keys=False, allow_unicode=True
+                    )
+                click.echo(f"Wrote YAML: {export_yaml_path}")
+
+        # Print summary
+        click.echo(
+            json.dumps(
+                {
+                    "file": file,
+                    "risk_level": report.get("risk_assessment", {}).get("risk_level"),
+                    "risk_score": report.get("risk_assessment", {}).get(
+                        "behavioral_risk_score"
+                    ),
+                    "recommendation_count": len(report.get("recommendations", [])),
+                },
+                indent=2,
+            )
+        )
+
+    except Exception as e:
+        logger.error(f"Suggestions failed: {str(e)}", exc_info=True)
+        sys.exit(1)
+
+
 @cli.command()
 @click.argument("input_file", type=click.Path(exists=True))
 @click.option("--threshold", "-t", type=float, default=0.7, help="Confidence threshold")
@@ -295,7 +517,12 @@ def extract_iocs(ctx: click.Context, input_file: str, threshold: float) -> None:
 @click.option("--filename", "-f", type=str, help="Custom filename (without extension)")
 @click.pass_context
 def export_messages(
-    ctx: click.Context, db_path: str, contact: str, limit: Optional[int], output_dir: str, filename: Optional[str]
+    ctx: click.Context,
+    db_path: str,
+    contact: str,
+    limit: Optional[int],
+    output_dir: str,
+    filename: Optional[str],
 ) -> None:
     """Export iMessage messages for a contact to CSV."""
     try:

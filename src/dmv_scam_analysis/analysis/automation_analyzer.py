@@ -32,7 +32,9 @@ class AutomationAnalyzer:
             "timing_regularity": self._analyze_timing_regularity(messages_df),
             "content_similarity": self._analyze_content_patterns(messages_df),
             "volume_consistency": self._analyze_volume_patterns(messages_df),
-            "response_predictability": self._analyze_response_predictability(messages_df),
+            "response_predictability": self._analyze_response_predictability(
+                messages_df
+            ),
         }
 
         # Calculate overall automation score
@@ -53,7 +55,11 @@ class AutomationAnalyzer:
             return {"regularity_score": 0.0, "analysis": "no_time_intervals"}
 
         # Calculate coefficient of variation (lower = more regular)
-        cv = float(time_deltas.std() / time_deltas.mean()) if time_deltas.mean() > 0 else float("inf")
+        cv = (
+            float(time_deltas.std() / time_deltas.mean())
+            if time_deltas.mean() > 0
+            else float("inf")
+        )
 
         # Convert to regularity score (higher = more regular)
         regularity_score = 1 / (1 + cv) if cv != float("inf") else 0.0
@@ -67,10 +73,14 @@ class AutomationAnalyzer:
             "coefficient_of_variation": cv,
             "interval_diversity": float(interval_diversity),
             "mean_interval_seconds": float(time_deltas.mean()),
-            "analysis": self._interpret_timing_regularity(regularity_score, interval_diversity),
+            "analysis": self._interpret_timing_regularity(
+                regularity_score, interval_diversity
+            ),
         }
 
-    def _interpret_timing_regularity(self, regularity_score: float, interval_diversity: float) -> str:
+    def _interpret_timing_regularity(
+        self, regularity_score: float, interval_diversity: float
+    ) -> str:
         """Interpret timing regularity results"""
         if regularity_score > 0.8 and interval_diversity < 0.3:
             return "HIGH_AUTOMATION_LIKELIHOOD"
@@ -95,10 +105,14 @@ class AutomationAnalyzer:
         similarities = []
         for i in range(len(message_texts)):
             for j in range(i + 1, len(message_texts)):
-                similarity = self._calculate_text_similarity(message_texts[i], message_texts[j])
+                similarity = self._calculate_text_similarity(
+                    message_texts[i], message_texts[j]
+                )
                 similarities.append(similarity)
 
-        average_similarity: float = float(np.mean(similarities)) if similarities else 0.0
+        average_similarity: float = (
+            float(np.mean(similarities)) if similarities else 0.0
+        )
 
         # Check for exact duplicates
         unique_messages = len(set(message_texts))
@@ -109,7 +123,9 @@ class AutomationAnalyzer:
             "duplicate_ratio": float(duplicate_ratio),
             "unique_message_count": unique_messages,
             "total_message_count": len(message_texts),
-            "analysis": self._interpret_content_similarity(float(average_similarity), float(duplicate_ratio)),
+            "analysis": self._interpret_content_similarity(
+                float(average_similarity), float(duplicate_ratio)
+            ),
         }
 
     def _calculate_text_similarity(self, text1: str, text2: str) -> float:
@@ -132,7 +148,9 @@ class AutomationAnalyzer:
 
         return intersection / union if union > 0 else 0
 
-    def _interpret_content_similarity(self, similarity_score: float, duplicate_ratio: float) -> str:
+    def _interpret_content_similarity(
+        self, similarity_score: float, duplicate_ratio: float
+    ) -> str:
         """Interpret content similarity results"""
         if duplicate_ratio > 0.5 or similarity_score > 0.8:
             return "HIGH_TEMPLATE_USAGE"
@@ -150,7 +168,11 @@ class AutomationAnalyzer:
         daily_counts = messages_df.groupby(messages_df["datetime"].dt.date).size()
 
         # Calculate consistency metrics
-        cv = daily_counts.std() / daily_counts.mean() if daily_counts.mean() > 0 else float("inf")
+        cv = (
+            daily_counts.std() / daily_counts.mean()
+            if daily_counts.mean() > 0
+            else float("inf")
+        )
         consistency_score = 1 / (1 + cv) if cv != float("inf") else 0
 
         return {
@@ -159,17 +181,24 @@ class AutomationAnalyzer:
             "mean_daily_messages": float(daily_counts.mean()),
             "std_daily_messages": float(daily_counts.std()),
             "analysis": (
-                "HIGH_VOLUME_CONSISTENCY" if consistency_score > 0.7 else "VARIABLE_VOLUME_PATTERN"
+                "HIGH_VOLUME_CONSISTENCY"
+                if consistency_score > 0.7
+                else "VARIABLE_VOLUME_PATTERN"
             ),
         }
 
-    def _analyze_response_predictability(self, messages_df: pd.DataFrame) -> Dict[str, Any]:
+    def _analyze_response_predictability(
+        self, messages_df: pd.DataFrame
+    ) -> Dict[str, Any]:
         """Analyze predictability of response patterns"""
         sent_messages = messages_df[messages_df["is_from_me"] == 1]
         received_messages = messages_df[messages_df["is_from_me"] == 0]
 
         if len(sent_messages) == 0 or len(received_messages) == 0:
-            return {"predictability_score": 0, "analysis": "no_bidirectional_communication"}
+            return {
+                "predictability_score": 0,
+                "analysis": "no_bidirectional_communication",
+            }
 
         # Simple analysis: check if responses follow consistent patterns
         response_ratio = (
@@ -183,7 +212,9 @@ class AutomationAnalyzer:
             "predictability_score": predictability_score,
             "response_ratio": response_ratio,
             "analysis": (
-                "HIGH_PREDICTABILITY" if predictability_score > 0.8 else "VARIABLE_RESPONSE_PATTERN"
+                "HIGH_PREDICTABILITY"
+                if predictability_score > 0.8
+                else "VARIABLE_RESPONSE_PATTERN"
             ),
         }
 
@@ -201,6 +232,8 @@ class AutomationAnalyzer:
             scores.append(indicators["volume_consistency"].get("consistency_score", 0))
 
         if "response_predictability" in indicators:
-            scores.append(indicators["response_predictability"].get("predictability_score", 0))
+            scores.append(
+                indicators["response_predictability"].get("predictability_score", 0)
+            )
 
         return np.mean(scores) if scores else 0

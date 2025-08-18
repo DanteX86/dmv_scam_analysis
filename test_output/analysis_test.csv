@@ -1,8 +1,0 @@
-message_id,timestamp,threat_score,risk_level,indicators,confidence,analysis_id
-msg_000,2025-06-27T14:30:00Z,0.0,low,"['urgency_language', 'authority_impersonation']",0.52,behavioral_743433
-msg_001,2025-06-27T14:35:00Z,0.0,low,['authority_impersonation'],0.22000000000000003,behavioral_630957
-msg_002,2025-06-27T14:40:00Z,0.0,low,"['urgency_language', 'authority_impersonation']",0.5,behavioral_900768
-msg_003,2025-06-27T14:42:00Z,0.0,low,[],0.0,behavioral_638592
-msg_004,2025-06-27T14:43:00Z,0.0,low,['authority_impersonation'],0.28,behavioral_392372
-msg_005,2025-06-27T14:45:00Z,0.0,low,['authority_impersonation'],0.28,behavioral_698972
-msg_006,2025-06-27T14:50:00Z,0.0,low,"['urgency_language', 'authority_impersonation']",0.42000000000000004,behavioral_335821

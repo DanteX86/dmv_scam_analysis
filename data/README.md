@@ -18,6 +18,7 @@ data/
 ## Data Types
 
 ### Raw Data
+
 - Location: `raw/`
 - Contains original, untouched data files
 - Never modify these files directly
@@ -29,6 +30,7 @@ data/
   - metadata: Additional contextual information
 
 ### Interim Data
+
 - Location: `interim/`
 - Contains partially processed data
 - Intermediate steps between raw and final datasets
@@ -38,6 +40,7 @@ data/
   - Temporary analysis outputs
 
 ### Processed Data
+
 - Location: `processed/`
 - Contains final, cleaned datasets ready for analysis
 - Features:
@@ -47,6 +50,7 @@ data/
   - Added derived variables
 
 ### External Data
+
 - Location: `external/`
 - Contains third-party data used in analysis
 - May include:
@@ -55,6 +59,7 @@ data/
   - Benchmark datasets
 
 ### Backup Data
+
 - Location: `backup/`
 - Contains versioned backups of datasets
 - Managed by data versioning system
@@ -63,6 +68,7 @@ data/
 ## Version Control
 
 Dataset versions are tracked in `versions.json` with the following information:
+
 - Version hash
 - Timestamp
 - File path
@@ -75,11 +81,13 @@ Dataset versions are tracked in `versions.json` with the following information:
 The following scripts are available for data management:
 
 1. `scripts/data_validation.py`
+
    - Validates data quality and consistency
    - Checks required columns, data types, and value ranges
    - Generates validation reports
 
 2. `scripts/data_preprocessing.py`
+
    - Cleans and transforms raw data
    - Removes PII
    - Extracts features
@@ -109,6 +117,7 @@ The following scripts are available for data management:
 ## Data Quality Checks
 
 All datasets must pass the following quality checks:
+
 1. Required columns present
 2. Correct data types
 3. No invalid values
@@ -119,5 +128,6 @@ All datasets must pass the following quality checks:
 ## Contact
 
 For questions about the data structure or management:
+
 - Data Manager: [Name]
 - Email: [Email]

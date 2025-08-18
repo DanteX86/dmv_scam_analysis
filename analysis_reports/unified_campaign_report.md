@@ -7,21 +7,24 @@ This report documents the evolution of a sophisticated scam campaign targeting P
 ## Campaign Timeline & Evolution
 
 ### Phase 1: DMV Impersonation (Nov 2024 - Dec 2024)
+
 - Initial SMS campaign targeting PA residents
 - Infrastructure:
-  * Domain: pa.gov-jad.vip
-  * Phone: +639127911810 (Philippines)
+  - Domain: pa.gov-jad.vip
+  - Phone: +639127911810 (Philippines)
 - Campaign Metrics:
-  * Week 1: 500-700 messages/day
-  * Peak: 800-1000 messages/day
-  * Final: 300-400 messages/day
+  - Week 1: 500-700 messages/day
+  - Peak: 800-1000 messages/day
+  - Final: 300-400 messages/day
 
 ### Phase 2: Transition Period (Jan 2025 - May 2025)
+
 - Infrastructure hardening
 - Operational methodology refinement
 - Shift towards financial institution impersonation
 
 ### Phase 3: Financial Institution Impersonation (June 2025)
+
 - Wells Fargo/Wachovia impersonation campaign
 - Enhanced social engineering techniques
 - Professional-grade physical materials
@@ -33,7 +36,9 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ## Technical Analysis
 
 ### Infrastructure Evolution
+
 1. Initial Campaign (2024)
+
    - SMS-based delivery
    - Domain spoofing
    - Philippines-based operations
@@ -47,12 +52,14 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ### Threat Actor Capabilities
 
 #### Technical Sophistication
+
 - Professional-grade materials production
 - High-quality forgery capabilities
 - Advanced social engineering
 - Multi-channel attack vectors
 
 #### Operational Security
+
 - International operations compartmentalization
 - Professional front organizations
 - Sophisticated victim targeting
@@ -61,12 +68,15 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ## Pattern Analysis
 
 ### Common Elements Across Campaigns
+
 1. Geographic Targeting:
+
    - Consistent focus on Pennsylvania
    - Regional expansion capabilities
    - Strategic victim selection
 
 2. Social Engineering Tactics:
+
    - Authority impersonation
    - Urgency creation
    - Threat of consequences
@@ -81,6 +91,7 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ### Evolution of Techniques
 
 #### Initial Campaign (DMV)
+
 - Digital-first approach
 - Mass targeting
 - Rapid deployment
@@ -88,6 +99,7 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 - SMS-based contact
 
 #### Current Campaign (Financial)
+
 - Physical materials
 - Targeted approach
 - Extended engagement
@@ -99,13 +111,16 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ### Threat Level: HIGH
 
 #### Risk Factors
+
 1. Operational Sophistication:
+
    - Professional-grade materials
    - Multi-phase campaign
    - Advanced social engineering
    - Geographic targeting
 
 2. Victim Impact:
+
    - Personal information exposure
    - Financial fraud risk
    - Identity theft potential
@@ -120,13 +135,16 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ## Defensive Recommendations
 
 ### Immediate Actions
+
 1. Law Enforcement Notification:
+
    - FBI IC3 report
    - Local law enforcement
    - Financial crime units
    - Postal inspection service
 
 2. Victim Protection:
+
    - Credit monitoring
    - ChexSystems alerts
    - Financial institution notifications
@@ -139,7 +157,9 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
    - Forensic analysis
 
 ### Long-term Measures
+
 1. Public Awareness:
+
    - Community alerts
    - Educational campaigns
    - Reporting mechanisms
@@ -154,7 +174,9 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ## Intelligence Value
 
 ### Key Findings
+
 1. Campaign Evolution:
+
    - Sophisticated progression
    - Tactical adaptation
    - Infrastructure development
@@ -167,7 +189,9 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
    - Resource investment
 
 ### Future Predictions
+
 1. Likely Developments:
+
    - Continued evolution
    - New target institutions
    - Enhanced techniques
@@ -182,18 +206,21 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 ## Appendices
 
 ### A. Evidence Catalog
+
 - Envelope photographs (4)
 - Letter photographs (3)
 - Digital analysis results
 - Pattern documentation
 
 ### B. Technical Indicators
+
 - Infrastructure details
 - Communication patterns
 - Operational signatures
 - Attribution markers
 
 ### C. Timeline Documentation
+
 - Campaign progression
 - Tactical evolution
 - Pattern development
@@ -201,6 +228,6 @@ Note: Detailed analysis of the Wells Fargo campaign has been moved to a separate
 
 ---
 
-**Classification**: LAW ENFORCEMENT SENSITIVE  
-**Last Updated**: June 27, 2025  
+**Classification**: LAW ENFORCEMENT SENSITIVE
+**Last Updated**: June 27, 2025
 **Status**: Active Investigation

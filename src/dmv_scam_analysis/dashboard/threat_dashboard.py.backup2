@@ -198,7 +198,7 @@ class ThreatDashboard:
         active_alerts = len([a for a in self.alerts_data if not a.get('resolved', False)][-10:])
         alert_color = \"red\" if active_alerts > 0 else \"green\"
         alert_status = f\"{active_alerts} Active Alerts\" if active_alerts > 0 else \"All Clear\"
-        
+
         fig.add_trace(
             go.Indicator(
                 mode=\"gauge+number+delta\",
@@ -222,39 +222,39 @@ class ThreatDashboard:
             ),
             row=2, col=2
         )
-        
+
         # 5. Daily Threat Summary (Bar Chart)
         if self.threats_data:
             # Get last 7 days of data
             now = datetime.now()
             daily_data = {}
-            
+
             for threat in self.threats_data:
                 threat_date = datetime.fromisoformat(threat['timestamp']).date()
                 if (now.date() - threat_date).days <= 7:
                     date_str = threat_date.strftime('%Y-%m-%d')
                     if date_str not in daily_data:
                         daily_data[date_str] = {'high': 0, 'medium': 0, 'low': 0}
-                    
+
                     if threat['classification'] == 'high_risk':
                         daily_data[date_str]['high'] += 1
                     elif threat['classification'] == 'medium_risk':
                         daily_data[date_str]['medium'] += 1
                     else:
                         daily_data[date_str]['low'] += 1
-            
+
             dates = sorted(daily_data.keys())
             high_counts = [daily_data[d]['high'] for d in dates]
             medium_counts = [daily_data[d]['medium'] for d in dates]
             low_counts = [daily_data[d]['low'] for d in dates]
-            
+
             fig.add_trace(go.Bar(x=dates, y=high_counts, name='High Risk', marker_color='red'), row=3, col=1)
             fig.add_trace(go.Bar(x=dates, y=medium_counts, name='Medium Risk', marker_color='orange'), row=3, col=1)
             fig.add_trace(go.Bar(x=dates, y=low_counts, name='Low Risk', marker_color='green'), row=3, col=1)
-        
+
         # 6. Performance Overview Table
         performance_data = self._calculate_performance_summary()
-        
+
         fig.add_trace(
             go.Table(
                 header=dict(values=['Metric', 'Current Value', 'Status'],
@@ -270,7 +270,7 @@ class ThreatDashboard:
             ),
             row=3, col=2
         )
-        
+
         # Update layout
         fig.update_layout(
             height=1200,
@@ -278,28 +278,28 @@ class ThreatDashboard:
             title_text=f\"DMV Scam Analysis - Real-time Threat Dashboard (Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')})\",
             title_x=0.5
         )
-        
+
         # Save dashboard
         output_path = self.data_dir / output_file
         fig.write_html(str(output_path))
-        
+
         logger.info(f\"Dashboard generated: {output_path}\")
         return str(output_path)
-    
+
     def _generate_basic_html_dashboard(self, output_file: str) -> str:
         \"\"\"Generate a basic HTML dashboard without Plotly.\"\"\"
-        
+
         # Calculate basic statistics
         total_threats = len(self.threats_data)
-        recent_threats = [t for t in self.threats_data if 
+        recent_threats = [t for t in self.threats_data if
                          datetime.now() - datetime.fromisoformat(t['timestamp']) < timedelta(hours=24)]
-        
+
         high_risk_count = len([t for t in recent_threats if t['classification'] == 'high_risk'])
         medium_risk_count = len([t for t in recent_threats if t['classification'] == 'medium_risk'])
         low_risk_count = len([t for t in recent_threats if t['classification'] == 'low_risk'])
-        
+
         active_alerts = len([a for a in self.alerts_data if not a.get('resolved', False)])
-        
+
         # Generate HTML
         html_content = f\"\"\"
 <!DOCTYPE html>
@@ -326,46 +326,46 @@ class ThreatDashboard:
 <body>
     <h1>🛡️ DMV Scam Analysis - Threat Dashboard</h1>
     <p style=\"text-align: center; color: #666;\">Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-    
+
     <div class=\"dashboard\">
         <div class=\"card\">
             <div class=\"metric\">{total_threats}</div>
             <div class=\"label\">Total Threats Analyzed</div>
         </div>
-        
+
         <div class=\"card\">
             <div class=\"metric\">{len(recent_threats)}</div>
             <div class=\"label\">Threats (Last 24 Hours)</div>
         </div>
-        
+
         <div class=\"card alert\" style=\"{'display: block' if high_risk_count > 0 else 'display: none'}\">
             <div class=\"metric\" style=\"color: #f44336;\">{high_risk_count}</div>
             <div class=\"label\">High Risk Threats</div>
         </div>
-        
+
         <div class=\"card warning\" style=\"{'display: block' if medium_risk_count > 0 else 'display: none'}\">
             <div class=\"metric\" style=\"color: #ff9800;\">{medium_risk_count}</div>
             <div class=\"label\">Medium Risk Threats</div>
         </div>
-        
+
         <div class=\"card success\">
             <div class=\"metric\" style=\"color: #4caf50;\">{low_risk_count}</div>
             <div class=\"label\">Low Risk Messages</div>
         </div>
-        
+
         <div class=\"card {'alert' if active_alerts > 0 else 'success'}\">
             <span class=\"status-indicator {'status-red' if active_alerts > 0 else 'status-green'}\"></span>
             <div class=\"metric\" style=\"color: {'#f44336' if active_alerts > 0 else '#4caf50'};\">{active_alerts}</div>
             <div class=\"label\">Active Alerts</div>
         </div>
     </div>
-    
+
     <div style=\"margin-top: 20px;\">
         <div class=\"card\">
             <h3>Recent High-Risk Threats</h3>
             <ul>
         \"\"\"
-        
+
         # Add recent high-risk threats
         recent_high_risk = [t for t in recent_threats if t['classification'] == 'high_risk'][-5:]
         if recent_high_risk:
@@ -374,12 +374,12 @@ class ThreatDashboard:
                 html_content += f\"\"\"<li>[{timestamp}] Score: {threat['threat_score']:.2f} - Source: {threat['source']}</li>\"\"\"
         else:
             html_content += \"<li>No high-risk threats in the last 24 hours ✅</li>\"
-        
+
         html_content += \"\"\"
             </ul>
         </div>
     </div>
-    
+
     <div style=\"margin-top: 20px;\">
         <div class=\"card\">
             <h3>System Status</h3>
@@ -391,18 +391,18 @@ class ThreatDashboard:
 </body>
 </html>
         \"\"\"
-        
+
         # Save HTML file
         output_path = self.data_dir / output_file
         with open(output_path, 'w') as f:
             f.write(html_content)
-        
+
         logger.info(f\"Basic dashboard generated: {output_path}\")
         return str(output_path)
-    
+
     def _check_threat_alerts(self, threat_record: Dict[str, Any]) -> None:
         \"\"\"Check if threat record triggers any alerts.\"\"\"
-        
+
         # High threat score alert
         if threat_record['threat_score'] > 0.8:
             self._create_alert(
@@ -411,13 +411,13 @@ class ThreatDashboard:
                 'high',
                 {'threat_record': threat_record}
             )
-        
+
         # Check threat spike (compare to recent average)
         recent_scores = [t['threat_score'] for t in self.threats_data[-20:]]  # Last 20
         if len(recent_scores) >= 10:
             avg_score = sum(recent_scores[:-1]) / len(recent_scores[:-1])
             current_score = recent_scores[-1]
-            
+
             if current_score > avg_score * 1.5:  # 50% spike
                 self._create_alert(
                     'threat_spike',
@@ -425,10 +425,10 @@ class ThreatDashboard:
                     'medium',
                     {'current_score': current_score, 'average_score': avg_score}
                 )
-    
+
     def _check_performance_alerts(self, metric_name: str, value: float) -> None:
         \"\"\"Check if performance metric triggers alerts.\"\"\"
-        
+
         if metric_name == 'response_time' and value > self.alert_thresholds['response_time']:
             self._create_alert(
                 'slow_response',
@@ -436,7 +436,7 @@ class ThreatDashboard:
                 'medium',
                 {'metric': metric_name, 'value': value}
             )
-        
+
         elif metric_name == 'error_rate' and value > self.alert_thresholds['error_rate']:
             self._create_alert(
                 'high_error_rate',
@@ -444,10 +444,10 @@ class ThreatDashboard:
                 'high',
                 {'metric': metric_name, 'value': value}
             )
-    
+
     def _create_alert(self, alert_type: str, message: str, severity: str, metadata: Dict = None) -> None:
         \"\"\"Create a new alert.\"\"\"
-        
+
         alert = {
             'id': f\"{alert_type}_{int(time.time())}\",
             'type': alert_type,
@@ -457,22 +457,22 @@ class ThreatDashboard:
             'resolved': False,
             'metadata': metadata or {}
         }
-        
+
         self.alerts_data.append(alert)
-        
+
         # Keep only last 100 alerts
         if len(self.alerts_data) > 100:
             self.alerts_data = self.alerts_data[-100:]
-        
+
         self._save_data(self.alerts_file, self.alerts_data)
-        
+
         logger.warning(f\"Alert created: {alert['type']} - {alert['message']}\")
-    
+
     def _calculate_performance_summary(self) -> Dict[str, Dict[str, Any]]:
         \"\"\"Calculate performance summary statistics.\"\"\"
-        
+
         summary = {}
-        
+
         # Response time summary
         if 'response_time' in self.metrics_data and self.metrics_data['response_time']:
             recent_response_times = [m['value'] for m in self.metrics_data['response_time'][-10:]]
@@ -481,34 +481,34 @@ class ThreatDashboard:
                 'value': f\"{avg_response_time:.3f}s\",
                 'status': '✅ Good' if avg_response_time < 1.0 else '⚠️ Slow' if avg_response_time < 2.0 else '❌ Critical'
             }
-        
+
         # Threat detection rate
         if self.threats_data:
-            recent_threats = [t for t in self.threats_data if 
+            recent_threats = [t for t in self.threats_data if
                             datetime.now() - datetime.fromisoformat(t['timestamp']) < timedelta(hours=1)]
             threat_rate = len(recent_threats)
             summary['Threats/Hour'] = {
                 'value': str(threat_rate),
                 'status': '✅ Normal' if threat_rate < 10 else '⚠️ Elevated' if threat_rate < 20 else '❌ High'
             }
-        
+
         # Active alerts
         active_alerts = len([a for a in self.alerts_data if not a.get('resolved', False)])
         summary['Active Alerts'] = {
             'value': str(active_alerts),
             'status': '✅ Clear' if active_alerts == 0 else '⚠️ Some' if active_alerts < 3 else '❌ Many'
         }
-        
+
         return summary
-    
+
     def get_dashboard_data(self) -> Dict[str, Any]:
         \"\"\"Get current dashboard data for API consumption.\"\"\"
-        
+
         return {
             'timestamp': datetime.now().isoformat(),
             'summary': {
                 'total_threats': len(self.threats_data),
-                'recent_threats': len([t for t in self.threats_data if 
+                'recent_threats': len([t for t in self.threats_data if
                                      datetime.now() - datetime.fromisoformat(t['timestamp']) < timedelta(hours=24)]),
                 'active_alerts': len([a for a in self.alerts_data if not a.get('resolved', False)]),
                 'high_risk_count': len([t for t in self.threats_data[-100:] if t['classification'] == 'high_risk'])
@@ -517,7 +517,7 @@ class ThreatDashboard:
             'active_alerts': [a for a in self.alerts_data if not a.get('resolved', False)][-5:],
             'performance_summary': self._calculate_performance_summary()
         }
-    
+
     def _load_data(self, file_path: Path, default_value: Any) -> Any:
         \"\"\"Load data from JSON file.\"\"\"
         if file_path.exists():
@@ -528,7 +528,7 @@ class ThreatDashboard:
                 logger.error(f\"Failed to load data from {file_path}: {e}\")
                 return default_value
         return default_value
-    
+
     def _save_data(self, file_path: Path, data: Any) -> None:
         \"\"\"Save data to JSON file.\"\"\"
         try:
@@ -540,9 +540,9 @@ class ThreatDashboard:
 
 def demo_dashboard():
     \"\"\"Create a demo dashboard with sample data.\"\"\"
-    
+
     dashboard = ThreatDashboard()
-    
+
     # Add sample threat data
     sample_threats = [
         {'threat_score': 0.9, 'classification': 'high_risk', 'confidence': 0.85, 'source': 'sms', 'analysis_id': 'demo_1'},
@@ -551,31 +551,31 @@ def demo_dashboard():
         {'threat_score': 0.95, 'classification': 'high_risk', 'confidence': 0.88, 'source': 'sms', 'analysis_id': 'demo_4'},
         {'threat_score': 0.2, 'classification': 'low_risk', 'confidence': 0.95, 'source': 'email', 'analysis_id': 'demo_5'}
     ]
-    
+
     for threat in sample_threats:
         dashboard.record_threat_analysis(threat)
         time.sleep(0.1)  # Small delay to create time separation
-    
+
     # Add sample performance metrics
     dashboard.record_system_metric('response_time', 0.245)
     dashboard.record_system_metric('response_time', 0.189)
     dashboard.record_system_metric('response_time', 0.356)
     dashboard.record_system_metric('response_time', 0.298)
-    
+
     dashboard.record_system_metric('error_rate', 2.1)
     dashboard.record_system_metric('error_rate', 1.8)
     dashboard.record_system_metric('error_rate', 2.3)
-    
+
     # Generate dashboard
     dashboard_path = dashboard.generate_dashboard_html(\"demo_threat_dashboard.html\")
     print(f\"Demo dashboard created: {dashboard_path}\")
-    
+
     # Print dashboard data
     data = dashboard.get_dashboard_data()
     print(\"\
 Dashboard Data:\")
     print(json.dumps(data, indent=2))
-    
+
     return dashboard_path
 
 

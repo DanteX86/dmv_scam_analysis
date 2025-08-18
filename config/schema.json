@@ -1,12 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": [
-    "environment",
-    "application",
-    "storage",
-    "analysis"
-  ],
+  "required": ["environment", "application", "storage", "analysis"],
   "properties": {
     "environment": {
       "type": "object",

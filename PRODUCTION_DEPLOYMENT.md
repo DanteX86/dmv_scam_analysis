@@ -7,12 +7,14 @@ This guide covers the complete production deployment process for the DMV Scam An
 ## Prerequisites
 
 ### System Requirements
+
 - **CPU**: 4+ cores (8+ recommended for high throughput)
 - **RAM**: 8GB minimum (16GB+ recommended)
 - **Storage**: 50GB+ available space
 - **OS**: Linux (Ubuntu 20.04+, CentOS 8+) or Docker-compatible environment
 
 ### Software Dependencies
+
 - Docker 20.10+
 - Docker Compose 2.0+
 - Python 3.11+ (if not using Docker)
@@ -159,6 +161,7 @@ sudo systemctl status dmv-api
 ### 1. API Security
 
 **Authentication:**
+
 - Generate secure API keys (32+ character random strings)
 - Use environment variables for all sensitive configuration
 - Implement token rotation policies
@@ -172,11 +175,13 @@ openssl rand -hex 64
 ```
 
 **Rate Limiting:**
+
 - Default: 1000 requests/hour per client
 - Adjust based on expected usage patterns
 - Monitor for abuse patterns
 
 **CORS Configuration:**
+
 - Restrict origins to your actual domains
 - Never use `*` in production
 - Update `CORS_ORIGINS` environment variable
@@ -184,6 +189,7 @@ openssl rand -hex 64
 ### 2. Infrastructure Security
 
 **Network Security:**
+
 ```bash
 # Firewall configuration (UFW example)
 sudo ufw default deny incoming
@@ -200,10 +206,10 @@ Use a reverse proxy (nginx/Apache) with SSL certificates:
 server {
     listen 443 ssl http2;
     server_name api.yourdomain.com;
-    
+
     ssl_certificate /path/to/certificate.pem;
     ssl_certificate_key /path/to/private.key;
-    
+
     location / {
         proxy_pass http://127.0.0.1:8000;
         proxy_set_header Host $host;
@@ -266,11 +272,13 @@ if performance['accuracy'] < 0.85:
 ### 1. Application Logs
 
 Logs are stored in the `logs/` directory:
+
 - `api_audit.log` - API access and performance logs
 - `application.log` - General application logs
 - `error.log` - Error and exception logs
 
 **Log Rotation:**
+
 ```bash
 # Configure logrotate
 sudo nano /etc/logrotate.d/dmv-api
@@ -291,6 +299,7 @@ sudo nano /etc/logrotate.d/dmv-api
 ### 2. Performance Monitoring
 
 **Prometheus Metrics:** (if enabled)
+
 - API response times
 - Request rates
 - Error rates
@@ -299,6 +308,7 @@ sudo nano /etc/logrotate.d/dmv-api
 Access Prometheus at: `http://localhost:9090`
 
 **Key Metrics to Monitor:**
+
 - Response time percentiles (p50, p95, p99)
 - Request rate (requests/second)
 - Error rate percentage
@@ -309,6 +319,7 @@ Access Prometheus at: `http://localhost:9090`
 ### 3. Alerting
 
 Set up alerts for:
+
 - API response time > 1 second
 - Error rate > 5%
 - Memory usage > 80%
@@ -319,6 +330,7 @@ Set up alerts for:
 ### 1. Scaling Configuration
 
 **Horizontal Scaling:**
+
 ```yaml
 # docker-compose.yml
 services:
@@ -329,6 +341,7 @@ services:
 ```
 
 **Vertical Scaling:**
+
 - Increase worker processes: `-w 8` (for 8-core systems)
 - Adjust memory limits based on model size
 - Optimize database connections
@@ -336,6 +349,7 @@ services:
 ### 2. Caching Strategy
 
 **Redis Caching:**
+
 - Cache model predictions for identical inputs
 - Cache authentication tokens
 - Cache frequently accessed model metadata
@@ -352,6 +366,7 @@ CACHE_CONFIG = {
 ### 3. Database Optimization
 
 **PostgreSQL Tuning:**
+
 ```sql
 -- Optimize for analysis workloads
 ALTER SYSTEM SET shared_buffers = '256MB';
@@ -403,6 +418,7 @@ chmod +x backup.sh
 ### 3. Recovery Procedures
 
 **Database Recovery:**
+
 ```bash
 # Restore database
 dropdb dmv_analysis_prod
@@ -411,6 +427,7 @@ psql -U dmv_prod_user dmv_analysis_prod < backup_20240101.sql
 ```
 
 **Model Recovery:**
+
 ```bash
 # Restore models
 tar -xzf models_backup.tar.gz -C ./
@@ -422,11 +439,13 @@ systemctl restart dmv-api
 ### Common Issues
 
 1. **High Response Times**
+
    - Check model loading performance
    - Review database query performance
    - Monitor memory usage
 
 2. **Authentication Failures**
+
    - Verify API key configuration
    - Check rate limiting settings
    - Review audit logs
@@ -471,11 +490,13 @@ chmod +x health_check.sh
 ### Regular Maintenance Tasks
 
 1. **Daily:**
+
    - Review error logs
    - Check API performance metrics
    - Verify backup completion
 
 2. **Weekly:**
+
    - Review model performance metrics
    - Update threat intelligence data
    - Clean up old log files
@@ -488,11 +509,12 @@ chmod +x health_check.sh
 ### Getting Support
 
 For technical support and questions:
+
 - Review logs in `/logs/` directory
 - Check GitHub issues and documentation
 - Use the health check script for diagnostics
 
 ---
 
-**Last Updated:** {datetime.now().strftime('%Y-%m-%d')}  
+**Last Updated:** {datetime.now().strftime('%Y-%m-%d')}
 **Version:** Production v1.0.0

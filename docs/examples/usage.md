@@ -5,6 +5,7 @@
 ### 1. Message Extraction
 
 Extract messages from the database:
+
 ```python
 from scripts.message_extractor import MessageExtractor
 
@@ -24,6 +25,7 @@ clean_messages = extractor.filter_messages(messages)
 ### 2. Threat Classification
 
 Classify potential threats:
+
 ```python
 from scripts.ml_threat_classifier import ThreatClassifier
 
@@ -42,6 +44,7 @@ print(f"Confidence: {result['confidence']}")
 ### 3. Pattern Analysis
 
 Analyze message patterns:
+
 ```python
 from scripts.nlp_analyzer import NLPAnalyzer
 
@@ -68,6 +71,7 @@ print("Patterns:", analysis["patterns"])
 ### 1. Behavioral Analysis
 
 Track and analyze scammer behavior:
+
 ```python
 from scripts.behavioral_analyzer import BehaviorAnalyzer
 from datetime import datetime, timedelta
@@ -96,6 +100,7 @@ profile = analyzer.generate_profile(
 ### 2. Visualization
 
 Create analysis visualizations:
+
 ```python
 from scripts.threat_visualizer import ThreatVisualizer
 import pandas as pd
@@ -132,6 +137,7 @@ heatmap.write_html("reports/threat_heatmap.html")
 ### 3. Custom Pipeline
 
 Create a custom analysis pipeline:
+
 ```python
 from scripts.message_extractor import MessageExtractor
 from scripts.ml_threat_classifier import ThreatClassifier
@@ -145,23 +151,23 @@ class AnalysisPipeline:
         self.classifier = ThreatClassifier(model_path="models/classifier.pkl")
         self.nlp = NLPAnalyzer(config={"use_spacy": True})
         self.behavior = BehaviorAnalyzer(data_path="data/processed/")
-        
+
     def run_analysis(self, start_date: str, end_date: str):
         # Extract messages
         messages = self.extractor.extract_messages(
             start_date=start_date,
             end_date=end_date
         )
-        
+
         # Process each message
         results = []
         for msg in messages.itertuples():
             # Classify threat
             threat = self.classifier.predict(msg.content)
-            
+
             # Analyze text
             analysis = self.nlp.analyze_text(msg.content)
-            
+
             # Combine results
             results.append({
                 "message_id": msg.message_id,
@@ -169,13 +175,13 @@ class AnalysisPipeline:
                 "sentiment": analysis["sentiment"],
                 "entities": analysis["entities"]
             })
-            
+
         # Create results DataFrame
         results_df = pd.DataFrame(results)
-        
+
         # Analyze patterns
         patterns = self.behavior.analyze_patterns(results_df)
-        
+
         return {
             "results": results_df,
             "patterns": patterns
@@ -265,11 +271,11 @@ def update_config(config_path: str, updates: dict):
     # Load current config
     with open(config_path, 'r') as f:
         config = yaml.safe_load(f)
-    
+
     # Update values
     for key, value in updates.items():
         config[key] = value
-    
+
     # Save updated config
     with open(config_path, 'w') as f:
         yaml.dump(config, f, default_flow_style=False)
@@ -284,3 +290,4 @@ update_config(
         }
     }
 )
+```

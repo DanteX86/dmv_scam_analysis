@@ -1,0 +1,2 @@
+from dmv_scam_analysis.analysis.behavioral import BehavioralAnalyzer
+

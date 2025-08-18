@@ -15,9 +15,7 @@
     "timestamp": "2024-09-21T19:00:41.887118",
     "label": "scam",
     "threat_score": 0.9990701090412153,
-    "suspicious_indicators": [
-      "SUSPENDED"
-    ]
+    "suspicious_indicators": ["SUSPENDED"]
   },
   {
     "id": "1356ecd6-6a1c-4949-828e-dc36eb739639",
@@ -26,9 +24,7 @@
     "timestamp": "2024-08-01T07:21:52.357630",
     "label": "scam",
     "threat_score": 0.8443602597354021,
-    "suspicious_indicators": [
-      "URGENT"
-    ]
+    "suspicious_indicators": ["URGENT"]
   },
   {
     "id": "2d73d5ef-3375-4499-a8a4-52bce3acd61a",
@@ -37,9 +33,7 @@
     "timestamp": "2024-12-06T04:21:42.295193",
     "label": "scam",
     "threat_score": 0.726237591051567,
-    "suspicious_indicators": [
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["CLICK NOW"]
   },
   {
     "id": "49eb0b47-8259-40ea-9b31-71b8852b267c",
@@ -57,9 +51,7 @@
     "timestamp": "2025-05-03T17:53:59.232497",
     "label": "scam",
     "threat_score": 0.9044165810092111,
-    "suspicious_indicators": [
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["CLICK NOW"]
   },
   {
     "id": "5006888d-c19f-4297-930b-80f812f78353",
@@ -122,10 +114,7 @@
     "timestamp": "2025-01-13T12:34:14.809562",
     "label": "scam",
     "threat_score": 0.8530023030500238,
-    "suspicious_indicators": [
-      "IMMEDIATE ACTION",
-      "EXPIRED"
-    ]
+    "suspicious_indicators": ["IMMEDIATE ACTION", "EXPIRED"]
   },
   {
     "id": "edf36be4-ff19-499a-8da6-faca3ccff0d6",
@@ -134,9 +123,7 @@
     "timestamp": "2025-04-01T13:12:58.117945",
     "label": "scam",
     "threat_score": 0.8216721047780561,
-    "suspicious_indicators": [
-      "URGENT"
-    ]
+    "suspicious_indicators": ["URGENT"]
   },
   {
     "id": "80706a3e-f9c3-4f56-a398-74ad2a77a0df",
@@ -181,9 +168,7 @@
     "timestamp": "2025-04-25T07:38:01.229926",
     "label": "scam",
     "threat_score": 0.9298023301465537,
-    "suspicious_indicators": [
-      "LOCKED"
-    ]
+    "suspicious_indicators": ["LOCKED"]
   },
   {
     "id": "fb1ca74d-d49b-4a17-a4b6-02c94cdf4982",
@@ -192,9 +177,7 @@
     "timestamp": "2024-10-22T20:37:27.976732",
     "label": "scam",
     "threat_score": 0.9334223471995584,
-    "suspicious_indicators": [
-      "FINAL NOTICE"
-    ]
+    "suspicious_indicators": ["FINAL NOTICE"]
   },
   {
     "id": "6d62d62f-3fac-41ff-8eaa-56de494beba3",
@@ -203,9 +186,7 @@
     "timestamp": "2024-08-13T07:59:31.068459",
     "label": "scam",
     "threat_score": 0.8070638239775298,
-    "suspicious_indicators": [
-      "URGENT"
-    ]
+    "suspicious_indicators": ["URGENT"]
   },
   {
     "id": "05219883-34c9-410b-9734-b3f7b37c32f6",
@@ -214,10 +195,7 @@
     "timestamp": "2025-02-03T16:40:56.802005",
     "label": "scam",
     "threat_score": 0.7099821606233712,
-    "suspicious_indicators": [
-      "EXPIRED",
-      "FINAL NOTICE"
-    ]
+    "suspicious_indicators": ["EXPIRED", "FINAL NOTICE"]
   },
   {
     "id": "c4d7e682-1003-4dad-b80e-a0a1e50f5e4b",
@@ -253,11 +231,7 @@
     "timestamp": "2025-04-01T01:28:46.305431",
     "label": "scam",
     "threat_score": 0.7736234658742143,
-    "suspicious_indicators": [
-      "FINAL NOTICE",
-      "IMMEDIATE ACTION",
-      "LOCKED"
-    ]
+    "suspicious_indicators": ["FINAL NOTICE", "IMMEDIATE ACTION", "LOCKED"]
   },
   {
     "id": "ba2b322b-26b1-4234-89bd-2f56d7338e87",
@@ -266,11 +240,7 @@
     "timestamp": "2025-07-10T07:49:49.251908",
     "label": "scam",
     "threat_score": 0.8209726901649351,
-    "suspicious_indicators": [
-      "CLICK NOW",
-      "IMMEDIATE ACTION",
-      "URGENT"
-    ]
+    "suspicious_indicators": ["CLICK NOW", "IMMEDIATE ACTION", "URGENT"]
   },
   {
     "id": "96d2517e-0d2c-4baa-a320-0bfa6a2f606d",
@@ -288,9 +258,7 @@
     "timestamp": "2025-02-02T21:05:57.927485",
     "label": "scam",
     "threat_score": 0.7065772283869051,
-    "suspicious_indicators": [
-      "VERIFY NOW"
-    ]
+    "suspicious_indicators": ["VERIFY NOW"]
   },
   {
     "id": "224347ef-1245-49d8-970f-3450de38ddc4",
@@ -299,9 +267,7 @@
     "timestamp": "2024-07-16T16:50:15.725259",
     "label": "scam",
     "threat_score": 0.9045283175966535,
-    "suspicious_indicators": [
-      "VERIFY NOW"
-    ]
+    "suspicious_indicators": ["VERIFY NOW"]
   },
   {
     "id": "d1e054cf-10d0-4227-aa67-04cbc2643d9e",
@@ -319,11 +285,7 @@
     "timestamp": "2024-08-03T11:05:21.791331",
     "label": "scam",
     "threat_score": 0.7401025107462593,
-    "suspicious_indicators": [
-      "LOCKED",
-      "LIMITED TIME",
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["LOCKED", "LIMITED TIME", "CLICK NOW"]
   },
   {
     "id": "2c8cd4eb-f187-4b73-8197-a4e44a100c64",
@@ -368,9 +330,7 @@
     "timestamp": "2025-02-04T15:56:29.857241",
     "label": "scam",
     "threat_score": 0.8928204726277464,
-    "suspicious_indicators": [
-      "LOCKED"
-    ]
+    "suspicious_indicators": ["LOCKED"]
   },
   {
     "id": "7d4e095b-7e4e-45b1-92ef-49f7ee1cef62",
@@ -379,11 +339,7 @@
     "timestamp": "2024-10-16T10:04:24.140095",
     "label": "scam",
     "threat_score": 0.7996594579285892,
-    "suspicious_indicators": [
-      "EXPIRED",
-      "URGENT",
-      "FINAL NOTICE"
-    ]
+    "suspicious_indicators": ["EXPIRED", "URGENT", "FINAL NOTICE"]
   },
   {
     "id": "f3fc9683-0bc2-4595-b262-8c21b2fff721",
@@ -401,10 +357,7 @@
     "timestamp": "2024-07-23T13:56:07.326507",
     "label": "scam",
     "threat_score": 0.8744211396290118,
-    "suspicious_indicators": [
-      "SUSPENDED",
-      "IMMEDIATE ACTION"
-    ]
+    "suspicious_indicators": ["SUSPENDED", "IMMEDIATE ACTION"]
   },
   {
     "id": "c26bdad0-6971-4f53-8094-520c8eaf5817",
@@ -413,11 +366,7 @@
     "timestamp": "2024-09-12T15:24:57.039505",
     "label": "scam",
     "threat_score": 0.8922017062742744,
-    "suspicious_indicators": [
-      "FINAL NOTICE",
-      "EXPIRED",
-      "LIMITED TIME"
-    ]
+    "suspicious_indicators": ["FINAL NOTICE", "EXPIRED", "LIMITED TIME"]
   },
   {
     "id": "1b1d091c-2f65-4a29-a06e-3df9f016815a",
@@ -426,11 +375,7 @@
     "timestamp": "2025-01-12T22:42:45.353077",
     "label": "scam",
     "threat_score": 0.9944218907713902,
-    "suspicious_indicators": [
-      "VERIFY NOW",
-      "URGENT",
-      "SUSPENDED"
-    ]
+    "suspicious_indicators": ["VERIFY NOW", "URGENT", "SUSPENDED"]
   },
   {
     "id": "48412d4b-c025-4ba4-be81-108fbab44a65",
@@ -439,11 +384,7 @@
     "timestamp": "2024-09-22T06:15:54.339686",
     "label": "scam",
     "threat_score": 0.985823150288422,
-    "suspicious_indicators": [
-      "SUSPENDED",
-      "LOCKED",
-      "VERIFY NOW"
-    ]
+    "suspicious_indicators": ["SUSPENDED", "LOCKED", "VERIFY NOW"]
   },
   {
     "id": "f3e5152d-a7c8-4cf7-833c-ef07f850c591",
@@ -470,11 +411,7 @@
     "timestamp": "2025-03-04T18:51:52.464739",
     "label": "scam",
     "threat_score": 0.9287080142257987,
-    "suspicious_indicators": [
-      "URGENT",
-      "IMMEDIATE ACTION",
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["URGENT", "IMMEDIATE ACTION", "CLICK NOW"]
   },
   {
     "id": "5a54f6ad-b74b-4109-b08f-c24a428f5060",
@@ -483,10 +420,7 @@
     "timestamp": "2024-09-28T14:45:29.842085",
     "label": "scam",
     "threat_score": 0.9630644323852295,
-    "suspicious_indicators": [
-      "URGENT",
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["URGENT", "CLICK NOW"]
   },
   {
     "id": "2f0f265c-5ced-400d-9de8-ec039922f870",
@@ -504,9 +438,7 @@
     "timestamp": "2024-12-13T15:27:33.056728",
     "label": "scam",
     "threat_score": 0.8171671571785375,
-    "suspicious_indicators": [
-      "IMMEDIATE ACTION"
-    ]
+    "suspicious_indicators": ["IMMEDIATE ACTION"]
   },
   {
     "id": "865c6aff-fe30-4f58-a8e2-bb5a386373ec",
@@ -515,9 +447,6 @@
     "timestamp": "2024-08-23T04:17:35.991921",
     "label": "scam",
     "threat_score": 0.7687348087269059,
-    "suspicious_indicators": [
-      "LIMITED TIME",
-      "CLICK NOW"
-    ]
+    "suspicious_indicators": ["LIMITED TIME", "CLICK NOW"]
   }
 ]

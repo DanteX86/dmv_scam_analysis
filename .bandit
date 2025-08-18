@@ -7,4 +7,3 @@ exclude_dirs: .venv, venv, tests, .git, build, dist
 severity: medium
 confidence: medium
 recursive: true
-

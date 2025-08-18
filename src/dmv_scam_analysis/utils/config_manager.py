@@ -9,13 +9,14 @@ Author: Cybersecurity Researcher
 Version: 2.0
 """
 
-import os
-import yaml
 import json
+import logging
+import os
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from dataclasses import dataclass
-import logging
+
+import yaml
 
 # Try to import jsonschema for validation
 try:
@@ -89,7 +90,11 @@ class ConfigManager:
                 "analysis": {
                     "output_dir": "./analysis_output",
                     "nlp": {"enabled": True, "model_path": "./models/nlp/"},
-                    "ml": {"enabled": True, "model_path": "./models/ml/", "auto_train": False},
+                    "ml": {
+                        "enabled": True,
+                        "model_path": "./models/ml/",
+                        "auto_train": False,
+                    },
                     "behavioral": {"enabled": True, "time_window_hours": 24},
                 },
                 "logging": {
@@ -110,7 +115,11 @@ class ConfigManager:
         dev_file = env_dir / "development.yaml"
         if not dev_file.exists():
             dev_config = {
-                "environment": {"name": "development", "debug": True, "test_mode": True},
+                "environment": {
+                    "name": "development",
+                    "debug": True,
+                    "test_mode": True,
+                },
                 "analysis": {"output_dir": "./dev_output"},
                 "logging": {"level": "DEBUG"},
             }
@@ -122,7 +131,11 @@ class ConfigManager:
         prod_file = env_dir / "production.yaml"
         if not prod_file.exists():
             prod_config = {
-                "environment": {"name": "production", "debug": False, "test_mode": False},
+                "environment": {
+                    "name": "production",
+                    "debug": False,
+                    "test_mode": False,
+                },
                 "analysis": {"output_dir": "/var/log/sentinel/analysis"},
                 "logging": {"level": "INFO"},
             }
@@ -138,7 +151,10 @@ class ConfigManager:
                 "properties": {
                     "sentinel_analyzer": {
                         "type": "object",
-                        "properties": {"version": {"type": "string"}, "name": {"type": "string"}},
+                        "properties": {
+                            "version": {"type": "string"},
+                            "name": {"type": "string"},
+                        },
                     },
                     "environment": {
                         "type": "object",
@@ -162,7 +178,10 @@ class ConfigManager:
                     },
                     "logging": {
                         "type": "object",
-                        "properties": {"level": {"type": "string"}, "file": {"type": "string"}},
+                        "properties": {
+                            "level": {"type": "string"},
+                            "file": {"type": "string"},
+                        },
                     },
                 },
                 "required": ["environment", "analysis"],
@@ -184,7 +203,9 @@ class ConfigManager:
             try:
                 env_config = self._load_yaml_file(env_config_path)
             except ConfigurationError:
-                logger.warning(f"Environment config {env_config_path} not found, using defaults")
+                logger.warning(
+                    f"Environment config {env_config_path} not found, using defaults"
+                )
                 env_config = {}
 
             # Merge configurations
@@ -234,7 +255,11 @@ class ConfigManager:
         result = base.copy()
 
         for key, value in override.items():
-            if key in result and isinstance(result[key], dict) and isinstance(value, dict):
+            if (
+                key in result
+                and isinstance(result[key], dict)
+                and isinstance(value, dict)
+            ):
                 result[key] = self._merge_dicts(result[key], value)
             else:
                 result[key] = value
@@ -342,7 +367,9 @@ class ConfigManager:
                 missing.append(key)
 
         if missing:
-            raise ConfigurationError(f"Missing required configuration keys: {', '.join(missing)}")
+            raise ConfigurationError(
+                f"Missing required configuration keys: {', '.join(missing)}"
+            )
 
     def as_dict(self) -> Dict[str, Any]:
         """

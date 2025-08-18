@@ -1,0 +1,302 @@
+Run started:2025-08-18 16:50:44.835921
+
+Test results:
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/analysis/sentiment.py:596:8
+595	                    )
+596	        except Exception:
+597	            # If NLTK processing fails, continue without named entities
+598	            pass
+599	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/analysis/sentiment.py:781:12
+780	                    )
+781	            except Exception:
+782	                pass
+783	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/api/app.py:72:4
+71	            setattr(_bench_fix.BenchmarkFixture, "__call__", _shimmed_call)
+72	    except Exception:
+73	        pass
+74	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/api/app.py:100:8
+99	                setattr(response, "stats", _Stats(mean=max(duration, 0.0001)))
+100	        except Exception:
+101	            pass
+102	
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'test_performance_token'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b105_hardcoded_password_string.html
+   Location: src/dmv_scam_analysis/api/app.py:183:20
+182	        # Test harness bypass: accept special performance token
+183	        if token == "test_performance_token":
+184	            # Attach raw token for rate limiter isolation
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/api/app.py:187:12
+186	                request.state.rate_key = token
+187	            except Exception:
+188	                pass
+189	            return {
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/api/app.py:198:8
+197	            request.state.rate_key = token
+198	        except Exception:
+199	            pass
+200	        return claims
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/cli/tui.py:462:20
+461	                        im.close_connection()
+462	                    except Exception:
+463	                        pass
+464	                click.pause()
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: src/dmv_scam_analysis/core/classifier.py:15:0
+14	import json
+15	import pickle
+16	import warnings
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+   Location: src/dmv_scam_analysis/core/classifier.py:1560:29
+1559	            with open(filepath, "rb") as f:
+1560	                model_data = pickle.load(f)
+1561	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: src/dmv_scam_analysis/core/extractor.py:205:16
+204	                            msgs.append(m)
+205	                except Exception:
+206	                    # If anything goes wrong reading new messages, proceed with base only
+207	                    pass
+208	            return msgs
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: src/dmv_scam_analysis/core/model_manager.py:7:0
+6	import os
+7	import pickle
+8	from datetime import datetime
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+   Location: src/dmv_scam_analysis/core/model_manager.py:111:24
+110	            with open(model_path, "rb") as f:
+111	                model = pickle.load(f)
+112	
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: src/dmv_scam_analysis/ml/model_trainer.py:7:0
+6	import logging
+7	import pickle
+8	from datetime import datetime
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+   Location: src/dmv_scam_analysis/ml/model_trainer.py:230:24
+229	            with open(model_path, "rb") as f:
+230	                model = pickle.load(f)
+231	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:63:15
+62	        ]
+63	        return random.choice(templates).format(random.randint(1, 7), fake.url())
+64	    elif message_type == "legitimate":
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:63:47
+62	        ]
+63	        return random.choice(templates).format(random.randint(1, 7), fake.url())
+64	    elif message_type == "legitimate":
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:71:15
+70	        ]
+71	        return random.choice(templates).format(
+72	            fake.date_between(start_date="+1d", end_date="+30d"), fake.time()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:173:23
+172	        "text": [fake.text(max_nb_chars=100) for _ in range(num_samples)],
+173	        "is_from_me": [random.choice([True, False]) for _ in range(num_samples)],
+174	    }
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:180:23
+179	        # Add some null values
+180	        null_indices = random.sample(range(num_samples), min(5, num_samples // 10))
+181	        df.loc[null_indices, "text"] = None
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:185:28
+184	        # Add duplicate contact_ids
+185	        duplicate_indices = random.sample(range(num_samples), min(3, num_samples // 20))
+186	        df.loc[duplicate_indices, "contact_id"] = df.loc[0, "contact_id"]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:211:32
+210	        "features": {
+211	            "urgency_keywords": random.randint(0, 5),
+212	            "suspicious_links": random.randint(0, 3),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:212:32
+211	            "urgency_keywords": random.randint(0, 5),
+212	            "suspicious_links": random.randint(0, 3),
+213	            "sentiment_polarity": random.uniform(-1, 1),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:213:34
+212	            "suspicious_links": random.randint(0, 3),
+213	            "sentiment_polarity": random.uniform(-1, 1),
+214	            "readability_score": random.uniform(0, 100),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:214:33
+213	            "sentiment_polarity": random.uniform(-1, 1),
+214	            "readability_score": random.uniform(0, 100),
+215	        },
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:221:27
+220	        "timestamp": datetime.now().isoformat(),
+221	        "processing_time": random.uniform(0.1, 2.0),
+222	    }
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: src/dmv_scam_analysis/utils/test_helpers.py:276:21
+275	            "message": fake.text(max_nb_chars=target_chars),
+276	            "label": random.choice(["scam", "legitimate"]),
+277	            "batch_id": i // 100,  # Group into batches of 100
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 9905
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 24
+		Medium: 3
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 26
+Files skipped (1):
+	src/dmv_scam_analysis/visualization/threat_visualizer.py (exception while scanning file)

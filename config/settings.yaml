@@ -3,7 +3,7 @@
 
 # Environment Settings
 environment:
-  name: development  # development, staging, production
+  name: development # development, staging, production
   debug: true
   timezone: UTC
   encoding: utf-8
@@ -25,7 +25,7 @@ storage:
     backup_path: data/backup/
     max_connections: 5
     timeout: 30
-  
+
   files:
     raw_data: data/raw/
     processed_data: data/processed/
@@ -42,7 +42,7 @@ analysis:
     embeddings:
       model_path: models/text_embeddings.pkl
       dimension: 768
-  
+
   nlp:
     language: en
     models:
@@ -50,7 +50,7 @@ analysis:
       - en_core_web_md
     max_length: 1000000
     batch_size: 50
-  
+
   features:
     text:
       - length

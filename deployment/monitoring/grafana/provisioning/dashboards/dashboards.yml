@@ -1,10 +1,10 @@
 apiVersion: 1
 
 providers:
-  - name: 'DMV Analysis Dashboards'
+  - name: "DMV Analysis Dashboards"
     orgId: 1
-    folder: ''
-    folderUid: ''
+    folder: ""
+    folderUid: ""
     type: file
     disableDeletion: false
     editable: true

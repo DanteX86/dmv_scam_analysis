@@ -5,8 +5,8 @@ Analyzes temporal patterns in message data.
 
 from typing import Any, Dict, Optional
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 from scipy import stats
 
 
@@ -54,7 +54,9 @@ class TemporalAnalyzer:
         std_hourly = hourly_counts.std()
 
         # Identify peak hours
-        peak_hours = hourly_counts[hourly_counts > mean_hourly + std_hourly].index.tolist()
+        peak_hours = hourly_counts[
+            hourly_counts > mean_hourly + std_hourly
+        ].index.tolist()
 
         # Calculate anomaly score for timing
         z_scores = np.abs(stats.zscore(hourly_counts.values))
@@ -83,12 +85,16 @@ class TemporalAnalyzer:
         # Calculate weekend anomaly score
         total_messages = len(messages_df)
         weekend_ratio = (
-            weekly_stats["weekend_messages"] / total_messages if total_messages > 0 else 0
+            weekly_stats["weekend_messages"] / total_messages
+            if total_messages > 0
+            else 0
         )
 
         # Normal expectation: ~28.6% weekend activity (2/7 days)
         expected_weekend_ratio = 2 / 7
-        weekend_anomaly_score = abs(weekend_ratio - expected_weekend_ratio) / expected_weekend_ratio
+        weekend_anomaly_score = (
+            abs(weekend_ratio - expected_weekend_ratio) / expected_weekend_ratio
+        )
 
         weekly_stats["weekend_anomaly_score"] = weekend_anomaly_score
         weekly_stats["weekend_ratio"] = weekend_ratio
@@ -182,7 +188,9 @@ class TemporalAnalyzer:
 
         return {
             "anomalies": anomalies,
-            "anomaly_score": len(anomalies) / len(time_deltas) if len(time_deltas) > 0 else 0,
+            "anomaly_score": (
+                len(anomalies) / len(time_deltas) if len(time_deltas) > 0 else 0
+            ),
             "statistics": {
                 "mean_interval_seconds": float(mean_interval),
                 "std_interval_seconds": float(std_interval),
@@ -195,8 +203,12 @@ class TemporalAnalyzer:
         if len(messages_df) < 2:
             return {"response_analysis": "insufficient_data"}
 
-        sent_messages = messages_df[messages_df["is_from_me"] == 1].sort_values("datetime")
-        received_messages = messages_df[messages_df["is_from_me"] == 0].sort_values("datetime")
+        sent_messages = messages_df[messages_df["is_from_me"] == 1].sort_values(
+            "datetime"
+        )
+        received_messages = messages_df[messages_df["is_from_me"] == 0].sort_values(
+            "datetime"
+        )
 
         if len(sent_messages) == 0 or len(received_messages) == 0:
             return {"response_analysis": "no_bidirectional_communication"}
@@ -210,7 +222,9 @@ class TemporalAnalyzer:
 
             if not subsequent_received.empty:
                 next_received = subsequent_received.iloc[0]
-                response_time = (next_received["datetime"] - sent_msg["datetime"]).total_seconds()
+                response_time = (
+                    next_received["datetime"] - sent_msg["datetime"]
+                ).total_seconds()
                 response_times.append(
                     {
                         "sent_timestamp": sent_msg["datetime"].isoformat(),
@@ -233,7 +247,9 @@ class TemporalAnalyzer:
                 "max_response_time_seconds": max(response_seconds),
                 "total_exchanges": len(response_times),
             },
-            "rapid_responses": [rt for rt in response_times if rt["response_time_seconds"] < 60],
+            "rapid_responses": [
+                rt for rt in response_times if rt["response_time_seconds"] < 60
+            ],
             "delayed_responses": [
                 rt for rt in response_times if rt["response_time_seconds"] > 3600
             ],

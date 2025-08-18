@@ -2,11 +2,12 @@
 Data Validation and Error Handling Module
 """
 
-from typing import Dict, Union, Any, List, Optional, TypedDict
-import pandas as pd
 import logging
 import os
 from pathlib import Path
+from typing import Any, Dict, List, Optional, TypedDict, Union
+
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 
@@ -51,7 +52,9 @@ class DataValidator:
         Returns:
             dict: Validation results
         """
-        self.validation_results = ValidationResults(is_valid=True, errors=[], warnings=[])
+        self.validation_results = ValidationResults(
+            is_valid=True, errors=[], warnings=[]
+        )
 
         # Convert dict to DataFrame if needed
         if isinstance(data, dict):
@@ -135,7 +138,9 @@ class DataValidator:
             for rule in rules:
                 self._apply_validation_rule(data, column, rule)
 
-    def _apply_validation_rule(self, data: pd.DataFrame, column: str, rule: str) -> None:
+    def _apply_validation_rule(
+        self, data: pd.DataFrame, column: str, rule: str
+    ) -> None:
         """Apply individual validation rule"""
         if rule == "not_null":
             null_count = data[column].isnull().sum()

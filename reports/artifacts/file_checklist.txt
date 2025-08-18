@@ -1,0 +1,8 @@
+FOUND requirements.txt
+FOUND setup.py
+FOUND pyproject.toml
+FOUND pytest.ini
+FOUND Makefile
+FOUND .pre-commit-config.yaml
+FOUND .github/workflows/ci.yml
+FOUND Dockerfile
