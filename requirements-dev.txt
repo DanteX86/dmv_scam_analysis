@@ -33,3 +33,6 @@ ipython>=7.31.0
 ipdb>=0.13.9
 jupyter-client>=7.1.0
 jupyter-core>=4.9.1
+
+# Test data generators
+faker>=24
