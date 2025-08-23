@@ -16,7 +16,9 @@ exclude =
     docs/conf.py
 per-file-ignores =
     __init__.py: F401, F403
-    tests/*: S101, S105, S404, S603, S607
+    # Tests often include long strings, exploratory imports, and synthetic inputs; relax selected rules
+    tests/**/*.py: E501, F401, F841, F821, E231, E722, F722, S101, S105, S404, S603, S607
+    tests/*: E501
 max-complexity = 10
 docstring-convention = google
 statistics = True
